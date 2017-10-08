@@ -1,0 +1,6 @@
+source: app
+# To exclude inside app/
+baseurl: https://wegomajor.com
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
