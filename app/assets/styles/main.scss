@@ -35,3 +35,86 @@
 
 /* Core
    ========================================================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	animation: colorchange 40s infinite;
+	/* animation-name followed by duration in seconds*/
+	/* you could also use milliseconds (ms) or something like 2.5s */
+	-webkit-animation: colorchange 20s infinite;
+	/* Chrome and Safari */
+	background-color: #EAD7CF;
+}
+
+/*@keyframes colorchange {
+
+	0%   {background: #FF0023;}
+	20%  {background: #FFD525;}
+	40%  {background: #031950;}
+	60%  {background: #feebb6;}
+	80%  {background: #E8D7CF;}
+	100% {background: #FF0023;}
+	}
+
+	@-webkit-keyframes colorchange {
+	0%   {background: #FF0023;}
+	20%  {background: #FFD525;}
+	40%  {background: #031950;}
+	60%  {background: #feebb6;}
+	80%  {background: #E8D7CF;}
+	100% {background: #FF0023;}
+	}*/
+
+/*main {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+img {
+	height: 50%;
+	width: 50%;
+	margin-top: 10%;
+}
+*/
+
+p {
+	color: #031950;
+	font-size: 24px;
+	font-family: serif;
+	max-width: 800px;
+	text-align:center;
+	margin: 0 auto;
+	    margin-bottom: 400px;
+
+}  
+
+a {
+	color: #031950;
+}
+
+#wrapper { 
+	text-align: center;
+	padding: 2rem;
+    height: 70vh;
+    width: 30vw;
+    margin: 8% auto;
+
+   }
+
+
+#form {
+    height: 100%;
+    width: 100%;
+    mask: url(../graphics/content/major-logo-tall.svg) no-repeat 100% 100%;
+    -webkit-mask: url(../graphics/content/major-logo-tall.svg) no-repeat 100% 100%;
+    mask-image: url(../graphics/content/major-logo-tall.svg) no-repeat 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    transition: all .2s ease-in-out;
+    z-index: -10;
+    background: #FF0023;
+}
