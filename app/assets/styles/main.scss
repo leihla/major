@@ -87,10 +87,17 @@ p {
 	font-family: serif;
 	max-width: 800px;
 	text-align:center;
-	margin: 0 auto;
-	    margin-bottom: 400px;
-
+	margin: 10% auto;
+	margin-top: 40px;
+	width: 80%;
+	max-width: 800px;
 }  
+
+img {
+	margin-top: 10%;
+	width: 40%;
+	color: #FF0023;
+}
 
 a {
 	color: #031950;
@@ -99,14 +106,14 @@ a {
 #wrapper { 
 	text-align: center;
 	padding: 2rem;
-    height: 70vh;
-    width: 30vw;
-    margin: 8% auto;
+/*    height: 70vh;
+    width: 30vw;*/
+    margin: 0 auto;
 
    }
 
 
-#form {
+/*#form {
     height: 100%;
     width: 100%;
     mask: url(../graphics/content/major-logo-tall.svg) no-repeat 100% 100%;
@@ -117,4 +124,4 @@ a {
     transition: all .2s ease-in-out;
     z-index: -10;
     background: #FF0023;
-}
+}*/
