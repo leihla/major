@@ -41,87 +41,40 @@
 }
 
 body {
-	animation: colorchange 40s infinite;
-	/* animation-name followed by duration in seconds*/
-	/* you could also use milliseconds (ms) or something like 2.5s */
-	-webkit-animation: colorchange 20s infinite;
-	/* Chrome and Safari */
-	background-color: #EAD7CF;
+	background-color: #fff;
+	font-family: 'IBM Plex Sans', sans-serif;
+	color: #071D49;
 }
 
-/*@keyframes colorchange {
-
-	0%   {background: #FF0023;}
-	20%  {background: #FFD525;}
-	40%  {background: #031950;}
-	60%  {background: #feebb6;}
-	80%  {background: #E8D7CF;}
-	100% {background: #FF0023;}
-	}
-
-	@-webkit-keyframes colorchange {
-	0%   {background: #FF0023;}
-	20%  {background: #FFD525;}
-	40%  {background: #031950;}
-	60%  {background: #feebb6;}
-	80%  {background: #E8D7CF;}
-	100% {background: #FF0023;}
-	}*/
-
-/*main {
-	width: 80%;
-	text-align: center;
-	margin: 0 auto;
+h1 {
+	font-family: 'Oswald', sans-serif;
+	color: #071D49;
+	font-size: 70px;
+	font-weight: 400;
+	line-height: 1.2;
+	@include column(8/12);
 }
-
-img {
-	height: 50%;
-	width: 50%;
-	margin-top: 10%;
-}
-*/
 
 p {
-	color: #031950;
+	font-size: 18px;
+}
+
+.lead {
 	font-size: 24px;
-	font-family: serif;
-	max-width: 800px;
-	text-align:center;
-	margin: 10% auto;
-	margin-top: 40px;
+}
+
+
+#page-footer {
+	background-color: #FF0036;
+	color: #fff;
+}
+
+ 
+.row {
+	max-width: 1280px;
 	width: 80%;
-	max-width: 800px;
-}  
-
-img {
-	margin-top: 10%;
-	width: 40%;
-	color: #FF0023;
+	margin-left: auto;
+    margin-right: auto;
+    /*padding-top: 90px;*/
+    overflow: hidden; 
 }
-
-a {
-	color: #031950;
-}
-
-#wrapper { 
-	text-align: center;
-	padding: 2rem;
-/*    height: 70vh;
-    width: 30vw;*/
-    margin: 0 auto;
-
-   }
-
-
-/*#form {
-    height: 100%;
-    width: 100%;
-    mask: url(../graphics/content/major-logo-tall.svg) no-repeat 100% 100%;
-    -webkit-mask: url(../graphics/content/major-logo-tall.svg) no-repeat 100% 100%;
-    mask-image: url(../graphics/content/major-logo-tall.svg) no-repeat 100% 100%;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    transition: all .2s ease-in-out;
-    z-index: -10;
-    background: #FF0023;
-}*/
