@@ -36,37 +36,161 @@
 /* Core
    ========================================================================== */
 
+html {font-size:18px;}
+
 * {
-	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
 }
 
+
+$titles-type: 'Oswald', sans-serif;
+$body-text-type:'IBM Plex Sans', sans-serif;
+$background-color: #FAF9F8;
+$red: #FF0036;
+$darkblue: #071D49;
+$lightgrey: #828DA3;
+$title-padding: 2.2rem;
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+html,body{
+	height: 100%;
+	width:100%;
+	position: relative; 
+ 	ul{
+    	list-style:none;
+    	li{
+      		padding-left:0;
+		}
+	} 
+}
+
+
 body {
-	background-color: #fff;
-	font-family: 'IBM Plex Sans', sans-serif;
-	color: #071D49;
+	background-color: $background-color;
+	font-family: $body-text-type;
+	font-weight: 400;
+	color: $darkblue;
+	font-size: 1rem;
+	line-height: 1.4rem;
 }
 
 h1 {
-	font-family: 'Oswald', sans-serif;
-	color: #071D49;
-	font-size: 70px;
-	font-weight: 400;
-	line-height: 1.2;
-	@include column(8/12);
+	font-family: $titles-type;
+	font-size: 3.9rem;
+	font-weight: 300;
+	line-height: 4.4rem;
+	margin: unset;
+	padding-bottom: $title-padding;
+	/*@include column(8/12);*/
 }
 
+h2{
+	font-family: $titles-type;
+	font-size: 2.5rem;
+	font-weight: 300;
+	line-height: 2.8rem;
+	padding-bottom: $title-padding;
+}
+
+
+h3{
+	font-family: $titles-type;
+	font-size: 1.3rem;
+	font-weight: 300;
+	line-height: 1.7rem;
+}
+
+
 p {
-	font-size: 18px;
+	font-size: 1rem;
+	line-height: 1.4rem;
+}
+
+small{
+	font-size: 0.9rem;
+	line-height: 1rem;
+	font-weight: 300;
+	color: $lightgrey;
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+
+#page-logo{
+
+	img{
+		height: 48px;
+	}
+
 }
 
 .lead {
-	font-size: 24px;
+	font-size: 1.3rem;
+	line-height: 1.8rem;
+}
+
+.project-name{
+	font-size: 1.13rem;
 }
 
 
 #page-footer {
 	background-color: #FF0036;
 	color: #fff;
+	height: 60vh;
+	position: relative;
+
+
+	.row{
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.say-hi-contact{
+
+	h2{
+		padding-bottom: unset;
+	}
+
+	a{
+	font-family: $titles-type;
+	color: white;
+	font-size: 2.5rem;
+	font-weight: 300;
+	line-height: 2.8rem;
+	}
+	}
+	.social{
+		position: absolute;
+		bottom: 0;
+	}
 }
 
  
@@ -75,6 +199,154 @@ p {
 	width: 80%;
 	margin-left: auto;
     margin-right: auto;
-    /*padding-top: 90px;*/
-    overflow: hidden; 
 }
+
+
+
+header{
+	
+	position: fixed;
+	height: 70px;
+	width: 100vw;
+	display: flex;
+	align-items: flex-end;
+
+	h1{
+		all:unset;
+	}
+
+
+	nav{
+		display: none;
+	}
+}
+
+
+.landingpage{
+	background-image: linear-gradient(43deg, #FAF9F8 0%, #FFFFFF 100%);
+	min-height: 100vh;
+	
+	display: flex;
+	align-items: center;
+
+
+
+}
+
+.wecanhelp{
+	
+	margin-top: -40px;
+
+	.row{
+		
+		display: flex;
+		align-items: center;
+	}
+
+	.redblock{
+		background-color: red;
+		min-height: 700px;
+		height: 50vh;
+		@include column(1/2);
+		
+	}
+
+	.wecanhelptext{
+	
+		max-width: 380px;
+		padding: 5%;
+		@include column(1/2);
+	}
+}
+
+.internet-statement{
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	
+	h1{
+		width: 100%;
+		text-align: center;
+	}
+
+
+}
+
+
+.projects{
+
+
+	ul{
+		li{
+			
+			margin-bottom: 10vh;
+	
+			article{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.card-shot{
+				
+					width: 51%;
+					margin: 0 3% 0 0;
+
+					img{
+						width: 100%;
+			        	height: auto;
+			        	object-fit: cover;
+					}
+
+				}
+				.card-resume{
+					
+					max-width: 445px;
+					margin: 0 10% 0 0;
+				
+			
+
+					.card-name{
+						display: inline-block;
+						font-size: 0.9rem;
+						line-height: 0.9rem;
+						padding-bottom: 0.9rem;
+					}
+					p{
+						padding-bottom: 1.3rem;
+					}
+				}
+			}
+		}
+
+		li:nth-child(even){
+			article{
+				flex-direction: row-reverse;
+				.card-shot{
+					margin: 0 0 0 3%;
+				}
+				.card-resume{
+					margin: 0 0 0 10%;
+				}
+
+			}
+
+		}
+
+		li:last-child{
+			margin-bottom: unset;
+		}
+
+	}
+
+}
+
+
+.know-more-about{
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+
+
