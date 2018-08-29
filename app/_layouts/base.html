@@ -6,93 +6,23 @@
 
     <!-- build:css /assets/styles/vendor.css -->
     <!-- endbuild -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- build:css /assets/styles/main.css -->
     <link rel="stylesheet" href="/assets/styles/main.css">
     <!-- endbuild -->
-    
+
   </head>
-  <body>
-    <header id="page-header" role="banner">
-      <div class="row">
-        <h1 id="page-logo">
-          <a href="/" title="Major">
-            <img src="/assets/graphics/content/major-logo-tall-red.svg" alt="Major">
-          </a>
-        </h1>
-
-        <nav id="page-nav" role="navigation">
-          <ul>
-            <li><a href="#" title="Work">Work</a></li>
-            <li><a href="#" title="About">About</a></li>
-            <li><a href="#" title="Contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main id="page-body" role="main">
-
-      <section class="landingpage">
-        <div class="row">
-          <h1>Closing the gap between people and technology.</h1>
-          <p class="lead">A collaborative design studio creating digital products with love.</p>
-        </div>
-      </section>
-
-       <section class="wecanhelp">
-        <div class="row">
-          <div class="redblock"></div>
-          <div class="wecanhelptext">
-            <h1>We can <br>help you.</h1>
-            <p class="lead">Get clarity on your ideas and improve existing experiences, all the while ensuring that your users love what you build.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="internet-statement row">
-        <h1>The internet? Yes, we know it.</h1>
-      </section>
-
-      <section class="projects">
-        <h2 class="row">Projects</h2>
+      {{content}}
+      <div class="row label-guide">
         <ul>
-          <li>
-            <article>
-                <div class="card-shot"><img src="/assets/graphics/content/projectshot1.png" alt="Wodify Arena"></div>
-                <div class="card-resume">  
-                  <span class="card-name">Wodify Arena</span>
-                  <h2 class="card-title">Crossfit competitions, made easy.</h2>
-                  <p>We created a fast and easy way to manage the all moving pieces of a competition bringing competitors, spectators and judges together.</p>
-                  <small>Mobile and desktop app</small>
-                </div> 
-            </article>
-          </li>
-          <li>
-            <article>
-                <div class="card-shot"><img src="/assets/graphics/content/projectshot1.png" alt="Wodify Arena"></div>
-                <div class="card-resume">  
-                  <span class="card-name">Wodify Arena</span>
-                  <h2 class="card-title">Crossfit competitions, made easy.</h2>
-                  <p>We created a fast and easy way to manage the all moving pieces of a competition bringing competitors, spectators and judges together.</p>
-                  <small>Mobile and desktop app</small>
-                </div> 
-            </article>
-          </li>
+          <li>major@wegomajor.com</li>
+          <li>work</li>
         </ul>
-      </section>
-
-      <section class="know-more-about">
-        <h2>
-          <a href="">know more about us</a>
-        </h2>
-      </section>
-    
+      </div>
     </main>
-
-    <footer id="page-footer" role="contentinfo">   
+    <footer id="page-footer" role="contentinfo">
       <div class="row">
         <div class="say-hi-contact">
         <h2>Say hi</h2>
@@ -100,11 +30,23 @@
         </div>
         <div class="social">
           <ul>
-            <li>Instagram</li>
-            <li>Facebook</li>
-            <li>LinkedIn</li>
+            <li>
+              <a href="/" title="Instagram">
+                <img src="/assets/graphics/layout/instagram.svg" alt="Instagram">
+              </a>
+            </li>
+            <li>
+              <a href="/" title="Facebook">
+                <img src="/assets/graphics/layout/facebook.svg" alt="Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="/" title="Linkedin">
+                <img src="/assets/graphics/layout/linkedin.svg" alt="Linkedin">
+              </a>
+            </li>
           </ul>
-       
+
         <p>© 2018 Major. All rights reserved.</p>
          </div>
       </div>
@@ -114,11 +56,9 @@
 
     <!-- build:js /assets/scripts/vendor.js -->
     <script src="/assets/scripts/vendor.js"></script>
-
     <!-- endbuild -->
     <!-- build:js /assets/scripts/bundle.js -->
     <script src="/assets/scripts/bundle.js"></script>
     <!-- endbuild -->
-
   </body>
 </html>
