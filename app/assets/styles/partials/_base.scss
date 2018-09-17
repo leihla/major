@@ -198,79 +198,160 @@ small{
 	left: 50vw;
 	transform: translate(-50%,-50%);
 	z-index: -1;
-	// width:100vw;
-	// height: 100vh;
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
+
+	span{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+ .movecontainer{
+	animation: movecontainerframes 0.5s ease-out;
+ }
+
+  @keyframes movecontainerframes{
+		0% {opacity:0; transform: translate(-50%, -40%);}
+		100% {opacity: 1; transform: translate(-50%, -50%)}
+	}
+
 
 	img{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
 		display: none;
 	}
 
-	// ul{
-	// 	font-size: 0;
-	// 	border: 1px solid red;
-	// 	height: 100%;
-	// 	min-width: 230px;
-	// 	width:100%;
-	//
-	// 	li{
-	// 		width: 20px;
-	// 		background-color: blue;
-	// 		height: 100%;
-	// 		position: absolute;
-	//
-	// 		&:nth-child(even) {
-  //   	top: 0;
-  //   	transform: translateY(-50%);
-  // 		}
-	//
-  // 		&:nth-child(odd) {
-  //   	bottom: 0;
-  //   	transform: translateY(50%);
-  // 		}
-	//
-	// 		&:nth-child(1){
-	// 			height:110px;
-	// 		}
-	// 		&:nth-child(2){
-  //   //align-self:flex-end;
-  //    height:90px;
-  //    left: 12.5%;
-	//   }
-	//     &:nth-child(3){
-	//     height:60px;
-	//     left: 25%
-	//   }
-	//     &:nth-child(4){
-	//     height:150px;
-	//     left: 37.5%;
-	//   }
-	//      &:nth-child(5){
-	//      height:110px;
-	//      left: 50%;
-	//   }
-	//      &:nth-child(6){
-	//    	height:30px;
-	//     left: 62.5%;
-	//
-	//   }
-	//     &:nth-child(7){
-	//     height:180px;
-	//     left: 75%;
-	//   }
-	//     &:nth-child(8){
-	//     height:50px;
-	//     left: 87.5%;
-	//
-	//   }
-	//
-	// 	}
-	//
-	//
-	//
-	//
-	// }
+	.bars-container{ //grande
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		height:40vh;
+		min-width: 230px;
+		width:100%;
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.5s ease-out;
+	}
+
+	.bar {
+  background-color: white;
+  width: 20px;
+  height:100%;
+  margin-right:10px;
+  transition: height 2s;
+
+	@mixin bar-animation{
+	animation-duration: 0.5s;
+	animation-iteration-count:1;
+	animation-timing-function: ease-out;
+
+	}
+
+  &:nth-child(1){
+    height:90%;
+    margin-top:0%;
+    align-self:flex-start;
+    animation-name: stroke1;
+		@include bar-animation;
+
+
+
+  }
+    &:nth-child(2){
+    height:80%;
+    margin-bottom:0%;
+    align-self:flex-end;
+		animation-name: stroke2;
+		@include bar-animation;
+
+  }
+    &:nth-child(3){
+    height:70%;
+    margin-top:3%;
+    align-self:flex-start;
+		animation-name: stroke3;
+		@include bar-animation;
+
+  }
+    &:nth-child(4){
+    height:85%;
+    margin-bottom:0%;
+    align-self:flex-end;
+		animation-name: stroke4;
+		@include bar-animation;
+
+  }
+    &:nth-child(5){
+    height:95%;
+    margin-top:0%;
+    align-self:flex-start;
+		animation-name: stroke5;
+		@include bar-animation;
+
+  }
+    &:nth-child(6){
+    height:80%;
+    align-self:center;
+		animation-name: stroke67;
+		@include bar-animation;
+
+  }
+    &:nth-child(7){
+    height:80%;
+  	align-self:center;
+		animation-name: stroke67;
+		@include bar-animation;
+  }
+    &:nth-child(8){
+    height:120%;
+    margin-bottom:-3%;
+    align-self:flex-end;
+		animation-name: stroke8;
+		@include bar-animation;
+
+  }
+
+}
+
+	@keyframes stroke1 {
+	  0%   { height: 20%; margin-top:-5%; }
+	  100% { height: 1; margin-top:0; }
+	}
+
+	@keyframes stroke2 {
+	  0%   { height: 10%; margin-bottom:-5%;}
+	  100% { height: 1; margin-bottom:0%; }
+	}
+
+	@keyframes stroke3 {
+	  0%   { height: 5%; margin-top:-2%; }
+	  100% { height: 1; margin-top:3%; }
+	}
+
+	@keyframes stroke4 {
+	  0%   { height: 40%; margin-bottom:-5%; }
+	  100% { height: 1; margin-bottom:0%; }
+	}
+
+	@keyframes stroke5 {
+	  0%   { height: 20%; margin-top:-10%; }
+	  100% { height: 1; margin-top:0%; }
+	}
+
+	@keyframes stroke67 {
+	  0%   { height: 30%; margin-bottom:-40%; }
+	  100% { height: 1; margin-bottom:0%; }
+	}
+
+	@keyframes stroke8 {
+	  0%   { height: 10%; margin-bottom:-15%; }
+	  100% { height: 1; margin-bottom:-3%; }
+	}
+
+
+
 
 }
