@@ -2,9 +2,10 @@
 .landingpage{
 	background-image: linear-gradient(43deg, #FAF9F8 0%, #FFFFFF 100%);
 	min-height: 100vh;
-
 	display: flex;
 	align-items: center;
+	margin-top:-100px;
+
 
 }
 
@@ -41,7 +42,70 @@
 	justify-content: center;
 	position: relative;
 	width: 100vw;
+	
 	overflow: hidden;
+
+	.strokes-container{
+		height:100%;
+	  min-width: 230px;
+	  width:20%;
+  	position: relative;
+
+
+		.stroke{
+			position:absolute;
+  		background-color: white;
+  		width: 20px;
+  		height:100%;
+
+			&:nth-child(even) {
+	 bottom: 0;
+	 transform: translateY(50%);
+ }
+
+ &:nth-child(odd) {
+	 top: 0;
+	 transform: translateY(-50%);
+ }
+
+ &:nth-child(1){
+	 height:110px;
+
+ }
+	 &:nth-child(2){
+	 //align-self:flex-end;
+		height:90px;
+		left: 12.5%;
+ }
+	 &:nth-child(3){
+		height:60px;
+		left: 25%
+ }
+	 &:nth-child(4){
+		height:150px;
+		 left: 37.5%;
+ }
+		 &:nth-child(5){
+		 height:110px;
+		 left: 50%;
+ }
+		 &:nth-child(6){
+	height:30px;
+			 left: 62.5%;
+
+ }
+		 &:nth-child(7){
+	 height:180px;
+			 left: 75%;
+ }
+		 &:nth-child(8){
+	 height:50px;
+			 left: 87.5%;
+
+ }
+		}
+
+	}
 
 
 
@@ -125,13 +189,81 @@
 }
 
 .know-more-about{
-	height: 70vh;
+	height: 90vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+	width: 100vw;
+	border:1px solid red;
+
+
+	.logo-container{
+		height:100%;
+		//height: 22%;
+	  min-width: 230px;
+	  width:19%;
+  	position: relative;
+
+
+
+		.stroke{
+		position:absolute;
+
+
+
+
+			&:nth-child(even) {
+	bottom: 0;
+	 transform: translateY(150%);
+ }
+
+		 &:nth-child(odd) {
+			 top: 0;
+		 transform: translateY(-150%);
+		 }
+
+		 &:nth-child(1){
+			 left: 0;
+			 width: 31.8%;
+
+		 }
+			 &:nth-child(2){
+				left: 31.8%;
+				width: 19.7%;
+
+		 }
+			 &:nth-child(3){
+				left: 51.5%;
+				width: 13.7%;
+
+		 }
+			 &:nth-child(4){
+				 left: 65.3%;
+				 width: 21.9%;
+				 //top: -1%;
+		 }
+				 &:nth-child(5){
+				 right: 0;
+				 width: 12.7%;
+		 }
+
+				}
+
+			}
+
+h2{
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
 
 	a{
 		color: $red;
+	}
 	}
 
 }

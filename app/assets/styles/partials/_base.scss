@@ -168,14 +168,15 @@ small{
 		right: 0;
 		transform: rotate(90deg) translate(0, 100%);
 		transform-origin: right bottom;
+		transition: transform 0.4s cubic-bezier(0.705, 0.005, 0.790, 0.455);
 
 
 	li{
-
 		display: inline-block;
 
+
 	}
-	&::after{
+	&:after{
 		display: inline-block;
 		width: 130px;
 		height: 3px;
@@ -183,10 +184,23 @@ small{
 		content: "";
 		margin:0 0 3px 16px;
 
-	}
+
 	}
 
+
+	}
+
+	.label-guide-animation{
+		transform: rotate(90deg) translate(100%, 100%);
+		transition: transform 0.4s cubic-bezier(0.705, 0.005, 0.790, 0.455);
+	}
+
+
 }
+
+
+
+
 
 .section-title-underlay{
 	font-family: $titles-type;
@@ -204,6 +218,7 @@ small{
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%,-50%);
+		transition: all 0.5s ease-out;
 	}
 
  .movecontainer{
@@ -224,6 +239,8 @@ small{
 		display: none;
 	}
 
+/*
+
 	.bars-container{ //grande
 		display:flex;
 		flex-direction:row;
@@ -231,24 +248,28 @@ small{
 		height:40vh;
 		min-width: 230px;
 		width:100%;
-		visibility: visible;
+		transition: all 0.5s ease-out;
+
+
+
+	}
+
+
+
+		.bar {
+	  background-color: white;
+	  width: 20px;
+	  height:100%;
+	  margin-right:10px;
+	  transition: all 0.5s;
 		opacity: 1;
-		transition: opacity 0.5s ease-out;
-	}
 
-	.bar {
-  background-color: white;
-  width: 20px;
-  height:100%;
-  margin-right:10px;
-  transition: height 2s;
+		@mixin bar-animation{
+		animation-duration: 0.5s;
+		animation-iteration-count:1;
+		animation-timing-function: ease-out;
 
-	@mixin bar-animation{
-	animation-duration: 0.5s;
-	animation-iteration-count:1;
-	animation-timing-function: ease-out;
-
-	}
+		}
 
   &:nth-child(1){
     height:90%;
@@ -317,8 +338,8 @@ small{
 }
 
 	@keyframes stroke1 {
-	  0%   { height: 20%; margin-top:-5%; }
-	  100% { height: 1; margin-top:0; }
+	0%   { height: 20%; margin-top:-5%; }
+  100% { height: 1; margin-top:0; }
 	}
 
 	@keyframes stroke2 {
@@ -351,7 +372,7 @@ small{
 	  100% { height: 1; margin-bottom:-3%; }
 	}
 
-
+*/
 
 
 }

@@ -13,18 +13,21 @@
 
 header{
 
-	position: fixed;
+	//position: fixed;
+
 	height: 100px;
 	width: 100vw;
 	display: flex;
 	align-items: center;
 	z-index: 11;
 
+
 	.row{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-end;
+		position: relative;
 
 		h1{
 			all:unset;
@@ -37,6 +40,9 @@ header{
 		nav{
 			.menu-icon{
 				position: relative;
+				position: fixed;
+				transform: translate(-100%, -100%);
+
 				z-index: 99;
 				rect {
 				  fill: black;
