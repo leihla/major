@@ -17,6 +17,11 @@
 .about-landingpage{
 	background-image: linear-gradient(-136deg, #EE204C 0%, #F9204C 100%);
 	color: white;
+  height: 100vh;
+	min-height: 600px;
+  .row{
+    padding-right: 10%;
+  }
 }
 
 
@@ -42,6 +47,7 @@
 		max-width: 380px;
 		padding: 5%;
 		@include column(1/2);
+    background-color: $background-color;
 	}
 
 	.studio-photo2{
@@ -75,6 +81,7 @@
 				height: 45px;
 				position: absolute;
 				margin-top: 3rem;
+        min-width: 145px;
 
 				dl{
 					display: inline-block;
@@ -92,7 +99,7 @@
 			&:nth-child(4n-2),&:nth-child(4n-3){
 				.member-description{
 					text-align: right;
-					right: 250px;
+					//right: 250px;
 					&::after{
 						display: inline-block;
 						width: 2px;
@@ -116,7 +123,8 @@
 
 			&:nth-child(4n),&:nth-child(4n-1){
 				.member-description{
-					left: 250px;
+					//left: 250px;
+          right: 0;
 					&::before{
 						display: inline-block;
 						width: 2px;
@@ -163,8 +171,7 @@
 			figure{
 				background-color: white;
 				width: 100%;
-				min-height:444px;
-				height: 30vh;
+				height: 27rem;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -189,7 +196,7 @@
 
 .process{
 
-		padding-bottom: 10vh;
+
 
 			display: flex;
 			align-items: center;
@@ -204,7 +211,7 @@
 				img{
 					max-width: 535px;
 					width: 100%;
-					margin-top: -30px;
+					margin-top: -2rem;
 
 				}
 

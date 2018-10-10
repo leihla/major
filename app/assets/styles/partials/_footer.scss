@@ -15,15 +15,11 @@
 	.say-hi-contact{
 
 	h2{
-		padding-bottom: unset;
+		padding-bottom: 0.5rem;
 	}
 
 	a{
-	font-family: $titles-type;
 	color: white;
-	font-size: 3rem;
-	font-weight: 300;
-	line-height: 3.25rem;
 	}
 	}
 	.social{
@@ -41,7 +37,7 @@
 			flex-direction: row;
 			img{
 				width: 20px;
-				margin-right:30px;
+				margin-right:1rem;
 			}
 		}
 		p{
@@ -49,6 +45,9 @@
 			line-height: 0.87rem;
 			font-weight: 300;
 
+		}
+		a{
+			line-height: 0;
 		}
 	}
 }

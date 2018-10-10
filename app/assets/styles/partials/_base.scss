@@ -140,6 +140,14 @@ small{
 
 }
 
+a{
+font-family: $titles-type;
+color: $darkblue;
+font-size: 3rem;
+font-weight: 300;
+line-height: 3.25rem;
+}
+
 .lead {
 	font-size: 1.13rem;
 	line-height: 1.6rem;
@@ -169,6 +177,8 @@ small{
 		transform: rotate(90deg) translate(0, 100%);
 		transform-origin: right bottom;
 		transition: transform 0.4s cubic-bezier(0.705, 0.005, 0.790, 0.455);
+		min-width: 300px;
+		text-align: right;
 
 
 	li{
@@ -192,14 +202,12 @@ small{
 
 	.label-guide-animation{
 		transform: rotate(90deg) translate(100%, 100%);
-		transition: transform 0.4s cubic-bezier(0.705, 0.005, 0.790, 0.455);
+		transition: transform 0.4s cubic-bezier(0.705, 0.005, 0.790, 0.455), opacity 2s linear;
+		opacity: 0;
 	}
 
 
 }
-
-
-
 
 
 .section-title-underlay{
@@ -213,22 +221,24 @@ small{
 	transform: translate(-50%,-50%);
 	z-index: -1;
 
-	span{
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%,-50%);
-		transition: all 0.5s ease-out;
+	ul{
+		position: relative;
+			li{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				color: white;
+				opacity: 0;
+				transition: opacity 0.5s ease-out;
+			}
 	}
 
- .movecontainer{
-	animation: movecontainerframes 0.5s ease-out;
+ .fadetext{
+	transition: opacity 0.5s ease-out;
+	opacity: 1;
+
  }
-
-  @keyframes movecontainerframes{
-		0% {opacity:0; transform: translate(-50%, -40%);}
-		100% {opacity: 1; transform: translate(-50%, -50%)}
-	}
 
 
 	img{
@@ -239,140 +249,15 @@ small{
 		display: none;
 	}
 
-/*
-
-	.bars-container{ //grande
-		display:flex;
-		flex-direction:row;
-		justify-content:center;
-		height:40vh;
-		min-width: 230px;
-		width:100%;
-		transition: all 0.5s ease-out;
-
-
-
-	}
-
-
-
-		.bar {
-	  background-color: white;
-	  width: 20px;
-	  height:100%;
-	  margin-right:10px;
-	  transition: all 0.5s;
-		opacity: 1;
-
-		@mixin bar-animation{
-		animation-duration: 0.5s;
-		animation-iteration-count:1;
-		animation-timing-function: ease-out;
-
-		}
-
-  &:nth-child(1){
-    height:90%;
-    margin-top:0%;
-    align-self:flex-start;
-    animation-name: stroke1;
-		@include bar-animation;
-
-
-
-  }
-    &:nth-child(2){
-    height:80%;
-    margin-bottom:0%;
-    align-self:flex-end;
-		animation-name: stroke2;
-		@include bar-animation;
-
-  }
-    &:nth-child(3){
-    height:70%;
-    margin-top:3%;
-    align-self:flex-start;
-		animation-name: stroke3;
-		@include bar-animation;
-
-  }
-    &:nth-child(4){
-    height:85%;
-    margin-bottom:0%;
-    align-self:flex-end;
-		animation-name: stroke4;
-		@include bar-animation;
-
-  }
-    &:nth-child(5){
-    height:95%;
-    margin-top:0%;
-    align-self:flex-start;
-		animation-name: stroke5;
-		@include bar-animation;
-
-  }
-    &:nth-child(6){
-    height:80%;
-    align-self:center;
-		animation-name: stroke67;
-		@include bar-animation;
-
-  }
-    &:nth-child(7){
-    height:80%;
-  	align-self:center;
-		animation-name: stroke67;
-		@include bar-animation;
-  }
-    &:nth-child(8){
-    height:120%;
-    margin-bottom:-3%;
-    align-self:flex-end;
-		animation-name: stroke8;
-		@include bar-animation;
-
-  }
-
 }
 
-	@keyframes stroke1 {
-	0%   { height: 20%; margin-top:-5%; }
-  100% { height: 1; margin-top:0; }
-	}
+	//Move containers on scrollPos
+.animatecontainer{
+ transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+ transform: translateY(100px);
+ opacity: 0;
+}
 
-	@keyframes stroke2 {
-	  0%   { height: 10%; margin-bottom:-5%;}
-	  100% { height: 1; margin-bottom:0%; }
-	}
-
-	@keyframes stroke3 {
-	  0%   { height: 5%; margin-top:-2%; }
-	  100% { height: 1; margin-top:3%; }
-	}
-
-	@keyframes stroke4 {
-	  0%   { height: 40%; margin-bottom:-5%; }
-	  100% { height: 1; margin-bottom:0%; }
-	}
-
-	@keyframes stroke5 {
-	  0%   { height: 20%; margin-top:-10%; }
-	  100% { height: 1; margin-top:0%; }
-	}
-
-	@keyframes stroke67 {
-	  0%   { height: 30%; margin-bottom:-40%; }
-	  100% { height: 1; margin-bottom:0%; }
-	}
-
-	@keyframes stroke8 {
-	  0%   { height: 10%; margin-bottom:-15%; }
-	  100% { height: 1; margin-bottom:-3%; }
-	}
-
-*/
-
-
+.wecanhelptext h1, .wecanhelptext p {
+	transition: transform 0.4s ease-out, opacity 0.4s ease-out;
 }

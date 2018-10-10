@@ -1,0 +1,334 @@
+
+
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1200px) {
+
+.services ul li figure{
+  //min-height: 400px;
+}
+
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 992px) {
+
+.mobile-break{
+  display: block;
+
+  }
+
+.services ul li figure{
+  height: 20rem;
+}
+
+
+
+
+ }
+
+ @media (max-width: 920px) {
+
+   .wecanhelp .redblock{
+    min-height:600px;
+   }
+
+.projects article{
+  flex-direction: column-reverse;
+
+  .card-shot, .card-resume{
+    margin: 0;
+    width: 60%;
+    max-width: none;
+  }
+
+  .card-resume{
+    padding-bottom: 4rem;
+  }
+}
+
+.projects li:nth-child(even){
+  article{
+    flex-direction: column-reverse;
+    .card-shot{
+      margin: 0;
+    }
+    .card-resume{
+      margin: 0;
+    }
+  }
+}
+
+.services ul li figure{
+  height: 18rem;
+}
+
+
+
+.about-the-studio{
+  padding-bottom: 20vh;
+
+  .row{
+    width: 100%;
+
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    .about-text{
+      margin: 0 0 0 10%;
+      width: 90%;
+      max-width: none;
+      padding: 15% 0% 10% 5%;
+
+    }
+
+    .studio-photo1{
+      width: 60%;
+      align-self: flex-end;
+      margin: 0 10% 0 0;
+    }
+  }
+
+  .studio-photo2{
+ display: none;
+  }
+
+  .about-text{
+    // width: 50%;
+    // position: absolute;
+    // left: 70%;
+    // transform: translate(-60%, 50%);
+  }
+}
+
+.clients{
+  .row{
+    flex-direction: column;
+    .clients-text{
+      width: 100%;
+      margin: 0;
+      max-width: none;
+    }
+
+    .clients-logos{
+      li:nth-child(1), li:nth-child(2), li:nth-child(3){
+          margin:0 0 0 2rem;
+
+        }
+
+         li:nth-child(2), li:nth-child(3){
+
+           img:last-child{
+              margin-top: 2rem;
+           }
+
+         }
+
+      li:last-child{
+        margin-left: 0;
+      }
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-top: 4rem;
+
+
+    }
+  }
+}
+
+
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 800px) {
+
+  .wecanhelp .row{
+    width: 100%;
+    flex-direction: row-reverse;
+
+    .redblock{
+      display: none;
+    }
+
+    .wecanhelptext{
+      min-height: 500px;
+      color: white;
+      background-color: $red;
+      max-width: none;
+      height: 60vh;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5% 18% 5% 10%;
+
+    }
+  }
+
+
+  .services ul{
+    flex-wrap: wrap;
+
+    li{
+      width: 48%;
+      margin-bottom: 4rem;
+      + li {margin-left: 0;}
+      figure{
+        height: 27rem;
+        margin-bottom: 1rem;
+        img{
+          width: 40%;
+        }
+      }
+    }
+  }
+
+
+
+
+//reset styles
+  .team ul li:nth-child(4n-2) .member-description::after, .team ul li:nth-child(4n-3) .member-description::after{
+    display: none;
+  }
+
+  .team ul li:nth-child(4n) .member-description::before, .team ul li:nth-child(4n-1) .member-description::before{
+    display: none;
+  }
+
+  .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
+    right: auto;
+  }
+
+  .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img{
+    float: none;
+  }
+
+  .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
+    float: none;
+  }
+//end reset Styles
+
+.team .team-text{
+  width: inherit;
+}
+  .team ul li{
+    float: none;
+    width: 100%;
+
+    &:nth-child(odd){
+      .member-description{
+        text-align: right;
+        z-index: 10;
+        &::after{
+          display: inline-block;
+          width: 2px;
+          height: 100%;
+          background-color: $darkblue;
+          content: "";
+          margin-left:16px;
+        }
+      }
+
+      figure{
+        text-align: center;
+      //  transform: translateX(30%);
+      }
+    }
+
+    &:nth-child(even){
+
+      .member-description{
+        text-align: left;
+        right: 0;
+        z-index: 10;
+
+        &::before{
+          display: inline-block;
+          width: 2px;
+          height: 100%;
+          background-color: $darkblue;
+          content: "";
+          margin-right:16px;
+        }
+      }
+
+      figure{
+        text-align: center;
+      //  transform: translateX(-30%);
+      }
+    }
+
+  }
+
+  .process{
+    flex-direction: column-reverse;
+
+    figure{
+      width: 80%;
+      margin: 4rem 0 0 0;
+    }
+
+    .process-text{
+      width: 80%;
+      padding: 0;
+      max-width: none;
+      margin-left: 10%;
+    }
+  }
+
+  .section-title-underlay{
+    font-size: 11rem;
+  }
+
+
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+
+  h1{
+    	font-size: 2.7rem;
+    	line-height: 3rem;
+      padding-bottom: 1rem;
+    }
+
+  h2{
+  	font-size: 2.2rem;
+  	line-height: 2.4rem;
+    padding-bottom: 1.2rem;
+  }
+
+  a{
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
+
+
+  .section-title-underlay{
+    font-size: 7rem;
+  }
+
+
+  .projects article{
+    .card-shot, .card-resume{
+      width: 80%;
+    }
+  }
+
+  .clients .row .clients-logos li:nth-child(1), .clients .row .clients-logos li:nth-child(2), .clients .row .clients-logos li:nth-child(3){
+        margin: 0 0 0 1rem;
+  }
+
+  .clients .row .clients-logos li:nth-child(2) img:last-child, .clients .row .clients-logos li:nth-child(3) img:last-child{
+    margin-top: 1rem;
+  }
+
+  #page-footer .social{
+    flex-direction: column;
+    align-items: flex-start;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+}
