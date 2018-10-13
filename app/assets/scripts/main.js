@@ -1,6 +1,8 @@
 'use strict';
 //require('./config')
 
+require('./jquery.waypoints.min')
+
 //Open and Close menu
 $(document).ready(function () {
   $(".menu-icon").click(function () {
@@ -8,7 +10,29 @@ $(document).ready(function () {
     $(".overlay-menu").removeClass('no-animation');
     $(".overlay-menu").toggleClass('visible');
     $(".overlay-menu").toggleClass('closemenu', 1);
+    $('body').toggleClass('lock-scrol');
+
+    setTimeout(function() {
+      $(".overlay-menu li:nth-child(1) a").toggleClass('animatecontainer');
+      $(".overlay-menu li:nth-child(1) a").toggleClass('animacao');
+      $(".overlay-menu li:nth-child(1) a").toggleClass('animacao2');
+
+      setTimeout(function() {
+        $(".overlay-menu li:nth-child(2) a").toggleClass('animatecontainer');
+        $(".overlay-menu li:nth-child(2) a").toggleClass('animacao');
+        $(".overlay-menu li:nth-child(2) a").toggleClass('animacao2');
+
+          setTimeout(function() {
+            $(".overlay-menu li:nth-child(3) a").toggleClass('animatecontainer');
+            $(".overlay-menu li:nth-child(3) a").toggleClass('animacao');
+            $(".overlay-menu li:nth-child(3) a").toggleClass('animacao2');
+
+          }, 300);
+      }, 300);
+    }, 500);
+
   });
+
 
 
   // Variables for strokes animation
@@ -30,9 +54,96 @@ $(document).ready(function () {
     var percentage = (((b - a) / c) * 100);
     var strokeopacity = (percentage / 25) - ((percentage * percentage) / 2500);
     var strokescale = (2 * percentage / 25) - ((percentage * percentage) / 1250);
-
     return {percentage, strokeopacity, strokescale};
   }
+
+  //Animate containers when scroll first time
+    //Landing page
+    const $homelandh1 = $('.landingpage h1');
+    const $homelandp = $('.landingpage p');
+    const $redblock = $('.wecanhelp .redblock');
+    const $labelguide = $('.label-guide ul');
+    $homelandh1.waypoint(function(direction){
+    if (direction == 'down'){
+    $homelandh1.removeClass('animatecontainer');
+    $redblock.removeClass('animatecontainer');
+    $homelandh1.addClass('animacao');
+    $labelguide.removeClass('label-guide-animation');
+    setTimeout(function() {
+      $homelandp.removeClass('animatecontainer');
+      $homelandp.addClass('animacao');
+  }, 200);
+    }
+  }, {offset: '60%'});
+
+    //wecan help
+    const $wecanhelp = $('.wecanhelptext h1');
+    const $wecanhelpp = $('.wecanhelptext p');
+    $wecanhelp.waypoint(function(direction){
+    if (direction == 'down'){
+    $wecanhelp.removeClass('animatecontainer')
+    $wecanhelp.addClass('animacao')
+    setTimeout(function() {
+      $wecanhelpp.removeClass('animatecontainer');
+      $wecanhelpp.addClass('animacao');
+  }, 200);
+    }
+  }, {offset: '60%'});
+
+
+    //internet statment
+    const $internet = $('.internet-statement h1');
+    $internet.waypoint(function(direction){
+    if (direction == 'down'){
+    $internet.removeClass('animatecontainer');
+    $internet.addClass('animacao')
+    }
+  }, {offset: '60%'});
+
+    const $project = $('.projects li:nth-child(1)');
+    const $projectname = $('.projects li:nth-child(1) article .card-resume .card-name');
+    const $projectstatement = $('.projects li:nth-child(1) article .card-resume h2');
+    const $projectdescription = $('.projects li:nth-child(1) article .card-resume .description');
+    const $projectdetail = $('.projects li:nth-child(1) article .card-resume .small');
+    const $projectimg = $('.projects li:nth-child(1) article .card-shot');
+    $project.waypoint(function(direction){
+    if (direction == 'down'){
+    $projectname.removeClass('animatecontainer')
+    $projectname.addClass('animacao');
+    setTimeout(function() {$projectstatement.removeClass('animatecontainer');$projectstatement.addClass('animacao');
+      setTimeout(function() {$projectdescription.removeClass('animatecontainer');$projectdescription.addClass('animacao');
+          setTimeout(function() {$projectdetail.removeClass('animatecontainer');$projectdetail.addClass('animacao');
+              setTimeout(function() {$projectimg.removeClass('animatecontainer');$projectimg.addClass('animacao');
+            }, 100);
+        }, 100);
+    }, 100);
+  }, 100);
+    }
+  }, {offset: '60%'});
+
+
+    const $project2 = $('.projects li:nth-child(2)');
+    const $projectname2 = $('.projects li:nth-child(2) article .card-resume .card-name');
+    const $projectstatement2 = $('.projects li:nth-child(2) article .card-resume h2');
+    const $projectdescription2 = $('.projects li:nth-child(2) article .card-resume .description');
+    const $projectdetail2 = $('.projects li:nth-child(2) article .card-resume .small');
+    const $projectimg2 = $('.projects li:nth-child(2) article .card-shot');
+    $project2.waypoint(function(direction){
+    if (direction == 'down'){
+    $projectname2.removeClass('animatecontainer');
+    $projectname2.addClass('animacao');
+    setTimeout(function() {$projectstatement2.removeClass('animatecontainer');$projectstatement2.addClass('animacao');
+      setTimeout(function() {$projectdescription2.removeClass('animatecontainer');$projectdescription2.addClass('animacao');
+          setTimeout(function() {$projectdetail2.removeClass('animatecontainer');$projectdetail2.addClass('animacao');
+              setTimeout(function() {$projectimg2.removeClass('animatecontainer');$projectimg2.addClass('animacao');
+            }, 100);
+        }, 100);
+    }, 100);
+  }, 100);
+    }
+  }, {offset: '60%'});
+
+
 
   //Change section title on scroll
   $(document).scroll(function () {
@@ -64,42 +175,6 @@ $(document).ready(function () {
         $('.section-title-underlay span').removeClass('movecontainer');
         $('.section-title-underlay span').text('');
       }
-
-      // if (scrollPos >= knowmoreabout ) {
-      //   body.css('transition', 'all 0.5s')
-      //   body.addClass('know-more-about-red');
-      // }
-      //
-      // else{
-      //   body.removeClass('know-more-about-red');
-      // }
-      //movecontainerframes
-
-
-
-       var animatecontainer=($('.wecanhelptext').offset().top)-compensation;
-       if (scrollPos >= animatecontainer ) {
-
-
-       }
-
-      var container=$('.wecanhelptext');
-      var containerchild=$('.wecanhelptext>*');
-      var numofchild=$('.wecanhelptext >*').length;
-
-      var i = 0;
-      movecontainer();
-
-      function movecontainer() {
-
-          if (i < numofchild) {
-            $(containerchild[i]).removeClass('animatecontainer');
-            i++;
-            setTimeout(movecontainer, 200);
-          }
-      }
-
-
 
 
       // Strokes animation

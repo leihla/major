@@ -4,10 +4,6 @@
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1200px) {
 
-.services ul li figure{
-  //min-height: 400px;
-}
-
  }
 
 // Medium devices (tablets, less than 992px)
@@ -17,12 +13,6 @@
   display: block;
 
   }
-
-.services ul li figure{
-  height: 20rem;
-}
-
-
 
 
  }
@@ -58,11 +48,6 @@
     }
   }
 }
-
-.services ul li figure{
-  height: 18rem;
-}
-
 
 
 .about-the-studio{
@@ -173,13 +158,7 @@
       width: 48%;
       margin-bottom: 4rem;
       + li {margin-left: 0;}
-      figure{
-        height: 27rem;
-        margin-bottom: 1rem;
-        img{
-          width: 40%;
-        }
-      }
+
     }
   }
 

@@ -100,6 +100,10 @@ body {
 	line-height: 1.4rem;
 }
 
+.lock-scrol{
+	overflow:hidden;
+}
+
 h1 {
 	font-family: $titles-type;
 	font-size: 4.5rem;
@@ -168,6 +172,8 @@ line-height: 3.25rem;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 9;
+	transition: transform 0.4s cubic-bezier(0.705, 0.005, 0.790, 0.455);
+
 
 
 	ul{
@@ -202,10 +208,9 @@ line-height: 3.25rem;
 
 	.label-guide-animation{
 		transform: rotate(90deg) translate(100%, 100%);
-		transition: transform 0.4s cubic-bezier(0.705, 0.005, 0.790, 0.455), height 2s linear;
-		height: 0;
-
+		transition: transform 0.4s cubic-bezier(0.705, 0.005, 0.790, 0.455);
 	}
+
 
 
 }
@@ -254,11 +259,77 @@ line-height: 3.25rem;
 
 	//Move containers on scrollPos
 .animatecontainer{
- transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+ transition: transform 800ms cubic-bezier(0.035, 0.655, 0.240, 0.965), opacity 1s;
  transform: translateY(100px);
  opacity: 0;
 }
 
-.wecanhelptext h1, .wecanhelptext p {
-	transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+.landingpage h1,
+.landingpage p,
+.wecanhelp .redblock,
+.wecanhelptext h1,
+.wecanhelptext p,
+.internet-statement h1,
+.projects article .card-resume .card-name,
+.projects article .card-resume h2,
+.projects article .card-resume .description,
+.projects article .card-resume .small,
+.projects article .card-shot,
+.about-landingpage h1,
+.about-the-studio h1,
+.about-the-studio p,
+.about-the-studio .row .studio-photo1 img,
+.about-the-studio .row .studio-photo2 img,
+.team .team-text h1,
+.team .team-text p,
+.team ul .member-description,
+.team ul figure,
+.services h1,
+.services figure,
+.services dl,
+.process figure,
+.process .process-text h1,
+.process .process-text p,
+.clients .clients-text h1,
+.clients .clients-text p,
+.clients .clients-logos
+{
+	transition: transform 800ms cubic-bezier(0.035, 0.655, 0.240, 0.965), opacity 1s;
+}
+
+.animacao{
+	position: relative;
+	animation: animee 0.4s normal ease-in-out ;
+	display: inline-block;
+
+	 &:after{
+	 content:"";
+	 position:absolute;
+	 top:0;
+	 left:0;
+	 width:100%;
+	 height:100%;
+	 background-color:$yellow;
+	 animation: animee2 0.4s normal 0.4s ease-in-out forwards;
+
+ }
+}
+
+.animacao2::after{
+	background-color:$red;
+}
+
+
+@keyframes animee{
+  0%{transform: scaleX(0);
+  transform-origin: 0% 0% 0px;}
+  100%{transform: scaleX(1);
+  transform-origin: 0% 0% 0px;}
+}
+
+@keyframes animee2{
+  0%{transform: scaleX(1);
+  transform-origin: 100% 0% 0px;}
+  100%{transform: scaleX(0);
+  transform-origin: 100% 0% 0px;}
 }
