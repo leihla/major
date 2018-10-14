@@ -62,7 +62,7 @@
       margin: 0 0 0 10%;
       width: 90%;
       max-width: none;
-      padding: 15% 0% 10% 5%;
+      padding: 15% 10% 10% 5%;
 
     }
 
@@ -188,6 +188,10 @@
     float: none;
     width: 100%;
 
+    figure{
+      overflow: hidden;
+    }
+
     &:nth-child(odd){
       .member-description{
         text-align: right;
@@ -200,7 +204,9 @@
 
       figure{
         text-align: center;
-      //  transform: translateX(30%);
+        img{margin-left:(30%);
+        }
+
       }
     }
 
@@ -218,7 +224,10 @@
 
       figure{
         text-align: center;
-      //  transform: translateX(-30%);
+        img{
+            margin-left:(-30%);
+        }
+
       }
     }
 
@@ -272,10 +281,15 @@
     font-size: 7rem;
   }
 
+.overlay-menu .menu a{
+  font-size: 2.7rem;
+  line-height: 3rem;
+}
 
   .projects article{
     .card-shot, .card-resume{
       width: 80%;
+      padding-bottom: 2rem;
     }
   }
 

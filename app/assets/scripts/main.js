@@ -113,11 +113,11 @@ $(document).ready(function () {
     $project.waypoint(function(direction){
     if (direction == 'down'){
     $projectname.removeClass('animatecontainer')
-    //$projectname.addClass('animacao');
-    setTimeout(function() {$projectstatement.removeClass('animatecontainer');//$projectstatement.addClass('animacao');
-      setTimeout(function() {$projectdescription.removeClass('animatecontainer');//$projectdescription.addClass('animacao');
-          setTimeout(function() {$projectdetail.removeClass('animatecontainer');//$projectdetail.addClass('animacao');
-              setTimeout(function() {$projectimg.removeClass('animatecontainer');$projectimg.addClass('animacao');
+    $projectname.addClass('animacao');
+    setTimeout(function() {$projectstatement.removeClass('animatecontainer');$projectstatement.addClass('animacao');
+      setTimeout(function() {$projectdescription.removeClass('animatecontainer');$projectdescription.addClass('animacao');
+          setTimeout(function() {$projectdetail.removeClass('animatecontainer');$projectdetail.addClass('animacao');
+              setTimeout(function() {$projectimg.removeClass('animatecontainer');//$projectimg.addClass('animacao');
             }, 100);
         }, 100);
     }, 100);
@@ -152,14 +152,14 @@ $(document).ready(function () {
 const $studiophoto1 = $('.about-the-studio .row .studio-photo1');
 const $abouttitle = $('.about-the-studio .about-text h1');
 const $abouttdescription = $('.about-the-studio .about-text p');
-const $studiophoto2 = $('.about-the-studio .studio-photo2');
+const $studiophoto2 = $('.about-the-studio .row .studio-photo2');
 $studiophoto1.waypoint(function(direction){
 if (direction == 'down'){
 $abouttitle.removeClass('animatecontainer');
 $abouttitle.addClass('animacao')
 setTimeout(function() {$abouttdescription.removeClass('animatecontainer'); $abouttdescription.addClass('animacao');
-  setTimeout(function() {$studiophoto1.removeClass('animatecontainer'); $studiophoto1.addClass('animacao');
-    setTimeout(function() {$studiophoto2.removeClass('animatecontainer'); $studiophoto2.addClass('animacao');
+  setTimeout(function() {$studiophoto1.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
+    setTimeout(function() {$studiophoto2.removeClass('animatecontainer'); //$studiophoto2.addClass('animacao');
   }, 200);
 }, 200);
 }, 200);
@@ -192,7 +192,7 @@ setTimeout(function() {$teamdescription.removeClass('animatecontainer'); $teamde
             setTimeout(function() {$teammembdesc4.removeClass('animatecontainer');$teammembdesc4.addClass('animacao');
               setTimeout(function() {$teammembfoto4.removeClass('animatecontainer');
 
-    }, 200);
+    }, 100);
 
   }, 200);
 
@@ -208,6 +208,59 @@ setTimeout(function() {$teamdescription.removeClass('animatecontainer'); $teamde
 }, {offset: '60%'});
 
 
+//services
+const $servicestitle = $('.services h1');
+const $servicesresearch = $('.services li:nth-child(1)');
+const $servicesux =  $('.services li:nth-child(2)');
+const $servicesui =  $('.services li:nth-child(3)');
+const $servicesfe =  $('.services li:nth-child(4)');
+$servicestitle.waypoint(function(direction){
+if (direction == 'down'){
+$servicestitle.removeClass('animatecontainer');
+$servicestitle.addClass('animacao')
+setTimeout(function() {$servicesresearch.removeClass('animatecontainer'); //$abouttdescription.addClass('animacao');
+  setTimeout(function() {$servicesux.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
+    setTimeout(function() {$servicesui.removeClass('animatecontainer'); //$studiophoto2.addClass('animacao');
+      setTimeout(function() {$servicesfe.removeClass('animatecontainer'); //$studiophoto2.addClass('animacao');
+  }, 200);
+  }, 200);
+}, 200);
+}, 200);
+}
+}, {offset: '60%'});
+
+//process
+const $processtitle = $('.process h1');
+const $processdesc = $('.process p');
+const $processfigure =  $('.process figure');
+$processtitle.waypoint(function(direction){
+if (direction == 'down'){
+$processtitle.removeClass('animatecontainer');
+$processtitle.addClass('animacao')
+setTimeout(function() {$processdesc.removeClass('animatecontainer'); $processdesc.addClass('animacao');
+  setTimeout(function() {$processfigure.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
+
+}, 200);
+}, 200);
+}
+}, {offset: '60%'});
+
+
+//clients
+const $clientstitle = $('.clients h1');
+const clientsdesc = $('.clients p');
+const $clientslogos =  $('.clients ul');
+$clientstitle.waypoint(function(direction){
+if (direction == 'down'){
+$clientstitle.removeClass('animatecontainer');
+$clientstitle.addClass('animacao')
+setTimeout(function() {clientsdesc.removeClass('animatecontainer'); clientsdesc.addClass('animacao');
+  setTimeout(function() {$clientslogos.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
+
+}, 200);
+}, 200);
+}
+}, {offset: '60%'});
 
 
   //END -----   Animate containers when scroll first time

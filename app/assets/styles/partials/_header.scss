@@ -32,7 +32,7 @@ header{
 		h1{
 			all:unset;
 			display: inline-flex;
-			z-index: 99;
+			//z-index: 99;
 			a{
 			display: inline-flex;
 			}
@@ -119,6 +119,22 @@ header{
 	animation: closemenu 1s;
 	z-index: 10;
 
+	svg{
+		height: 48px;
+		path{
+			fill:$red;
+		}
+	}
+
+.row{
+	height:100px;
+	display: flex;
+	align-items: center;
+	z-index: 10;
+	position: absolute;
+	left: 10%;
+
+}
 
 	.menu{
 		margin-left: auto;
