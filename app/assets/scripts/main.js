@@ -38,6 +38,9 @@ $(document).ready(function () {
   // Variables for strokes animation
   var $evenStripe = $('.stroke:nth-child(even)');
   var $oddStripe = $('.stroke:nth-child(odd)');
+  var $evenLogo=$('.know-more-about .logo-container .logo:nth-child(even)');
+  var $oddLogo=$('.know-more-about .logo-container .logo:nth-child(odd)');
+  var $logo = $('.logo');
   var $strokes = $('.stroke');
   var compensation = $(window).height() / 2;
 
@@ -46,16 +49,16 @@ $(document).ready(function () {
   function calcAnimationValues (section) {
     //Variables for strokes animation
     var a = ($(section).offset().top) - compensation;
-    //var a = ($('.know-more-about').offset().top) - compensation;
     var b = $(document).scrollTop();
     var c = $(section).height();
 
-
-    var percentage = (((b - a) / c) * 100);
+    var percentage = parseInt((((b - a) / c) * 100));
     var strokeopacity = (percentage / 25) - ((percentage * percentage) / 2500);
     var strokescale = (2 * percentage / 25) - ((percentage * percentage) / 1250);
     return {percentage, strokeopacity, strokescale};
   }
+
+
 
   //Animate containers when scroll first time
     //Landing page
@@ -100,6 +103,7 @@ $(document).ready(function () {
     }
   }, {offset: '60%'});
 
+  //Project 1
     const $project = $('.projects li:nth-child(1)');
     const $projectname = $('.projects li:nth-child(1) article .card-resume .card-name');
     const $projectstatement = $('.projects li:nth-child(1) article .card-resume h2');
@@ -109,10 +113,10 @@ $(document).ready(function () {
     $project.waypoint(function(direction){
     if (direction == 'down'){
     $projectname.removeClass('animatecontainer')
-    $projectname.addClass('animacao');
-    setTimeout(function() {$projectstatement.removeClass('animatecontainer');$projectstatement.addClass('animacao');
-      setTimeout(function() {$projectdescription.removeClass('animatecontainer');$projectdescription.addClass('animacao');
-          setTimeout(function() {$projectdetail.removeClass('animatecontainer');$projectdetail.addClass('animacao');
+    //$projectname.addClass('animacao');
+    setTimeout(function() {$projectstatement.removeClass('animatecontainer');//$projectstatement.addClass('animacao');
+      setTimeout(function() {$projectdescription.removeClass('animatecontainer');//$projectdescription.addClass('animacao');
+          setTimeout(function() {$projectdetail.removeClass('animatecontainer');//$projectdetail.addClass('animacao');
               setTimeout(function() {$projectimg.removeClass('animatecontainer');$projectimg.addClass('animacao');
             }, 100);
         }, 100);
@@ -121,7 +125,7 @@ $(document).ready(function () {
     }
   }, {offset: '60%'});
 
-
+  //Project 2
     const $project2 = $('.projects li:nth-child(2)');
     const $projectname2 = $('.projects li:nth-child(2) article .card-resume .card-name');
     const $projectstatement2 = $('.projects li:nth-child(2) article .card-resume h2');
@@ -143,7 +147,70 @@ $(document).ready(function () {
     }
   }, {offset: '60%'});
 
+//About the major_studio
 
+const $studiophoto1 = $('.about-the-studio .row .studio-photo1');
+const $abouttitle = $('.about-the-studio .about-text h1');
+const $abouttdescription = $('.about-the-studio .about-text p');
+const $studiophoto2 = $('.about-the-studio .studio-photo2');
+$studiophoto1.waypoint(function(direction){
+if (direction == 'down'){
+$abouttitle.removeClass('animatecontainer');
+$abouttitle.addClass('animacao')
+setTimeout(function() {$abouttdescription.removeClass('animatecontainer'); $abouttdescription.addClass('animacao');
+  setTimeout(function() {$studiophoto1.removeClass('animatecontainer'); $studiophoto1.addClass('animacao');
+    setTimeout(function() {$studiophoto2.removeClass('animatecontainer'); $studiophoto2.addClass('animacao');
+  }, 200);
+}, 200);
+}, 200);
+}
+}, {offset: '60%'});
+
+//Team
+const $teamtitle = $('.team h1');
+const $teamdescription = $('.team p');
+const $teammembdesc1  = $('.team li:nth-child(1) .member-description');
+const $teammembfoto1  = $('.team li:nth-child(1) figure');
+const $teammembdesc2  = $('.team li:nth-child(2) .member-description');
+const $teammembfoto2  = $('.team li:nth-child(2) figure');
+const $teammembdesc3  = $('.team li:nth-child(3) .member-description');
+const $teammembfoto3  = $('.team li:nth-child(3) figure');
+const $teammembdesc4  = $('.team li:nth-child(4) .member-description');
+const $teammembfoto4  = $('.team li:nth-child(4) figure');
+
+$teamtitle.waypoint(function(direction){
+if (direction == 'down'){
+$teamtitle.removeClass('animatecontainer');
+$teamtitle.addClass('animacao')
+setTimeout(function() {$teamdescription.removeClass('animatecontainer'); $teamdescription.addClass('animacao');
+  setTimeout(function() {$teammembdesc1.removeClass('animatecontainer'); $teammembdesc1.addClass('animacao');
+    setTimeout(function() {$teammembfoto1.removeClass('animatecontainer');
+      setTimeout(function() {$teammembdesc2.removeClass('animatecontainer');$teammembdesc2.addClass('animacao');
+        setTimeout(function() {$teammembfoto2.removeClass('animatecontainer');
+        setTimeout(function() {$teammembdesc3.removeClass('animatecontainer');$teammembdesc3.addClass('animacao');
+          setTimeout(function() {$teammembfoto3.removeClass('animatecontainer');
+            setTimeout(function() {$teammembdesc4.removeClass('animatecontainer');$teammembdesc4.addClass('animacao');
+              setTimeout(function() {$teammembfoto4.removeClass('animatecontainer');
+
+    }, 200);
+
+  }, 200);
+
+  }, 200);
+
+  }, 200);
+  }, 200);
+  }, 200);
+  }, 200);
+}, 200);
+}, 200);
+}
+}, {offset: '60%'});
+
+
+
+
+  //END -----   Animate containers when scroll first time
 
   //Change section title on scroll
   $(document).scroll(function () {
@@ -160,7 +227,7 @@ $(document).ready(function () {
       //Homepage
       var landingpage = ($('.landingpage').offset().top);
       var statement = ($('.internet-statement').offset().top) - (compensation / 2);
-      var projects = ($('.projects').offset().top) - compensation;
+      var projects = ($('.projects').offset().top) - compensation*1.5;
       var knowmore = ($('.know-more-about').offset().top) - compensation;
       var landingpage = ($('.landingpage').offset().top);
       var knowmoreabout= ($('.know-more-about').offset().top);
@@ -169,15 +236,16 @@ $(document).ready(function () {
 
       // Apply text changes
       if (scrollPos >= projects && scrollPos < knowmore) {
-        $('.section-title-underlay span').addClass('movecontainer');
-        $('.section-title-underlay span').text('Work');
+        $('.section-title-underlay span').addClass('fadetext');
+
       } else {
-        $('.section-title-underlay span').removeClass('movecontainer');
-        $('.section-title-underlay span').text('');
+        $('.section-title-underlay span').removeClass('fadetext');
+        //$('.section-title-underlay span').text('');
       }
 
 
-      // Strokes animation
+
+      // Strokes animation - we know the internet
       if (scrollPos >= landingpage && scrollPos < projects+compensation) {
         let {percentage, strokeopacity, strokescale} = calcAnimationValues('.internet-statement');
         if (percentage >= 0 && percentage <= 100) {
@@ -194,23 +262,26 @@ $(document).ready(function () {
           $evenStripe.css('visibility', 'hidden');
           $oddStripe.css('visibility', 'hidden');
         }
+      // Strokes animation - major logo
       } else if (scrollPos >= projects+compensation){
         let {percentage, strokeopacity, strokescale} = calcAnimationValues('.know-more-about');
-        if (percentage >= 0 && percentage <= 100) {
-          $evenStripe.css('visibility', 'visible');
-          $evenStripe.css('bottom', percentage * 1.5 + '%');
-          $evenStripe.css('transform', 'scaleY(' + 1 + ')');
+        if (percentage >= 0 && percentage <= 50) {
+          console.log(percentage);
+          // $oddLogo.css('visibility', 'visible');
+           $('.know-more-about .logo:nth-child(1)').css('top', ((0.02020)*(percentage*percentage) - 0.5051) + '%');
+           $('.know-more-about .logo:nth-child(3)').css('top', ((0.03125)*(percentage*percentage)-(0.625*percentage)+3.125) + '%');
+           $('.know-more-about .logo:nth-child(5)').css('top', ((0.008929)*(percentage*percentage)+(0.4464*percentage)+5.357) + '%');
+           $('.know-more-about .logo:nth-child(2)').css('bottom', ((0.008929)*(percentage*percentage)+(0.4464*percentage)+5.357) + '%');
+           $('.know-more-about .logo:nth-child(4)').css('bottom', ((1/50)*(percentage*percentage)) + '%');
 
-          $oddStripe.css('visibility', 'visible');
-          $oddStripe.css('top', percentage * 1.5 + '%');
-          $oddStripe.css('transform', 'scaleY(' + 1 + ')');
-
-          $strokes.css('opacity', strokeopacity);
-
+           // $evenLogo.css('visibility', 'visible');
+          //$evenLogo.css('bottom', ((1/50)*(percentage*percentage)) + '%');
+        //$('.logo-container').css('width', 0.5*percentage + '%');
+           $logo.css('opacity', strokeopacity);
 
         } else {
-          $evenStripe.css('visibility', 'hidden');
-          $oddStripe.css('visibility', 'hidden');
+          //$evenStripe.css('visibility', 'hidden');
+          //$oddStripe.css('visibility', 'hidden');
         }
       }
     }
@@ -242,11 +313,6 @@ $(document).ready(function () {
       }
 
     }
-
-
-
-
-
 
 
     //Apply label guide disappear

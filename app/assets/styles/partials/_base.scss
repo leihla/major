@@ -255,6 +255,11 @@ line-height: 3.25rem;
 		display: none;
 	}
 
+	span{
+		opacity: 0;
+		transition: opacity 0.5s ease-out;
+	}
+
 }
 
 	//Move containers on scrollPos
@@ -317,6 +322,7 @@ line-height: 3.25rem;
 
 .animacao2::after{
 	background-color:$red;
+
 }
 
 

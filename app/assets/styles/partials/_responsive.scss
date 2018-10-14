@@ -166,13 +166,7 @@
 
 
 //reset styles
-  .team ul li:nth-child(4n-2) .member-description::after, .team ul li:nth-child(4n-3) .member-description::after{
-    display: none;
-  }
 
-  .team ul li:nth-child(4n) .member-description::before, .team ul li:nth-child(4n-1) .member-description::before{
-    display: none;
-  }
 
   .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
     right: auto;
@@ -198,15 +192,10 @@
       .member-description{
         text-align: right;
         z-index: 10;
-        &::after{
-          display: inline-block;
-          width: 2px;
-          height: 100%;
-          background-color: $darkblue;
-          content: "";
-          margin-left:16px;
-          transform: translateY(4px);
-        }
+        border-right: 2px solid $darkblue;
+        padding-right: 12px;
+        border-left: none;
+        padding-left: none;
       }
 
       figure{
@@ -221,16 +210,10 @@
         text-align: left;
         right: 0;
         z-index: 10;
-
-        &::before{
-          display: inline-block;
-          width: 2px;
-          height: 100%;
-          background-color: $darkblue;
-          content: "";
-          margin-right:16px;
-          transform: translateY(4px);
-        }
+        border-left: 2px solid $darkblue;
+        padding-left: 12px;
+        border-right: none;
+        padding-right: none;
       }
 
       figure{

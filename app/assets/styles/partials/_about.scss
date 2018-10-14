@@ -37,7 +37,8 @@
 		}
 
 	.studio-photo1{
-		@include column(1/2);
+		//@include column(1/2);
+    width: 50%;
 
 		img{
 			width: 100%;
@@ -52,11 +53,12 @@
 
 	.studio-photo2{
 		margin-top: -40px;
+    width: 100%;
 		img{
 			width: 60%;
 			float: right;
 		}
-		@include clearfix;
+	//	@include clearfix;
 	}
 
 	}
@@ -82,12 +84,14 @@
 				position: absolute;
 				margin-top: 3rem;
         min-width: 145px;
+        z-index: 10;
 
 				dl{
 					display: inline-block;
 					dt{
 						font-family: $titles-type;
 						font-size: 1.3rem;
+            line-height: 1.6rem;
 					}
 					dd{
 						font-size: 0.8rem;
@@ -99,16 +103,9 @@
 			&:nth-child(4n-2),&:nth-child(4n-3){
 				.member-description{
 					text-align: right;
-					//right: 250px;
-					&::after{
-						display: inline-block;
-						width: 2px;
-						height: 100%;
-						background-color: $darkblue;
-						content: "";
-						margin-left:16px;
-            transform: translateY(4px);
-					}
+          border-right: 2px solid $darkblue;
+          padding-right: 12px;
+
 				}
 				figure{
 					width: 100%;
@@ -124,17 +121,9 @@
 
 			&:nth-child(4n),&:nth-child(4n-1){
 				.member-description{
-					//left: 250px;
-          right: 0;
-					&::before{
-						display: inline-block;
-						width: 2px;
-						height: 100%;
-						background-color: $darkblue;
-						content: "";
-						margin-right:16px;
-            transform: translateY(4px);
-					}
+					border-left: 2px solid $darkblue;
+          padding-left: 12px;
+
 				}
 				figure{
 					img{
@@ -167,7 +156,7 @@
 			font-size: 1rem;
 			line-height: 1.5rem;
 			font-weight: 300;
-    
+
 
 			+ li {margin-left: 30px;}
 
