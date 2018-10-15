@@ -184,6 +184,13 @@
 .team .team-text{
   width: inherit;
 }
+
+.team .row{
+  width: 100%;
+  .team-text{
+    padding: 0 10% 0 10%;
+  }
+}
   .team ul li{
     float: none;
     width: 100%;
@@ -200,6 +207,7 @@
         padding-right: 12px;
         border-left: none;
         padding-left: none;
+        left: 10%;
       }
 
       figure{
@@ -220,6 +228,7 @@
         padding-left: 12px;
         border-right: none;
         padding-right: none;
+        right: 10%;
       }
 
       figure{
