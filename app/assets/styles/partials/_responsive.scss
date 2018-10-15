@@ -246,15 +246,16 @@
     flex-direction: column-reverse;
 
     figure{
-      width: 80%;
+      width: 100%;
       margin: 4rem 0 0 0;
     }
 
     .process-text{
-      width: 80%;
+      width: 100%;
       padding: 0;
       max-width: none;
-      margin-left: 10%;
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -297,9 +298,15 @@
 
   .projects article{
     .card-shot, .card-resume{
-      width: 80%;
+      width: 100%;
       padding-bottom: 2rem;
     }
+  }
+
+
+  .know-more-about .logo-container{
+    min-width: 0;
+    width: 45%;
   }
 
   .clients .row .clients-logos li:nth-child(1), .clients .row .clients-logos li:nth-child(2), .clients .row .clients-logos li:nth-child(3){
@@ -308,6 +315,10 @@
 
   .clients .row .clients-logos li:nth-child(2) img:last-child, .clients .row .clients-logos li:nth-child(3) img:last-child{
     margin-top: 1rem;
+  }
+
+  .clients .row .clients-logos li:last-child{
+    margin: 0;
   }
 
 
