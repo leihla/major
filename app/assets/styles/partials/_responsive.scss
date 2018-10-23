@@ -150,6 +150,15 @@
     }
   }
 
+  .projects article{
+
+    .card-shot{
+      width: 100%;
+    }
+    .card-resume{
+      width: 80%;
+    }
+  }
 
   .services ul{
     flex-wrap: wrap;
@@ -298,7 +307,7 @@
 
   .projects article{
     .card-shot, .card-resume{
-      width: 100%;
+
       padding-bottom: 2rem;
     }
   }

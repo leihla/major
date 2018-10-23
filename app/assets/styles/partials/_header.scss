@@ -63,6 +63,14 @@ header{
 			  }
 			}
 
+			.menuwhite{
+			  fill:white;
+			}
+
+			.menudark{
+				fill:$darkblue;
+			}
+
 // HOVER STATE
 				&:not(.open):hover rect {
 				  &:nth-child(1) {
@@ -120,6 +128,7 @@ header{
 	z-index: 10;
 
 	svg{
+		transition: opacity 1s linear 1s;
 		height: 48px;
 		path{
 			fill:$red;
@@ -196,6 +205,11 @@ header{
 			left:80;
 			top:-100%;
 		}
+	}
+
+	.animatelogo{
+		transition: opacity 0.2s linear;
+		opacity: 0;
 	}
 
 }

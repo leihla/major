@@ -12,6 +12,15 @@
 
 	.row{
 		padding-right: 10%;
+
+		h1{
+			padding-bottom: 0.5rem;
+			margin-bottom: 2.2rem;
+		}
+
+		p{
+
+		}
 	}
 
 
@@ -20,11 +29,22 @@
 .wecanhelp{
 
 	margin-top: -40px;
+	position: relative;
+	z-index: 10;
 
 	.row{
 
 		display: flex;
 		align-items: center;
+
+		h1{
+			padding-bottom: 0.5rem;
+			margin-bottom: 2.2rem;
+		}
+
+		p{
+
+		}
 	}
 
 	.redblock{
@@ -131,6 +151,10 @@
 .projects{
 	position: relative;
 		z-index: 9;
+		ul{
+			width: 100%;
+			max-width: 1366px;
+		}
 			article{
 				display: flex;
 				align-items: center;
@@ -152,18 +176,24 @@
 				.card-resume{
 
 					max-width: 445px;
-					margin: 0 10% 0 0;
+					margin: 0 10% 3% 0;
 
+					.card-title{
+						padding-bottom: 0.3rem;
+						margin-bottom: 2.2rem;
+					}
 
 
 					.card-name{
 						display: inline-block;
 						font-size: 1rem;
 						line-height: 1.1rem;
-						padding-bottom: 1rem;
+						margin-bottom: 1rem;
+
+
 					}
 					p{
-						padding-bottom: 1.5rem;
+						margin-bottom: 1.5rem;
 					}
 				}
 			}
@@ -195,7 +225,7 @@
 }
 
 .know-more-about{
-	height: 90vh;
+	height: 100vh;
 	min-height: 600px;
 	display: flex;
 	align-items: center;
@@ -225,7 +255,8 @@
 
 			&:nth-child(odd) {
  			 top: 0;
- 		 transform: translateY(-50%);
+ 		 	transform: translateY(-50%);
+
  		 }
 
 			&:nth-child(even) {
@@ -233,11 +264,11 @@
 	transform: translateY(50%);
  }
 
-
-
 		 &:nth-child(1){
 			 left: 0;
 			 width: 31.8%;
+
+
 
 		 }
 			 &:nth-child(2){

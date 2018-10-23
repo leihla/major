@@ -5,17 +5,20 @@ require('./jquery.waypoints.min')
 
 //Open and Close menu
 $(document).ready(function () {
-  $(".menu-icon").click(function () {
-    $(this).toggleClass('open');
+  $(".menu-icon, #contact").click(function () {
+    $('.menu-icon').toggleClass('open');
     $(".overlay-menu").removeClass('no-animation');
     $(".overlay-menu").toggleClass('visible');
     $(".overlay-menu").toggleClass('closemenu', 1);
     $('body').toggleClass('lock-scrol');
+    $(".overlay-menu svg").toggleClass('animatelogo');
+    $(".body-about header .row nav .menu-icon rect").toggleClass('menudark');
 
     setTimeout(function() {
       $(".overlay-menu li:nth-child(1) a").toggleClass('animatecontainer');
       $(".overlay-menu li:nth-child(1) a").toggleClass('animacao');
       $(".overlay-menu li:nth-child(1) a").toggleClass('animacao2');
+
 
       setTimeout(function() {
         $(".overlay-menu li:nth-child(2) a").toggleClass('animatecontainer');
@@ -58,6 +61,26 @@ $(document).ready(function () {
     return {percentage, strokeopacity, strokescale};
   }
 
+
+//Change menu color -  ABOUT menu
+// const $menu = $('.body-about header .row nav .menu-icon rect');
+// const $aboutthestudio = $('.about-the-studio');
+// $('.body-about header .row nav .menu-icon rect').addClass('menuwhite')
+// $aboutthestudio.waypoint(function(direction){
+//   if (direction == 'down'){
+//   $menu.removeClass('menuwhite')
+//   } else {
+//     $menu.addClass('menuwhite')
+//   }
+// }, {offset: '7%'});
+
+//Change menu color -  ABOUT label guide
+// $('.label-guide').addClass('.label-guide-white');
+// if ($('body').is('.body-about')) {
+//
+//   $('.label-guide').addClass('label-guide-white');
+//
+// }
 
 
   //Animate containers when scroll first time
@@ -103,49 +126,78 @@ $(document).ready(function () {
     }
   }, {offset: '60%'});
 
-  //Project 1
-    const $project = $('.projects li:nth-child(1)');
-    const $projectname = $('.projects li:nth-child(1) article .card-resume .card-name');
-    const $projectstatement = $('.projects li:nth-child(1) article .card-resume h2');
-    const $projectdescription = $('.projects li:nth-child(1) article .card-resume .description');
-    const $projectdetail = $('.projects li:nth-child(1) article .card-resume .small');
-    const $projectimg = $('.projects li:nth-child(1) article .card-shot');
-    $project.waypoint(function(direction){
-    if (direction == 'down'){
-    $projectname.removeClass('animatecontainer')
-    $projectname.addClass('animacao');
-    setTimeout(function() {$projectstatement.removeClass('animatecontainer');$projectstatement.addClass('animacao');
-      setTimeout(function() {$projectdescription.removeClass('animatecontainer');$projectdescription.addClass('animacao');
-          setTimeout(function() {$projectdetail.removeClass('animatecontainer');$projectdetail.addClass('animacao');
-              setTimeout(function() {$projectimg.removeClass('animatecontainer');//$projectimg.addClass('animacao');
-            }, 100);
-        }, 100);
-    }, 100);
-  }, 100);
-    }
-  }, {offset: '60%'});
 
-  //Project 2
-    const $project2 = $('.projects li:nth-child(2)');
-    const $projectname2 = $('.projects li:nth-child(2) article .card-resume .card-name');
-    const $projectstatement2 = $('.projects li:nth-child(2) article .card-resume h2');
-    const $projectdescription2 = $('.projects li:nth-child(2) article .card-resume .description');
-    const $projectdetail2 = $('.projects li:nth-child(2) article .card-resume .small');
-    const $projectimg2 = $('.projects li:nth-child(2) article .card-shot');
-    $project2.waypoint(function(direction){
-    if (direction == 'down'){
-    $projectname2.removeClass('animatecontainer');
-    $projectname2.addClass('animacao');
-    setTimeout(function() {$projectstatement2.removeClass('animatecontainer');$projectstatement2.addClass('animacao');
-      setTimeout(function() {$projectdescription2.removeClass('animatecontainer');$projectdescription2.addClass('animacao');
-          setTimeout(function() {$projectdetail2.removeClass('animatecontainer');$projectdetail2.addClass('animacao');
-              setTimeout(function() {$projectimg2.removeClass('animatecontainer');$projectimg2.addClass('animacao');
+// Projects
+  function projectsvariables(article) {
+    var project = ('.projects'+' '+article);
+    var projectname = ('.projects'+' '+article+' '+'article .card-resume .card-name');
+    var projectstatement = ('.projects'+' '+article+' '+'article .card-resume h2');
+    var projectdescription = ('.projects'+' '+article+' '+'article .card-resume .description');
+    var projectdetail = ('.projects'+' '+article+' '+'article .card-resume .small');
+    var projectimg = ('.projects'+' '+article+' '+'article .card-shot');
+    $(projectname).removeClass('animatecontainer')
+    $(projectname).addClass('animacao');
+    setTimeout(function() {$(projectstatement).removeClass('animatecontainer');$(projectstatement).addClass('animacao');
+      setTimeout(function() {$(projectdescription).removeClass('animatecontainer');$(projectdescription).addClass('animacao');
+          setTimeout(function() {$(projectdetail).removeClass('animatecontainer');$(projectdetail).addClass('animacao');
+              setTimeout(function() {$(projectimg).removeClass('animatecontainer');//$projectimg.addClass('animacao');
             }, 100);
         }, 100);
     }, 100);
   }, 100);
-    }
-  }, {offset: '60%'});
+
+  return;
+
+  }
+
+//Project 1
+    $('.projects li:nth-child(1)').waypoint(function(direction){
+      if (direction == 'down'){
+      projectsvariables('li:nth-child(1)');
+        }
+      }, {offset: '60%'});
+
+//Project 2
+    $('.projects li:nth-child(2)').waypoint(function(direction){
+      if (direction == 'down'){
+      projectsvariables('li:nth-child(2)');
+        }
+      }, {offset: '60%'});
+
+//Project 3
+    $('.projects li:nth-child(3)').waypoint(function(direction){
+      if (direction == 'down'){
+      projectsvariables('li:nth-child(3)');
+        }
+      }, {offset: '60%'});
+
+//Project 4
+    $('.projects li:nth-child(4)').waypoint(function(direction){
+      if (direction == 'down'){
+      projectsvariables('li:nth-child(4)');
+        }
+      }, {offset: '60%'});
+
+//Project 5
+    $('.projects li:nth-child(5)').waypoint(function(direction){
+      if (direction == 'down'){
+      projectsvariables('li:nth-child(5)');
+        }
+      }, {offset: '60%'});
+
+//Project 6
+    $('.projects li:nth-child(6)').waypoint(function(direction){
+      if (direction == 'down'){
+      projectsvariables('li:nth-child(6)');
+        }
+      }, {offset: '60%'});
+
+//Project 7
+    $('.projects li:nth-child(7)').waypoint(function(direction){
+      if (direction == 'down'){
+      projectsvariables('li:nth-child(7)');
+        }
+      }, {offset: '60%'});
 
 //About the major_studio
 
@@ -233,7 +285,7 @@ setTimeout(function() {$servicesresearch.removeClass('animatecontainer'); //$abo
 const $processtitle = $('.process h1');
 const $processdesc = $('.process p');
 const $processfigure =  $('.process figure');
-$processtitle.waypoint(function(direction){
+$processfigure.waypoint(function(direction){
 if (direction == 'down'){
 $processtitle.removeClass('animatecontainer');
 $processtitle.addClass('animacao')
@@ -261,6 +313,8 @@ setTimeout(function() {clientsdesc.removeClass('animatecontainer'); clientsdesc.
 }, 200);
 }
 }, {offset: '60%'});
+
+
 
 
   //END -----   Animate containers when scroll first time
@@ -318,23 +372,21 @@ setTimeout(function() {clientsdesc.removeClass('animatecontainer'); clientsdesc.
       // Strokes animation - major logo
       } else if (scrollPos >= projects+compensation){
         let {percentage, strokeopacity, strokescale} = calcAnimationValues('.know-more-about');
-        if (percentage >= 0 && percentage <= 50) {
-          console.log(percentage);
-          // $oddLogo.css('visibility', 'visible');
-           $('.know-more-about .logo:nth-child(1)').css('top', ((0.02020)*(percentage*percentage) - 0.5051) + '%');
-           $('.know-more-about .logo:nth-child(3)').css('top', ((0.03125)*(percentage*percentage)-(0.625*percentage)+3.125) + '%');
-           $('.know-more-about .logo:nth-child(5)').css('top', ((0.008929)*(percentage*percentage)+(0.4464*percentage)+5.357) + '%');
-           $('.know-more-about .logo:nth-child(2)').css('bottom', ((0.008929)*(percentage*percentage)+(0.4464*percentage)+5.357) + '%');
-           $('.know-more-about .logo:nth-child(4)').css('bottom', ((1/50)*(percentage*percentage)) + '%');
+        if (percentage >= 0 && percentage <=45) {
 
-           // $evenLogo.css('visibility', 'visible');
-          //$evenLogo.css('bottom', ((1/50)*(percentage*percentage)) + '%');
-        //$('.logo-container').css('width', 0.5*percentage + '%');
+           $('.know-more-about .logo:nth-child(1)').css('top', ((0.02020)*(percentage*percentage) - 0.5051)+5 + '%');
+           $('.know-more-about .logo:nth-child(3)').css('top', ((0.03125)*(percentage*percentage)-(0.625*percentage)+3.125)+5 + '%');
+           $('.know-more-about .logo:nth-child(5)').css('top', ((0.008929)*(percentage*percentage)+(0.4464*percentage)+5.357)+5 + '%');
+           $('.know-more-about .logo:nth-child(2)').css('bottom', ((0.008929)*(percentage*percentage)+(0.4464*percentage)+5.357)+5 + '%');
+           $('.know-more-about .logo:nth-child(4)').css('bottom', ((1/50)*(percentage*percentage))+5 + '%');
            $logo.css('opacity', strokeopacity);
 
         } else {
-          //$evenStripe.css('visibility', 'hidden');
-          //$oddStripe.css('visibility', 'hidden');
+          $('.know-more-about .logo:nth-child(1)').css('top','50%');
+          $('.know-more-about .logo:nth-child(3)').css('top','50%');
+          $('.know-more-about .logo:nth-child(5)').css('top','50%');
+          $('.know-more-about .logo:nth-child(2)').css('bottom','50%');
+          $('.know-more-about .logo:nth-child(4)').css('bottom','50%');
         }
       }
     }
@@ -366,6 +418,7 @@ setTimeout(function() {clientsdesc.removeClass('animatecontainer'); clientsdesc.
       }
 
     }
+
 
 
     //Apply label guide disappear
