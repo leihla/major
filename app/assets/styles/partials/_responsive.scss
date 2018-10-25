@@ -33,7 +33,7 @@
   }
 
   .card-resume{
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -212,7 +212,7 @@
       .member-description{
         text-align: right;
         z-index: 10;
-        border-right: 2px solid $darkblue;
+        border-right: 3px solid $darkblue;
         padding-right: 12px;
         border-left: none;
         padding-left: none;
@@ -233,7 +233,7 @@
         text-align: left;
         right: 0;
         z-index: 10;
-        border-left: 2px solid $darkblue;
+        border-left: 3px solid $darkblue;
         padding-left: 12px;
         border-right: none;
         padding-right: none;
@@ -278,6 +278,14 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 576px) {
 
+  .page-logo svg{
+    height: 40px;
+  }
+
+  .overlay-menu svg{
+    height: 40px;
+  }
+
   h1{
     	font-size: 2.7rem;
     	line-height: 3rem;
@@ -300,9 +308,15 @@
     font-size: 7rem;
   }
 
-.overlay-menu .menu a{
+.overlay-menu .menu {
+  li{
+    margin-bottom: 0;
+  }
+
+  a{
   font-size: 2.7rem;
-  line-height: 3rem;
+  line-height: 2.7rem;
+}
 }
 
   .projects article{
@@ -331,14 +345,22 @@
   }
 
 
-  #page-footer .social{
+  #page-footer {
+
+    .logo-footer{display: none;}
+    .social{
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    left: 0;
     p {
-      margin-bottom: 1rem;
+      margin-top: 1rem;
 
 
     }
   }
+
+}
 
 }

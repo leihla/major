@@ -1,5 +1,5 @@
 #page-footer {
-	background-color: #FF0036;
+	background-color: $red;
 	color: #fff;
 	height: 100vh;
 	position: relative;
@@ -10,6 +10,7 @@
 		height: 100%;
 		display: flex;
 		align-items: center;
+		position: relative;
 	}
 
 	.say-hi-contact{
@@ -22,15 +23,30 @@
 	color: white;
 	}
 	}
+
+	.logo-footer{
+		position: absolute;
+		height: 100px;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		svg{
+			height: 38px;
+			 path{
+			 	fill:white;
+			 }
+		}
+	}
 	.social{
 		position: absolute;
-		height: 70px;
+		height: 100px;
 		bottom: 0;
+		right: 0;
 		display: flex;
-		flex-direction: row;
+		flex-direction: row-reverse;
 		align-items: center;
-		justify-content: space-between;
-		width: 90%;
+
 
 		ul{
 			display: flex;
@@ -44,6 +60,7 @@
 			font-size: 0.75rem;
 			line-height: 0.87rem;
 			font-weight: 300;
+			margin-right: 2rem;
 
 		}
 		a{

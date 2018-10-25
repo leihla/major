@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="255px" height="400px" viewBox="0 0 255 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>major_ux_illus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="major_ux_illus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <polygon id="Rectangle-21-Copy-20" fill="#F82A54" points="0 0 255 0 255 400 0 400"></polygon>
+            <rect id="Rectangle-8" fill="#EA0537" x="126" y="188" width="3" height="24"></rect>
+            <g id="Group-21-Copy" transform="translate(32.000000, 128.000000)">
+                <g id="Group-17" transform="translate(96.000000, 136.000000) scale(1, -1) translate(-96.000000, -136.000000) ">
+                    <rect id="Rectangle" fill="#2A80CC" x="0" y="25" width="192" height="194"></rect>
+                    <path d="M96.5,237.40983 L115.045085,274.5 L77.954915,274.5 L96.5,237.40983 Z" id="Triangle" stroke="#000000" stroke-width="5" fill="#FFCE38" transform="translate(96.500000, 257.500000) scale(1, -1) translate(-96.500000, -257.500000) "></path>
+                    <rect id="Rectangle" fill="#FFCE38" x="88" y="0" width="16" height="247"></rect>
+                    <rect id="Rectangle" fill="#000000" x="104" y="219" width="5" height="23"></rect>
+                    <rect id="Rectangle-Copy-29" fill="#000000" x="83" y="219" width="5" height="23"></rect>
+                    <path d="M187,157 L187,30 L109,30 L109,58 L156,58 L156,63 L104,63 L104,58 L104,30 L104,25 L192,25 L192,30 L192,214 L192,219 L104,219 L104,214 L104,154 L109,154 L109,214 L151,214 L151,183 L128,183 L128,178 L128,136 L104,136 L104,131 L128,131 L128,100 L133,100 L133,178 L156,178 L156,183 L156,214 L187,214 L187,162 L151,162 L151,157 L151,89 L109,89 L109,117 L104,117 L104,89 L104,84 L156,84 L156,89 L156,157 L187,157 Z M5,106 L31,106 L31,89 L31,84 L86,84 L88,84 L88,111 L83,111 L83,89 L36,89 L36,111 L31,111 L5,111 L5,214 L33,214 L33,154 L38,154 L38,214 L88,214 L88,219 L0,219 L0,214 L0,30 L0,25 L86,25 L88,25 L88,63 L86,63 L49,63 L49,58 L83,58 L83,30 L5,30 L5,58 L31,58 L31,63 L5,63 L5,106 Z M88,178 L88,183 L59,183 L59,178 L59,136 L31,136 L31,131 L59,131 L59,105 L64,105 L64,178 L83,178 L83,156 L88,156 L88,178 Z" id="Combined-Shape" fill="#000000"></path>
+                    <rect id="Rectangle" fill="#000000" x="104" y="0" width="5" height="47"></rect>
+                    <rect id="Rectangle-Copy-28" fill="#000000" x="83" y="0" width="5" height="47"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

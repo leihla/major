@@ -3,9 +3,11 @@
 
 require('./jquery.waypoints.min')
 
-//Open and Close menu
+function onPageLoad(){
+
 $(document).ready(function () {
-  $(".menu-icon, #contact").click(function () {
+//Open and Close menu
+  $(".menu-icon, #contact" ).click(function () {
     $('.menu-icon').toggleClass('open');
     $(".overlay-menu").removeClass('no-animation');
     $(".overlay-menu").toggleClass('visible');
@@ -394,11 +396,11 @@ setTimeout(function() {clientsdesc.removeClass('animatecontainer'); clientsdesc.
     //About  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     else if ($('body').is('.body-about')) {
 
-
-      var team = ($('.team').offset().top) - compensation;
-      var services = ($('.services').offset().top) - compensation;
-      var processs = ($('.process').offset().top) - compensation;
-      var clients = ($('.clients').offset().top) - compensation;
+      var compensationabout = $(window).height() / 1.2;
+      var team = ($('.team').offset().top) - compensationabout;
+      var services = ($('.services').offset().top) - compensationabout;
+      var processs = ($('.process').offset().top) - compensationabout;
+      var clients = ($('.clients').offset().top) - compensationabout;
 
 
       if (scrollPos >= team && scrollPos < services) {
@@ -431,4 +433,46 @@ setTimeout(function() {clientsdesc.removeClass('animatecontainer'); clientsdesc.
 
   }); // close scroll function
 
-});
+
+
+
+
+
+  $('header .row h1 a,.overlay-menu .menu li:not(:last-child) a').click(function(event){
+    event.preventDefault();
+    var self = this;
+
+    $('#page-transition-wrap').addClass('page-transition-wrap');
+    $('#page-transition').addClass('page-transition');
+    $('#page-transition').addClass('page-transition-animation');
+    setTimeout(function() {
+         window.location.replace(self);
+    }, 1000);
+    });
+
+
+}); //close document ready
+
+} // close onPageLoad function
+
+
+
+//Loading Animation
+ function preloader() {
+     document.getElementById("page-loader-wrap").scrollTop = 0;
+     document.getElementById("page-loader-wrap").style.display = "none";
+     document.getElementById("page-loader-wrap").style.overflow = "hidden";
+     $('#page-transition').addClass('page-transition-animation-after');
+     setTimeout(function() { // delays everything for the animation loading
+     $('#page-transition').removeClass('page-transition-animation-after');
+     $('#page-transition').removeClass('page-transition');
+     $('#page-transition-wrap').removeClass('page-transition-wrap');
+        onPageLoad();
+      }, 500); //close transition loading
+
+
+
+}
+
+
+window.onload = preloader;

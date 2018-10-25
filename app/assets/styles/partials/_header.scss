@@ -11,6 +11,7 @@
 }
 
 
+
 header{
 
 	//position: fixed;
@@ -20,7 +21,6 @@ header{
 	display: flex;
 	align-items: center;
 	z-index: 11;
-
 
 	.row{
 		display: flex;
@@ -32,7 +32,7 @@ header{
 		h1{
 			all:unset;
 			display: inline-flex;
-			//z-index: 99;
+			z-index: 9;
 			a{
 			display: inline-flex;
 			}
@@ -133,6 +133,7 @@ header{
 		path{
 			fill:$red;
 		}
+
 	}
 
 .row{
@@ -140,28 +141,34 @@ header{
 	display: flex;
 	align-items: center;
 	z-index: 10;
-	position: absolute;
-	left: 10%;
 
 }
 
 	.menu{
-		margin-left: auto;
-		margin-right: auto;
-		width: 80%;
 		font-family: $titles-type;
 		font-size: 4.5rem;
 		font-weight: 300;
 		line-height: 5.6rem;
 		color: $darkblue;
-		margin-top: 50vh;
-		transform: translateY(-50%);
-		text-align: right;
+		height: 100%;
+		margin-top: -100px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+
+		li{
+			margin-bottom: 1rem;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
 
 		a{
 			font-size: 4.5rem;
 			font-weight: 300;
-			line-height: 6rem;
+			line-height: 4.5rem;
+
 
 		}
 
