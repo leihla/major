@@ -15,6 +15,15 @@
   }
 
 
+  .team ul li:nth-child(4n-2) .member-description, .team ul li:nth-child(4n-3) .member-description{
+    right: 240px;
+  }
+
+  .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
+    left:240px;
+  }
+
+
  }
 
  @media (max-width: 920px) {
@@ -83,6 +92,25 @@
     // left: 70%;
     // transform: translate(-60%, 50%);
   }
+}
+
+
+.process{
+  .row{
+      flex-direction: column-reverse;
+
+      .process-text{
+        width: 100%;
+        max-width: none;
+      }
+
+      figure{
+        width: 60%;
+        margin: 3rem 0 0 0;
+      }
+  }
+
+
 }
 
 .clients{
@@ -179,6 +207,7 @@
 
   .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
     right: auto;
+    left: unset;
   }
 
   .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img{
@@ -212,11 +241,11 @@
       .member-description{
         text-align: right;
         z-index: 10;
-        border-right: 3px solid $darkblue;
+        border-right: 2px solid $red;
         padding-right: 12px;
         border-left: none;
         padding-left: none;
-        left: 10%;
+        right:50%;
       }
 
       figure{
@@ -233,11 +262,11 @@
         text-align: left;
         right: 0;
         z-index: 10;
-        border-left: 3px solid $darkblue;
+        border-left: 2px solid $red;
         padding-left: 12px;
         border-right: none;
         padding-right: none;
-        right: 10%;
+        left: 50%;
       }
 
       figure{
@@ -256,7 +285,7 @@
 
     figure{
       width: 100%;
-      margin: 4rem 0 0 0;
+      margin: 3rem 0 0 0;
     }
 
     .process-text{
@@ -342,6 +371,18 @@
 
   .clients .row .clients-logos li:last-child{
     margin: 0;
+  }
+
+  .process{
+    .row{
+
+        figure{
+          width: 90%;
+          margin: 3rem 0 0 0;
+        }
+    }
+
+
   }
 
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="585px" height="590px" viewBox="0 0 585 590" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>major_process_illus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="major_process_illus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(25.000000, 51.000000)">
+            <polygon id="Path-6" fill="#2A80CC" fill-rule="nonzero" transform="translate(255.500000, 43.500000) scale(-1, 1) translate(-255.500000, -43.500000) " points="254.835665 7 278 57.8990826 268.855145 65.266055 268.855145 80 240.920985 80 240.920985 65.266055 233 54.5504587"></polygon>
+            <g id="Group-14" transform="translate(255.500000, 123.000000) scale(-1, 1) translate(-255.500000, -123.000000) translate(190.000000, 0.000000)" fill-rule="nonzero">
+                <g id="Group-13" transform="translate(4.689290, 0.000000)">
+                    <g id="Group-12" transform="translate(37.514318, 3.355584)" stroke="#000000" stroke-width="5">
+                        <polyline id="Path-3" points="22.7353611 0.536893429 45.1731216 52.7318763 36.713193 63.1607924 36.713193 68.021588"></polyline>
+                        <polyline id="Path" points="8.52837174 68.021588 8.52837174 63.1607924 0.06844315 52.7318763 22.5062036 0.536893429"></polyline>
+                    </g>
+                    <path d="M59.8022078,4.02670072 L59.8022078,45.7631835" id="Path-4" stroke="#000000" stroke-width="5"></path>
+                    <ellipse id="Oval" fill="#1F0824" cx="59.9559197" cy="47.9848502" rx="4.35434053" ry="4.36225911"></ellipse>
+                    <ellipse id="Oval-Copy" fill="#1F0824" cx="120.916687" cy="4.36225911" rx="4.35434053" ry="4.36225911"></ellipse>
+                    <rect id="Rectangle" stroke="#000000" stroke-width="5" fill="#F82A54" x="36.8444199" y="71.8094962" width="44.8832024" height="14.7645693"></rect>
+                    <g id="Group-11" transform="translate(39.524014, 84.560715)" fill="#FFCE38" stroke="#000000" stroke-width="5">
+                        <path d="M2.58528788,2.93232426 L7.77671409,157.658119 L33.7569956,157.658119 L38.9484218,2.93232426 L2.58528788,2.93232426 Z" id="Rectangle"></path>
+                    </g>
+                    <path d="M120.581738,66.4405619 C120.581738,31.9703382 93.5885964,4.02670072 60.2908689,4.02670072 C26.9931415,4.02670072 0,31.9703382 0,66.4405619" id="Path" stroke="#000000" stroke-width="4"></path>
+                    <rect id="Rectangle-Copy-31" fill="#000000" x="55.6015791" y="0" width="10.3968254" height="10.4157325"></rect>
+                    <rect id="Rectangle-Copy-30" fill="#000000" x="116.562347" y="66.4405619" width="8.70868107" height="8.72451823"></rect>
+                    <path d="M0,4.36225911 L120.581738,4.36225911" id="Path-5" stroke="#000000" stroke-width="4"></path>
+                </g>
+                <ellipse id="Oval-Copy-2" fill="#1F0824" cx="4.35434053" cy="4.36225911" rx="4.35434053" ry="4.36225911"></ellipse>
+                <rect id="Rectangle" fill="#000000" x="0" y="66.4405619" width="8.70868107" height="8.72451823"></rect>
+            </g>
+            <text id="Learn-Copy-2" font-family="Oswald-Medium, Oswald" font-size="24" font-weight="400" line-spacing="31" fill="#000000">
+                <tspan x="246" y="491">Learn</tspan>
+            </text>
+            <text id="Measure" font-family="Oswald-Medium, Oswald" font-size="24" font-weight="400" line-spacing="31" fill="#000000">
+                <tspan x="423" y="193">Measure</tspan>
+            </text>
+            <text id="Build" font-family="Oswald-Medium, Oswald" font-size="24" font-weight="400" line-spacing="31" fill="#000000">
+                <tspan x="85" y="159">Build</tspan>
+            </text>
+            <g id="Group-3" transform="translate(411.000000, 359.000000) scale(1, -1) translate(-411.000000, -359.000000) translate(287.000000, 326.000000)" fill-rule="nonzero" stroke="#000000" stroke-width="5">
+                <g id="Group-11" transform="translate(124.185484, 32.680851) rotate(90.000000) translate(-124.185484, -32.680851) translate(91.685484, -90.819149)">
+                    <rect id="Rectangle" fill="#F82A54" x="2.5" y="2.5" width="59.6382979" height="241.370968"></rect>
+                    <rect id="Rectangle" fill="#FFCE38" x="45.2446809" y="2.5" width="16.893617" height="241.370968"></rect>
+                </g>
+                <ellipse id="Oval" fill="#2A80CC" transform="translate(21.808511, 19.919355) rotate(90.000000) translate(-21.808511, -19.919355) " cx="21.8085106" cy="19.9193548" rx="6.93548387" ry="6.88297872"></ellipse>
+            </g>
+            <path id="Path" d="M418.717655,297.542119 L426.832954,284.557616 L430.224949,286.677609 L418.063107,306.136594 L416.178669,309.151701 L414.580526,305.975553 L404.266386,285.477235 L407.839553,283.679325 L414.721925,297.357349 L415.286098,285.15689 C414.421803,212.562357 363.921393,150.404786 294.065155,134.044563 L294.977268,130.149945 C366.634434,146.931942 418.42688,210.698675 419.286506,285.168303 L419.284505,285.283774 L418.717655,297.542119 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Path" d="M197.657324,435.771502 L208.239813,446.837953 L205.348878,449.602459 L189.489628,433.017928 L187.032289,430.448209 L190.504436,429.682592 L212.913082,424.741431 L213.774401,428.647597 L198.821661,431.944712 L210.5256,435.505747 C222.516906,438.387953 234.880293,439.858215 247.437873,439.85784 C286.712401,439.856664 323.73343,425.414902 352.383244,399.742279 L355.052651,402.72125 C325.676042,429.045141 287.707219,443.856635 247.437993,443.85784 C234.544399,443.858225 221.847335,442.345839 209.532031,439.380844 L209.418,439.349799 L197.657324,435.771502 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Path" d="M205.553764,124.688784 L190.419678,122.361808 L191.027563,118.408269 L213.707981,121.895548 L217.222239,122.43589 L214.935551,125.158579 L200.177659,142.73035 L197.114634,140.157826 L206.962213,128.432615 L195.58506,132.712761 C150.172302,152.938242 116.647576,193.731385 105.930107,242.452038 L102.023511,241.592673 C113.019407,191.606316 147.416611,149.765923 194.012609,129.034321 L194.12139,128.989704 L205.553764,124.688784 Z" fill="#000000" fill-rule="nonzero"></path>
+            <g id="Group-2" transform="translate(0.000000, 252.000000)">
+                <g id="Group" transform="translate(4.169697, 0.000000)">
+                    <path d="" id="Path-7" stroke="#979797" fill-rule="nonzero"></path>
+                    <rect id="Rectangle-Copy" fill="#FFCE38" fill-rule="nonzero" x="36.4848485" y="4.54935622" width="126.784848" height="203.811159"></rect>
+                    <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="163.269697" y="0" width="4.56060606" height="211.090129"></rect>
+                    <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="12.769697" y="0" width="155.060606" height="5.45922747"></rect>
+                    <rect id="Rectangle-Copy-2" fill="#000000" fill-rule="nonzero" x="34.6606061" y="206.540773" width="133.169697" height="5.45922747"></rect>
+                    <rect id="Rectangle" stroke="#000000" stroke-width="5" fill="#2A80CC" fill-rule="nonzero" x="65.4363636" y="50.723176" width="72.530303" height="36.8540773"></rect>
+                    <rect id="Rectangle" fill="#000000" x="79.3545455" y="61.8712446" width="45.6060606" height="4.54935622"></rect>
+                    <rect id="Rectangle" fill="#000000" x="79.3545455" y="71.8798283" width="45.6060606" height="4.54935622"></rect>
+                    <rect id="Rectangle" fill="#F82A54" fill-rule="nonzero" x="0" y="4.54935622" width="31.9242424" height="203.811159"></rect>
+                </g>
+                <path d="M38.1545455,209.5 L38.1545455,2.5 L16,2.5 C8.54415588,2.5 2.5,8.54415588 2.5,16 L2.5,196 C2.5,203.455844 8.54415588,209.5 16,209.5 L38.1545455,209.5 Z" id="Rectangle" stroke="#000000" stroke-width="5" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

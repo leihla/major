@@ -1,13 +1,13 @@
 {% if page.title %}
-  {% capture meta_title %}{{ page.title }} — We go Major{% endcapture %}
+  {% capture meta_title %}{{ page.title }} — Major, a digital design studio.{% endcapture %}
 {% else %}
-  {% capture meta_title %}We go Major{% endcapture %}
+  {% capture meta_title %}Major, a digital design studio.{% endcapture %}
 {% endif %}
 
 {% if page.introduction %}
   {% assign meta_introduction = page.introduction %}
 {% else %}
-  {% assign meta_introduction = "We go Major." %}
+  {% assign meta_introduction = "Major, a digital design studio." %}
 {% endif %}
 
 {% if page.image %}
@@ -29,10 +29,10 @@
 <meta name="twitter:title" content="{{ meta_title }}">
 <meta name="twitter:description" content="{{ meta_introduction }}" />
 <meta name="twitter:image:src" content="{{ site.baseurl }}{{ meta_image }}" />
-<!--/ Twitter --> 
+<!--/ Twitter -->
 
 <!-- OG -->
-<meta property="og:site_name" content="We go Major" />
+<meta property="og:site_name" content="Major, a digital design studio." />
 <meta property="og:title" content="{{ meta_title }}" />
 <meta property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}" />
 <meta property="og:type" content="website" />

@@ -1,10 +1,16 @@
 
+.about-the-studio{
+  padding: 10% 0 5%;
+}
+
  .team, .services, .process, .clients{
-	margin-bottom: 30vh;
+	  padding: 10% 0 10% 0;
 }
 
 
+
 .body-about{
+  background-color: white;
 	.page-logo{
 		svg{
 			path{
@@ -33,9 +39,11 @@
 
 .about-the-studio{
 		margin-top: -40px;
-		padding-bottom: 20vh;
+
 
 	.row{
+    position: relative;
+    z-index: 9;
 		display: flex;
 		align-items: center;
 		figure{
@@ -55,7 +63,7 @@
 		max-width: 380px;
 		padding: 5%;
 		@include column(1/2);
-    background-color: $background-color;
+    background-color: white;
 	}
 
 	.studio-photo2{
@@ -72,13 +80,20 @@
 
 	}
 
+  .studio-description{
+    margin-top: 15%;
+
+    h2{
+      line-height: 4rem;
+    }
+  }
+
 }
 
 
 .team{
 
-//padding: 8% 0 8% 0;
-//background-color: white;
+background-color: white;
 	.team-text{
 		width: 50%;
 	}
@@ -116,8 +131,10 @@
 			&:nth-child(4n-2),&:nth-child(4n-3){
 				.member-description{
 					text-align: right;
-          border-right: 3px solid $darkblue;
+          border-right: 2px solid $red;
           padding-right: 12px;
+          right: 300px;
+
 
 				}
 				figure{
@@ -134,9 +151,9 @@
 
 			&:nth-child(4n),&:nth-child(4n-1){
 				.member-description{
-					border-left: 3px solid $darkblue;
+					border-left: 2px solid $red;
           padding-left: 12px;
-          right: 0;
+          left: 300px;
 
 				}
 				figure{
@@ -155,6 +172,9 @@
 }
 
 .services{
+  position: relative;
+  z-index: 9;
+
 
 	h1{
 		width: 100%;
@@ -197,22 +217,22 @@
 }
 
 .process{
-  //padding: 8% 0 8% 0;
-  //background-color: white;
+  background-color: white;
 
 .row{
 			display: flex;
 			align-items: center;
+      position: relative;
+      z-index: 9;
 
 
 			figure{
 				width: 51%;
 				margin: 0 3% 0 0;
-				background-color: white;
 				text-align: right;
 
 				img{
-					max-width: 535px;
+
 					width: 100%;
 					margin-top: -2rem;
 
@@ -231,8 +251,9 @@
 
 .clients{
 	.row{
-
 		display: flex;
+    position: relative;
+    z-index: 9;
 
 	.clients-text{
 		max-width: 445px;
