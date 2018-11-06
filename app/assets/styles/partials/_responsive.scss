@@ -60,7 +60,7 @@
 
 
 .about-the-studio{
-  padding-bottom: 20vh;
+
 
   .row{
     width: 100%;
@@ -68,8 +68,8 @@
     flex-direction: column-reverse;
     align-items: flex-start;
     .about-text{
-      margin: 0 0 0 10%;
-      width: 90%;
+      margin: 0 0 0 5%;
+      width: 95%;
       max-width: none;
       padding: 15% 10% 10% 5%;
 
@@ -78,8 +78,12 @@
     .studio-photo1{
       width: 60%;
       align-self: flex-end;
-      margin: 0 10% 0 0;
+      margin: 0 5% 0 0;
+      img{
+        width: 100%;
+      }
     }
+
   }
 
   .studio-photo2{
@@ -91,6 +95,11 @@
     // position: absolute;
     // left: 70%;
     // transform: translate(-60%, 50%);
+  }
+
+  .studio-description{
+    width: 90%;
+
   }
 }
 
@@ -123,16 +132,9 @@
     }
 
     .clients-logos{
+
       li:nth-child(1), li:nth-child(2), li:nth-child(3){
-          margin:0 0 0 2rem;
-
-        }
-
-         li:nth-child(2), li:nth-child(3){
-
-           img:last-child{
-              margin-top: 2rem;
-           }
+  margin:0 0 0 2rem;
 
          }
 
@@ -196,6 +198,10 @@
       margin-bottom: 4rem;
       + li {margin-left: 0;}
 
+      &:nth-child(3), &:nth-child(4) {
+        margin-bottom: 0;
+      }
+
     }
   }
 
@@ -226,7 +232,7 @@
 .team .row{
   width: 100%;
   .team-text{
-    padding: 0 10% 0 10%;
+    padding: 0 5% 0 5%;
   }
 }
   .team ul li{
@@ -241,7 +247,7 @@
       .member-description{
         text-align: right;
         z-index: 10;
-        border-right: 2px solid $red;
+        border-right: 3px solid $darkblue;
         padding-right: 12px;
         border-left: none;
         padding-left: none;
@@ -262,7 +268,7 @@
         text-align: left;
         right: 0;
         z-index: 10;
-        border-left: 2px solid $red;
+        border-left: 3px solid $darkblue;
         padding-left: 12px;
         border-right: none;
         padding-right: none;
@@ -355,17 +361,20 @@
     }
   }
 
+.about-the-studio .studio-description h2{
+  line-height: 3.3rem;
+}
 
   .know-more-about .logo-container{
     min-width: 0;
     width: 45%;
   }
 
-  .clients .row .clients-logos li:nth-child(1), .clients .row .clients-logos li:nth-child(2), .clients .row .clients-logos li:nth-child(3){
+  .clients .row .clients-logos li{
         margin: 0 0 0 1rem;
   }
 
-  .clients .row .clients-logos li:nth-child(2) img:last-child, .clients .row .clients-logos li:nth-child(3) img:last-child{
+  .clients .row .clients-logos li a{
     margin-top: 1rem;
   }
 

@@ -128,7 +128,7 @@ header{
 	z-index: 10;
 
 	svg{
-		transition: opacity 1s linear 1s;
+		transition: opacity 0.2s linear 0.8s;
 		height: 48px;
 		path{
 			fill:$red;
@@ -215,8 +215,8 @@ header{
 	}
 
 	.animatelogo{
-		transition: opacity 0.2s linear;
-		opacity: 0;
+		transition:  opacity 0.1s linear;
+		opacity:0;
 	}
 
 }
