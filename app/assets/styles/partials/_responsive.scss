@@ -2,7 +2,20 @@
 
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1200px) {
+@media (max-width: 1055px) {
+
+  .team ul li:nth-child(4n-2) .member-description, .team ul li:nth-child(4n-3) .member-description{
+    right: 240px;
+
+  }
+
+  .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
+    left:250px;
+  }
+
+  .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
+    width: 300px;
+  }
 
  }
 
@@ -15,13 +28,7 @@
   }
 
 
-  .team ul li:nth-child(4n-2) .member-description, .team ul li:nth-child(4n-3) .member-description{
-    right: 240px;
-  }
 
-  .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
-    left:240px;
-  }
 
 
  }
@@ -102,6 +109,9 @@
 
   }
 }
+
+
+
 
 
 .process{
@@ -210,6 +220,14 @@
 
 //reset styles
 
+.team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
+  width: 350px;
+}
+
+  .team ul li:nth-child(4n-1) .member-description dl, .team ul li:nth-child(4n-2) .member-description dl{
+    border:unset;
+  }
+
 
   .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
     right: auto;
@@ -218,6 +236,7 @@
 
   .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img{
     float: none;
+
   }
 
   .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
@@ -247,11 +266,18 @@
       .member-description{
         text-align: right;
         z-index: 10;
-        border-right: 3px solid $darkblue;
-        padding-right: 12px;
+
         border-left: none;
         padding-left: none;
         right:50%;
+        dl{
+          border-right: 2px solid $darkblue;
+          padding-right: 12px;
+        }
+
+        p{
+          padding-right: 12px;
+        }
       }
 
       figure{
@@ -268,11 +294,17 @@
         text-align: left;
         right: 0;
         z-index: 10;
-        border-left: 3px solid $darkblue;
-        padding-left: 12px;
         border-right: none;
         padding-right: none;
         left: 50%;
+        dl{
+          border-left: 2px solid $darkblue;
+          padding-left: 12px;
+        }
+
+        p{
+          padding-left: 12px;
+        }
       }
 
       figure{
