@@ -22,7 +22,7 @@
 		}
 
 		p{
-	
+
 		}
 	}
 
@@ -54,8 +54,19 @@
 		background-color: red;
 		min-height: 700px;
 		height: 50vh;
+		position: relative;
 		@include column(1/2);
 		box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img{
+			width: 90%;
+			max-width: 460px;
+				transition: transform 0.3s ease-in-out 0.2s, opacity 0.3s 0.1s;
+
+		}
 
 	}
 
@@ -74,6 +85,12 @@
 		padding: 5% 0 5% 5%;;
 		@include column(1/2);
 	}
+}
+
+.animate-help{
+	transition: transform 0.3s ease-in-out 0.2s, opacity 0.3s 0.1s;
+	transform: translate(-25px,25px);
+	opacity: 0;
 }
 
 .internet-statement{//second
@@ -201,7 +218,7 @@
 						display: inline-block;
 						font-size: 1rem;
 						line-height: 1.1rem;
-						margin-bottom: 2rem;
+						margin-bottom: 1rem;
 
 
 					}

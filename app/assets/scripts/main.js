@@ -113,6 +113,7 @@ setTimeout(function() {
     //wecan help
     const $wecanhelp = $('.wecanhelptext h1');
     const $wecanhelpp = $('.wecanhelptext p');
+    const $wecanhelpillust = $('.wecanhelp .redblock img');
     $wecanhelp.waypoint(function(direction){
     if (direction == 'down'){
     $wecanhelp.removeClass('container-invisible')
@@ -120,6 +121,7 @@ setTimeout(function() {
     setTimeout(function() {
       $wecanhelpp.removeClass('container-invisible');
       $wecanhelpp.addClass('animacao');
+      $wecanhelpillust.removeClass('animate-help');
   }, 200);
     }
   }, {offset: '60%'});
@@ -228,7 +230,7 @@ setTimeout(function() {$abouttdescription.removeClass('container-invisible'); $a
 }, {offset: '60%'});
 
 //Studio philosophy
-const $studiolongdescription = $('.about-the-studio .studio-description');
+const $studiolongdescription = $('.about-the-studio .studio-description h2');
 $studiolongdescription.waypoint(function(direction){
 if (direction == 'down'){
 $studiolongdescription.removeClass('container-invisible');
