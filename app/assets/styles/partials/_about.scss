@@ -152,6 +152,14 @@ background-color: white;
       visibility: hidden;
       }
 
+      figure{
+        position: relative;
+        .smiling{
+          position: absolute;
+          visibility: hidden;
+        }
+      }
+
 			&:nth-child(4n-2),&:nth-child(4n-3){
 				.member-description{
           right: 300px;
@@ -165,17 +173,23 @@ background-color: white;
 				}
         .member-long-description{
           left:0;
-
-
         }
+
+
+
+
 				figure{
 					width: 100%;
 					margin: unset;
+          position: relative;
 					img{
 						width: 350px;
 						float: right;
 						//margin-right: -5%;
 					}
+          .smiling{
+            right: 0;
+          }
 				@include clearfix;
 				}
 			}
@@ -201,6 +215,9 @@ background-color: white;
 						float: left;
 						//margin-left: -5%;
 					}
+          .smiling{
+            left: 0;
+          }
 				@include clearfix;
 				}
 
@@ -211,6 +228,9 @@ background-color: white;
 
 li:hover{
   .member-long-description {
+    visibility: visible;
+  }
+  .smiling{
     visibility: visible;
   }
 }
