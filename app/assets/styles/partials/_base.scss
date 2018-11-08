@@ -62,7 +62,7 @@ svg {
 $titles-type: 'Oswald', sans-serif;
 $body-text-type:'IBM Plex Sans', sans-serif;
 $background-color: #FAF9F8;
-$red: #FF0036;
+$red: #F82A54;
 $darkblue: #071D49;
 $lightgrey: #828DA3;
 $yellow:#FFCE38;
@@ -78,7 +78,7 @@ $title-padding: 2.2rem;
 }
 
 html {
-    overflow-y: scroll;
+  //  overflow-y: scroll;
 
 }
 
@@ -105,7 +105,7 @@ body {
 }
 
 .lock-scrol{
-	overflow:hidden;
+	overflow: hidden
 }
 
 h1 {
