@@ -271,7 +271,7 @@
         padding-left: none;
         right:50%;
         dl{
-          border-right: 2px solid $red;
+          border-right: 3px solid $red;
           padding-right: 12px;
         }
 
@@ -298,7 +298,7 @@
         padding-right: none;
         left: 50%;
         dl{
-          border-left: 2px solid $red;
+          border-left: 3px solid $red;
           padding-left: 12px;
         }
 
@@ -394,7 +394,8 @@
   }
 
 .about-the-studio .studio-description h2{
-  line-height: 3.3rem;
+  font-size: 2.7rem;
+  line-height: 4rem;
 }
 
   .know-more-about .logo-container{

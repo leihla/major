@@ -13,6 +13,7 @@ $(document).ready(function () {
     $(".overlay-menu").toggleClass('visible');
     $(".overlay-menu").toggleClass('closemenu', 1);
     $('body').toggleClass('lock-scrol');
+
     $(".overlay-menu svg").toggleClass('animatelogo');
     $(".body-about header .row nav .menu-icon rect").toggleClass('menudark');
 
@@ -415,7 +416,8 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
     //About  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     else if ($('body').is('.body-about')) {
 
-      var compensationabout = $(window).height() / 1.2;
+      var compensationabout = $(window).height() / 2;
+      var mission=($('.studio-description').offset().top) - compensationabout;
       var team = ($('.team').offset().top) - compensationabout;
       var services = ($('.services').offset().top) - compensationabout;
       var processs = ($('.process').offset().top) - compensationabout;
@@ -434,7 +436,11 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
       } else if (scrollPos >= clients && scrollPos < footer) {
         $('.section-title-underlay ul li:not(:nth-child(4))').removeClass("fadetext");
         $('.section-title-underlay ul li:nth-child(4)').addClass("fadetext");
-      } else {
+      } else if (scrollPos >= mission && scrollPos < team) {
+        $('.section-title-underlay ul li:not(:nth-child(5))').removeClass("fadetext");
+        $('.section-title-underlay ul li:nth-child(5)').addClass("fadetext");
+      }
+      else {
         $('.section-title-underlay ul li').removeClass("fadetext");
       }
 

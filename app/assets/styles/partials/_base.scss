@@ -77,6 +77,9 @@ $title-padding: 2.2rem;
   }
 }
 
+html {
+    overflow-y: scroll;
+}
 
 html,body{
 	height: 100%;
@@ -116,6 +119,7 @@ h1 {
 
 
 }
+
 
 h2{
 	font-family: $titles-type;
@@ -608,4 +612,27 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
   0%{transform:scaleY(0.2)}
   50%{transform:scaleY(1.5)}
   100%{transform:scaleY(0.2)}
+}
+
+
+//Scrollbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $red;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
 }
