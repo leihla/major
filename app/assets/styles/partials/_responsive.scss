@@ -181,7 +181,7 @@
       background-color: $red;
       max-width: none;
       height: 60vh;
-      width: 90%;
+      width: 95%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -431,15 +431,18 @@
     .row{
 
         figure{
-          width: 90%;
+          width: 100%;
           margin: 3rem 0 0 0;
+          text-align: center;
         }
     }
 
 
   }
 
-
+.clients .row .clients-logos{
+  padding-top: 1rem;
+}
   #page-footer {
 
     .logo-footer{display: none;}
