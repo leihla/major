@@ -164,7 +164,7 @@
 
  }
 
-// Small devices (landscape phones, less than 768px)
+// Small devices (landscape phones, less than 800px)
 @media (max-width: 800px) {
 
   .wecanhelp .row{
@@ -221,7 +221,7 @@
 //reset styles
 
 .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
-  width: 350px;
+  width: 60%;
 }
 
   .team ul li:nth-child(4n-1) .member-description dl, .team ul li:nth-child(4n-2) .member-description dl{
@@ -242,7 +242,15 @@
   .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
     float: none;
   }
+
+  .team ul li:nth-child(4n) figure .smiling, .team ul li:nth-child(4n-1) figure .smiling{
+    left: unset;
+  }
 //end reset Styles
+
+.team{
+  overflow-x: hidden;
+}
 
 .team .team-text{
   width: inherit;
@@ -260,6 +268,8 @@
 
     figure{
       overflow: hidden;
+
+
     }
 
     &:nth-child(odd){
@@ -281,10 +291,11 @@
       }
 
       figure{
-        text-align: center;
-        img{margin-left:(30%);
-        }
+        text-align: right;
 
+        .smiling{
+          right: 0;
+        }
       }
     }
 
@@ -308,11 +319,11 @@
       }
 
       figure{
-        text-align: center;
-        img{
-            margin-left:(-30%);
-        }
+        text-align: left;
 
+        .smiling{
+          left: 0;
+        }
       }
     }
 
@@ -356,7 +367,8 @@
   h1{
     	font-size: 2.7rem;
     	line-height: 3rem;
-      padding-bottom: 2rem;
+      padding: 2rem 0;
+
     }
 
   h2{
@@ -394,8 +406,8 @@
   }
 
 .about-the-studio .studio-description h2{
-  font-size: 2.7rem;
-  line-height: 4rem;
+
+  line-height: 3.5rem;
 }
 
   .know-more-about .logo-container{
@@ -444,6 +456,10 @@
     }
   }
 
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 }

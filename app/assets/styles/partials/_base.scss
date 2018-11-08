@@ -79,6 +79,7 @@ $title-padding: 2.2rem;
 
 html {
     overflow-y: scroll;
+
 }
 
 html,body{
@@ -619,7 +620,7 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
 
 /* Track */

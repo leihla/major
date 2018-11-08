@@ -307,7 +307,7 @@ setTimeout(function() {$servicesresearch.removeClass('animatecontainer'); //$abo
 const $processtitle = $('.process h1');
 const $processdesc = $('.process p');
 const $processfigure =  $('.process figure');
-$processfigure.waypoint(function(direction){
+$processtitle.waypoint(function(direction){
 if (direction == 'down'){
 $processtitle.removeClass('container-invisible');
 $processtitle.addClass('animacao')
