@@ -476,6 +476,20 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
     });
 
 
+    //Team images HOVER
+
+    $(".team ul li figure img").mouseover(function(){
+      var index = $(this).closest("li").index()+1;
+    $(".team ul li:nth-child("+index+") .member-long-description").css("visibility","visible");
+    $(".team ul li:nth-child("+index+") .smiling").css("visibility","visible");
+});
+
+$(".team ul li figure img").mouseout(function(){
+  var index = $(this).closest("li").index()+1;
+$(".team ul li:nth-child("+index+") .member-long-description").css("visibility","hidden");
+$(".team ul li:nth-child("+index+") .smiling").css("visibility","hidden");
+});
+
 }); //close document ready
 
 } // close onPageLoad function
