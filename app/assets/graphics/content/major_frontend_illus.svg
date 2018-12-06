@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="255px" height="400px" viewBox="0 0 255 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
     <title>major_frontend_illus</title>
     <desc>Created with Sketch.</desc>
     <g id="major_frontend_illus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -11,19 +11,19 @@
                     <g id="Group">
                         <rect id="Rectangle" fill="#F82A54" fill-rule="nonzero" x="0" y="31" width="182" height="120"></rect>
                         <rect id="Rectangle" stroke="#1F0824" stroke-width="5" fill-rule="nonzero" x="2.5" y="2.5" width="177" height="31"></rect>
-                        <polygon id="Path" fill="#000000" points="107 67.4471322 132.8331 88.000695 107 108.552868 110.578418 113 142 88.000695 110.578418 63"></polygon>
-                        <polygon id="Path" fill="#000000" points="71.4215823 63 40 88.000695 71.4215823 113 75 108.552868 49.1668998 88.000695 75 67.4471322"></polygon>
-                        <polygon id="Path" fill="#000000" points="78 117.141847 98.5136578 57 104 58.8581529 83.4877569 119"></polygon>
+                        <polygon id="Path" fill="#071D49" points="107 67.4471322 132.8331 88.000695 107 108.552868 110.578418 113 142 88.000695 110.578418 63"></polygon>
+                        <polygon id="Path" fill="#071D49" points="71.4215823 63 40 88.000695 71.4215823 113 75 108.552868 49.1668998 88.000695 75 67.4471322"></polygon>
+                        <polygon id="Path" fill="#071D49" points="78 117.141847 98.5136578 57 104 58.8581529 83.4877569 119"></polygon>
                     </g>
-                    <rect id="Rectangle" stroke="#000000" stroke-width="5" fill-rule="nonzero" x="2.5" y="2.5" width="177" height="146"></rect>
-                    <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="0" y="31" width="182" height="5"></rect>
-                    <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="165" cy="18" r="5"></circle>
-                    <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="150" cy="18" r="5"></circle>
-                    <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="135" cy="18" r="5"></circle>
+                    <rect id="Rectangle" stroke="#071D49" stroke-width="5" fill-rule="nonzero" x="2.5" y="2.5" width="177" height="146"></rect>
+                    <rect id="Rectangle" fill="#071D49" fill-rule="nonzero" x="0" y="31" width="182" height="5"></rect>
+                    <circle id="Oval" fill="#071D49" fill-rule="nonzero" cx="165" cy="18" r="5"></circle>
+                    <circle id="Oval" fill="#071D49" fill-rule="nonzero" cx="150" cy="18" r="5"></circle>
+                    <circle id="Oval" fill="#071D49" fill-rule="nonzero" cx="135" cy="18" r="5"></circle>
                 </g>
-                <rect id="Rectangle" stroke="#000000" stroke-width="5" fill="#2A80CC" fill-rule="nonzero" x="104" y="309" width="52" height="88" rx="26"></rect>
-                <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="127" y="263" width="5" height="81"></rect>
-                <rect id="Rectangle-Copy-9" fill="#000000" fill-rule="nonzero" x="104" y="341" width="52" height="5"></rect>
+                <rect id="Rectangle" stroke="#071D49" stroke-width="5" fill="#2A80CC" fill-rule="nonzero" x="104" y="309" width="52" height="88" rx="26"></rect>
+                <rect id="Rectangle" fill="#071D49" fill-rule="nonzero" x="127" y="263" width="5" height="81"></rect>
+                <rect id="Rectangle-Copy-9" fill="#071D49" fill-rule="nonzero" x="104" y="341" width="52" height="5"></rect>
             </g>
         </g>
     </g>

@@ -330,10 +330,10 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 	//Move containers on scrollPos
 .animatecontainer{
 
-	-webkit-transition:transform 2000ms ease-out, opacity 600ms ease-out;
-	-moz-transition: transform 2000ms ease-out, opacity 600ms ease-out;
-	-o-transition: transform 2000ms ease-out, opacity 600ms ease-out;
-	transition:transform 2000ms ease-out, opacity 600ms ease-out;
+	-webkit-transition:transform 800ms ease-out, opacity 600ms ease-out;
+	-moz-transition: transform 800ms ease-out, opacity 600ms ease-out;
+	-o-transition: transform 800ms ease-out, opacity 600ms ease-out;
+	transition:transform 800ms ease-out, opacity 600ms ease-out;
 
   -webkit-transform: translateY(50px);
 	-moz-transform: translateY(50px);
@@ -372,10 +372,10 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 .clients .clients-logos
 {
 
-	-webkit-transition:transform 2000ms ease-out, opacity 600ms ease-out;
-	-moz-transition: transform 2000ms ease-out, opacity 600ms ease-out;
-	-o-transition: transform 2000ms ease-out, opacity 600ms ease-out;
-	transition:transform 2000ms ease-out, opacity 600ms ease-out;
+	-webkit-transition:transform 800ms ease-out, opacity 600ms ease-out;
+	-moz-transition: transform 800ms ease-out, opacity 600ms ease-out;
+	-o-transition: transform 800ms ease-out, opacity 600ms ease-out;
+	transition:transform 800ms ease-out, opacity 600ms ease-out;
 
 }
 

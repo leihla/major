@@ -29,18 +29,18 @@ $(document).ready(function () {
     $(".body-about header .row nav .menu-icon rect").toggleClass('menudark');
 
     setTimeout(function() {
-      $(".overlay-menu li:nth-child(1) a").toggleClass('animatecontainer');
+      $(".overlay-menu li:nth-child(1) a").toggleClass('container-invisible');
       $(".overlay-menu li:nth-child(1) a").toggleClass('animacao');
       $(".overlay-menu li:nth-child(1) a").toggleClass('animacao2');
 
 
       setTimeout(function() {
-        $(".overlay-menu li:nth-child(2) a").toggleClass('animatecontainer');
+        $(".overlay-menu li:nth-child(2) a").toggleClass('container-invisible');
         $(".overlay-menu li:nth-child(2) a").toggleClass('animacao');
         $(".overlay-menu li:nth-child(2) a").toggleClass('animacao2');
 
           setTimeout(function() {
-            $(".overlay-menu li:nth-child(3) a").toggleClass('animatecontainer');
+            $(".overlay-menu li:nth-child(3) a").toggleClass('container-invisible');
             $(".overlay-menu li:nth-child(3) a").toggleClass('animacao');
             $(".overlay-menu li:nth-child(3) a").toggleClass('animacao2');
 
@@ -123,18 +123,19 @@ setTimeout(function() {
   }, {offset: '60%'});
 
     //wecan help
-    const $wecanhelp = $('.wecanhelptext h1');
-    const $wecanhelpp = $('.wecanhelptext p');
-    const $wecanhelpillust = $('.wecanhelp .redblock img');
-    $wecanhelp.waypoint(function(direction){
+    // const $wecanhelp = $('.wecanhelptext h1');
+    const $wecanhelph2 = $('.wecanhelptext p');
+    //const $wecanhelpillust = $('.wecanhelp .redblock img');
+    $wecanhelph2.waypoint(function(direction){
     if (direction == 'down'){
-    $wecanhelp.removeClass('container-invisible')
-    $wecanhelp.addClass('animacao')
-    setTimeout(function() {
-      $wecanhelpp.removeClass('container-invisible');
-      $wecanhelpp.addClass('animacao');
-      $wecanhelpillust.removeClass('animate-help');
-  }, 200);
+    // $wecanhelp.removeClass('container-invisible')
+    // $wecanhelp.addClass('animacao')
+    $wecanhelph2.removeClass('container-invisible');
+    $wecanhelph2.addClass('animacao');
+    //$wecanhelpillust.removeClass('animate-help');
+  //   setTimeout(function() {
+  //
+  // }, 200);
     }
   }, {offset: '60%'});
 
@@ -158,12 +159,14 @@ setTimeout(function() {
     var projectdetail = ('.projects'+' '+article+' '+'article .card-resume .small');
     var projectimg = ('.projects'+' '+article+' '+'article .card-shot');
 
-  setTimeout(function() {$(projectname).removeClass('container-invisible'); $(projectname).addClass('animacao');
+  setTimeout(function() {
+    $(projectname).removeClass('container-invisible'); $(projectname).addClass('animacao');
+    $(projectimg).removeClass('animatecontainer');
     setTimeout(function() {$(projectstatement).removeClass('container-invisible');$(projectstatement).addClass('animacao');
       setTimeout(function() {$(projectdescription).removeClass('container-invisible');$(projectdescription).addClass('animacao');
           setTimeout(function() {$(projectdetail).removeClass('container-invisible');$(projectdetail).addClass('animacao');
-              setTimeout(function() {$(projectimg).removeClass('animatecontainer');
-            }, 100);
+
+
         }, 100);
     }, 100);
   }, 100);
@@ -230,8 +233,8 @@ const $abouttdescription = $('.about-the-studio .about-text p');
 const $studiophoto2 = $('.about-the-studio .row .studio-photo2');
 $studiophoto1.waypoint(function(direction){
 if (direction == 'down'){
-$abouttitle.removeClass('container-invisible');
-$abouttitle.addClass('animacao')
+// $abouttitle.removeClass('container-invisible');
+// $abouttitle.addClass('animacao')
 setTimeout(function() {$abouttdescription.removeClass('container-invisible'); $abouttdescription.addClass('animacao');
   setTimeout(function() {$studiophoto1.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
     setTimeout(function() {$studiophoto2.removeClass('animatecontainer'); //$studiophoto2.addClass('animacao');
@@ -488,13 +491,13 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
 
     //Team images HOVER
 
-    $(".team ul li figure img").mouseover(function(){
+    $(".team ul li figure img, .team ul li .member-long-description").mouseover(function(){
       var index = $(this).closest("li").index()+1;
     $(".team ul li:nth-child("+index+") .member-long-description").css("visibility","visible");
     $(".team ul li:nth-child("+index+") .smiling").css("visibility","visible");
 });
 
-$(".team ul li figure img").mouseout(function(){
+$(".team ul li figure img, .team ul li .member-long-description").mouseout(function(){
   var index = $(this).closest("li").index()+1;
 $(".team ul li:nth-child("+index+") .member-long-description").css("visibility","hidden");
 $(".team ul li:nth-child("+index+") .smiling").css("visibility","hidden");
