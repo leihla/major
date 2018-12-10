@@ -330,10 +330,10 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 	//Move containers on scrollPos
 .animatecontainer{
 
-	-webkit-transition:transform 800ms ease-out, opacity 600ms ease-out;
-	-moz-transition: transform 800ms ease-out, opacity 600ms ease-out;
-	-o-transition: transform 800ms ease-out, opacity 600ms ease-out;
-	transition:transform 800ms ease-out, opacity 600ms ease-out;
+	-webkit-transition:transform 700ms ease-out, opacity 600ms ease-out;
+	-moz-transition: transform 700ms ease-out, opacity 600ms ease-out;
+	-o-transition: transform 700ms ease-out, opacity 600ms ease-out;
+	transition:transform 700ms ease-out, opacity 600ms ease-out;
 
   -webkit-transform: translateY(50px);
 	-moz-transform: translateY(50px);
@@ -372,18 +372,18 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 .clients .clients-logos
 {
 
-	-webkit-transition:transform 800ms ease-out, opacity 600ms ease-out;
-	-moz-transition: transform 800ms ease-out, opacity 600ms ease-out;
-	-o-transition: transform 800ms ease-out, opacity 600ms ease-out;
-	transition:transform 800ms ease-out, opacity 600ms ease-out;
+	-webkit-transition:transform 700ms ease-out, opacity 600ms ease-out;
+	-moz-transition: transform 700ms ease-out, opacity 600ms ease-out;
+	-o-transition: transform 700ms ease-out, opacity 600ms ease-out;
+	transition:transform 700ms ease-out, opacity 600ms ease-out;
 
 }
 
 .container-invisible{
-	-webkit-transition:opacity 800ms;
-	-moz-transition: opacity 800ms;
-	-o-transition: opacity 800ms;
-	transition:opacity 800ms;
+	-webkit-transition:opacity 700ms;
+	-moz-transition: opacity 700ms;
+	-o-transition: opacity 700ms;
+	transition:opacity 700ms;
 	opacity:0;
 }
 
@@ -402,7 +402,7 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 	 left:0;
 	 width:100%;
 	 height:100%;
-	 background-color:$yellow;
+	 background-color:#faf9f8;
 	 -webkit-animation:animee2 0.3s normal 0.3s ease-in-out forwards; /* Safari 4+ */
  	-moz-animation:animee2 0.3s normal 0.4s ease-in-out forwards; /* Fx 5+ */
  	-o-animation:animee2 0.3s normal 0.4s ease-in-out forwards; /* Opera 12+ */
