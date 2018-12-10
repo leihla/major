@@ -389,10 +389,10 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 
 .animacao{
 	position: relative;
-	-webkit-animation:animee 0.4s normal ease-in-out; /* Safari 4+ */
-	-moz-animation:    animee 0.4s normal ease-in-out; /* Fx 5+ */
-	-o-animation:      animee 0.4s normal ease-in-out; /* Opera 12+ */
-	animation:         animee 0.4s normal ease-in-out; /* IE 10+, Fx 29+ */
+	-webkit-animation:animee 0.3s normal ease-in-out; /* Safari 4+ */
+	-moz-animation:    animee 0.3s normal ease-in-out; /* Fx 5+ */
+	-o-animation:      animee 0.3s normal ease-in-out; /* Opera 12+ */
+	animation:         animee 0.3s normal ease-in-out; /* IE 10+, Fx 29+ */
 	display: inline-block;
 
 	 &:after{
@@ -403,10 +403,10 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 	 width:100%;
 	 height:100%;
 	 background-color:$yellow;
-	 -webkit-animation:animee2 0.4s normal 0.4s ease-in-out forwards; /* Safari 4+ */
- 	-moz-animation:animee2 0.4s normal 0.4s ease-in-out forwards; /* Fx 5+ */
- 	-o-animation:animee2 0.4s normal 0.4s ease-in-out forwards; /* Opera 12+ */
- 	animation:animee2 0.4s normal 0.4s ease-in-out forwards; /* IE 10+, Fx 29+ */
+	 -webkit-animation:animee2 0.3s normal 0.3s ease-in-out forwards; /* Safari 4+ */
+ 	-moz-animation:animee2 0.3s normal 0.4s ease-in-out forwards; /* Fx 5+ */
+ 	-o-animation:animee2 0.3s normal 0.4s ease-in-out forwards; /* Opera 12+ */
+ 	animation:animee2 0.3s normal 0.4s ease-in-out forwards; /* IE 10+, Fx 29+ */
 
 
  }
