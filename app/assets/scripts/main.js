@@ -97,17 +97,14 @@ $(document).ready(function () {
 // }
 
 
-$('.wecanhelp .redblock').addClass('redblockscale');
-setTimeout(function() {
-  $('.wecanhelp .redblock').removeClass('redblockscale');
-}, 5000);
+
+
 
 
   //Animate containers when scroll first time
     //Landing page
     const $homelandh1 = $('.landingpage h1');
     const $homelandp = $('.landingpage p');
-    const $redblock = $('.wecanhelp .redblock');
     const $labelguide = $('.label-guide ul');
     $homelandh1.waypoint(function(direction){
     if (direction == 'down'){
@@ -123,19 +120,16 @@ setTimeout(function() {
   }, {offset: '60%'});
 
     //wecan help
-    // const $wecanhelp = $('.wecanhelptext h1');
-    const $wecanhelph2 = $('.wecanhelptext p');
-    //const $wecanhelpillust = $('.wecanhelp .redblock img');
-    $wecanhelph2.waypoint(function(direction){
+    const $wecanhelph2 = $('.wecanhelptext h2');
+    const $redblock = $('.wecanhelp .redblock');
+    $redblock.waypoint(function(direction){
     if (direction == 'down'){
-    // $wecanhelp.removeClass('container-invisible')
-    // $wecanhelp.addClass('animacao')
-    $wecanhelph2.removeClass('container-invisible');
-    $wecanhelph2.addClass('animacao');
-    //$wecanhelpillust.removeClass('animate-help');
-  //   setTimeout(function() {
-  //
-  // }, 200);
+    $redblock.addClass('redblockscale');
+
+     setTimeout(function() {
+       $wecanhelph2.removeClass('container-invisible');
+       $wecanhelph2.addClass('animacao');
+ }, 100);
     }
   }, {offset: '60%'});
 
@@ -227,20 +221,14 @@ setTimeout(function() {
 
 //About the major_studio
 
-const $studiophoto1 = $('.about-the-studio .row .studio-photo1');
-const $abouttitle = $('.about-the-studio .about-text h1');
+
 const $abouttdescription = $('.about-the-studio .about-text p');
-const $studiophoto2 = $('.about-the-studio .row .studio-photo2');
-$studiophoto1.waypoint(function(direction){
+const $abouttitle = $('.about-the-studio .about-text h1');
+const $studiofigure = $('.about-the-studio .row figure img');
+$studiofigure.waypoint(function(direction){
 if (direction == 'down'){
-// $abouttitle.removeClass('container-invisible');
-// $abouttitle.addClass('animacao')
-setTimeout(function() {$abouttdescription.removeClass('container-invisible'); $abouttdescription.addClass('animacao');
-  setTimeout(function() {$studiophoto1.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
-    setTimeout(function() {$studiophoto2.removeClass('animatecontainer'); //$studiophoto2.addClass('animacao');
-  }, 200);
-}, 200);
-}, 200);
+    $abouttdescription.removeClass('container-invisible'); $abouttdescription.addClass('animacao');
+
 }
 }, {offset: '60%'});
 
@@ -255,8 +243,8 @@ $studiolongdescription.addClass('animacao');
 
 
 //Team
-const $teamtitle = $('.team h1');
-const $teamdescription = $('.team p');
+const $teamtitle = $('.team .team-text h1');
+const $teamdescription = $('.team .team-text p');
 const $teammembdesc1  = $('.team li:nth-child(1) .member-description');
 const $teammembfoto1  = $('.team li:nth-child(1) figure');
 const $teammembdesc2  = $('.team li:nth-child(2) .member-description');
@@ -269,7 +257,7 @@ const $teammembfoto4  = $('.team li:nth-child(4) figure');
 $teamtitle.waypoint(function(direction){
 if (direction == 'down'){
 $teamtitle.removeClass('container-invisible');
-$teamtitle.addClass('animacao')
+$teamtitle.addClass('animacao');
 setTimeout(function() {$teamdescription.removeClass('container-invisible'); $teamdescription.addClass('animacao');
   setTimeout(function() {$teammembdesc1.removeClass('container-invisible'); $teammembdesc1.addClass('animacao');
     setTimeout(function() {$teammembfoto1.removeClass('animatecontainer');
@@ -494,14 +482,16 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
     $(".team ul li figure img, .team ul li .member-long-description").mouseover(function(){
       var index = $(this).closest("li").index()+1;
     $(".team ul li:nth-child("+index+") .member-long-description").css("visibility","visible");
+    $(".team ul li:nth-child("+index+") .member-long-description").addClass("animacao");
     $(".team ul li:nth-child("+index+") .smiling").css("visibility","visible");
 });
 
-$(".team ul li figure img, .team ul li .member-long-description").mouseout(function(){
-  var index = $(this).closest("li").index()+1;
-$(".team ul li:nth-child("+index+") .member-long-description").css("visibility","hidden");
-$(".team ul li:nth-child("+index+") .smiling").css("visibility","hidden");
-});
+    $(".team ul li figure img, .team ul li .member-long-description").mouseout(function(){
+      var index = $(this).closest("li").index()+1;
+    $(".team ul li:nth-child("+index+") .member-long-description").css("visibility","hidden");
+    $(".team ul li:nth-child("+index+") .member-long-description").removeClass("animacao");
+    $(".team ul li:nth-child("+index+") .smiling").css("visibility","hidden");
+    });
 
 }); //close document ready
 
