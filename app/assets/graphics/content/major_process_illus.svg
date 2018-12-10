@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="585px" height="590px" viewBox="0 0 585 590" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>major_process_illus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="major_process_illus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-Copy-3" stroke="#071D49" stroke-width="5" fill="#F82A54" fill-rule="nonzero" cx="221" cy="295" r="158"></circle>
+        <ellipse id="Oval" stroke="#071D49" stroke-width="5" fill="#2A80CC" fill-rule="nonzero" cx="365" cy="295" rx="158" ry="159"></ellipse>
+        <circle id="Oval-Copy-3" stroke="#071D49" stroke-width="5" fill-rule="nonzero" cx="221" cy="295" r="158"></circle>
+        <path d="M292.134686,436.238565 C241.545891,409.731893 207,356.485434 207,295.119282 C207,233.753131 241.545891,180.506672 292.134686,154 C343.664595,180.026135 379,233.446196 379,295.119282 C379,356.792369 343.664595,410.21243 292.134686,436.238565 Z" id="Combined-Shape" stroke="#071D49" stroke-width="5" fill="#FFCE38" fill-rule="nonzero"></path>
+        <text id="us" font-family="Oswald-Medium, Oswald" font-size="32" font-weight="400" line-spacing="32" fill="#071D49">
+            <tspan x="279" y="349">us</tspan>
+        </text>
+        <text id="+" font-family="Oswald-Medium, Oswald" font-size="32" font-weight="400" line-spacing="32" fill="#071D49">
+            <tspan x="286" y="321">+</tspan>
+        </text>
+        <text id="you" font-family="Oswald-Medium, Oswald" font-size="32" font-weight="400" line-spacing="32" fill="#071D49">
+            <tspan x="271" y="285">you</tspan>
+        </text>
+    </g>
+</svg>

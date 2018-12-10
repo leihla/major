@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="255px" height="400px" viewBox="0 0 255 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>major_research_illus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="major_research_illus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Rectangle-21-Copy-19" fill="#FFCE38" fill-rule="nonzero" points="0 0 255 0 255 400 0 400"></polygon>
+        <g id="Group-2" transform="translate(50.000000, 128.000000)" fill-rule="nonzero">
+            <g id="Group" transform="translate(0.500000, 0.000000)">
+                <ellipse id="Oval" stroke="#071D49" stroke-width="5" fill="#2A80CC" cx="78" cy="75" rx="75.5" ry="75"></ellipse>
+                <path d="M2.20594209,74.5 C17.3351042,48.4956404 45.6126469,31 78,31 C110.387353,31 138.664896,48.4956404 153.794058,74.5 C138.664896,100.50436 110.387353,118 78,118 C45.6126469,118 17.3351042,100.50436 2.20594209,74.5 Z" id="Combined-Shape" fill="#FFCE38"></path>
+                <path d="M3.38439206,74.5 C18.8828902,100.943522 46.7860423,117.5 77.5,117.5 C108.213958,117.5 136.11711,100.943522 151.615608,74.5 C136.11711,48.0564777 108.213958,31.5 77.5,31.5 C46.7860423,31.5 18.8828902,48.0564777 3.38439206,74.5 Z" id="Combined-Shape" stroke="#071D49" stroke-width="5"></path>
+                <circle id="Oval" fill="#EA0537" cx="78" cy="74.5" r="33.5"></circle>
+                <circle id="Oval" fill="#071D49" cx="79" cy="74.5" r="11.5"></circle>
+                <circle id="Oval" stroke="#071D49" stroke-width="5" cx="78" cy="74.5" r="31"></circle>
+            </g>
+            <path d="M63,186.5 L94,186.5" id="Path" stroke="#071D49" stroke-width="5"></path>
+            <polygon id="Path" stroke="#071D49" stroke-width="5" points="63 316 63 171 93 171 93 316"></polygon>
+            <rect id="Rectangle" stroke="#071D49" stroke-width="5" x="73" y="150" width="10" height="21"></rect>
+        </g>
+    </g>
+</svg>

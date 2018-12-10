@@ -6,40 +6,79 @@
 
     <!-- build:css /assets/styles/vendor.css -->
     <!-- endbuild -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- build:css /assets/styles/main.css -->
     <link rel="stylesheet" href="/assets/styles/main.css">
     <!-- endbuild -->
-    
+
   </head>
-  <body class="page page--docs">
-    <div id="wrapper">
       {{content}}
-
-      <main>
-        <img id="page-brand" src="/assets/graphics/content/major-logo-tall-red.svg" alt="Major">
-      </main>
-
-      <div id="form" class="white">
-            &nbsp;
+      <div class="row label-guide">
+        <ul class="label-guide-animation">
+          <li><a href="mailto:hello@wegomajor.com" title="Say Hello">hello@wegomajor.com</a></li>
+        </ul>
+      </div>
+    </main>
+    <footer id="page-footer" role="contentinfo">
+      <div class="row">
+        <div class="say-hi-contact">
+        <h2>Hey, we just met you and this is crazy</h2>
+        <a href="mailto:hello@wegomajor.com" title="Say Hello"> Say hello@wegomajor.com</a>
         </div>
-
- 
-      
+        <a href="/" title="Major" class="logo-footer">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg  width="43px" height="48px" viewBox="0 0 422 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M71.9292,14.553 C84.6762,-3.359 107.6042,-4.194 115.6372,14.551 C117.1202,18.396 117.9922,23.246 117.9922,29.323 L117.9922,292.03 L87.5752,292.03 L87.5752,35.137 C87.5752,22.666 74.3062,24.378 74.3062,34.404 L74.2612,292.03 L43.8352,292.03 L43.8352,35.137 C43.8352,22.736 30.7272,24.367 30.5802,34.245 L30.5802,292.03 L0.1862,292.03 L0.1862,5.283 L27.2712,5.283 L28.3322,16.929 C36.8322,-3 63.8072,-4.909 71.9292,14.553 Z M313.0572,0.8405 C348.1382,0.8405 350.1292,28.7225 350.1292,46.1975 L350.1292,251.1825 C350.1292,268.6585 348.1312,296.5405 313.0492,296.5405 C277.9682,296.5405 275.9782,268.6585 275.9782,251.1825 L275.9782,46.1975 C275.9782,28.7225 277.9752,0.8405 313.0572,0.8405 Z M319.6802,35.8015 C319.6802,23.3295 306.4192,23.3295 306.4192,35.8015 L306.4192,261.5795 C306.4192,274.0515 319.6802,274.0515 319.6802,261.5795 L319.6802,35.8015 Z M395.9849,16.9939 C402.1779,4.8439 411.0739,0.8069 421.6359,0.8069 L421.6359,32.8269 C415.1819,32.8269 398.2329,38.4889 398.2329,53.0479 L398.2329,292.2649 L367.8389,292.2649 L367.8389,5.3479 L394.9229,5.3479 L395.9849,16.9939 Z M208.4741,46.1613 L208.4911,280.3833 L209.5511,292.0293 L181.4061,292.0293 L180.2871,280.4283 C171.9461,301.6863 134.3771,305.3533 134.3771,267.6513 L134.3771,163.9533 C134.3771,112.8933 178.0551,120.7533 178.0551,104.6423 L178.0551,34.2213 C178.0551,23.7313 165.5991,23.7313 165.5991,34.2213 L165.5541,101.8613 L135.1341,101.8613 L135.1341,46.1613 C135.1341,28.6863 136.3131,0.8043 171.3941,0.8043 C206.4761,0.8043 208.4741,28.6863 208.4741,46.1613 Z M178.0591,263.2063 L178.0591,144.5163 C178.0591,144.5163 164.6981,149.4033 164.8041,161.1253 L164.7961,261.2323 C164.7961,277.1863 178.0591,267.1883 178.0591,263.2063 Z M228.1909,282.5627 L228.1599,5.2827 L258.5779,5.2827 L258.5779,284.7917 C258.5779,323.3957 240.4619,329.7707 217.7449,329.0597 L217.7449,303.5377 C227.1979,303.5377 228.1909,301.1917 228.1909,282.5627 Z" id="Combined-Shape">
+            </path>
+          </svg>
+      </a>
+        <div class="social">
+          <ul>
+            <li>
+              <a href="/" title="Dribbble">
+                <img src="/assets/graphics/layout/dribbble.svg" alt="Dribbble">
+              </a>
+            </li>
+            <li>
+              <a href="/" title="Instagram">
+                <img src="/assets/graphics/layout/instagram.svg" alt="Instagram">
+              </a>
+            </li>
+            <li>
+              <a href="/" title="Facebook">
+                <img src="/assets/graphics/layout/facebook.svg" alt="Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="/" title="Linkedin">
+                <img src="/assets/graphics/layout/linkedin.svg" alt="Linkedin">
+              </a>
+            </li>
+          </ul>
+        <!-- <p>© 2018 Major. All rights reserved.</p> -->
+         </div>
+      </div>
+    </footer>
+    <div id="page-transition-wrap" class="page-transition-wrap">
+      <div id="page-transition" class="page-transition"></div>
     </div>
-
-    
-        <p>We spent the last 500 days doing research, designing websites and launching new products, so we didn't have time to update this website. We'll get to it, eventually. In the meanwhile you can reach us at <a href="mailto:hello@wegomajor.com" title="Say Hello">hello@wegomajor.com</a></p>
+    <div id="page-loader-wrap" class="page-loader-wrap">
+      <div id="page-loader" class="page-loader">
+        <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+      </div>
+    </div>
 
     <!-- build:js /assets/scripts/vendor.js -->
     <script src="/assets/scripts/vendor.js"></script>
-
     <!-- endbuild -->
     <!-- build:js /assets/scripts/bundle.js -->
     <script src="/assets/scripts/bundle.js"></script>
     <!-- endbuild -->
-
   </body>
 </html>
