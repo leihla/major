@@ -31,36 +31,42 @@
 }
 
 .wecanhelp{
-
-	margin-top: -40px;
-	position: relative;
-	z-index: 9;
+		position: relative;
+		z-index: 9;
+		margin-top: -40px;
 
 	.row{
 
 		display: flex;
 		align-items: center;
+		position: relative;
+		justify-content: center;
+		min-height: 700px;
+		min-height: 50vh;
 
 		h1{
 			padding-bottom: 0.5rem;
 			margin-bottom: 2.2rem;
 		}
 
-		p{
+	h2{
+		padding-bottom: unset;
 
-		}
+	}
 	}
 
 	.redblock{
 		background-color: $red;
-		min-height: 700px;
-		height: 50vh;
-		position: relative;
-		@include column(1/2);
-		box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	width: 100%;
+height: 100%;
+
+	position: absolute;
+	top: 0;
+
+	box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
+	transform:scaleX(0.5);
+	transform-origin: left bottom;
+
 
 		img{
 			width: 60%;
@@ -72,19 +78,19 @@
 	}
 
 .redblockscale{
-//	animation: scaleblock 0.8s ease-out;
-
+animation: scaleblock 0.4s ease-in-out;
+animation-fill-mode: forwards;
 }
 	@keyframes scaleblock{
-	  0%{transform:scaleX(3); transform-origin: left bottom;;}
-	  100%{transform:scale(1); transform-origin: left bottom;;}
+	  0%{transform:scaleX(0.5); transform-origin: left bottom;}
+	  100%{transform:scale(1); transform-origin: left bottom;}
 	}
 
 	.wecanhelptext{
+				padding: 3rem;
+				width: 80%;
+				color: white;
 
-
-		padding: 5% 0 5% 5%;;
-		@include column(1/2);
 	}
 }
 
