@@ -2,6 +2,7 @@
 var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var defaultsdeep = require('lodash.defaultsdeep');
 var del = require('del');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
@@ -129,8 +130,8 @@ gulp.task('javascript', function () {
   }
 
   watcher
-  .on('log', gutil.log)
-  .on('update', bundler);
+    .on('log', gutil.log)
+    .on('update', bundler);
 
   return bundler();
 });
@@ -222,7 +223,12 @@ gulp.task('styles', function () {
 
 // After being rendered by jekyll process the html files. (merge css files, etc)
 gulp.task('html', function () {
-  var jkConf = YAML.load('_config.yml');
+  let jkConf = YAML.load('_config.yml');
+  if (process.env.DS_ENV === 'staging') {
+    const stageConf = YAML.load('_config-stage.yml');
+    jkConf = defaultsdeep({}, stageConf, jkConf);
+  }
+
   return gulp.src('_site/**/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
