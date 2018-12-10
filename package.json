@@ -23,6 +23,7 @@
     "postinstall": "[ -f app/assets/scripts/config/local.js ] || echo 'module.exports = {};' > app/assets/scripts/config/local.js; [ -f _config-dev.yml ] || echo 'baseurl: http://localhost:3000' > _config-dev.yml",
     "serve": "DS_ENV=development gulp serve",
     "build": "DS_ENV=production NODE_ENV=production gulp",
+    "build-stage": "DS_ENV=staging NODE_ENV=staging node --max-old-space-size=4096 ./node_modules/gulp/bin/gulp.js",
     "lint": "eslint app/assets/scripts/ --ext .js",
     "test": "echo \"No tests\" && exit 0"
   },
