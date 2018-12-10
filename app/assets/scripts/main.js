@@ -157,8 +157,8 @@ $(document).ready(function () {
     $(projectname).removeClass('container-invisible'); $(projectname).addClass('animacao');
     $(projectimg).removeClass('animatecontainer');
     setTimeout(function() {$(projectstatement).removeClass('container-invisible');$(projectstatement).addClass('animacao');
-      setTimeout(function() {$(projectdescription).removeClass('container-invisible');$(projectdescription).addClass('animacao');
-          setTimeout(function() {$(projectdetail).removeClass('container-invisible');$(projectdetail).addClass('animacao');
+      setTimeout(function() {$(projectdescription).removeClass('container-invisible');$(projectdescription).addClass('animacao_grey');
+          setTimeout(function() {$(projectdetail).removeClass('container-invisible');$(projectdetail).addClass('animacao_grey');
 
 
         }, 100);
@@ -227,7 +227,8 @@ const $abouttitle = $('.about-the-studio .about-text h1');
 const $studiofigure = $('.about-the-studio .row figure img');
 $studiofigure.waypoint(function(direction){
 if (direction == 'down'){
-    $abouttdescription.removeClass('container-invisible'); $abouttdescription.addClass('animacao');
+    $abouttdescription.removeClass('container-invisible');
+    $abouttdescription.addClass('animacao');
 
 }
 }, {offset: '60%'});
