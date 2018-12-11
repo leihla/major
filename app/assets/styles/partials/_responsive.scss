@@ -475,8 +475,13 @@ dl{
   }
 
   dd{
+    display: none;
   }
   }
+}
+
+.clients{
+  margin-bottom: 10%;
 }
 
   .clients .row .clients-logos li{
