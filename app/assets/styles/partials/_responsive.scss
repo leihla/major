@@ -64,7 +64,7 @@ figure{
 }
 .about-text{
   width: 100%;
-  padding: 3rem 0 3rem 0;
+  padding: 3rem 0 1rem 0;
   margin-top: 0;
 
 }
@@ -406,8 +406,14 @@ animation-fill-mode: forwards;
   }
 
 
-.about-the-studio .studio-description h2{
+.about-the-studio .studio-description{
+
+  margin-top: 0;
+  padding: 2rem 3rem;
+
+  h2{
 line-height: 3rem;
+}
 }
 
 .about-the-studio .row figure{
