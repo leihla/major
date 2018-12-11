@@ -113,8 +113,15 @@ $(document).ready(function () {
     $homelandh1.addClass('animacao');
     $labelguide.removeClass('label-guide-animation');
     setTimeout(function() {
+
+      if ($('body').is('.body-homepage')) {
       $homelandp.removeClass('container-invisible');
-      $homelandp.addClass('animacao');
+      $homelandp.addClass('animacao_white');
+    }
+    else {
+      $homelandp.removeClass('container-invisible');
+      $homelandp.addClass('animacao_red');
+    }
   }, 200);
     }
   }, {offset: '60%'});
@@ -128,7 +135,7 @@ $(document).ready(function () {
 
      setTimeout(function() {
        $wecanhelph2.removeClass('container-invisible');
-       $wecanhelph2.addClass('animacao');
+       $wecanhelph2.addClass('animacao_red');
  }, 100);
     }
   }, {offset: '60%'});
@@ -153,8 +160,9 @@ $(document).ready(function () {
     var projectdetail = ('.projects'+' '+article+' '+'article .card-resume .small');
     var projectimg = ('.projects'+' '+article+' '+'article .card-shot');
 
-  setTimeout(function() {
-    $(projectname).removeClass('container-invisible'); $(projectname).addClass('animacao');
+
+    $(projectname).removeClass('container-invisible');
+    $(projectname).addClass('animacao');
     $(projectimg).removeClass('animatecontainer');
     setTimeout(function() {$(projectstatement).removeClass('container-invisible');$(projectstatement).addClass('animacao');
       setTimeout(function() {$(projectdescription).removeClass('container-invisible');$(projectdescription).addClass('animacao_grey');
@@ -164,7 +172,7 @@ $(document).ready(function () {
         }, 100);
     }, 100);
   }, 100);
-}, 100);
+
 
   return;
 
@@ -220,15 +228,19 @@ $(document).ready(function () {
       }, {offset: '60%'});
 
 //About the major_studio
-
-
 const $abouttdescription = $('.about-the-studio .about-text p');
 const $abouttitle = $('.about-the-studio .about-text h1');
-const $studiofigure = $('.about-the-studio .row figure img');
+const $studiofigure = $('.about-the-studio .row figure');
+const $studioimg = $('.about-the-studio .row figure img')
 $studiofigure.waypoint(function(direction){
 if (direction == 'down'){
+$studioimg.addClass('scaleteam');
+  setTimeout(function() {
     $abouttdescription.removeClass('container-invisible');
-    $abouttdescription.addClass('animacao');
+    $abouttdescription.addClass('animacao_grey');
+}, 100);
+
+
 
 }
 }, {offset: '60%'});
@@ -259,14 +271,14 @@ $teamtitle.waypoint(function(direction){
 if (direction == 'down'){
 $teamtitle.removeClass('container-invisible');
 $teamtitle.addClass('animacao');
-setTimeout(function() {$teamdescription.removeClass('container-invisible'); $teamdescription.addClass('animacao');
-  setTimeout(function() {$teammembdesc1.removeClass('container-invisible'); $teammembdesc1.addClass('animacao');
+setTimeout(function() {$teamdescription.removeClass('container-invisible'); $teamdescription.addClass('animacao_white');
+  setTimeout(function() {$teammembdesc1.removeClass('container-invisible'); $teammembdesc1.addClass('animacao_grey');
     setTimeout(function() {$teammembfoto1.removeClass('animatecontainer');
-      setTimeout(function() {$teammembdesc2.removeClass('container-invisible');$teammembdesc2.addClass('animacao');
+      setTimeout(function() {$teammembdesc2.removeClass('container-invisible');$teammembdesc2.addClass('animacao_grey');
         setTimeout(function() {$teammembfoto2.removeClass('animatecontainer');
-        setTimeout(function() {$teammembdesc3.removeClass('container-invisible');$teammembdesc3.addClass('animacao');
+        setTimeout(function() {$teammembdesc3.removeClass('container-invisible');$teammembdesc3.addClass('animacao_grey');
           setTimeout(function() {$teammembfoto3.removeClass('animatecontainer');
-            setTimeout(function() {$teammembdesc4.removeClass('container-invisible');$teammembdesc4.addClass('animacao');
+            setTimeout(function() {$teammembdesc4.removeClass('container-invisible');$teammembdesc4.addClass('animacao_grey');
               setTimeout(function() {$teammembfoto4.removeClass('animatecontainer');
 
     }, 100);
@@ -306,6 +318,7 @@ setTimeout(function() {$servicesresearch.removeClass('animatecontainer'); //$abo
 }
 }, {offset: '60%'});
 
+
 //process
 const $processtitle = $('.process h1');
 const $processdesc = $('.process p');
@@ -314,7 +327,7 @@ $processtitle.waypoint(function(direction){
 if (direction == 'down'){
 $processtitle.removeClass('container-invisible');
 $processtitle.addClass('animacao')
-setTimeout(function() {$processdesc.removeClass('container-invisible'); $processdesc.addClass('animacao');
+setTimeout(function() {$processdesc.removeClass('container-invisible'); $processdesc.addClass('animacao_white');
   setTimeout(function() {$processfigure.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
 
 }, 200);
@@ -331,7 +344,7 @@ $clientstitle.waypoint(function(direction){
 if (direction == 'down'){
 $clientstitle.removeClass('container-invisible');
 $clientstitle.addClass('animacao')
-setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsdesc.addClass('animacao');
+setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsdesc.addClass('animacao_grey');
   setTimeout(function() {$clientslogos.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
 
 }, 200);

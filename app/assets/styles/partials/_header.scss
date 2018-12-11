@@ -35,10 +35,11 @@ header{
 			z-index: 9;
 			a{
 			display: inline-flex;
+			margin-left: -3px;
 			}
 		}
 		nav{
-			.menu-icon{
+			.menu-icon {
 				position: relative;
 				position: fixed;
 				transform: translate(-100%, -100%);
@@ -75,6 +76,7 @@ header{
 				&:not(.open):hover rect {
 				  &:nth-child(1) {
 				    transform: translate(12px, 8px);
+
 				  }
 
 				  &:nth-child(2) {
@@ -168,7 +170,7 @@ header{
 			font-size: 4.5rem;
 			font-weight: 300;
 			line-height: 4.5rem;
-			
+
 
 
 		}
