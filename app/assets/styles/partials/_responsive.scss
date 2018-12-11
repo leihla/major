@@ -339,7 +339,7 @@ figure{
 
   h2{
   	font-size: 2.2rem;
-  	line-height: 2.4rem;
+  	line-height: 3rem;
     padding-bottom: 1.2rem;
   }
 
@@ -361,7 +361,7 @@ figure{
 
 
   .section-title-underlay{
-    font-size: 7rem;
+    display: none;
   }
 
 .overlay-menu .menu {
@@ -393,9 +393,12 @@ animation-fill-mode: forwards;
 	}
 
 .projects{
-  margin-top: -2rem;
+  margin-top: -3rem;
 }
 
+.projects article .card-resume .card-title{
+  margin-bottom: 1rem;
+}
 
   .know-more-about .logo-container{
     min-width: 0;

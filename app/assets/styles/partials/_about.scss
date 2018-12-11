@@ -91,13 +91,18 @@ align-items: center;
 	}
 
   .studio-description{
-    padding: 3rem 0 3rem 0;
-    min-height: 100vh;
+    margin-top: 3rem;
+    padding: 3rem;
+    min-height: 700px;
+
+    display: flex;
+    justify-content: center;
 
 
     h2{
 
       line-height: 4rem;
+      width: 80%;
 
     }
   }

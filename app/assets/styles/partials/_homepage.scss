@@ -61,7 +61,7 @@
 		height: 100%;
 		position: absolute;
 		top: 0;
-		box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
+		//box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
 		transform:scaleX(0.5);
 		transform-origin: left bottom;
 
@@ -340,6 +340,7 @@ h2{
 	transform: translate(-50%, -50%);
 	width: 100%;
 	text-align: center;
+	padding: 2rem;
 
 	a{
 		color: $red;
