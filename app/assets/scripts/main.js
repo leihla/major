@@ -237,7 +237,7 @@ if (direction == 'down'){
 $studioimg.addClass('scaleteam');
   setTimeout(function() {
     $abouttdescription.removeClass('container-invisible');
-    $abouttdescription.addClass('animacao_grey');
+    $abouttdescription.addClass('animacao');
 }, 100);
 
 
@@ -250,7 +250,7 @@ const $studiolongdescription = $('.about-the-studio .studio-description h2');
 $studiolongdescription.waypoint(function(direction){
 if (direction == 'down'){
 $studiolongdescription.removeClass('container-invisible');
-$studiolongdescription.addClass('animacao');
+$studiolongdescription.addClass('animacao_grey');
 }
 }, {offset: '60%'});
 
@@ -271,7 +271,7 @@ $teamtitle.waypoint(function(direction){
 if (direction == 'down'){
 $teamtitle.removeClass('container-invisible');
 $teamtitle.addClass('animacao');
-setTimeout(function() {$teamdescription.removeClass('container-invisible'); $teamdescription.addClass('animacao_white');
+setTimeout(function() {$teamdescription.removeClass('container-invisible'); $teamdescription.addClass('animacao_grey');
   setTimeout(function() {$teammembdesc1.removeClass('container-invisible'); $teammembdesc1.addClass('animacao_grey');
     setTimeout(function() {$teammembfoto1.removeClass('animatecontainer');
       setTimeout(function() {$teammembdesc2.removeClass('container-invisible');$teammembdesc2.addClass('animacao_grey');
@@ -407,6 +407,8 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
           $evenStripe.css('visibility', 'hidden');
           $oddStripe.css('visibility', 'hidden');
         }
+
+
       // Strokes animation - major logo
       } else if (scrollPos >= projects+compensation){
         let {percentage, strokeopacity, strokescale} = calcAnimationValues('.know-more-about');
@@ -453,10 +455,11 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
       } else if (scrollPos >= clients && scrollPos < footer-compensationtitle) {
         $('.section-title-underlay ul li:not(:nth-child(4))').removeClass("fadetext");
         $('.section-title-underlay ul li:nth-child(4)').addClass("fadetext");
-      } else if (scrollPos >= mission && scrollPos < team-compensationtitle) {
-        $('.section-title-underlay ul li:not(:nth-child(5))').removeClass("fadetext");
-        $('.section-title-underlay ul li:nth-child(5)').addClass("fadetext");
       }
+      // else if (scrollPos >= mission && scrollPos < team-compensationtitle) {
+      //   $('.section-title-underlay ul li:not(:nth-child(5))').removeClass("fadetext");
+      //   $('.section-title-underlay ul li:nth-child(5)').addClass("fadetext");
+      // }
       else {
         $('.section-title-underlay ul li').removeClass("fadetext");
       }
@@ -493,6 +496,8 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
 
     //Team images HOVER
 
+    if ($(window).width() > 800) {
+
     $(".team ul li figure img, .team ul li .member-long-description").mouseover(function(){
       var index = $(this).closest("li").index()+1;
     $(".team ul li:nth-child("+index+") .member-long-description").css("visibility","visible");
@@ -500,12 +505,16 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
     $(".team ul li:nth-child("+index+") .smiling").css("visibility","visible");
 });
 
+
+
     $(".team ul li figure img, .team ul li .member-long-description").mouseout(function(){
       var index = $(this).closest("li").index()+1;
     $(".team ul li:nth-child("+index+") .member-long-description").css("visibility","hidden");
     $(".team ul li:nth-child("+index+") .member-long-description").removeClass("animacao");
     $(".team ul li:nth-child("+index+") .smiling").css("visibility","hidden");
     });
+
+      }
 
 }); //close document ready
 
@@ -524,7 +533,7 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
      $('#page-transition').removeClass('page-transition');
      $('#page-transition-wrap').removeClass('page-transition-wrap');
         onPageLoad();
-      }, 500); //close transition loading
+      }, 400); //close transition loading
 
 
 

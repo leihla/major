@@ -3,7 +3,10 @@
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1055px) {
-
+.team ul{
+  width: 100%;
+  margin: unset;
+}
 
 
  }
@@ -377,7 +380,7 @@ figure{
 }
 
 .wecanhelp .row{
-  width: 95%;
+  width: 90%;
   min-height: unset;
   padding: 3rem 0 3rem 0;
   margin-left: 5%;
@@ -478,6 +481,9 @@ dl{
 .services ul li{
 
   margin-bottom: 2rem;
+  figure{
+    margin-bottom: 0.5rem;
+  }
 
 dl{
   dt{
