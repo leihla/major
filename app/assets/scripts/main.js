@@ -250,7 +250,7 @@ const $studiolongdescription = $('.about-the-studio .studio-description h2');
 $studiolongdescription.waypoint(function(direction){
 if (direction == 'down'){
 $studiolongdescription.removeClass('container-invisible');
-$studiolongdescription.addClass('animacao_grey');
+$studiolongdescription.addClass('animacao_white');
 }
 }, {offset: '60%'});
 
