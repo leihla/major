@@ -327,7 +327,7 @@ $processtitle.waypoint(function(direction){
 if (direction == 'down'){
 $processtitle.removeClass('container-invisible');
 $processtitle.addClass('animacao')
-setTimeout(function() {$processdesc.removeClass('container-invisible'); $processdesc.addClass('animacao_white');
+setTimeout(function() {$processdesc.removeClass('container-invisible'); $processdesc.addClass('animacao_grey');
   setTimeout(function() {$processfigure.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
 
 }, 200);
@@ -344,7 +344,7 @@ $clientstitle.waypoint(function(direction){
 if (direction == 'down'){
 $clientstitle.removeClass('container-invisible');
 $clientstitle.addClass('animacao')
-setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsdesc.addClass('animacao_grey');
+setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsdesc.addClass('animacao_white');
   setTimeout(function() {$clientslogos.removeClass('animatecontainer'); //$studiophoto1.addClass('animacao');
 
 }, 200);
