@@ -136,7 +136,7 @@ $(document).ready(function () {
      setTimeout(function() {
        $wecanhelph2.removeClass('container-invisible');
        $wecanhelph2.addClass('animacao_red');
- }, 100);
+ },100);
     }
   }, {offset: '60%'});
 
