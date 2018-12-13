@@ -97,11 +97,11 @@ align-items: center;
 	}
 
   .studio-description{
-    margin-top: 3rem;
-    padding: 3rem;
+    padding: 8rem 3rem;
     min-height: 700px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
 
@@ -109,7 +109,13 @@ align-items: center;
 
       line-height: 4rem;
       width: 80%;
+      padding-bottom: 2rem;
 
+    }
+
+    p{
+      width: 80%;
+      padding-bottom: 2rem;
     }
   }
 

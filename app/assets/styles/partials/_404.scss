@@ -1,0 +1,23 @@
+
+
+.body-404{
+
+	h1, p{
+		width: 60%;
+		display: block;
+	}
+	p{
+		margin-bottom: 2rem;
+	}
+
+	h2 a{
+		font-size: 3rem;
+		color: $red;
+	}
+
+	.section-title-underlay span{
+		opacity: 1;
+	}
+
+	footer{display: none;}
+}
