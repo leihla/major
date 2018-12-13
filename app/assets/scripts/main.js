@@ -456,10 +456,10 @@ setTimeout(function() {clientsdesc.removeClass('container-invisible'); clientsde
         $('.section-title-underlay ul li:not(:nth-child(4))').removeClass("fadetext");
         $('.section-title-underlay ul li:nth-child(4)').addClass("fadetext");
       }
-      // else if (scrollPos >= mission && scrollPos < team-compensationtitle) {
-      //   $('.section-title-underlay ul li:not(:nth-child(5))').removeClass("fadetext");
-      //   $('.section-title-underlay ul li:nth-child(5)').addClass("fadetext");
-      // }
+      else if (scrollPos >= mission && scrollPos < team-compensationtitle) {
+        $('.section-title-underlay ul li:not(:nth-child(5))').removeClass("fadetext");
+        $('.section-title-underlay ul li:nth-child(5)').addClass("fadetext");
+      }
       else {
         $('.section-title-underlay ul li').removeClass("fadetext");
       }
