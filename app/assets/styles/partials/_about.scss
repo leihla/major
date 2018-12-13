@@ -87,9 +87,19 @@ align-items: center;
 
 
 	.about-text{
-    margin-top: 40px;
-    padding: 7%;
+
+    padding: 0rem 4rem 0rem 4rem;
     width: 50%;
+    transform: translateY(80px);
+    p{
+      margin-bottom: 1rem;
+      
+    }
+
+    .lead{
+
+      padding-bottom: 2rem;
+    }
 
 	}
 
@@ -97,7 +107,7 @@ align-items: center;
 	}
 
   .studio-description{
-    padding: 8rem 3rem;
+    padding: 18rem 3rem;
     min-height: 700px;
 
     display: flex;
