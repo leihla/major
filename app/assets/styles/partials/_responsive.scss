@@ -93,12 +93,19 @@ figure{
       .process-text{
         width: 100%;
         max-width: none;
+
+        h1, p{
+          max-width: unset;
+        }
       }
 
       figure{
-        width: 80%;
-        margin: 3rem 0 0 0;
-        text-align: center;
+        width: 70%;
+        margin-top: 3rem;
+        img{
+          margin-top: 0;
+        }
+
       }
   }
 
@@ -300,10 +307,16 @@ figure{
 
   .process{
     flex-direction: column-reverse;
-
+.row{
     figure{
-      width: 100%;
+      width: 80%;
       margin: 3rem 0 0 0;
+
+      img{
+
+        height: 50%;
+
+      }
     }
 
     .process-text{
@@ -313,6 +326,8 @@ figure{
       margin: 0;
       padding: 0;
     }
+
+  }
   }
 
   .section-title-underlay{
@@ -506,6 +521,8 @@ dl{
   }
 }
 
+
+
 .clients{
   padding-bottom: 15%;
 }
@@ -523,11 +540,12 @@ dl{
   }
 
   .process{
+    padding-top: 10%;
     .row{
 
         figure{
           width: 100%;
-          margin: 3rem 0 0 0;
+          margin: 3 0 3rem 0;
           text-align: center;
         }
     }
