@@ -271,7 +271,7 @@ $teamtitle.waypoint(function(direction){
 if (direction == 'down'){
 $teamtitle.removeClass('container-invisible');
 $teamtitle.addClass('animacao');
-setTimeout(function() {$teamdescription.removeClass('container-invisible'); $teamdescription.addClass('animacao_grey');
+setTimeout(function() {$teamdescription.removeClass('container-invisible'); $teamdescription.addClass('animacao_white');
   setTimeout(function() {$teammembdesc1.removeClass('container-invisible'); $teammembdesc1.addClass('animacao_grey');
     setTimeout(function() {$teammembfoto1.removeClass('animatecontainer');
       setTimeout(function() {$teammembdesc2.removeClass('container-invisible');$teammembdesc2.addClass('animacao_grey');
