@@ -243,7 +243,7 @@ $studiofigure.removeClass('animatecontainer');
 
 
 }
-}, {offset: '60%'});
+}, {offset: '95%'});
 
 //Studio philosophy
 const $studiolongdescription = $('.about-the-studio .studio-description h2');
