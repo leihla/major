@@ -313,12 +313,12 @@ right:2rem;
         .gifanim{
           position: absolute;
           top: 0;
-          visibility:  hidden;
+          display: none;
         }
 
         &:hover{
           .gifanim{
-            visibility: visible;
+            display: block;
           }
         }
 
