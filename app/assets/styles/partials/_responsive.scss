@@ -336,7 +336,7 @@ figure{
   h1{
     	font-size: 2.7rem;
     	line-height: 3rem;
-      padding: 2rem 0;
+      padding: 2rem 0 1rem 0;
 
     }
 
@@ -379,6 +379,10 @@ figure{
 }
 }
 
+.landingpage .row h1{
+  margin-bottom: 1rem;
+}
+
 .wecanhelp .row{
   width: 90%;
   min-height: unset;
@@ -388,7 +392,7 @@ figure{
 
 .wecanhelp .row h2{
   line-height: 3rem;
-  width: 80%;
+  width: 90%;
   padding-bottom: 0;
 }
 
@@ -413,6 +417,9 @@ animation-fill-mode: forwards;
   margin-bottom: 1rem;
 }
 
+.projects article .card-resume p {
+  margin-bottom: 1rem;
+}
   .know-more-about .logo-container{
     min-width: 0;
     width: 45%;
@@ -426,6 +433,7 @@ animation-fill-mode: forwards;
 
   h2{
 line-height: 3rem;
+width: 90%;
 }
 }
 
@@ -438,7 +446,7 @@ line-height: 3rem;
 }
 
 .team ul li{
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -463,8 +471,8 @@ dl{
   }
 
   dd{
-    font-size: 0.7rem;
-    letter-spacing: 0.02rem;
+    font-size: 0.8rem;
+
 
   }
   }
@@ -498,7 +506,7 @@ dl{
 }
 
 .clients{
-  margin-bottom: 10%;
+  padding-bottom: 15%;
 }
 
   .clients .row .clients-logos li{
@@ -522,8 +530,10 @@ dl{
           text-align: center;
         }
     }
+  }
 
-
+  .know-more-about h2 a{
+    text-decoration: underline;
   }
 
 .clients .row .clients-logos{

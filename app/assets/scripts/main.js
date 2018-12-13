@@ -234,7 +234,7 @@ const $studiofigure = $('.about-the-studio .row figure');
 const $studioimg = $('.about-the-studio .row figure img')
 $studiofigure.waypoint(function(direction){
 if (direction == 'down'){
-$studioimg.addClass('scaleteam');
+$studiofigure.removeClass('animatecontainer');
   setTimeout(function() {
     $abouttdescription.removeClass('container-invisible');
     $abouttdescription.addClass('animacao');
