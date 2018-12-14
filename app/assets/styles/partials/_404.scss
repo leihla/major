@@ -2,8 +2,12 @@
 
 .body-404{
 
+	.row entry-text{
+		z-index: 10;
+	}
+
 	h1, p{
-		width: 60%;
+		width: 70%;
 		display: block;
 	}
 	p{
@@ -21,8 +25,17 @@
 
 	}
 }
-	.section-title-underlay span{
-		opacity: 1;
+	.underlay {
+		font-family: $titles-type;
+		font-size: 13rem;
+		color: white;
+		line-height: 13rem;
+		position: fixed;
+		top:50vh;
+		left: 50vw;
+		transform: translate(-50%,-50%);
+		z-index: 0;
+		color: #F3F1EF;
 	}
 
 	footer{display: none;}

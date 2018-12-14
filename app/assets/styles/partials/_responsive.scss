@@ -330,8 +330,12 @@ figure{
   }
   }
 
-  .section-title-underlay{
+  .section-title-underlay, .underlay span{
     font-size: 11rem;
+  }
+
+  .body-404 h1, .body-404 p{
+    width: 100%;
   }
 
 
