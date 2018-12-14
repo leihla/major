@@ -8,6 +8,36 @@
   margin: unset;
 }
 
+.about-the-studio{
+
+
+  .row{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+
+figure{
+  width: 50%;
+}
+.about-text{
+  width: 100%;
+  padding: 3rem 0rem 1rem 0;
+  margin-top: 0;
+  transform: translateY(0);
+
+}
+
+    }
+
+
+  .studio-description{
+    width: 90%;
+    padding: 12rem 3rem;
+
+  }
+}
+
 
  }
 
@@ -18,9 +48,6 @@
   display: block;
 
   }
-
-
-
  }
 
  @media (max-width: 920px) {
@@ -53,35 +80,7 @@
 }
 
 
-.about-the-studio{
 
-
-  .row{
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-
-
-figure{
-  width: 50%;
-}
-.about-text{
-  width: 100%;
-  padding: 3rem 0 1rem 0;
-  margin-top: 0;
-  transform: translateY(0);
-
-}
-
-    }
-
-
-  .studio-description{
-    width: 90%;
-    padding: 12rem 3rem;
-
-  }
-}
 
 
 
