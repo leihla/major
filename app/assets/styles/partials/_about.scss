@@ -181,7 +181,7 @@ background-color: white;
             // line-height: 1rem;
             font-size: 0.9rem;
     line-height: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
 
 
 					}
@@ -189,9 +189,9 @@ background-color: white;
 			}
 
       .member-long-description{
-        font-family: $titles-type;
-        font-size: 1.3rem;
-        line-height: 1.9rem;
+        //font-family: $titles-type;
+        font-size: 1rem;
+        line-height: 1.5rem;
         color: $darkblue;
         max-width: 350px;
         padding: 2rem;
@@ -202,6 +202,7 @@ background-color: white;
         margin-bottom: -3rem;
 
         visibility: hidden;
+        font-weight: 400;
       }
 
       .member-long-description-visible{
