@@ -2,9 +2,7 @@
 
 .body-404{
 
-	.row entry-text{
-		z-index: 10;
-	}
+background-color: white;
 
 	h1, p{
 		width: 70%;
@@ -16,6 +14,7 @@
 
 	h2 {
 		line-height: 1rem;
+		z-index: 10;
 
 	a{
 		font-family: $body-text-type;
@@ -25,6 +24,13 @@
 
 	}
 }
+
+.landingpage{
+	z-index: 10;
+	background-color: unset;
+	position: relative;
+}
+
 	.underlay {
 		font-family: $titles-type;
 		font-size: 13rem;
