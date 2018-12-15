@@ -1,0 +1,600 @@
+
+
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1055px) {
+.team ul{
+  width: 100%;
+  margin: unset;
+}
+
+.about-the-studio{
+
+
+  .row{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+
+figure{
+  width: 50%;
+}
+.about-text{
+  width: 100%;
+  padding: 3rem 0rem 1rem 0;
+  margin-top: 0;
+  transform: translateY(0);
+
+}
+
+    }
+
+
+  .studio-description{
+    width: 90%;
+    padding: 12rem 3rem;
+
+  }
+}
+
+
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 992px) {
+
+.mobile-break{
+  display: block;
+
+  }
+ }
+
+ @media (max-width: 920px) {
+
+
+.projects article{
+  flex-direction: column-reverse;
+
+  .card-shot, .card-resume{
+    margin: 0;
+    width: 60%;
+    max-width: none;
+  }
+
+  .card-resume{
+    padding-bottom: 1rem;
+  }
+}
+
+.projects li:nth-child(even){
+  article{
+    flex-direction: column-reverse;
+    .card-shot{
+      margin: 0;
+    }
+    .card-resume{
+      margin: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.process{
+  .row{
+      flex-direction: column-reverse;
+
+      .process-text{
+        width: 100%;
+        max-width: none;
+
+        h1, p{
+          max-width: unset;
+        }
+      }
+
+      figure{
+        width: 70%;
+        margin-top: 3rem;
+        img{
+          margin-top: 0;
+        }
+
+      }
+  }
+
+
+}
+
+.clients{
+  .row{
+    flex-direction: column;
+    .clients-text{
+      width: 100%;
+      margin: 0;
+      max-width: none;
+    }
+
+    .clients-logos{
+
+      li:nth-child(1), li:nth-child(2), li:nth-child(3){
+  margin:0 0 0 2rem;
+
+         }
+
+      li:last-child{
+        margin-left: 0;
+      }
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-top: 4rem;
+
+
+    }
+  }
+}
+
+
+ }
+
+// Small devices (landscape phones, less than 800px)
+@media (max-width: 800px) {
+
+
+
+header .row nav .menu-icon{
+  &:not(.open):hover rect {
+    &:nth-child(1) {
+       transform: translate(12px, 3px);
+
+    }
+
+    &:nth-child(2) {
+      transform: translate(19px, 13px);
+    }
+
+    &:nth-child(3) {
+      transform: translate(26px, 6px);
+    }
+  }
+}
+
+
+  .wecanhelp .row{
+  //min-height: 600px;
+
+  }
+
+  .wecanhelp .wecanhelptext{
+    width: 100%;
+    padding: 6rem 8rem 6rem 3rem;
+  }
+
+  .projects article{
+
+    .card-shot{
+      width: 100%;
+    }
+    .card-resume{
+      width: 90%;
+    }
+  }
+
+  .services ul{
+    flex-wrap: wrap;
+
+    li{
+      width: 48%;
+      margin-bottom: 4rem;
+      + li {margin-left: 0;}
+
+      &:nth-child(3), &:nth-child(4) {
+        margin-bottom: 0;
+      }
+
+    }
+  }
+
+.about-the-studio{
+  .row{
+
+figure{
+  width: 70%;
+}
+.about-text{
+
+
+}
+
+    }
+}
+
+//reset styles
+
+.team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
+  width: 60%;
+}
+
+  .team ul li:nth-child(4n-1) .member-description dl, .team ul li:nth-child(4n-2) .member-description dl{
+    border:unset;
+  }
+
+
+  .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
+    right: auto;
+    left: unset;
+  }
+
+  .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img{
+    float: none;
+
+  }
+
+  .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
+    float: none;
+  }
+
+  .team ul li:nth-child(4n) figure .smiling, .team ul li:nth-child(4n-1) figure .smiling{
+    left: unset;
+  }
+//end reset Styles
+
+.team{
+  overflow-x: hidden;
+}
+
+.team .team-text{
+  width: inherit;
+  margin-bottom: 5rem;
+}
+
+.team .row{
+  width: 100%;
+  .team-text{
+    padding: 0 5% 0 5%;
+  }
+}
+  .team ul li{
+    float: none;
+    width: 100%;
+
+    figure{
+      overflow: hidden;
+
+
+    }
+
+    &:nth-child(odd){
+      .member-description{
+        width: 60%;
+        right: 0;
+
+      }
+
+      figure{
+        text-align: right;
+
+        .smiling{
+          right: 0;
+        }
+      }
+    }
+
+    &:nth-child(even){
+
+      .member-description{
+        width: 60%;
+        left: 0;
+      }
+
+      figure{
+        text-align: left;
+
+        .smiling{
+          left: 0;
+        }
+      }
+    }
+
+  }
+
+  .process{
+    flex-direction: column-reverse;
+.row{
+    figure{
+      width: 80%;
+      margin: 3rem 0 0 0;
+
+      img{
+
+        height: 50%;
+
+      }
+    }
+
+    .process-text{
+      width: 100%;
+      padding: 0;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+  }
+  }
+
+  .section-title-underlay, .underlay span{
+    font-size: 11rem;
+  }
+
+  .body-404 h1, .body-404 p{
+    width: 100%;
+  }
+
+
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+
+  .page-logo svg{
+    height: 40px;
+  }
+
+  .overlay-menu svg{
+    height: 40px;
+  }
+
+  h1{
+    	font-size: 2.7rem;
+    	line-height: 3rem;
+      padding: 2rem 0 1rem 0;
+
+    }
+
+  h2{
+  	font-size: 2.2rem;
+  	line-height: 2.7rem;
+    padding-bottom: 1.2rem;
+  }
+
+  a{
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
+
+  p{
+    font-size: 1rem;
+  	line-height: 1.4rem;
+  	display: inline-block;
+  }
+
+  .lead{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+
+  .section-title-underlay{
+    display: none;
+  }
+
+.overlay-menu .menu {
+  line-height: 4.5rem;
+  li{
+    margin-bottom: 0;
+  }
+
+  a{
+  font-size: 2.7rem;
+  line-height: 2.7rem;
+}
+}
+
+.landingpage .row h1{
+  margin-bottom: 1rem;
+}
+
+.wecanhelp .row{
+  width: 90%;
+  min-height: unset;
+  padding: 3rem 0 3rem 0;
+  margin-left: 5%;
+}
+
+.wecanhelp .row h2{
+  line-height: 3rem;
+  width: 90%;
+  padding-bottom: 0;
+}
+
+.wecanhelp .wecanhelptext{
+  padding: 2rem 3rem 2rem 2rem;
+}
+
+.redblockscale{
+animation: scaleblock 0.4s ease-in-out;
+animation-fill-mode: forwards;
+}
+	@keyframes scaleblock{
+	  0%{transform:scaleX(0.5); transform-origin: left bottom;}
+	  100%{transform:scale(1); transform-origin: left bottom; width: 100%;}
+	}
+
+.projects{
+  margin-top: -3rem;
+}
+
+.projects article .card-resume .card-title{
+  margin-bottom: 1rem;
+}
+
+.projects article .card-resume p {
+  margin-bottom: 1rem;
+}
+  .know-more-about .logo-container{
+    min-width: 0;
+    width: 45%;
+  }
+
+
+.about-the-studio .studio-description{
+
+  margin-top: 0;
+  padding: 4rem 2rem;
+  min-height: unset;
+
+  h2{
+line-height: 3rem;
+width: 90%;
+}
+}
+
+.about-the-studio .row figure{
+  width: 100%;
+}
+
+.team .row .team-text{
+  margin-bottom: 2rem;
+}
+
+.team ul li{
+  margin-bottom: 1rem;
+}
+
+
+  .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
+    width: 60%;
+  }
+
+  .team ul li:nth-child(odd), .team ul li:nth-child(even){
+    .member-description{
+      width: 60%;
+    }
+}
+
+.team ul li .member-description{
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+
+dl{
+  dt{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  dd{
+    font-size: 0.8rem;
+    line-height: 1rem;
+
+
+  }
+  }
+
+}
+
+.team ul li .member-long-description{
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin-bottom: -2rem;
+}
+
+.services ul li{
+
+  margin-bottom: 2rem;
+  figure{
+    margin-bottom: 0.5rem;
+  }
+
+dl{
+  dt{
+    font-size: 1.3rem;
+    line-height:1.5rem;
+  }
+
+  dd{
+    display: none;
+  }
+  }
+}
+
+
+
+.clients{
+  padding-bottom: 15%;
+}
+
+  .clients .row .clients-logos li{
+        margin: 0 0 0 1rem;
+  }
+
+  .clients .row .clients-logos li a{
+    margin-top: 1rem;
+  }
+
+  .clients .row .clients-logos li:last-child{
+    margin: 0;
+  }
+
+  .process{
+    padding-top: 10%;
+    .row{
+
+        figure{
+          width: 100%;
+          margin: 3rem 0 2rem 0;
+          text-align: center;
+        }
+    }
+  }
+
+  .know-more-about h2 a{
+    text-decoration: underline;
+  }
+
+.clients .row .clients-logos{
+  padding-top: 1rem;
+}
+  #page-footer {
+
+    .logo-footer{display: none;}
+    .social{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    p {
+      margin-top: 1rem;
+
+
+    }
+  }
+
+  .say-hi-contact{
+
+   a{
+    font-size: 1.5rem;
+  }
+  }
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+}
+
+@media (max-width: 420px) {
+
+
+}

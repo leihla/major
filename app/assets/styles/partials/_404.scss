@@ -1,0 +1,48 @@
+
+
+.body-404{
+
+background-color: white;
+
+	h1, p{
+		width: 70%;
+		display: block;
+	}
+	p{
+		margin-bottom: 1.5rem;
+	}
+
+	h2 {
+		line-height: 1rem;
+		z-index: 10;
+
+	a{
+		font-family: $body-text-type;
+		font-size: 1rem;
+		color: $red;
+		font-weight: 500;
+
+	}
+}
+
+.landingpage{
+	z-index: 10;
+	background-color: unset;
+	position: relative;
+}
+
+	.underlay {
+		font-family: $titles-type;
+		font-size: 13rem;
+		color: white;
+		line-height: 13rem;
+		position: fixed;
+		top:50vh;
+		left: 50vw;
+		transform: translate(-50%,-50%);
+		z-index: 0;
+		color: #F3F1EF;
+	}
+
+	footer{display: none;}
+}

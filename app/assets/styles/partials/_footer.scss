@@ -1,0 +1,77 @@
+#page-footer {
+	background-color: $red;
+	color: #fff;
+	height: 100vh;
+	position: relative;
+	z-index: 9;
+
+
+	.row{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	.say-hi-contact{
+		display: flex;
+		flex-direction: column;
+		//margin-bottom: 10%;
+
+	h2{
+		padding-bottom: 0.5rem;
+	}
+
+	a{
+
+color: white;
+font-size: 2rem;
+
+
+	}
+	}
+
+	.logo-footer{
+		position: absolute;
+		height: 100px;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		svg{
+			height: 32px;
+			 path{
+			 	fill:white;
+			 }
+		}
+	}
+	.social{
+		position: absolute;
+		height: 100px;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+
+
+		ul{
+			display: flex;
+			flex-direction: row;
+			img{
+				width: 20px;
+				margin-right:1.5rem;
+			}
+		}
+		p{
+			font-size: 0.75rem;
+			line-height: 0.87rem;
+			font-weight: 400;
+			margin-right: 2rem;
+
+		}
+		a{
+			line-height: 0;
+		}
+	}
+}
