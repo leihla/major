@@ -383,10 +383,10 @@ right:2rem;
 			.process-text{
 
 				width: 50%;
-				padding: 0 0 5% 0;
+				padding: 0 4rem 5% 0;
 
          p{
-        max-width: 405px;
+        //max-width: 405px;
         }
 			}
 }
@@ -401,9 +401,9 @@ right:2rem;
     justify-content: space-between;
 
 	.clients-text{
-		max-width: 445px;
-		width: 40%;
-		margin:0 10% 0 0;
+		//max-width: 445px;
+		width: 50%;
+		padding:0 4rem 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
