@@ -127,16 +127,14 @@ $(document).ready(function () {
   }, {offset: '60%'});
 
     //wecan help
-    const $wecanhelph2 = $('.wecanhelptext h2');
+    const $wecanhelph2 = $('.wecanhelptext h1');
     const $redblock = $('.wecanhelp .redblock');
     $redblock.waypoint(function(direction){
     if (direction == 'down'){
     $redblock.addClass('redblockscale');
+    $wecanhelph2.removeClass('container-invisible');
+    $wecanhelph2.addClass('animacao_red');
 
-     setTimeout(function() {
-       $wecanhelph2.removeClass('container-invisible');
-       $wecanhelph2.addClass('animacao_red');
- },100);
     }
   }, {offset: '60%'});
 
@@ -235,9 +233,11 @@ const $studioimg = $('.about-the-studio .row figure img')
 $studiofigure.waypoint(function(direction){
 if (direction == 'down'){
 $studiofigure.removeClass('animatecontainer');
+$abouttitle.removeClass('container-invisible');
+$abouttitle.addClass('animacao');
   setTimeout(function() {
     $abouttdescription.removeClass('container-invisible');
-    $abouttdescription.addClass('animacao');
+    $abouttdescription.addClass('animacao_white');
 }, 100);
 
 
@@ -246,7 +246,7 @@ $studiofigure.removeClass('animatecontainer');
 }, {offset: '95%'});
 
 //Studio philosophy
-const $studiolongdescription = $('.about-the-studio .studio-description h2');
+const $studiolongdescription = $('.about-the-studio .studio-description h1');
 $studiolongdescription.waypoint(function(direction){
 if (direction == 'down'){
 $studiolongdescription.removeClass('container-invisible');
