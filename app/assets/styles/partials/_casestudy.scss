@@ -1,0 +1,162 @@
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin section-padding{
+padding: 10% 0;
+}
+
+.body-casestudy{
+  header{
+    position: absolute;
+  }
+}
+
+.cs-hero{
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .cs-hero-title{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+}
+
+.cs-intro{
+  background-color: white;
+  @include section-padding;
+  .row{
+    display: flex;
+    justify-content: space-between;
+  }
+  figure{
+    	@include column(2/12);
+      img{
+        width: 100%;
+      }
+  }
+  dl{
+    @include column(8/12);
+  }
+}
+
+.cs-resume{
+  display: flex;
+    @include section-padding;
+  li{
+    @include column(4/12);
+  }
+  dt{
+    font-size: 1rem;
+    line-height: 1.13rem;
+    padding-bottom: 1rem;
+    font-family: $titles-type;
+    text-transform: uppercase;
+  }
+  h3{
+    padding-bottom: 0.5rem;
+  }
+}
+
+.cs-content{
+article{
+  position: relative;
+}
+
+.sec-text-img{
+  .row{
+    @include section-padding;
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cs-section-images{
+    img{
+      width: 100%;
+      &:last-child{
+        margin-top: -25%;
+      }
+    }
+  }
+
+  dt{
+    font-family: $titles-type;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.3;
+    padding-bottom: $title-padding;
+  }
+
+}
+
+
+.sec-text-left{
+  .row{
+  flex-direction: row;
+
+  .cs-section-text-content{
+  @include column(5/12);
+  }
+  .cs-section-images{
+    @include column(6/12);
+  }
+}
+
+}
+
+.sec-text-right{
+  .row{
+  flex-direction: row-reverse;
+  .cs-section-text-content{
+  @include column(5/12);
+  }
+  .cs-section-images{
+    @include column(6/12);
+  }
+}
+
+}
+
+.sec-small-title{
+dt{
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+}
+
+.sec-background-white{
+background-color: white;
+
+}
+
+.sec-background-custom{
+  color:white;
+  .cs-article-background{
+    width: 100%;
+    height: 80vh;
+    background-color: blue;
+    position: absolute;
+    z-index: -1;
+  }
+
+}
+
+.sec-img{
+
+}
+
+
+
+}
