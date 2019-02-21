@@ -140,6 +140,16 @@ h3{
 	display: inline-block;
 }
 
+@mixin smalltitle{
+	font-family: $titles-type;
+	text-transform: uppercase;
+	letter-spacing: 0.03rem;
+	display: inline-block;
+	font-size: 1rem;
+	line-height: 1.1rem;
+	margin-bottom: 1rem;
+}
+
 
 p {
 	font-size: 1.13rem;
@@ -178,7 +188,7 @@ display: inline-block;
 	max-width: 1280px;
 	width: 90%;
 	margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 }
 
 

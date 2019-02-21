@@ -22,12 +22,19 @@ padding: 10% 0;
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: white;
+  background-image: url("/assets/graphics/content/ctt_cs_hero_banner.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   .cs-hero-title{
     width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    dt{
+      @include smalltitle;
+    }
   }
 
 }
@@ -57,14 +64,13 @@ padding: 10% 0;
     @include column(4/12);
   }
   dt{
-    font-size: 1rem;
-    line-height: 1.13rem;
-    padding-bottom: 1rem;
-    font-family: $titles-type;
-    text-transform: uppercase;
+    @include smalltitle;
   }
   h3{
     padding-bottom: 0.5rem;
+  }
+  .scope dd{
+    color: $lightgrey;
   }
 }
 
@@ -81,10 +87,11 @@ article{
     justify-content: space-between;
   }
 
-  .cs-section-images{
+  .sec-text-img-images{
     img{
       width: 100%;
-      &:last-child{
+      display: block;
+      &:nth-child(2){
         margin-top: -25%;
       }
     }
@@ -100,6 +107,11 @@ article{
 
 }
 
+.sec-text-vertical-center{
+  .row{
+  align-items: center;
+}
+}
 
 .sec-text-left{
   .row{
@@ -108,12 +120,12 @@ article{
   .cs-section-text-content{
   @include column(5/12);
   }
-  .cs-section-images{
+  .sec-text-img-images{
     @include column(6/12);
   }
 }
-
 }
+
 
 .sec-text-right{
   .row{
@@ -121,7 +133,7 @@ article{
   .cs-section-text-content{
   @include column(5/12);
   }
-  .cs-section-images{
+  .sec-text-img-images{
     @include column(6/12);
   }
 }
@@ -145,18 +157,193 @@ background-color: white;
   color:white;
   .cs-article-background{
     width: 100%;
-    height: 80vh;
-    background-color: blue;
+    height: 60vh;
+    background-color: $red;
     position: absolute;
     z-index: -1;
+  }
+  .sec-text-img-images{
+  box-shadow: 10px 10px 40px 0 rgba(0,0,0,0.10);
   }
 
 }
 
 .sec-img{
+  @include section-padding;
+  max-width: 1280px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+    img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+}
+
+.sec-img-full-width{
+  padding: 0;
+  max-width: unset;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.sec-img-overlap{
+  img:last-child{
+    margin-top: -100px;
+  }
 
 }
 
 
+.sec-metrics{
+    @include section-padding;
+ul{
+display: flex;
+justify-content: space-around;
+  li{
+      @include column(3/12);
+  }
+
+  dt{
+  @include smalltitle;
+    }
+    .metric-value{
+      font-family: $titles-type;
+      font-size: 4.5rem;
+      line-height: 5rem;
+      padding-bottom: 1rem;
+      font-weight: 500;
+      color: $darkblue;
+    }
+
+    dd{
+      color: $lightgrey;
+    }
+
+}
+}
+
+.sec-quote{
+  padding: 5% 0;
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+    color: white;
+    background-color: $red;
+    dl{
+      @include column(10/12);
+    }
+    dt{
+
+    }
+  }
+}
+
+.sec-users-saying{
+  @include section-padding;
+
+  h2{
+    width: 100%;
+    text-align: center;
+  }
+  ul{
+      display:flex;
+      justify-content: space-around;
+
+      li{
+        @include column(4/12);
+        background-color: white;
+        padding: 3rem 2rem;
+        height: 280px;
+        box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
+
+        dl{
+          position: relative;
+          height: 100%;
+        .user-card-header{
+          display: flex;
+          align-items: center;
+          img{
+            width: 40px;
+            border-radius: 40px;
+          }
+          dl{
+            font-size: 0.875;
+            padding-left: 1rem;
+          dt{
+            font-weight: 600;
+          }
+          dd{
+            color: $lightgrey;
+          }
+          }
+        }
+
+        .user-card-quote{
+          padding-top: 2rem;
+        }
+        .user-card-source{
+          position: absolute;
+          bottom: 0;
+          color: $lightgrey
+        }
+        }
+      }
+  }
+}
+}
+
+
+.cs-browse-more-projects{
+    @include section-padding;
+    background-color: white;
+  ul{
+    display: flex;
+    justify-content: flex-end;
+    li{
+      @include column(3/12);
+      height: 450px;
+      max-height: 450px;
+      background-color: white;
+      box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
+      transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover{
+          box-shadow: 10px 15px 70px 0 rgba(0,0,0,0.2);
+          transform: scale(1.05);
+          transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      }
+
+
+      a{
+        height: 100%;
+        text-decoration: none;
+      }
+      figure{
+        overflow: hidden;
+        img{
+          width: 100%;
+
+        }
+      }
+
+      dl{
+        padding: 2rem 1.5rem;
+        dt{
+          @include smalltitle;
+          display: block;
+        }
+
+      }
+
+
+    }
+  }
 
 }
