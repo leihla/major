@@ -8,7 +8,7 @@
 }
 
 @mixin section-padding{
-padding: 10% 0;
+padding:10% 0;
 }
 
 .body-casestudy{
@@ -18,16 +18,31 @@ padding: 10% 0;
 }
 
 .cs-hero{
-  height: 80vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  min-height: 700px;
+  position: relative;
   background-color: white;
-  background-image: url("/assets/graphics/content/ctt_cs_hero_banner.jpg");
-  background-repeat: no-repeat;
-  background-size: auto 100%;
+  //background-image: url("/assets/graphics/content/ctt_cs_hero_banner.jpg");
+  //background-repeat: no-repeat;
+  //background-position: center top;
+  //background-size: 100% auto;
+  overflow: hidden;
+
+
+  .cs-hero-background{
+    position: relative;
+    display: block;
+    width: 100%;
+    top:0;
+    min-width: 1440px;
+
+  }
+
   .cs-hero-title{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
     width: 40%;
+    max-width: 475px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,6 +52,16 @@ padding: 10% 0;
     }
   }
 
+}
+
+.cs-hero-title-white{
+  .cs-hero-title{
+    color: white;
+  }
+}
+
+.cs-hero-background-color-custom{
+    background-color: blue;
 }
 
 .cs-intro{
@@ -58,7 +83,9 @@ padding: 10% 0;
 }
 
 .cs-resume{
-  display: flex;
+  ul{
+    display: flex;
+  }
     @include section-padding;
   li{
     @include column(4/12);
@@ -102,7 +129,7 @@ article{
     font-size: 3rem;
     font-weight: 300;
     line-height: 1.3;
-    padding-bottom: $title-padding;
+
   }
 
 }
@@ -157,7 +184,8 @@ background-color: white;
   color:white;
   .cs-article-background{
     width: 100%;
-    height: 60vh;
+    height: 70%;
+
     background-color: $red;
     position: absolute;
     z-index: -1;
@@ -175,18 +203,27 @@ background-color: white;
   margin-left: auto;
   margin-right: auto;
     img{
-      max-width: 100%;
-      height: auto;
-      display: block;
+    width: 100%;
+    height: auto;
+    display: block;
     }
 }
 
 .sec-img-full-width{
+  width: unset;
   padding: 0;
   max-width: unset;
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  figure{
+    width: 100%;
+    background-color: blue;
+    img{
+      min-height: 80vh;
+      object-fit: cover;
+    }
+  }
+
 
 }
 
@@ -251,15 +288,30 @@ justify-content: space-around;
     width: 100%;
     text-align: center;
   }
+  .user-cards{
+  overflow-x: scroll;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  }
+
+  .user-cards::-webkit-scrollbar {
+  display: none;
+  }
+
   ul{
       display:flex;
       justify-content: space-around;
+      min-width: 1040px;
+      padding: 0rem 4rem 4rem 4rem;
+
 
       li{
         @include column(4/12);
         background-color: white;
         padding: 3rem 2rem;
-        height: 280px;
+
         box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
 
         dl{
@@ -286,6 +338,7 @@ justify-content: space-around;
 
         .user-card-quote{
           padding-top: 2rem;
+          min-height: 12rem;
         }
         .user-card-source{
           position: absolute;
@@ -295,6 +348,7 @@ justify-content: space-around;
         }
       }
   }
+
 }
 }
 
@@ -302,13 +356,21 @@ justify-content: space-around;
 .cs-browse-more-projects{
     @include section-padding;
     background-color: white;
+
+.browse-more-projects-wrap{
+
+ overflow-x: scroll;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
   ul{
     display: flex;
     justify-content: flex-end;
     li{
       @include column(3/12);
-      height: 450px;
-      max-height: 450px;
+
       background-color: white;
       box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
       transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -323,6 +385,7 @@ justify-content: space-around;
 
       a{
         height: 100%;
+        width: 100%;
         text-decoration: none;
       }
       figure{
@@ -335,6 +398,7 @@ justify-content: space-around;
 
       dl{
         padding: 2rem 1.5rem;
+        min-height: 13rem;
         dt{
           @include smalltitle;
           display: block;

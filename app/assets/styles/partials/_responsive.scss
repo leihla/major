@@ -3,14 +3,14 @@
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1055px) {
+
+//ABOUT /////////////////////////////////////////////////////////////////
 .team ul{
   width: 100%;
   margin: unset;
 }
 
 .about-the-studio{
-
-
   .row{
     flex-direction: column;
     align-items: flex-start;
@@ -30,13 +30,22 @@ figure{
 
     }
 
-
   .studio-description{
     width: 90%;
     padding: 12rem 3rem;
 
   }
 }
+
+//CASE STUDY ///////////////////////////////////////////////////////////////
+.cs-content .sec-background-custom .cs-article-background{
+  height: 80%;
+}
+
+.cs-browse-more-projects ul li{
+  height: 400px;
+}
+
 
 
  }
@@ -55,7 +64,7 @@ figure{
 
  @media (max-width: 920px) {
 
-
+//HOMEPAGE ///////////////////////////////////////////////////////////////
 .projects article{
   flex-direction: column-reverse;
 
@@ -83,7 +92,7 @@ figure{
 }
 
 
-
+//ABOUT ///////////////////////////////////////////////////////////////
 .process{
   .row{
       flex-direction: column-reverse;
@@ -139,6 +148,11 @@ figure{
     }
   }
 }
+//CASE STUDY ///////////////////////////////////////////////////////////////
+
+.cs-browse-more-projects ul li{
+  @include column(4/12);
+}
 
 
  }
@@ -147,7 +161,7 @@ figure{
 @media (max-width: 800px) {
 
 
-
+//BASE ///////////////////////////////////////////////////////////////////
 header .row nav .menu-icon{
   &:not(.open):hover rect {
     &:nth-child(1) {
@@ -165,7 +179,7 @@ header .row nav .menu-icon{
   }
 }
 
-
+//HOMEPAGE ///////////////////////////////////////////////////////////////
   .wecanhelp .row{
   //min-height: 600px;
 
@@ -186,6 +200,7 @@ header .row nav .menu-icon{
     }
   }
 
+//ABOUT ///////////////////////////////////////////////////////////////
   .services ul{
     flex-wrap: wrap;
 
@@ -338,6 +353,64 @@ figure{
   }
 
 
+  //CASE STUDY ///////////////////////////////////////////////////////////////
+  .cs-intro{
+    .row{
+    flex-direction: column;
+    }
+    figure{
+      padding-bottom: 2rem;
+    }
+  }
+
+  .cs-resume{
+    ul{
+    flex-direction: column;
+    li{
+      width: 100%;
+      padding-bottom: 3rem;
+    }
+    }
+  }
+
+  .cs-content {
+    .sec-text-img .row, .sec-text-right .row{
+    flex-direction: column;
+    }
+
+    .sec-text-right .row .cs-section-text-content, .sec-text-left .row .cs-section-text-content{
+      width: 100%;
+      padding-bottom: 3rem;
+    }
+    .sec-text-right .row .sec-text-img-images,  .sec-text-left .row .sec-text-img-images{
+      width: 100%;
+    }
+  }
+
+  .cs-content .sec-metrics ul{
+    flex-direction: column;
+    align-items: center;
+
+    li{
+      padding-bottom: 3rem;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  // .cs-browse-more-projects ul{
+  //   flex-direction: column;
+  //   align-items: flex-end;
+  //
+  //   li{
+  //     width: 50%;
+  //     margin: 0;
+  //     margin-bottom: 3rem;
+  //     height: unset;
+  //   }
+  // }
+
+
 }
 
 // Extra small devices (portrait phones, less than 576px)
@@ -354,7 +427,7 @@ figure{
   h1{
     	font-size: 2.7rem;
     	line-height: 3rem;
-      padding: 2rem 0 1rem 0;
+      padding: 0rem 0 1rem 0;
 
     }
 
@@ -362,6 +435,12 @@ figure{
   	font-size: 2.2rem;
   	line-height: 2.7rem;
     padding-bottom: 1.2rem;
+  }
+
+  h3{
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    padding-bottom: 0.7rem;
   }
 
   a{
