@@ -42,8 +42,14 @@ figure{
   height: 80%;
 }
 
-.cs-browse-more-projects ul li{
-  height: 400px;
+.cs-browse-more-projects ul{
+
+  padding: 0rem 4rem 4rem 5%;
+
+  li{
+    @include column(4/12);
+  }
+
 }
 
 
@@ -149,6 +155,10 @@ figure{
   }
 }
 //CASE STUDY ///////////////////////////////////////////////////////////////
+
+.cs-content .sec-users-saying ul{
+  padding: 0rem 4rem 4rem 5%;
+}
 
 .cs-browse-more-projects ul li{
   @include column(4/12);
@@ -354,12 +364,18 @@ figure{
 
 
   //CASE STUDY ///////////////////////////////////////////////////////////////
+
+
   .cs-intro{
     .row{
     flex-direction: column;
     }
     figure{
       padding-bottom: 2rem;
+      width: 25%;
+    }
+    dl{
+      width: 100%;
     }
   }
 
@@ -367,24 +383,40 @@ figure{
     ul{
     flex-direction: column;
     li{
-      width: 100%;
-      padding-bottom: 3rem;
+      &:nth-child(1){
+        width: 100%;
+        padding-bottom: 3rem;
+      }
+      &:nth-child(2){
+        width: 100%;
+      }
+
     }
     }
   }
 
   .cs-content {
-    .sec-text-img .row, .sec-text-right .row{
+    .sec-text-img .row{
     flex-direction: column;
-    }
 
-    .sec-text-right .row .cs-section-text-content, .sec-text-left .row .cs-section-text-content{
+    .cs-section-text-content{
       width: 100%;
       padding-bottom: 3rem;
     }
-    .sec-text-right .row .sec-text-img-images,  .sec-text-left .row .sec-text-img-images{
-      width: 100%;
+
+    .sec-text-img-images{
+      width: 80%;
+      &:last-child{
+        margin: 0 auto;
+      }
     }
+
+    }
+
+
+
+
+
   }
 
   .cs-content .sec-metrics ul{
@@ -398,20 +430,36 @@ figure{
     }
   }
 
-  // .cs-browse-more-projects ul{
-  //   flex-direction: column;
-  //   align-items: flex-end;
-  //
-  //   li{
-  //     width: 50%;
-  //     margin: 0;
-  //     margin-bottom: 3rem;
-  //     height: unset;
-  //   }
-  // }
+
 
 
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 650px) {
+
+//CASE STUDY ///////////////////////////////////////////
+
+.cs-resume{
+  ul{
+  li{
+    &:nth-child(2){
+      flex-direction: column;
+      dl{
+        width: 100%;
+        &:nth-child(1){
+        padding-bottom: 3rem;
+        }
+      }
+    }
+
+  }
+  }
+}
+
+
+}
+
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 576px) {
@@ -434,7 +482,7 @@ figure{
   h2{
   	font-size: 2.2rem;
   	line-height: 2.7rem;
-    padding-bottom: 1.2rem;
+    padding-bottom: 2rem;
   }
 
   h3{
@@ -674,9 +722,43 @@ dl{
     display: none;
 }
 
+
+//CASE STUDY ////////////////////
+.cs-content .sec-metrics ul {
+.metric-value{
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+}
+
+.cs-browse-more-projects{
+h2{
+  padding-bottom: 0;
+}
+ul{
+  padding: 2rem 4rem 4rem 5%;
+}
+
+
+}
+
 }
 
 @media (max-width: 420px) {
 
+//Case Study /////////////////////////
+.cs-content .sec-users-saying h2{
+  text-align: left;
+}
+
+.cs-content .sec-quote .row{
+  min-height: 500px;
+}
+
+.cs-content .sec-users-saying ul, .cs-browse-more-projects ul{
+  min-width: 280vw;
+
+}
 
 }

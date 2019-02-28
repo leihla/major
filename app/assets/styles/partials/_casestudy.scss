@@ -85,10 +85,19 @@ transform: translateY(-50%);
 .cs-resume{
   ul{
     display: flex;
+    flex-direction: row;
   }
     @include section-padding;
   li{
     @include column(4/12);
+    &:nth-child(2){
+    @include column(8/12);
+    display: flex;
+    flex-direction: row;
+    dl{
+      @include column(6/12);
+    }
+    }
   }
   dt{
     @include smalltitle;
@@ -210,17 +219,14 @@ background-color: white;
 }
 
 .sec-img-full-width{
-  width: unset;
-  padding: 0;
-  max-width: unset;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   figure{
     width: 100%;
     background-color: blue;
     img{
-      min-height: 80vh;
-      object-fit: cover;
+
     }
   }
 
@@ -264,7 +270,7 @@ justify-content: space-around;
 }
 
 .sec-quote{
-  padding: 5% 0;
+    @include section-padding;
   .row{
     display: flex;
     align-items: center;
@@ -274,6 +280,7 @@ justify-content: space-around;
     background-color: $red;
     dl{
       @include column(10/12);
+      padding: 3rem 0;
     }
     dt{
 
@@ -365,9 +372,15 @@ justify-content: space-around;
   margin-right: auto;
   }
 
+  .browse-more-projects-wrap::-webkit-scrollbar {
+  display: none;
+  }
+
   ul{
     display: flex;
     justify-content: flex-end;
+    min-width: 1040px;
+    padding: 0rem 4rem 4rem 4rem;
     li{
       @include column(3/12);
 
@@ -392,6 +405,7 @@ justify-content: space-around;
         overflow: hidden;
         img{
           width: 100%;
+          display: block;
 
         }
       }
