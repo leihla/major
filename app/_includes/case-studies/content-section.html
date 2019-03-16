@@ -53,4 +53,6 @@
     {% endfor %}
   </figure>
 </article>
+{% elsif include.sec.type == 'section-esc-hatch' %}
+  {{ include.sec.content | liquify | markdownify }}
 {% endif %}
