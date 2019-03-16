@@ -1,0 +1,56 @@
+{% if include.sec.type == 'section-tl' or include.sec.type == 'section-tr' or include.sec.type == 'section-tl-small' or include.sec.type == 'section-tr-small' %}
+
+{% if include.sec.type == 'section-tl' %}
+  {% assign klass='sec-text-left' %}
+{% elsif include.sec.type == 'section-tr' %}
+  {% assign klass='sec-text-right' %}
+{% elsif include.sec.type == 'section-tl-small' %}
+  {% assign klass='sec-text-left sec-small-title' %}
+{% elsif include.sec.type == 'section-tr-small' %}
+  {% assign klass='sec-text-right sec-small-title' %}
+{% endif %}
+
+{% if include.sec.bgcolor %}
+  {% assign bgklass='sec-background-custom' %}
+{% else %}
+  {% assign bgklass='sec-background-white' %}
+{% endif %}
+
+<article class="sec-text-img {{ bgklass }} {{ klass }} {{ include.sec.class }}">
+  {% if include.sec.bgcolor %}
+    <span class="cs-article-background" style="background-color: {{ include.sec.bgcolor }}"></span>
+  {% else %}
+    <span class="cs-article-background"></span>
+  {% endif %}
+  <div class="row">
+    <dl class="cs-section-text-content">
+      <dt><h2>{{ include.sec.title }}</h2></dt>
+      <dd>{{ include.sec.content | liquify | markdownify }}</dd>
+    </dl>
+    <figure class="sec-text-img-images">
+      {% for img in include.sec.images %}
+      <img
+        src="{{ img.url }}"
+        alt="{{ img.alt }}"
+      />
+      {% endfor %}
+    </figure>
+  </div>
+</article>
+
+{% elsif include.sec.type == 'section-img' or include.sec.type == 'section-img-full' %}
+{% if include.sec.type == 'section-img-full' %}
+<article class="sec-img sec-img-full-width {{ include.sec.class }}">
+{% else %}
+<article class="sec-img {{ include.sec.class }}">
+{% endif %}
+  <figure class="sec-img-images">
+    {% for img in include.sec.images %}
+    <img
+      src="{{ img.url }}"
+      alt="{{ img.alt }}"
+    />
+    {% endfor %}
+  </figure>
+</article>
+{% endif %}

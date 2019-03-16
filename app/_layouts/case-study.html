@@ -1,0 +1,193 @@
+---
+layout: base
+---
+<body class="body-casestudy">
+  {% include header.html %}
+
+  <main id="page-body" role="main">
+    <section class="cs-hero">
+      <img
+        class="cs-hero-background"
+        src="{{ page.images.full }}"
+        alt="Project image"
+      />
+      <div class="row">
+        <dl class="cs-hero-title">
+          <dt>{{ page.client }}</dt>
+          <dd><h1>{{ page.title }}</h1></dd>
+        </dl>
+      </div>
+    </section>
+
+    {% if page.s_intro %}
+    <section class="cs-intro">
+      <div class="row">
+        <figure>
+          {% for logo in page.s_intro.logos %}
+          <img
+            class="cs-client-logo"
+            src="{{ logo.url }}"
+            alt="{{ logo.alt }}"
+          />
+          {% endfor %}
+        </figure>
+        <dl>
+          <dt>
+            <h2>{{ page.s_intro.title }}</h2>
+          </dt>
+          <dd>
+            <p>{{ page.s_intro.description | markdownify }}</p>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.s_summary %}
+    <section class="cs-resume">
+      <div class="row">
+        <ul>
+          <li>
+            <dl class="scope">
+              <dt>Scope</dt>
+              {% for scope in page.s_summary.scope %}
+              <dd>{{ scope }}</dd>
+              {% endfor %}
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Challenge</dt>
+              <dd><h3>{{ page.s_summary.challenge.title }}</h3></dd>
+              <dd>{{ page.s_summary.challenge.description | markdownify }}</dd>
+            </dl>
+            <dl>
+              <dt>Solution</dt>
+              <dd><h3>{{ page.s_summary.solution.title }}</h3></dd>
+              <dd>{{ page.s_summary.solution.description | markdownify }}</dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </section>
+    {% endif %}
+
+    <section class="cs-content">
+      {% if page.s_content %}
+        {% for section in page.s_content %}
+          {% include case-study-section.html sec=section %}
+        {% endfor %}
+      {% endif %}
+
+      {% if page.s_metrics %}
+      <article class="sec-metrics">
+        <ul class="row">
+          {% for metric in page.s_metrics %}
+          <li>
+            <dl>
+              <dt>{{ metric.title }}</dt>
+              <dd class="metric-value">{{ metric.value }}</dd>
+              <dd>{{ metric.description }}</dd>
+            </dl>
+          </li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endif %}
+      
+      {% if page.s_feature_quote %}
+      <article class="sec-quote {{ page.s_feature_quote.class }}">
+        {% if page.s_feature_quote.bgcolor %}
+        <div class="row" style="background-color: {{ page.s_feature_quote.bgcolor }}">
+        {% else %}
+        <div class="row">
+        {% endif %}
+          <dl>
+            <dt><h2>{{ page.s_feature_quote.quote }}</h2></dt>
+            <dd>— {{ page.s_feature_quote.source }}</dd>
+          </dl>
+        </div>
+      </article>
+      {% endif %}
+
+      {% if page.s_quotes %}
+      <article class="sec-users-saying">
+        <div class="row">
+          <h2>What users are saying</h2>
+        </div>
+        <div class="user-cards">
+          <ul>
+            {% for quote in page.s_quotes %}
+            <li>
+              <dl>
+                <dt class="user-card-header">
+                  <img src="{{ quote.author.image.url }}" alt="{{ quote.author.image.alt }}" />
+                  <dl>
+                    <dt>{{ quote.author.name }}</dt>
+                    <dd>{{ quote.author.role }}</dd>
+                  </dl>
+                </dt>
+                <dd class="user-card-quote">{{ quote.quote }}</dd>
+                <dd class="user-card-source">— {{ quote.source }}</dd>
+              </dl>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+      {% endif %}
+    </section>
+
+    <section class="cs-browse-more-projects">
+      <div class="row">
+        <h2>Browse more projects</h2>
+      </div>
+      <div class="browse-more-projects-wrap">
+        <ul>
+          <li>
+            <a href="#">
+              <figure>
+                <img
+                  src="/assets/graphics/content/w_ClimateScope_Design_Shot.jpg"
+                  alt=""
+                />
+              </figure>
+              <dl>
+                <dt>Project / client</dt>
+                <dd><h3>This is the project title with two lines</h3></dd>
+              </dl>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure>
+                <img
+                  src="/assets/graphics/content/w_ClimateScope_Design_Shot.jpg"
+                  alt=""
+                />
+              </figure>
+              <dl>
+                <dt>Project / client</dt>
+                <dd><h3>This is the project title with two lines</h3></dd>
+              </dl>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure>
+                <img
+                  src="/assets/graphics/content/w_ClimateScope_Design_Shot.jpg"
+                  alt=""
+                />
+              </figure>
+              <dl>
+                <dt>Project / client</dt>
+                <dd><h3>This is the project title with two lines</h3></dd>
+              </dl>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
