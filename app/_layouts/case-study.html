@@ -141,48 +141,27 @@ body_class: body-casestudy
   </div>
   <div class="browse-more-projects-wrap">
     <ul>
-      <li>
-        <a href="#">
-          <figure>
-            <img
-              src="/assets/graphics/content/w_ClimateScope_Design_Shot.jpg"
-              alt=""
-            />
-          </figure>
-          <dl>
-            <dt>Project / client</dt>
-            <dd><h3>This is the project title with two lines</h3></dd>
-          </dl>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <figure>
-            <img
-              src="/assets/graphics/content/w_ClimateScope_Design_Shot.jpg"
-              alt=""
-            />
-          </figure>
-          <dl>
-            <dt>Project / client</dt>
-            <dd><h3>This is the project title with two lines</h3></dd>
-          </dl>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <figure>
-            <img
-              src="/assets/graphics/content/w_ClimateScope_Design_Shot.jpg"
-              alt=""
-            />
-          </figure>
-          <dl>
-            <dt>Project / client</dt>
-            <dd><h3>This is the project title with two lines</h3></dd>
-          </dl>
-        </a>
-      </li>
+      {% comment %}
+        With these 2 loops we always print the list items that come after
+        the one being viewed and only after that we start from the beginning.
+      {% endcomment %}
+
+      {% assign found = false %}
+      {% for case_study in site.case_studies %}
+        {% if found %}
+          <li>{% include case-studies/card.html case=case_study %}</li>
+        {% endif %}
+        {% if case_study.url == page.url %}
+          {% assign found = true %}
+        {% endif %}
+      {% endfor %}
+
+      {% for case_study in site.case_studies %}
+        {% if case_study.url == page.url %}
+          {% break %}
+        {% endif %}
+        <li>{% include case-studies/card.html case=case_study %}</li>
+      {% endfor %}
     </ul>
   </div>
 </section>
