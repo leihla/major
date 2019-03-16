@@ -72,7 +72,7 @@ body_class: body-casestudy
 <section class="cs-content">
   {% if page.s_content %}
     {% for section in page.s_content %}
-      {% include case-study-section.html sec=section %}
+      {% include case-studies/content-section.html sec=section %}
     {% endfor %}
   {% endif %}
 
