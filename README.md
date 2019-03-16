@@ -1,50 +1,17 @@
 <h1 align="center">Major</h1>
 
-Major things will come to be!
+![](docs/home.png)
 
-## Installation and Usage
+Source code for [Major](http://wegomajor.com/) website
 
-The steps below will walk you through setting up your own instance of Major
+## Content management
 
-### Install Project Dependencies
-To set up the development environment for this website, you'll need to install the following on your system:
+- [Case studies documentation](docs/content/case-studies.md)
 
-- [Node](http://nodejs.org/) v10 (To manage multiple node versions we recommend [nvm](https://github.com/creationix/nvm))
-- [Yarn](https://yarnpkg.com/) Package manager
-- Ruby and [Bundler](http://bundler.io/). Highly suggest using [rvm](https://rvm.io/)
+## Development
 
-### Install Application Dependencies
+Please refer to [DEVELOPMENT.md](docs/DEVELOPMENT.md) for general development instructions.
 
-If you use [`nvm`](https://github.com/creationix/nvm), activate the desired Node version:
+## License
 
-```
-nvm install
-```
-
-Install Node modules:
-
-```
-yarn install
-```
-
-This will then automatically run `bundle install` to install the ruby gems.
-
-### Usage
-
-#### Starting the app
-
-```
-yarn run serve
-```
-Compiles the sass files, javascript, and launches the server making the site available at `http://localhost:3000/`
-The system will watch files and execute tasks whenever one of them changes.
-The site will automatically refresh since it is bundled with livereload.
-
-# Deployment
-To prepare the app for deployment run:
-
-```
-yarn run build
-```
-This will package the app and place all the contents in the `dist` directory.
-The app can then be run by any web server.
+The Major website in licensed under the [MIT License](LICENSE)
