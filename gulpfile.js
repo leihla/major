@@ -6,7 +6,6 @@ const defaultsdeep = require('lodash.defaultsdeep');
 const del = require('del');
 const browserSync = require('browser-sync');
 const browserify = require('browserify');
-const errorify = require('errorify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const notifier = require('node-notifier');
@@ -123,15 +122,19 @@ function javascript () {
     fullPaths: true
   }).external(pkg.dependencies ? Object.keys(pkg.dependencies) : []);
 
-  if (!isProd()) {
-    b.plugin(errorify);
-  } else {
-    b.on('error', function (e) {
-      throw new Error(e);
-    });
-  }
-
   return b.bundle()
+    .on('error', function (e) {
+      notifier.notify({
+        title: 'Oops! Browserify errored:',
+        message: e.message
+      });
+      console.log('Javascript error:', e); // eslint-disable-line
+      if (isProd()) {
+        throw new Error(e);
+      }
+      // Allows the watch to continue.
+      this.emit('end');
+    })
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe($.sourcemaps.init({ loadMaps: true }))
