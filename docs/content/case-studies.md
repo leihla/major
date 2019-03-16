@@ -110,7 +110,7 @@ These variables are needed by jekyll.
 `layout` will always be `case-study` and the permalink should be unique (The trailing slash is important)
 
 ### Main
-![](docs/content/sec-hero.jpg)
+![](sec-hero.jpg)
 ```
 title:
 client:
@@ -127,7 +127,7 @@ images:
 - `images.card` (string) is used for the cards on the "Other projects" section
 
 ### Intro section
-![](docs/content/sec-intro.jpg)
+![](sec-intro.jpg)
 
 All configuration for this section appears under the `s_intro` key.
 ```
@@ -147,7 +147,7 @@ s_intro:
 - `description` (string) description below the title. Markdown supported.
 
 ### Summary section
-![](docs/content/sec-summary.jpg)
+![](sec-summary.jpg)
 
 All configuration for this section appears under the `s_summary` key.
 ```
@@ -171,7 +171,7 @@ s_summary:
 - `solution.description` (string) solution description below the title. Markdown supported.
 
 ### Metrics section
-![](docs/content/sec-metrics.jpg)
+![](sec-metrics.jpg)
 
 All configuration for this section appears under the `s_metrics` key.
 ```
@@ -186,7 +186,7 @@ s_metrics:
 - `[].value` (string) metric value
 
 ### Featured Quote section
-![](docs/content/sec-feat-quote.jpg)
+![](sec-feat-quote.jpg)
 
 All configuration for this section appears under the `s_feature_quote` key.
 ```
@@ -202,7 +202,7 @@ s_feature_quote:
 - `class` (string) If needed, an additional css class can be added to this section
 
 ### Quotes section
-![](docs/content/sec-quotes.jpg)
+![](sec-quotes.jpg)
 
 All configuration for this section appears under the `s_quotes` key.
 ```
