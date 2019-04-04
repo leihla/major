@@ -14,7 +14,7 @@
     "url": "https://github.com/leihla/major/issues"
   },
   "engines": {
-    "node": "10.x"
+    "node": "8.x"
   },
   "homepage": "https://wegomajor.com",
   "main": "assets/scripts",
