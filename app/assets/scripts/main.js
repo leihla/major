@@ -2,6 +2,7 @@
 'use strict';
 
 require('./jquery.waypoints.min');
+require('./casestudy');
 
 function onPageLoad () {
   $(document).ready(function () {
