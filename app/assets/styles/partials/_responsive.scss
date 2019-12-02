@@ -363,6 +363,46 @@ figure{
   }
 
 
+  #page-footer {
+
+    .logo-footer{display: none;}
+
+    .p2020-footer{
+      left:0;
+      height: 90px;
+      svg{
+        max-width: 70%;
+      }
+
+    }
+
+    .social{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 144px;
+    justify-content: space-between;
+
+    left: 0;
+    p {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+
+
+    }
+  }
+
+  .say-hi-contact{
+
+   a{
+    font-size: 1.1rem;
+  }
+  }
+
+}
+
+
   //CASE STUDY ///////////////////////////////////////////////////////////////
 
 
@@ -693,30 +733,7 @@ dl{
 .clients .row .clients-logos{
   padding-top: 1rem;
 }
-  #page-footer {
 
-    .logo-footer{display: none;}
-    .social{
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    left: 0;
-    p {
-      margin-top: 1rem;
-
-
-    }
-  }
-
-  .say-hi-contact{
-
-   a{
-    font-size: 1.1rem;
-  }
-  }
-
-}
 
 ::-webkit-scrollbar {
     display: none;
