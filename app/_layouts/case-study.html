@@ -10,8 +10,8 @@ body_class: body-casestudy
   />
   <div class="row">
     <dl class="cs-hero-title">
-      <dt>{{ page.client }}</dt>
-      <dd><h1>{{ page.title }}</h1></dd>
+      <dt class="container-invisible" data-animate="white">{{ page.client }}</dt>
+      <dd class="container-invisible" data-animate="yellow"><h1>{{ page.title }}</h1></dd>
     </dl>
   </div>
 </section>
@@ -22,7 +22,8 @@ body_class: body-casestudy
     <figure>
       {% for logo in page.s_intro.logos %}
       <img
-        class="cs-client-logo"
+        class="cs-client-logo animatecontainer"
+        data-animate="images"
         src="{{ logo.url }}"
         alt="{{ logo.alt }}"
       />
@@ -30,10 +31,10 @@ body_class: body-casestudy
     </figure>
     <dl>
       <dt>
-        <h2>{{ page.s_intro.title }}</h2>
+        <h2 class="container-invisible" data-animate="yellow">{{ page.s_intro.title }}</h2>
       </dt>
       <dd>
-        <p>{{ page.s_intro.description | markdownify }}</p>
+        <p class="container-invisible" data-animate="white">{{ page.s_intro.description | markdownify }}</p>
       </dd>
     </dl>
   </div>
@@ -46,22 +47,22 @@ body_class: body-casestudy
     <ul>
       <li>
         <dl class="scope">
-          <dt>Scope</dt>
+          <dt class="container-invisible" data-animate="yellow">Scope</dt>
           {% for scope in page.s_summary.scope %}
-          <dd>{{ scope }}</dd>
+          <dd class="container-invisible" data-animate="grey">{{ scope }}</dd>
           {% endfor %}
         </dl>
       </li>
       <li>
         <dl>
-          <dt>Challenge</dt>
-          <dd><h3>{{ page.s_summary.challenge.title }}</h3></dd>
-          <dd>{{ page.s_summary.challenge.description | markdownify }}</dd>
+          <dt class="container-invisible" data-animate="yellow">Challenge</dt>
+          <dd><h3 class="container-invisible" data-animate="grey">{{ page.s_summary.challenge.title }}</h3></dd>
+          <dd class="container-invisible" data-animate="grey">{{ page.s_summary.challenge.description | markdownify }}</dd>
         </dl>
         <dl>
-          <dt>Solution</dt>
-          <dd><h3>{{ page.s_summary.solution.title }}</h3></dd>
-          <dd>{{ page.s_summary.solution.description | markdownify }}</dd>
+          <dt class="container-invisible" data-animate="yellow">Solution</dt>
+          <dd><h3 class="container-invisible" data-animate="grey">{{ page.s_summary.solution.title }}</h3></dd>
+          <dd class="container-invisible" data-animate="grey">{{ page.s_summary.solution.description | markdownify }}</dd>
         </dl>
       </li>
     </ul>
@@ -82,16 +83,16 @@ body_class: body-casestudy
       {% for metric in page.s_metrics %}
       <li>
         <dl>
-          <dt>{{ metric.title }}</dt>
-          <dd class="metric-value">{{ metric.value }}</dd>
-          <dd>{{ metric.description }}</dd>
+          <dt class="container-invisible" data-animate="grey">{{ metric.title }}</dt>
+          <dd data-animate="grey" class="metric-value container-invisible">{{ metric.value }}</dd>
+          <dd class="container-invisible" data-animate="grey">{{ metric.description }}</dd>
         </dl>
       </li>
       {% endfor %}
     </ul>
   </article>
   {% endif %}
-  
+
   {% if page.s_feature_quote %}
   <article class="sec-quote {{ page.s_feature_quote.class }}">
     {% if page.s_feature_quote.bgcolor %}
@@ -100,8 +101,8 @@ body_class: body-casestudy
     <div class="row">
     {% endif %}
       <dl>
-        <dt><h2>{{ page.s_feature_quote.quote }}</h2></dt>
-        <dd>— {{ page.s_feature_quote.source }}</dd>
+        <dt><h2 class="container-invisible" data-animate="white">{{ page.s_feature_quote.quote }}</h2></dt>
+        <dd class="container-invisible" data-animate="white">— {{ page.s_feature_quote.source }}</dd>
       </dl>
     </div>
   </article>
@@ -110,12 +111,12 @@ body_class: body-casestudy
   {% if page.s_quotes %}
   <article class="sec-users-saying">
     <div class="row">
-      <h2>What users are saying</h2>
+      <h2 class="container-invisible" data-animate="yellow">What users are saying</h2>
     </div>
     <div class="user-cards">
       <ul>
         {% for quote in page.s_quotes %}
-        <li>
+        <li class="animatecontainer" data-animate="images">
           <dl>
             <dt class="user-card-header">
               <img src="{{ quote.author.image.url }}" alt="{{ quote.author.image.alt }}" />
@@ -137,7 +138,7 @@ body_class: body-casestudy
 
 <section class="cs-browse-more-projects">
   <div class="row">
-    <h2>Browse more projects</h2>
+    <h2 class="container-invisible" data-animate="yellow">Browse more projects</h2>
   </div>
   <div class="browse-more-projects-wrap">
     <ul>
@@ -149,7 +150,7 @@ body_class: body-casestudy
       {% assign found = false %}
       {% for case_study in site.case_studies %}
         {% if found %}
-          <li>{% include case-studies/card.html case=case_study %}</li>
+          <li class="animatecontainer" data-animate="images">{% include case-studies/card.html case=case_study %}</li>
         {% endif %}
         {% if case_study.url == page.url %}
           {% assign found = true %}

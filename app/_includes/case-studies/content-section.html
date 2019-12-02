@@ -24,12 +24,14 @@
   {% endif %}
   <div class="row">
     <dl class="cs-section-text-content">
-      <dt><h2>{{ include.sec.title }}</h2></dt>
-      <dd>{{ include.sec.content | liquify | markdownify }}</dd>
+      <dt><h2 class="container-invisible" data-animate="yellow">{{ include.sec.title }}</h2></dt>
+      <dd class="container-invisible" data-animate="white">{{ include.sec.content | liquify | markdownify }}</dd>
     </dl>
-    <figure class="sec-text-img-images">
+    <figure class="sec-text-img-images ">
       {% for img in include.sec.images %}
       <img
+        class="animatecontainer"
+        data-animate="images"
         src="{{ img.url }}"
         alt="{{ img.alt }}"
       />
@@ -47,6 +49,8 @@
   <figure class="sec-img-images">
     {% for img in include.sec.images %}
     <img
+    class="animatecontainer"
+    data-animate="images"
       src="{{ img.url }}"
       alt="{{ img.alt }}"
     />

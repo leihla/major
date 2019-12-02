@@ -38,15 +38,15 @@ padding:10% 0;
   }
 
   .cs-hero-title{
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-    width: 40%;
-    max-width: 475px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+      width: 40%;
+      max-width: 475px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
     dt{
       @include smalltitle;
     }
@@ -107,6 +107,7 @@ transform: translateY(-50%);
   }
   .scope dd{
     color: $lightgrey;
+    width: 100%;
   }
 }
 
@@ -252,6 +253,7 @@ justify-content: space-around;
 
   dt{
   @include smalltitle;
+  width: 100%;
     }
     .metric-value{
       font-family: $titles-type;
@@ -290,9 +292,11 @@ justify-content: space-around;
 
 .sec-users-saying{
   @include section-padding;
+  .row{
+    text-align: center;
+  }
 
   h2{
-    width: 100%;
     text-align: center;
   }
   .user-cards{
