@@ -174,14 +174,13 @@ function calcAnimationValues (section) {
 }
 
 
-});
-
-function scrollhomepage(){
+window.scrollhomepage =  function (){
   // calculate where the sections start
   // Homepage
   var landingpage = $('.landingpage').offset().top;
   var projects = $('.projects').offset().top - compensation * 1.5;
   var knowmore = $('.know-more-about').offset().top - compensation;
+  var scrollPos = $(document).scrollTop();
 
   // Apply text changes
   if (scrollPos >= projects && scrollPos < knowmore) {
@@ -263,3 +262,5 @@ function scrollhomepage(){
     }
   }
 };
+
+});

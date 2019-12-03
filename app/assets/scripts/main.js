@@ -84,7 +84,6 @@ function onPageLoad () {
       // Homepage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
       if ($('body').is('.body-homepage')) {
-
         scrollhomepage();
       }
 

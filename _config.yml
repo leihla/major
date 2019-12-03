@@ -9,4 +9,4 @@ kramdown:
 
 collections:
   case_studies:
-    output: true
+    output: false

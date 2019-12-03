@@ -243,9 +243,7 @@ $clientstitle.waypoint(
     });
   }
 
-  });
-
-  function scrollabout(){
+  window.scrollabout = function (){
     var compensationabout = $(window).height() / 2;
     var compensationtitle = $('.section-title-underlay ul li').height() / 2;
     var mission = $('.studio-description').offset().top - compensationabout;
@@ -253,6 +251,8 @@ $clientstitle.waypoint(
     var services = $('.services').offset().top - compensationabout;
     var processs = $('.process').offset().top - compensationabout;
     var clients = $('.clients').offset().top - compensationabout;
+    var scrollPos = $(document).scrollTop();
+    var footer = $('#page-footer').offset().top - compensationabout;
 
     if (scrollPos >= team && scrollPos < services - compensationtitle) {
       $('.section-title-underlay ul li:not(:nth-child(1))').removeClass(
@@ -295,3 +295,5 @@ $clientstitle.waypoint(
       $('.section-title-underlay ul li').removeClass('fadetext');
     }
   };
+
+  });
