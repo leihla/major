@@ -177,7 +177,6 @@ function calcAnimationValues (section) {
 });
 
 function scrollhomepage(){
-
   // calculate where the sections start
   // Homepage
   var landingpage = $('.landingpage').offset().top;
