@@ -1,66 +1,17 @@
 <h1 align="center">Major</h1>
 
-Major things will come to be!
+![](docs/home.png)
 
-## Installation and Usage
+Source code for [Major](http://wegomajor.com/) website
 
-The steps below will walk you through setting up your own instance of Major
+## Content management
 
-### Install Project Dependencies
-To set up the development environment for this website, you'll need to install the following on your system:
+- [Case studies documentation](docs/content/case-studies.md)
 
-- [Node](http://nodejs.org/) v8 (To manage multiple node versions we recommend [nvm](https://github.com/creationix/nvm))
-- [Yarn](https://yarnpkg.com/) Package manager
+## Development
 
-### Install Application Dependencies
+Please refer to [DEVELOPMENT.md](docs/DEVELOPMENT.md) for general development instructions.
 
-If you use [`nvm`](https://github.com/creationix/nvm), activate the desired Node version:
+## License
 
-```
-nvm install
-```
-
-Install Node modules:
-
-```
-yarn install
-```
-
-### Usage
-
-#### Config files
-All the config files can be found in `app/assets/scripts/config`.
-After installing the projects there will be 3 main files:
-  - `local.js` - Used only for local development. On production this file should not exist or be empty.
-  - `staging.js`
-  - `production.js`
-
-The `production.js` file serves as base and the other 2 will override it as needed:
-  - `staging.js` will be loaded whenever the env variable `DS_ENV` is set to staging.
-  - `local.js` will be loaded if it exists.
-
-The following options must be set: (The used file will depend on the context):
-
-Example:
-```
-module.exports = {
-};
-```
-
-#### Starting the app
-
-```
-yarn run serve
-```
-Compiles the sass files, javascript, and launches the server making the site available at `http://localhost:3000/`
-The system will watch files and execute tasks whenever one of them changes.
-The site will automatically refresh since it is bundled with livereload.
-
-# Deployment
-To prepare the app for deployment run:
-
-```
-yarn run build
-```
-This will package the app and place all the contents in the `dist` directory.
-The app can then be run by any web server.
+The Major website in licensed under the [MIT License](LICENSE)
