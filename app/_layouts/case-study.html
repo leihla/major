@@ -1,0 +1,168 @@
+---
+layout: base
+body_class: body-casestudy
+---
+<section class="cs-hero">
+  <img
+    class="cs-hero-background"
+    src="{{ page.images.full }}"
+    alt="Project image"
+  />
+  <div class="row">
+    <dl class="cs-hero-title">
+      <dt class="container-invisible" data-animate="white">{{ page.client }}</dt>
+      <dd class="container-invisible" data-animate="yellow"><h1>{{ page.title }}</h1></dd>
+    </dl>
+  </div>
+</section>
+
+{% if page.s_intro %}
+<section class="cs-intro">
+  <div class="row">
+    <figure>
+      {% for logo in page.s_intro.logos %}
+      <img
+        class="cs-client-logo animatecontainer"
+        data-animate="images"
+        src="{{ logo.url }}"
+        alt="{{ logo.alt }}"
+      />
+      {% endfor %}
+    </figure>
+    <dl>
+      <dt>
+        <h2 class="container-invisible" data-animate="yellow">{{ page.s_intro.title }}</h2>
+      </dt>
+      <dd>
+        <p class="container-invisible" data-animate="white">{{ page.s_intro.description | markdownify }}</p>
+      </dd>
+    </dl>
+  </div>
+</section>
+{% endif %}
+
+{% if page.s_summary %}
+<section class="cs-resume">
+  <div class="row">
+    <ul>
+      <li>
+        <dl class="scope">
+          <dt class="container-invisible" data-animate="yellow">Scope</dt>
+          {% for scope in page.s_summary.scope %}
+          <dd class="container-invisible" data-animate="grey">{{ scope }}</dd>
+          {% endfor %}
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt class="container-invisible" data-animate="yellow">Challenge</dt>
+          <dd><h3 class="container-invisible" data-animate="grey">{{ page.s_summary.challenge.title }}</h3></dd>
+          <dd class="container-invisible" data-animate="grey">{{ page.s_summary.challenge.description | markdownify }}</dd>
+        </dl>
+        <dl>
+          <dt class="container-invisible" data-animate="yellow">Solution</dt>
+          <dd><h3 class="container-invisible" data-animate="grey">{{ page.s_summary.solution.title }}</h3></dd>
+          <dd class="container-invisible" data-animate="grey">{{ page.s_summary.solution.description | markdownify }}</dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="cs-content">
+  {% if page.s_content %}
+    {% for section in page.s_content %}
+      {% include case-studies/content-section.html sec=section %}
+    {% endfor %}
+  {% endif %}
+
+  {% if page.s_metrics %}
+  <article class="sec-metrics">
+    <ul class="row">
+      {% for metric in page.s_metrics %}
+      <li>
+        <dl>
+          <dt class="container-invisible" data-animate="grey">{{ metric.title }}</dt>
+          <dd data-animate="grey" class="metric-value container-invisible">{{ metric.value }}</dd>
+          <dd class="container-invisible" data-animate="grey">{{ metric.description }}</dd>
+        </dl>
+      </li>
+      {% endfor %}
+    </ul>
+  </article>
+  {% endif %}
+
+  {% if page.s_feature_quote %}
+  <article class="sec-quote {{ page.s_feature_quote.class }}">
+    {% if page.s_feature_quote.bgcolor %}
+    <div class="row" style="background-color: {{ page.s_feature_quote.bgcolor }}">
+    {% else %}
+    <div class="row">
+    {% endif %}
+      <dl>
+        <dt><h2 class="container-invisible" data-animate="white">{{ page.s_feature_quote.quote }}</h2></dt>
+        <dd class="container-invisible" data-animate="white">— {{ page.s_feature_quote.source }}</dd>
+      </dl>
+    </div>
+  </article>
+  {% endif %}
+
+  {% if page.s_quotes %}
+  <article class="sec-users-saying">
+    <div class="row">
+      <h2 class="container-invisible" data-animate="yellow">What users are saying</h2>
+    </div>
+    <div class="user-cards">
+      <ul>
+        {% for quote in page.s_quotes %}
+        <li class="animatecontainer" data-animate="images">
+          <dl>
+            <dt class="user-card-header">
+              <img src="{{ quote.author.image.url }}" alt="{{ quote.author.image.alt }}" />
+              <dl>
+                <dt>{{ quote.author.name }}</dt>
+                <dd>{{ quote.author.role }}</dd>
+              </dl>
+            </dt>
+            <dd class="user-card-quote">{{ quote.quote }}</dd>
+            <dd class="user-card-source">— {{ quote.source }}</dd>
+          </dl>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
+  {% endif %}
+</section>
+
+<section class="cs-browse-more-projects">
+  <div class="row">
+    <h2 class="container-invisible" data-animate="yellow">Browse more projects</h2>
+  </div>
+  <div class="browse-more-projects-wrap">
+    <ul>
+      {% comment %}
+        With these 2 loops we always print the list items that come after
+        the one being viewed and only after that we start from the beginning.
+      {% endcomment %}
+
+      {% assign found = false %}
+      {% for case_study in site.case_studies %}
+        {% if found %}
+          <li class="animatecontainer" data-animate="images">{% include case-studies/card.html case=case_study %}</li>
+        {% endif %}
+        {% if case_study.url == page.url %}
+          {% assign found = true %}
+        {% endif %}
+      {% endfor %}
+
+      {% for case_study in site.case_studies %}
+        {% if case_study.url == page.url %}
+          {% break %}
+        {% endif %}
+        <li>{% include case-studies/card.html case=case_study %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

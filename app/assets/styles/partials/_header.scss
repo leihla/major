@@ -132,6 +132,8 @@ header{
 	svg{
 		transition: opacity 0.2s linear 0.8s;
 		height: 48px;
+		margin-left: -6px;
+		margin-top: 4px;
 		path{
 			fill:$red;
 		}

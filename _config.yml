@@ -4,3 +4,9 @@ baseurl: http://wegomajor.com
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+# Collection definition
+
+collections:
+  case_studies:
+    output: false

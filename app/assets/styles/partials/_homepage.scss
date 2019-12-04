@@ -52,7 +52,7 @@
 
 	h2{
 		padding-bottom: 0.5rem;
-		
+
 
 	}
 	}
@@ -224,14 +224,7 @@ animation-fill-mode: forwards;
 
 
 					.card-name{
-						font-family: $titles-type;
-						text-transform: uppercase;
-						letter-spacing: 0.03rem;
-						display: inline-block;
-						font-size: 1rem;
-						line-height: 1.1rem;
-						margin-bottom: 1rem;
-
+						@include smalltitle;
 
 					}
 					p{
