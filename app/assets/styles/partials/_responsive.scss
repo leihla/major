@@ -61,9 +61,15 @@ figure{
 
 .mobile-break{
   display: block;
-
   }
 
+
+.browse-more-projects-wrap{
+  ul{
+    justify-content: flex-start;
+    padding: 0rem 4rem 4rem 5%;
+  }
+}
 
 
  }
@@ -156,8 +162,16 @@ figure{
 }
 //CASE STUDY ///////////////////////////////////////////////////////////////
 
-.cs-content .sec-users-saying ul{
-  padding: 0rem 4rem 4rem 5%;
+.cs-content .sec-users-saying{
+
+  .row{
+    text-align: left;
+  }
+
+  ul{
+    padding: 3rem 4rem 4rem 5%;
+  }
+
 }
 
 .cs-browse-more-projects ul li{
@@ -515,14 +529,16 @@ figure{
   h1{
     	font-size: 2.7rem;
     	line-height: 3rem;
-      padding: 0rem 0 1rem 0;
+      padding-bottom: 0;
+      margin-bottom: 2rem;
 
     }
 
   h2{
   	font-size: 2.2rem;
   	line-height: 2.7rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
+    margin-bottom: 1.5rem;
   }
 
   h3{

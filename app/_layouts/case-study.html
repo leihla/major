@@ -10,7 +10,7 @@ body_class: body-casestudy
   />
   <div class="row">
     <dl class="cs-hero-title">
-      <dt class="container-invisible" data-animate="white">{{ page.client }}</dt>
+      <dt class="container-invisible" data-animate="getcolor">{{ page.client }}</dt>
       <dd class="container-invisible" data-animate="yellow"><h1>{{ page.title }}</h1></dd>
     </dl>
   </div>
@@ -30,11 +30,11 @@ body_class: body-casestudy
       {% endfor %}
     </figure>
     <dl>
-      <dt>
-        <h2 class="container-invisible" data-animate="yellow">{{ page.s_intro.title }}</h2>
+      <dt class="container-invisible" data-animate="yellow">
+        <h2 >{{ page.s_intro.title }}</h2>
       </dt>
-      <dd>
-        <p class="container-invisible" data-animate="white">{{ page.s_intro.description | markdownify }}</p>
+      <dd class="container-invisible" data-animate="getcolor">
+        <p>{{ page.s_intro.description | markdownify }}</p>
       </dd>
     </dl>
   </div>
@@ -49,20 +49,20 @@ body_class: body-casestudy
         <dl class="scope">
           <dt class="container-invisible" data-animate="yellow">Scope</dt>
           {% for scope in page.s_summary.scope %}
-          <dd class="container-invisible" data-animate="grey">{{ scope }}</dd>
+          <dd class="container-invisible" data-animate="getcolor">{{ scope }}</dd>
           {% endfor %}
         </dl>
       </li>
       <li>
         <dl>
           <dt class="container-invisible" data-animate="yellow">Challenge</dt>
-          <dd><h3 class="container-invisible" data-animate="grey">{{ page.s_summary.challenge.title }}</h3></dd>
-          <dd class="container-invisible" data-animate="grey">{{ page.s_summary.challenge.description | markdownify }}</dd>
+          <dd><h3 class="container-invisible" data-animate="getcolor">{{ page.s_summary.challenge.title }}</h3></dd>
+          <dd class="container-invisible" data-animate="getcolor">{{ page.s_summary.challenge.description | markdownify }}</dd>
         </dl>
         <dl>
           <dt class="container-invisible" data-animate="yellow">Solution</dt>
-          <dd><h3 class="container-invisible" data-animate="grey">{{ page.s_summary.solution.title }}</h3></dd>
-          <dd class="container-invisible" data-animate="grey">{{ page.s_summary.solution.description | markdownify }}</dd>
+          <dd><h3 class="container-invisible" data-animate="getcolor">{{ page.s_summary.solution.title }}</h3></dd>
+          <dd class="container-invisible" data-animate="getcolor">{{ page.s_summary.solution.description | markdownify }}</dd>
         </dl>
       </li>
     </ul>
@@ -83,9 +83,9 @@ body_class: body-casestudy
       {% for metric in page.s_metrics %}
       <li>
         <dl>
-          <dt class="container-invisible" data-animate="grey">{{ metric.title }}</dt>
-          <dd data-animate="grey" class="metric-value container-invisible">{{ metric.value }}</dd>
-          <dd class="container-invisible" data-animate="grey">{{ metric.description }}</dd>
+          <dt class="container-invisible" data-animate="yellow">{{ metric.title }}</dt>
+          <dd class="metric-value container-invisible" data-animate="getcolor">{{ metric.value }}</dd>
+          <dd class="container-invisible" data-animate="getcolor">{{ metric.description }}</dd>
         </dl>
       </li>
       {% endfor %}
@@ -101,8 +101,8 @@ body_class: body-casestudy
     <div class="row">
     {% endif %}
       <dl>
-        <dt><h2 class="container-invisible" data-animate="white">{{ page.s_feature_quote.quote }}</h2></dt>
-        <dd class="container-invisible" data-animate="white">— {{ page.s_feature_quote.source }}</dd>
+        <dt><h2 class="container-invisible" data-animate="yellow">{{ page.s_feature_quote.quote }}</h2></dt>
+        <dd class="container-invisible" data-animate="getcolor">— {{ page.s_feature_quote.source }}</dd>
       </dl>
     </div>
   </article>
