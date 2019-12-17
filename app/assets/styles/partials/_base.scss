@@ -57,6 +57,7 @@ svg {
 }
 
 $titles-type: 'objectivity-bold', sans-serif;
+$titles-type-medium: 'objectivity-medium', sans-serif;
 $body-text-type: 'Noto Serif TC', serif;
 $background-color: #FAF9F8;
 $red: #F82A54;
@@ -141,7 +142,7 @@ h3{
 	text-transform: uppercase;
 	letter-spacing: 0.03rem;
 	display: inline-block;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	line-height: 1.1rem;
 	margin-bottom: 1rem;
 }
@@ -154,7 +155,7 @@ p {
 }
 
 small{
-	font-size: 1rem;
+	font-size: 0.9rem;
 	line-height: 1.4rem;
 	font-weight: 300;
 	color: $lightgrey;

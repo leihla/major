@@ -34,7 +34,7 @@ $studiolongdescription.waypoint(
 );
 
 // Team
-const $teamtitle = $('.team .team-text h1');
+const $teamtitle = $('.team .team-text h2');
 const $teamdescription = $('.team .team-text p');
 const $teammembdesc1 = $('.team li:nth-child(1) .member-description');
 const $teammembfoto1 = $('.team li:nth-child(1) figure');
@@ -88,7 +88,7 @@ $teamtitle.waypoint(
 );
 
 // services
-const $servicestitle = $('.services h1');
+const $servicestitle = $('.services h2');
 const $servicesresearch = $('.services li:nth-child(1)');
 const $servicesux = $('.services li:nth-child(2)');
 const $servicesui = $('.services li:nth-child(3)');
@@ -116,7 +116,7 @@ $servicestitle.waypoint(
 );
 
 // process
-const $processtitle = $('.process h1');
+const $processtitle = $('.process h2');
 const $processdesc = $('.process p');
 const $processfigure = $('.process figure');
 $processtitle.waypoint(
@@ -137,7 +137,7 @@ $processtitle.waypoint(
 );
 
 // clients
-const $clientstitle = $('.clients h1');
+const $clientstitle = $('.clients h2');
 const clientsdesc = $('.clients p');
 const $clientslogos = $('.clients ul');
 $clientstitle.waypoint(

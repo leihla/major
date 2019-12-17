@@ -224,6 +224,9 @@ animation-fill-mode: forwards;
 					}
 					p{
 						margin-bottom: 1.5rem;
+						small{
+							font-family: $titles-type-medium;
+						}
 					}
 				}
 			}
