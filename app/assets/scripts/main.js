@@ -78,26 +78,38 @@ function onPageLoad () {
     $(document).scroll(function () {
       // calculate half the viewport
       var scrollPos = $(document).scrollTop();
-      var footer = $('#page-footer').offset().top - compensation;
-      var landingpage = $('.landingpage').offset().top;
+      // var footer = $('#page-footer').offset().top - compensation;
+      // var landingpage = $('.landingpage').offset().top;
 
       // Homepage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
       if ($('body').is('.body-homepage')) {
+        var footer = $('#page-footer').offset().top - compensation;
+        var landingpage = $('.landingpage').offset().top;
         scrollhomepage();
       }
 
       // About  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       else if ($('body').is('.body-about')) {
+        var footer = $('#page-footer').offset().top - compensation;
+        var landingpage = $('.landingpage').offset().top;
       scrollabout();
       }
 
-      // Apply label guide disappear
-      if (scrollPos > landingpage) {
-        $('.label-guide ul').addClass('label-guide-animation');
-      } else {
-        $('.label-guide ul').removeClass('label-guide-animation');
+      else if ($('body').is('.body-casestudy')) {
+        var footer = $('#page-footer').offset().top - compensation;
+        var hero = $('.cs-hero').offset().top;
+
+        if (scrollPos > hero) {
+          $('.label-guide ul').addClass('label-guide-animation');
+        } else {
+          $('.label-guide ul').removeClass('label-guide-animation');
+        }
+
       }
+
+      // Apply label guide disappear
+
     }); // close scroll function
 
     $('header .row h1 a,.overlay-menu .menu li:not(:last-child) a').click(

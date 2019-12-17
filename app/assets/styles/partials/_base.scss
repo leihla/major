@@ -428,8 +428,8 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 .animacao_grey{
 	@include textanimation;
 	&:after{
-		background-color:$background-color;
-		-webkit-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Safari 4+ */
+	background-color:$background-color;
+	-webkit-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Safari 4+ */
  	-moz-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Fx 5+ */
  	-o-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Opera 12+ */
  	animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* IE 10+, Fx 29+ */
@@ -450,13 +450,15 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 .animacao_white{
 	@include textanimation;
 	&:after{
-		background-color:white;
-		-webkit-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Safari 4+ */
+	background-color:white;
+	-webkit-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Safari 4+ */
  	-moz-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Fx 5+ */
  	-o-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Opera 12+ */
  	animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* IE 10+, Fx 29+ */
 	}
 }
+
+
 
 .animacao2::after{
 	background-color:$red;
