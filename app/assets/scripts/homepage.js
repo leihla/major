@@ -27,7 +27,7 @@ $homelandh1.waypoint(
 );
 
 // wecan help
-const $wecanhelph2 = $('.wecanhelptext h1');
+const $wecanhelph2 = $('.wecanhelptext h2');
 const $redblock = $('.wecanhelp .redblock');
 $redblock.waypoint(
   function (direction) {

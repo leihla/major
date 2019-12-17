@@ -217,11 +217,6 @@ animation-fill-mode: forwards;
 					max-width: 445px;
 					margin: 0 10% 0 0;
 
-					.card-title{
-						padding-bottom: 0.3rem;
-						margin-bottom: 2.2rem;
-					}
-
 
 					.card-name{
 						@include smalltitle;
@@ -229,6 +224,9 @@ animation-fill-mode: forwards;
 					}
 					p{
 						margin-bottom: 1.5rem;
+						small{
+							font-family: $titles-type-medium;
+						}
 					}
 				}
 			}
