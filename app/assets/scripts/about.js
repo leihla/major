@@ -2,7 +2,7 @@ $(function() {
   if(!$('body.body-about')) return;
 // About the major_studio
 const $abouttdescription = $('.about-the-studio .about-text p');
-const $abouttitle = $('.about-the-studio .about-text h1');
+const $abouttitle = $('.about-the-studio .about-text h2');
 const $studiofigure = $('.about-the-studio .row figure');
 $studiofigure.waypoint(
   function (direction) {

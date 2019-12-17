@@ -32,9 +32,6 @@ a:active {
 }
 
 
-
-
-
 /* Button */
 button:active{
 	border: none;
@@ -59,14 +56,14 @@ svg {
   background-color: transparent; //Firefox
 }
 
-$titles-type: 'Oswald', sans-serif;
-$body-text-type:'IBM Plex Sans', sans-serif;
+$titles-type: 'objectivity-bold', sans-serif;
+$body-text-type: 'Noto Serif TC', serif;
 $background-color: #FAF9F8;
 $red: #F82A54;
 $darkblue: #071D49;
 $lightgrey: #828DA3;
 $yellow:#FFCE38;
-$title-padding: 2.2rem;
+$title-padding: 1rem;
 
 
 @mixin clearfix {
@@ -101,7 +98,8 @@ body {
 	font-weight: 400;
 	color: $darkblue;
 	font-size: 1rem;
-	line-height: 1.4rem;
+	line-height: 1.5rem;
+	-webkit-font-smoothing: antialiased;
 }
 
 .lock-scrol{
@@ -124,7 +122,7 @@ h2{
 	font-family: $titles-type;
 	font-size: 3rem;
 	font-weight: 400;
-	line-height: 1.3;
+	line-height: 1.2;
 	margin-bottom: $title-padding;
 	display: inline-block;
 }
@@ -139,7 +137,7 @@ h3{
 }
 
 @mixin smalltitle{
-	font-family: $titles-type;
+	font-family: 'objectivity-medium', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.03rem;
 	display: inline-block;
@@ -151,7 +149,7 @@ h3{
 
 p {
 	font-size: 1.13rem;
-	line-height: 1.6rem;
+	line-height: 1.8rem;
 	display: inline-block;
 }
 
