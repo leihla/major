@@ -51,9 +51,9 @@
 
 
 .about-the-studio{
-
   	z-index: 9;
     background-color: white;
+
 
 
 	.row{
@@ -67,7 +67,8 @@ align-items: center;
 			margin:unset;
       box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
       overflow: hidden;
-      	margin-top: -40px;
+      margin-top: -40px;
+      position: relative;
 
       img{
         width: 100%;
@@ -140,145 +141,57 @@ animation-fill-mode: forwards;
 background-color: white;
 	.team-text{
 		width: 50%;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 	}
 	ul{
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 800px;
+    justify-content: space-between;
 
-		li{
+    &:after{
+      display: none!important;
+    }
 
-			width: 50%;
-			position: relative;
-			float: left;
-			margin-bottom: 10vh;
+    li{
+      flex: 0 1 32%;
+      position: relative;
+      //border: 1px solid red;
+      position: relative;
+      margin-bottom: 2rem;
 
-			.member-description{
-				position: absolute;
-        width: 350px;
-
-        min-width: 156px;
-        z-index: 9;
-        margin-top: 2rem;
-        padding-left: 2rem;
-
-
-				dl{
-					display: inline-block;
-          margin-bottom: 1rem;
-          width: 100%;
-
-					dt{
-						font-family: $titles-type;
-						font-size: 1.5rem;
-            line-height: 1.5rem;
-            margin-bottom: 0.3rem;
-
-					}
-					dd{
-            // font-family: $titles-type;
-            // text-transform: uppercase;
-						// font-size: 0.9rem;
-            // line-height: 1rem;
-            font-size: 0.9rem;
-    line-height: 1.3rem;
-    font-weight: 400;
-
-
-					}
-				}
-			}
-
+      .member-description{
+        padding: 1rem 0;
+        font-family: $titles-type;
+        font-size: 1.125rem;
+      }
       .member-long-description{
-        //font-family: $titles-type;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        color: $darkblue;
-        max-width: 350px;
-        padding: 2rem;
+         position: absolute;
+         bottom:0;
+         left: 0;
+         width: 100%;
+         visibility: hidden;
+         padding: 2rem;
         background-color: $yellow;
-        position: absolute;
-        z-index: 9999;
-        bottom: 0;
-        margin-bottom: -3rem;
-
-        visibility: hidden;
-        font-weight: 400;
       }
-
-      .member-long-description-visible{
-
-      }
-
       figure{
         position: relative;
-        .smiling{
-          position: absolute;
-          visibility: hidden;
+        display: block;
+        width: 100%;
+        img{
+          width: 100%;
+          height: auto;
+          &:nth-child(2){
+            position: absolute;
+            top:0;
+            left: 0;
+            visibility: hidden;
+          }
         }
       }
-
-			&:nth-child(4n-2),&:nth-child(4n-3){
-				.member-description{
-      right: 0;
-
-
-				}
-        .member-long-description{
-right:2rem;
-
-        }
-
-
-
-
-				figure{
-					width: 100%;
-					margin: unset;
-          position: relative;
-					img{
-						width: 350px;
-						float: right;
-						//margin-right: -5%;
-					}
-          .smiling{
-            right: 0;
-          }
-				@include clearfix;
-				}
-			}
-
-			&:nth-child(4n),&:nth-child(4n-1){
-				.member-description{
-          left: 0;
-
-				}
-
-        .member-long-description{
-          left:2rem;
-
-
-
-        }
-
-				figure{
-					img{
-						width: 350px;
-						float: left;
-						//margin-left: -5%;
-					}
-          .smiling{
-            left: 0;
-          }
-				@include clearfix;
-				}
-
-			}
-
-
-
-
-		}
+    }
 		@include clearfix;
 	}
 
@@ -338,13 +251,13 @@ right:2rem;
         width: 90%;
 			dt{
 				font-family: $titles-type;
-				font-size: 1.5rem;
-				line-height:1.9rem;
-				margin-bottom: 1rem;
+				font-size: 1.125rem;
+				line-height:1.6rem;
+				margin-bottom: 0.5rem;
 			}
       dd{
-				font-size: 0.9rem;
-				line-height:1.3rem;
+				font-size: 1rem;
+				line-height:1.6rem;
 			}
       }
 

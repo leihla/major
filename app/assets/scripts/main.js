@@ -5,6 +5,7 @@ require('./jquery.waypoints.min');
 require('./casestudy');
 require('./homepage');
 require('./about');
+require('./work');
 
 
 function onPageLoad () {
@@ -48,6 +49,14 @@ function onPageLoad () {
             );
             $('.overlay-menu li:nth-child(3) a').toggleClass('animacao');
             $('.overlay-menu li:nth-child(3) a').toggleClass('animacao2');
+
+            setTimeout(function () {
+              $('.overlay-menu li:nth-child(4) a').toggleClass(
+                'container-invisible'
+              );
+              $('.overlay-menu li:nth-child(4) a').toggleClass('animacao');
+              $('.overlay-menu li:nth-child(4) a').toggleClass('animacao2');
+            }, 300);
           }, 300);
         }, 300);
       }, 500);
@@ -87,6 +96,12 @@ function onPageLoad () {
         var footer = $('#page-footer').offset().top - compensation;
         var landingpage = $('.landingpage').offset().top;
         scrollhomepage();
+        console.log("uuu")
+        if (scrollPos > landingpage) {
+          $('.label-guide ul').addClass('label-guide-animation');
+        } else {
+          $('.label-guide ul').removeClass('label-guide-animation');
+        }
       }
 
       // About  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,6 +109,11 @@ function onPageLoad () {
         var footer = $('#page-footer').offset().top - compensation;
         var landingpage = $('.landingpage').offset().top;
       scrollabout();
+      if (scrollPos > landingpage) {
+        $('.label-guide ul').addClass('label-guide-animation');
+      } else {
+        $('.label-guide ul').removeClass('label-guide-animation');
+      }
       }
 
       else if ($('body').is('.body-casestudy')) {
@@ -105,8 +125,19 @@ function onPageLoad () {
         } else {
           $('.label-guide ul').removeClass('label-guide-animation');
         }
-
       }
+
+      else if ($('body').is('.body-work')) {
+        var footer = $('#page-footer').offset().top - compensation;
+        var landingpage = $('.landingpage').offset().top;
+
+      if (scrollPos > landingpage) {
+        $('.label-guide ul').addClass('label-guide-animation');
+      } else {
+        $('.label-guide ul').removeClass('label-guide-animation');
+      }
+      }
+
 
       // Apply label guide disappear
 

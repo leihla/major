@@ -44,6 +44,10 @@ const $teammembdesc3 = $('.team li:nth-child(3) .member-description');
 const $teammembfoto3 = $('.team li:nth-child(3) figure');
 const $teammembdesc4 = $('.team li:nth-child(4) .member-description');
 const $teammembfoto4 = $('.team li:nth-child(4) figure');
+const $teammembdesc5 = $('.team li:nth-child(5) .member-description');
+const $teammembfoto5 = $('.team li:nth-child(5) figure');
+const $teammembdesc6 = $('.team li:nth-child(6) .member-description');
+const $teammembfoto6 = $('.team li:nth-child(6) figure');
 
 $teamtitle.waypoint(
   function (direction) {
@@ -73,6 +77,20 @@ $teamtitle.waypoint(
                       $teammembdesc4.addClass('animacao_grey');
                       setTimeout(function () {
                         $teammembfoto4.removeClass('animatecontainer');
+                        setTimeout(function () {
+                          $teammembdesc5.removeClass('container-invisible');
+                          $teammembdesc5.addClass('animacao_grey');
+                          setTimeout(function () {
+                            $teammembfoto5.removeClass('animatecontainer');
+                            setTimeout(function () {
+                              $teammembdesc6.removeClass('container-invisible');
+                              $teammembdesc6.addClass('animacao_grey');
+                              setTimeout(function () {
+                                $teammembfoto6.removeClass('animatecontainer');
+                              }, 100);
+                            }, 200);
+                          }, 100);
+                        }, 200);
                       }, 100);
                     }, 200);
                   }, 200);

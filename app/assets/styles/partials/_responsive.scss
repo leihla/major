@@ -5,10 +5,6 @@
 @media (max-width: 1055px) {
 
 //ABOUT /////////////////////////////////////////////////////////////////
-.team ul{
-  width: 100%;
-  margin: unset;
-}
 
 .about-the-studio{
   .row{
@@ -254,94 +250,16 @@ figure{
     }
 }
 
-//reset styles
 
-.team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
-  width: 60%;
-}
-
-  .team ul li:nth-child(4n-1) .member-description dl, .team ul li:nth-child(4n-2) .member-description dl{
-    border:unset;
-  }
-
-
-  .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
-    right: auto;
-    left: unset;
-  }
-
-  .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img{
-    float: none;
-
-  }
-
-  .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
-    float: none;
-  }
-
-  .team ul li:nth-child(4n) figure .smiling, .team ul li:nth-child(4n-1) figure .smiling{
-    left: unset;
-  }
-//end reset Styles
-
-.team{
-  overflow-x: hidden;
-}
-
-.team .team-text{
-  width: inherit;
-  margin-bottom: 5rem;
-}
-
-.team .row{
-  width: 100%;
+//team
+.team {
   .team-text{
-    padding: 0 5% 0 5%;
+    width: 100%;
+  }
+  ul li{
+      flex: 0 1 48%;
   }
 }
-  .team ul li{
-    float: none;
-    width: 100%;
-
-    figure{
-      overflow: hidden;
-
-
-    }
-
-    &:nth-child(odd){
-      .member-description{
-        width: 60%;
-        right: 0;
-
-      }
-
-      figure{
-        text-align: right;
-
-        .smiling{
-          right: 0;
-        }
-      }
-    }
-
-    &:nth-child(even){
-
-      .member-description{
-        width: 60%;
-        left: 0;
-      }
-
-      figure{
-        text-align: left;
-
-        .smiling{
-          left: 0;
-        }
-      }
-    }
-
-  }
 
   .process{
     flex-direction: column-reverse;
@@ -647,50 +565,12 @@ width: 90%;
       padding: 1rem 0rem 1rem 0;
 }
 
-.team .row .team-text{
-  margin-bottom: 2rem;
-}
+//Team section
+.team {
 
-.team ul li{
-  margin-bottom: 1rem;
-}
-
-
-  .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
-    width: 60%;
+  ul li{
+      flex: 0 1 100%;
   }
-
-  .team ul li:nth-child(odd), .team ul li:nth-child(even){
-    .member-description{
-      width: 60%;
-    }
-}
-
-.team ul li .member-description{
-  margin-top: 1.5rem;
-  padding-left: 1.5rem;
-
-dl{
-  dt{
-    font-size: 1.2rem;
-    margin-bottom: 0;
-  }
-
-  dd{
-    font-size: 0.8rem;
-    line-height: 1rem;
-
-
-  }
-  }
-
-}
-
-.team ul li .member-long-description{
-  padding: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.5rem;
-  margin-bottom: -2rem;
 }
 
 .services ul li{
@@ -772,9 +652,24 @@ h2{
 ul{
   padding: 2rem 4rem 4rem 5%;
 }
-
-
 }
+.work-list{
+
+  ul{
+    li{
+      flex: 0 0 100%;
+      margin-bottom: 4rem;
+      &:nth-child(even){
+        margin-top: 0;
+      }
+      &:nth-child(odd){
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+
 
 }
 

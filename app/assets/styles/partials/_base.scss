@@ -58,7 +58,7 @@ svg {
 
 $titles-type: 'objectivity-bold', sans-serif;
 $titles-type-medium: 'objectivity-medium', sans-serif;
-$body-text-type: 'Noto Serif TC', serif;
+$body-text-type: 'Noto Serif SC', serif;
 $background-color: #FAF9F8;
 $red: #F82A54;
 $darkblue: #071D49;
@@ -267,8 +267,9 @@ display: inline-block;
 
 
 .section-title-underlay{
-	font-family: $titles-type;
-	font-size: 13rem;
+	font-family: $body-text-type;
+	font-size: 10rem;
+	font-weight: 700;
 	color: white;
 	line-height: 13rem;
 	position: fixed;
@@ -299,12 +300,12 @@ display: inline-block;
 	}
 
  .fadetext{
-	 // transition: opacity 0.5s ease-out;
-	 // opacity: 0.8;
--webkit-animation: fadetext 3s ease-in-out; /* Safari 4+ */
--moz-animation:    fadetext 3s ease-in-out; /* Fx 5+ */
--o-animation:      fadetext 3s ease-in-out; /* Opera 12+ */
-animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
+	 transition: opacity 0.5s ease-out;
+	 opacity: 0.8;
+// -webkit-animation: fadetext 3s ease-in-out; /* Safari 4+ */
+// -moz-animation:    fadetext 3s ease-in-out; /* Fx 5+ */
+// -o-animation:      fadetext 3s ease-in-out; /* Opera 12+ */
+// animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 
  }
 
@@ -375,7 +376,8 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 .process .process-text p,
 .clients .clients-text h1,
 .clients .clients-text p,
-.clients .clients-logos
+.clients .clients-logos,
+.work-list ul li a
 {
 
 	-webkit-transition:transform 600ms ease-out, opacity 600ms ease-out;

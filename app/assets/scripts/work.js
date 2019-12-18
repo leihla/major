@@ -1,6 +1,6 @@
 
 $(function() {
-  if(!$('body.body-casestudy')) return;
+  if(!$('body.body-work')) return;
 
   const sect = $('[data-animate]');
   sect.waypoint(function (direction) {
@@ -9,10 +9,13 @@ $(function() {
     const dataValue = wEl.data('animate');
     //const sectioncolor = $(this.element).closest('section').css('background-color');
     const sectioncolor = getBackground($(this.element));
-    //console.log(sectioncolor);
 
 
 if (direction === 'down') {
+        if (dataValue==="img-animate"){
+          wEl.removeClass('animatecontainer');
+        }
+
        if (dataValue==="yellow"){
          wEl.removeClass('container-invisible');
          wEl.addClass('animacao');
