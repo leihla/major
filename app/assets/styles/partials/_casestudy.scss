@@ -96,7 +96,8 @@ padding:10% 0;
   figure{
     	@include column(2/12);
       img{
-        width: 100%;
+        height: 40px;
+        width: auto;
       }
   }
   dl{
@@ -120,6 +121,9 @@ padding:10% 0;
       @include column(6/12);
     }
     }
+    dl{
+      padding-right: 2rem;
+    }
   }
   dt{
     @include smalltitle;
@@ -130,6 +134,7 @@ padding:10% 0;
   .scope dd{
     color: $lightgrey;
     width: 100%;
+    margin-bottom: 0.3rem;
   }
 }
 
@@ -177,6 +182,7 @@ article{
   flex-direction: row;
 
   .cs-section-text-content{
+      padding-top: 3rem;
   @include column(5/12);
   }
   .sec-text-img-images{
@@ -190,6 +196,7 @@ article{
   .row{
   flex-direction: row-reverse;
   .cs-section-text-content{
+    padding-top: 3rem;
   @include column(5/12);
   }
   .sec-text-img-images{
@@ -223,7 +230,7 @@ background-color: white;
     z-index: -1;
   }
   .sec-text-img-images{
-  box-shadow: 10px 10px 40px 0 rgba(0,0,0,0.10);
+  //box-shadow: 10px 10px 40px 0 rgba(0,0,0,0.10);
   }
 
 }
@@ -239,6 +246,14 @@ background-color: white;
     height: auto;
     display: block;
     }
+}
+
+.sec-img.no-padding{
+  padding: 0;
+}
+
+.sec-img.neg-margin-top{
+  margin-top: -50px;
 }
 
 .sec-img-full-width{
