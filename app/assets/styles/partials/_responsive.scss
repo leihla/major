@@ -34,6 +34,10 @@ figure{
 }
 
 //CASE STUDY ///////////////////////////////////////////////////////////////
+
+.cs-hero .cs-hero-background{
+  transform: translate(-15%,-20%);
+}
 .cs-content .sec-background-custom .cs-article-background{
   height: 80%;
 }
@@ -337,6 +341,9 @@ figure{
 
   //CASE STUDY ///////////////////////////////////////////////////////////////
 
+  .cs-hero .cs-hero-background{
+    transform: translate(-20%,-20%);
+  }
 
   .cs-intro{
     .row{
@@ -445,7 +452,7 @@ figure{
   }
 
   h1{
-    	font-size: 2.7rem;
+    	font-size: 2.52rem;
     	line-height: 3rem;
       padding-bottom: 0;
       margin-bottom: 2rem;
@@ -453,8 +460,8 @@ figure{
     }
 
   h2{
-  	font-size: 2.2rem;
-  	line-height: 2.7rem;
+  	font-size: 2rem;
+  	line-height: 2.5rem;
     padding-bottom: 0;
     margin-bottom: 1.5rem;
   }
@@ -510,7 +517,6 @@ figure{
 }
 
 .wecanhelp .row h2{
-  line-height: 3rem;
   width: 90%;
   padding-bottom: 0;
 }
@@ -637,6 +643,19 @@ dl{
 
 
 //CASE STUDY ////////////////////
+
+.cs-hero {
+  .cs-hero-background{
+      transform: translate(-45%,-5%);
+  }
+
+  .row .cs-hero-title{
+    top:30%;
+    width: 100%;
+  }
+
+}
+
 .cs-content .sec-metrics ul {
 .metric-value{
   font-size: 3.5rem;
@@ -645,14 +664,21 @@ dl{
 
 }
 
-.cs-browse-more-projects{
-h2{
-  padding-bottom: 0;
+.cs-browse-more-projects .browse-more-projects-wrap dl dt, .cs-browse-more-projects .browse-more-projects-wrap dl dd h3{
+font-size: 0.9rem;
+margin-bottom: 0;
 }
-ul{
-  padding: 2rem 4rem 4rem 5%;
+
+.cs-browse-more-projects .browse-more-projects-wrap dl .next-project:before{
+  transform: scale(0.8);
 }
+
+.cs-browse-more-projects .browse-more-projects-wrap dl .next-project:after{
+  transform: scale(0.8);
 }
+
+
+
 .work-list{
 
   ul{

@@ -82,6 +82,12 @@ function onPageLoad () {
       return { percentage, strokeopacity, strokescale };
     }
 
+//Change footer message
+
+if ( ($('body').is('.body-work')) || ($('body').is('.body-casestudy')) ){
+      $("#page-footer .say-hi-contact h2").html("Got a project? Talk with us.");
+}
+
 
     // Change section title on scroll
     $(document).scroll(function () {
@@ -91,7 +97,6 @@ function onPageLoad () {
       // var landingpage = $('.landingpage').offset().top;
 
       // Homepage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
       if ($('body').is('.body-homepage')) {
         var footer = $('#page-footer').offset().top - compensation;
         var landingpage = $('.landingpage').offset().top;
@@ -116,20 +121,32 @@ function onPageLoad () {
       }
       }
 
+      // Case study  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       else if ($('body').is('.body-casestudy')) {
         var footer = $('#page-footer').offset().top - compensation;
         var hero = $('.cs-hero').offset().top;
+        var intro =$('.cs-intro').offset().top - 50;
 
-        if (scrollPos > hero) {
-          $('.label-guide ul').addClass('label-guide-animation');
-        } else {
-          $('.label-guide ul').removeClass('label-guide-animation');
+
+        if ($('.dark').length===0) {
+          if (scrollPos > intro) {
+            $('header .row nav .menu-icon').removeClass('menu-icon-white');
+          } else {
+            $('header .row nav .menu-icon').addClass('menu-icon-white');
+          }
         }
-      }
+        else{
+          return;
+        }
+        }
 
+
+
+      // Work  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       else if ($('body').is('.body-work')) {
         var footer = $('#page-footer').offset().top - compensation;
         var landingpage = $('.landingpage').offset().top;
+
 
       if (scrollPos > landingpage) {
         $('.label-guide ul').addClass('label-guide-animation');

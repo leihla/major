@@ -3,7 +3,7 @@
 
 .landingpage{
 	background-color: white;
-	height: 100vh;
+	height: 90vh;
 	min-height: 600px;
 	display: flex;
 	align-items: center;
@@ -254,7 +254,27 @@ animation-fill-mode: forwards;
 			margin-bottom: unset;
 		}
 
+.allprojects{
+	height: 8rem;
+	display: flex;
+	align-items: flex-end;
+	padding-right: 0.5rem;
+	a{
+		width: 100%;
+		font-size: 1rem;
+		text-align: right;
+		color: $red;
+		line-height: 0.9rem;
+	}
+	svg{
+		margin-left: 0.5rem;
+		 g g{
+			 fill: $red;
 
+		 }
+
+	}
+}
 
 }
 

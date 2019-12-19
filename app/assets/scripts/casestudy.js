@@ -2,6 +2,15 @@
 $(function() {
   if(!$('body.body-casestudy')) return;
 
+  $('header .row nav .menu-icon').addClass('menu-icon-white');
+  if ($('.dark').length>0) {
+  $('header .row nav .menu-icon').removeClass('menu-icon-white');
+  }
+
+
+  
+
+
   const sect = $('[data-animate]');
   sect.waypoint(function (direction) {
     // Element of current waypoint.
