@@ -1,6 +1,13 @@
 
 
 
+@media (min-width: 1056px) {
+  // .cs-hero .cs-hero-background{
+  //   transform: translateY(-5%);
+  // }
+
+}
+
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1055px) {
 
@@ -35,9 +42,9 @@ figure{
 
 //CASE STUDY ///////////////////////////////////////////////////////////////
 
-.cs-hero .cs-hero-background{
-  transform: translate(-15%,-20%);
-}
+// .cs-hero .cs-hero-background{
+//   transform: translate(-15%,-20%);
+// }
 .cs-content .sec-background-custom .cs-article-background{
   height: 80%;
 }
@@ -341,9 +348,25 @@ figure{
 
   //CASE STUDY ///////////////////////////////////////////////////////////////
 
-  .cs-hero .cs-hero-background{
-    transform: translate(-20%,-20%);
+  .cs-hero {
+    align-items: initial;
+    padding-top: 6rem;
+    .row{
+      padding-top: 4rem;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+
+      figure{
+        flex: 1 1 auto;
+      }
+      dl{
+        flex: 1 1 auto;
+        padding-bottom: 2rem;
+      }
+
+    }
   }
+
 
   .cs-intro{
     .row{
@@ -421,6 +444,11 @@ figure{
 @media (max-width: 650px) {
 
 //CASE STUDY ///////////////////////////////////////////
+.cs-content .sec-img{
+  .no-padding{
+    padding: 10% 0;
+  }
+}
 
 .cs-resume{
   ul{
@@ -437,6 +465,9 @@ figure{
 
   }
   }
+}
+.neg-margin-top{
+  margin-top: 0px;
 }
 
 
@@ -648,15 +679,18 @@ dl{
 //CASE STUDY ////////////////////
 
 .cs-hero {
-  .cs-hero-background{
-      transform: translate(-45%,-15%);
-  }
+  // .cs-hero-background{
+  //     transform: translate(-45%,-15%);
+  // }
 
   .row .cs-hero-title{
     top:30%;
     width: 100%;
   }
+}
 
+.cs-intro figure img{
+  height: 24px;
 }
 
 .cs-content .sec-metrics ul {
@@ -665,6 +699,10 @@ dl{
   line-height: 4rem;
 }
 
+}
+
+.cs-content .sec-text-left .row .cs-section-text-content, .cs-content .sec-text-right .row .cs-section-text-content{
+  padding-top: 0;
 }
 
 .cs-browse-more-projects .browse-more-projects-wrap dl dt, .cs-browse-more-projects .browse-more-projects-wrap dl dd h3{
@@ -697,7 +735,6 @@ margin-bottom: 0;
     }
   }
 }
-
 
 
 }

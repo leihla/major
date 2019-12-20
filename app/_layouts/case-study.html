@@ -3,16 +3,19 @@ layout: base
 body_class: body-casestudy
 ---
 <section class="cs-hero">
-  <img
-    class="cs-hero-background"
-    src="{{ page.images.full }}"
-    alt="Project image"
-  />
   <div class="row">
-    <dl class="cs-hero-title">
-      <dt class="container-invisible" data-animate="getcolor">{{ page.client }}</dt>
-      <dd class="container-invisible" data-animate="yellow"><h1>{{ page.title }}</h1></dd>
-    </dl>
+    <figure>
+      <img
+        class="cs-hero-background"
+        src="{{ page.images.full }}"
+        alt="Project image"
+      />
+    </figure>
+      <dl class="cs-hero-title">
+        <dt class="container-invisible" data-animate="yellow">{{ page.client }}</dt>
+        <dd class="container-invisible" data-animate="yellow"><h1>{{ page.title }}</h1></dd>
+      </dl>
+
   </div>
 </section>
 
