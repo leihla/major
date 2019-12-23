@@ -71,6 +71,7 @@ s_content:
   - type:
     class:
     bgcolor:
+    color:
     title:
     content:
     images:
@@ -268,6 +269,7 @@ s_content:
         alt:
     bgcolor:
     class:
+    color:
 ```
 - `type` (string) type of the section as listed above
 - `title` (string) title of the section
@@ -277,6 +279,7 @@ s_content:
 - `image[].alt` (string) image tag alt text
 - `bgcolor` (string) background color for the section block. *Important*: This value must be between quotes
 - `class` (string) If needed, an additional css class can be added to this section
+- `color` (string) Text color for the section. Any css color is supported
 
 #### Image sections
 There are 2 types of image sections:

@@ -16,7 +16,11 @@
   {% assign bgklass='sec-background-white' %}
 {% endif %}
 
-<article class="sec-text-img {{ bgklass }} {{ klass }} {{ include.sec.class }}">
+{% if include.sec.color %}
+  {% capture articleStyle %}color: {{ include.sec.color }};{% endcapture %}
+{% endif %}
+
+<article class="sec-text-img {{ bgklass }} {{ klass }} {{ include.sec.class }}" style="{{ articleStyle }}">
   {% if include.sec.bgcolor %}
     <span class="cs-article-background" style="background-color: {{ include.sec.bgcolor }}"></span>
   {% else %}
