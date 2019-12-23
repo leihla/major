@@ -10,6 +10,7 @@ This is the base structure:
 ---
 layout: case-study
 permalink: case-studies/<slug>/
+theme:
 
 # Main section
 title:
@@ -105,9 +106,11 @@ Failing to do this will result in the variable being interpreted as plain text.
 ```
 layout: case-study
 permalink: case-studies/<slug>/
+theme:
 ```
 These variables are needed by jekyll.
 `layout` will always be `case-study` and the permalink should be unique (The trailing slash is important)
+The `theme` variable allows a class to be added to the `body` tag. Leave empty for no class.
 
 ### Main
 ![](sec-hero.jpg)
