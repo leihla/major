@@ -2,7 +2,13 @@
 layout: base
 body_class: body-casestudy
 ---
-<section class="cs-hero">
+{% if page.hero.bg_image %}
+  {% capture style %}{{ style }}background-image: url('{{page.hero.bg_image}}');{% endcapture %}
+{% endif %}
+{% if page.hero.bg_color %}
+  {% capture style %}{{ style }}background-color: {{page.hero.bg_color}};{% endcapture %}
+{% endif %}
+<section class="cs-hero" style="{{ style }}">
   <div class="row">
     <figure>
       <img

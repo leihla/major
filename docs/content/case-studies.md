@@ -15,6 +15,9 @@ theme:
 # Main section
 title:
 client:
+hero:
+  bg_color:
+  bg_image:
 images:
   full:
   small:
@@ -117,6 +120,9 @@ The `theme` variable allows a class to be added to the `body` tag. Leave empty f
 ```
 title:
 client:
+hero:
+  bg_color:
+  bg_image:
 images:
   full:
   small:
@@ -128,6 +134,8 @@ images:
 - `images.full` (string) is displayed on large screens
 - `images.small` (string) is displayed on small screens
 - `images.card` (string) is used for the cards on the "Other projects" section
+- `hero.bg_color` (string) color to be applied to the hero (applied to `section.cs-hero`)
+- `hero.bg_image` (string) image to be applied to the hero (applied to `section.cs-hero`)
 
 ### Intro section
 ![](sec-intro.jpg)
