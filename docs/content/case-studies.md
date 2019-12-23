@@ -44,9 +44,11 @@ s_summary:
 
 # Metrics section
 s_metrics:
-  - title:
-    description:
-    value:
+  class:
+  items:
+    - title:
+      description:
+      value:
 
 # Featured quote section
 s_feature_quote:
@@ -188,14 +190,17 @@ s_summary:
 All configuration for this section appears under the `s_metrics` key.
 ```
 s_metrics:
-  - title:
-    description:
-    value:
+  class:
+  items:
+    - title:
+      description:
+      value:
 ```
-- `[]` (array[objects]) list of metrics. Keep adding more items to the list if needed
-- `[].title` (string) metric title
-- `[].description` (string) metric description
-- `[].value` (string) metric value
+- `class` (string) If needed, an additional css class can be added to this section
+- `items[]` (array[objects]) list of metrics. Keep adding more items to the list if needed
+- `items[].title` (string) metric title
+- `items[].description` (string) metric description
+- `items[].value` (string) metric value
 
 ### Featured Quote section
 ![](sec-feat-quote.jpg)

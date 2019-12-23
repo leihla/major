@@ -86,10 +86,10 @@ body_class: body-casestudy
     {% endfor %}
   {% endif %}
 
-  {% if page.s_metrics %}
-  <article class="sec-metrics">
+  {% if page.s_metrics.items %}
+  <article class="sec-metrics {{ page.s_metrics.class }}">
     <ul class="row">
-      {% for metric in page.s_metrics %}
+      {% for metric in page.s_metrics.items %}
       <li>
         <dl>
           <dt class="container-invisible" data-animate="yellow">{{ metric.title }}</dt>
