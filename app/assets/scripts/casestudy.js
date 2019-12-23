@@ -2,6 +2,15 @@
 $(function() {
   if(!$('body.body-casestudy')) return;
 
+  $('header .row nav .menu-icon').addClass('menu-icon-white');
+  if ($('.dark').length>0) {
+  $('header .row nav .menu-icon').removeClass('menu-icon-white');
+  }
+
+
+  
+
+
   const sect = $('[data-animate]');
   sect.waypoint(function (direction) {
     // Element of current waypoint.
@@ -9,7 +18,7 @@ $(function() {
     const dataValue = wEl.data('animate');
     //const sectioncolor = $(this.element).closest('section').css('background-color');
     const sectioncolor = getBackground($(this.element));
-    console.log(sectioncolor);
+    //console.log(sectioncolor);
 
 
 if (direction === 'down') {

@@ -3,16 +3,19 @@ layout: base
 body_class: body-casestudy
 ---
 <section class="cs-hero">
-  <img
-    class="cs-hero-background"
-    src="{{ page.images.full }}"
-    alt="Project image"
-  />
   <div class="row">
-    <dl class="cs-hero-title">
-      <dt class="container-invisible" data-animate="getcolor">{{ page.client }}</dt>
-      <dd class="container-invisible" data-animate="yellow"><h1>{{ page.title }}</h1></dd>
-    </dl>
+    <figure>
+      <img
+        class="cs-hero-background"
+        src="{{ page.images.full }}"
+        alt="Project image"
+      />
+    </figure>
+      <dl class="cs-hero-title">
+        <dt class="container-invisible" data-animate="yellow">{{ page.client }}</dt>
+        <dd class="container-invisible" data-animate="yellow"><h1>{{ page.title }}</h1></dd>
+      </dl>
+
   </div>
 </section>
 
@@ -137,10 +140,23 @@ body_class: body-casestudy
 </section>
 
 <section class="cs-browse-more-projects">
-  <div class="row">
-    <h2 class="container-invisible" data-animate="yellow">Browse more projects</h2>
+  <div class="row browse-more-projects-wrap">
+    <a href="#">
+      <dl>
+        <dt class="previous-project">Previous project</dt>
+        <dd><h3>Wodify Arena</h3></dd>
+      </dl>
+    </a>
+    <a href="#">
+      <dl>
+        <dt class="next-project">Next project</dt>
+        <dd><h3>Climatescope 2018</h3></dd>
+      </dl>
+    </a>
+
+    <!-- <h2 class="container-invisible" data-animate="yellow">Browse more projects</h2> -->
   </div>
-  <div class="browse-more-projects-wrap">
+  <!-- <div class="browse-more-projects-wrap">
     <ul>
       {% comment %}
         With these 2 loops we always print the list items that come after
@@ -164,5 +180,5 @@ body_class: body-casestudy
         <li>{% include case-studies/card.html case=case_study %}</li>
       {% endfor %}
     </ul>
-  </div>
+  </div> -->
 </section>
