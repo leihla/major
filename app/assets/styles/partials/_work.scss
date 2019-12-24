@@ -111,6 +111,7 @@
 				}
 
 				&:hover{
+					cursor: default;
 					figure:after{
 						opacity: 1;
 							transition: opacity 200ms ease-out;

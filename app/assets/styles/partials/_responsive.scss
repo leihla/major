@@ -351,6 +351,8 @@ figure{
   .cs-hero {
     align-items: initial;
     padding-top: 6rem;
+    padding-bottom: 3rem;
+    max-height: 90vh;
     .row{
       padding-top: 4rem;
       flex-direction: column-reverse;
@@ -358,6 +360,7 @@ figure{
 
       figure{
         flex: 1 1 auto;
+        margin-top: 0;
       }
       dl{
         flex: 1 1 auto;
@@ -407,6 +410,7 @@ figure{
     .cs-section-text-content{
       width: 100%;
       padding-bottom: 3rem;
+      padding-top: 0;
     }
 
     .sec-text-img-images{
@@ -444,11 +448,12 @@ figure{
 @media (max-width: 650px) {
 
 //CASE STUDY ///////////////////////////////////////////
-.cs-content .sec-img{
+
   .no-padding{
-    padding: 10% 0;
+    padding: 5% 0;
   }
-}
+
+
 
 .cs-resume{
   ul{
@@ -467,9 +472,12 @@ figure{
   }
 }
 .neg-margin-top{
-  margin-top: 0px;
+  margin-top: -15px;
 }
 
+.large-neg-margin-top{
+  margin-top: 0px;
+}
 
 }
 

@@ -59,9 +59,10 @@ padding:10% 0;
 figure{
     flex: 1 1 45%;
     max-height: 500px;
-    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.26);
+    //box-shadow: 0 2px 24px 0 rgba(0,0,0,0.26);
     overflow: hidden;
     display: flex;
+    margin-top: 3rem;
 
     img{
       width: 100%;
@@ -225,10 +226,20 @@ article{
 }
 
 .sec-small-title{
-dt{
-  font-size: 1.5rem;
+dt h2{
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+.row{
+.cs-section-text-content{
+  padding-top: 0;
+@include column(4/12);
+}
+.sec-text-img-images{
+  @include column(7/12);
+}
 }
 }
 
@@ -266,9 +277,7 @@ background-color: white;
     }
 }
 
-.sec-img.no-padding{
-  padding: 0;
-}
+
 
 
 .sec-img-full-width{
@@ -277,7 +286,7 @@ background-color: white;
   margin-right: auto;
   figure{
     width: 100%;
-    background-color: blue;
+    //background-color: blue;
     img{
 
     }
@@ -545,6 +554,34 @@ justify-content: space-around;
 
 }
 
+.no-padding{
+  .row{
+      padding: 0 0 5% 0!important;
+  }
+}
+
+.no-padding-bottom{
+.row{
+  padding: 10% 0 0 0!important;
+}
+}
+
+.no-padding-top{
+.row{
+  padding: 0 0 10% 0!important;
+}
+}
+
+.no-padding.sec-img{
+      padding: 0 0 5% 0!important;
+  }
+
+
+
 .neg-margin-top{
   margin-top: -50px;
+}
+
+.large-neg-margin-top{
+  margin-top: -200px;
 }

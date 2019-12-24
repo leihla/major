@@ -2,6 +2,11 @@
 $(function() {
   if(!$('body.body-work')) return;
 
+  $('.coming-soon').click(function(e) {
+    e.preventDefault();
+    //do other stuff when a click happens
+  });
+
   const sect = $('[data-animate]');
   sect.waypoint(function (direction) {
     // Element of current waypoint.
