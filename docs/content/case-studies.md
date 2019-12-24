@@ -10,10 +10,14 @@ This is the base structure:
 ---
 layout: case-study
 permalink: case-studies/<slug>/
+theme:
 
 # Main section
 title:
 client:
+hero:
+  bg_color:
+  bg_image:
 images:
   full:
   small:
@@ -40,9 +44,11 @@ s_summary:
 
 # Metrics section
 s_metrics:
-  - title:
-    description:
-    value:
+  class:
+  items:
+    - title:
+      description:
+      value:
 
 # Featured quote section
 s_feature_quote:
@@ -67,6 +73,7 @@ s_content:
   - type:
     class:
     bgcolor:
+    color:
     title:
     content:
     images:
@@ -105,15 +112,20 @@ Failing to do this will result in the variable being interpreted as plain text.
 ```
 layout: case-study
 permalink: case-studies/<slug>/
+theme:
 ```
 These variables are needed by jekyll.
 `layout` will always be `case-study` and the permalink should be unique (The trailing slash is important)
+The `theme` variable allows a class to be added to the `body` tag. Leave empty for no class.
 
 ### Main
 ![](sec-hero.jpg)
 ```
 title:
 client:
+hero:
+  bg_color:
+  bg_image:
 images:
   full:
   small:
@@ -125,6 +137,8 @@ images:
 - `images.full` (string) is displayed on large screens
 - `images.small` (string) is displayed on small screens
 - `images.card` (string) is used for the cards on the "Other projects" section
+- `hero.bg_color` (string) color to be applied to the hero (applied to `section.cs-hero`)
+- `hero.bg_image` (string) image to be applied to the hero (applied to `section.cs-hero`)
 
 ### Intro section
 ![](sec-intro.jpg)
@@ -176,14 +190,17 @@ s_summary:
 All configuration for this section appears under the `s_metrics` key.
 ```
 s_metrics:
-  - title:
-    description:
-    value:
+  class:
+  items:
+    - title:
+      description:
+      value:
 ```
-- `[]` (array[objects]) list of metrics. Keep adding more items to the list if needed
-- `[].title` (string) metric title
-- `[].description` (string) metric description
-- `[].value` (string) metric value
+- `class` (string) If needed, an additional css class can be added to this section
+- `items[]` (array[objects]) list of metrics. Keep adding more items to the list if needed
+- `items[].title` (string) metric title
+- `items[].description` (string) metric description
+- `items[].value` (string) metric value
 
 ### Featured Quote section
 ![](sec-feat-quote.jpg)
@@ -257,6 +274,7 @@ s_content:
         alt:
     bgcolor:
     class:
+    color:
 ```
 - `type` (string) type of the section as listed above
 - `title` (string) title of the section
@@ -266,6 +284,7 @@ s_content:
 - `image[].alt` (string) image tag alt text
 - `bgcolor` (string) background color for the section block. *Important*: This value must be between quotes
 - `class` (string) If needed, an additional css class can be added to this section
+- `color` (string) Text color for the section. Any css color is supported
 
 #### Image sections
 There are 2 types of image sections:

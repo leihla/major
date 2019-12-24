@@ -2,7 +2,13 @@
 layout: base
 body_class: body-casestudy
 ---
-<section class="cs-hero">
+{% if page.hero.bg_image %}
+  {% capture style %}{{ style }}background-image: url('{{page.hero.bg_image}}');{% endcapture %}
+{% endif %}
+{% if page.hero.bg_color %}
+  {% capture style %}{{ style }}background-color: {{page.hero.bg_color}};{% endcapture %}
+{% endif %}
+<section class="cs-hero" style="{{ style }}">
   <div class="row">
     <figure>
       <img
@@ -80,10 +86,10 @@ body_class: body-casestudy
     {% endfor %}
   {% endif %}
 
-  {% if page.s_metrics %}
-  <article class="sec-metrics">
+  {% if page.s_metrics.items %}
+  <article class="sec-metrics {{ page.s_metrics.class }}">
     <ul class="row">
-      {% for metric in page.s_metrics %}
+      {% for metric in page.s_metrics.items %}
       <li>
         <dl>
           <dt class="container-invisible" data-animate="yellow">{{ metric.title }}</dt>
@@ -141,44 +147,50 @@ body_class: body-casestudy
 
 <section class="cs-browse-more-projects">
   <div class="row browse-more-projects-wrap">
-    <a href="#">
+    {% comment %}
+      With this loop we get the item before and after the current if they exist.
+    {% endcomment %}
+
+    {% assign found = false %}
+    {% for case_study in site.case_studies %}
+      {% if case_study.url == page.url %}
+        {% assign found = true %}
+        {% continue %}
+      {% endif %}
+
+      {% if found %}
+        {% assign next = case_study %}
+        {% break %}
+      {% else %} 
+        {% assign previous = case_study %}
+      {% endif %}
+    {% endfor %}
+
+    {% comment %}
+      Assign the next and previous items if they were not found. It may happen
+      When we're dealing with the first and last entries in the array.
+    {% endcomment %}
+    {% unless next %}
+      {% assign next = site.case_studies | first %}
+    {% endunless %}
+    {% unless previous %}
+      {% assign previous = site.case_studies | last %}
+    {% endunless %}
+
+    <a href="{{ site.baseurl }}{{ previous.url }}">
       <dl>
         <dt class="previous-project">Previous project</dt>
-        <dd><h3>Wodify Arena</h3></dd>
+        <dd><h3>{{ previous.client }}</h3></dd>
       </dl>
     </a>
-    <a href="#">
+
+    <a href="{{ site.baseurl }}{{ next.url }}">
       <dl>
         <dt class="next-project">Next project</dt>
-        <dd><h3>Climatescope 2018</h3></dd>
+        <dd><h3>{{ next.client }}</h3></dd>
       </dl>
     </a>
 
     <!-- <h2 class="container-invisible" data-animate="yellow">Browse more projects</h2> -->
   </div>
-  <!-- <div class="browse-more-projects-wrap">
-    <ul>
-      {% comment %}
-        With these 2 loops we always print the list items that come after
-        the one being viewed and only after that we start from the beginning.
-      {% endcomment %}
-
-      {% assign found = false %}
-      {% for case_study in site.case_studies %}
-        {% if found %}
-          <li class="animatecontainer" data-animate="images">{% include case-studies/card.html case=case_study %}</li>
-        {% endif %}
-        {% if case_study.url == page.url %}
-          {% assign found = true %}
-        {% endif %}
-      {% endfor %}
-
-      {% for case_study in site.case_studies %}
-        {% if case_study.url == page.url %}
-          {% break %}
-        {% endif %}
-        <li>{% include case-studies/card.html case=case_study %}</li>
-      {% endfor %}
-    </ul>
-  </div> -->
 </section>
