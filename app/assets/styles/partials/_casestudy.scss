@@ -31,7 +31,7 @@ padding:10% 0;
 .body-casestudy.dark{
   header{
     .page-logo svg path{
-      fill: $darkblue;
+      fill: $red;
     }
   }
 
@@ -46,9 +46,9 @@ padding:10% 0;
   background-color: white;
   max-height: 80vh;
   overflow: hidden;
-  background-color:purple;
   display: flex;
   align-items: center;
+  background-size:cover;
 
   .row{
     display: flex;
@@ -554,27 +554,38 @@ justify-content: space-around;
 }
 
 .no-padding{
+  padding: 0!important;
   .row{
-      padding: 0 0 5% 0!important;
+      padding:0!important;
   }
 }
 
 .no-padding-bottom{
+  padding-bottom: 5%!important;
 .row{
-  padding: 10% 0 0 0!important;
+  padding-bottom: 5%!important;
 }
 }
 
+
 .no-padding-top{
+    padding-top: 0!important;
 .row{
-  padding: 0 0 10% 0!important;
+    padding-top: 0!important;
 }
 }
 
 .no-padding.sec-img{
-      padding: 0 0 5% 0!important;
+      padding: 0!important;
   }
 
+.no-padding-top.sec-img{
+        padding-top:0!important;
+    }
+
+.no-padding-bottom.sec-img{
+      padding-bottom: 0!important;
+    }
 
 
 .neg-margin-top{
