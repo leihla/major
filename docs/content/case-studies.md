@@ -116,12 +116,14 @@ layout: case-study
 permalink: case-studies/<slug>/
 theme:
 published:
+featured:
 coming_soon:
 ```
 These variables are needed by jekyll.
 `layout` will always be `case-study` and the permalink should be unique (The trailing slash is important)
 The `theme` variable allows a class to be added to the `body` tag. Leave empty for no class.
 `published` controls whether a case study is published. If false, no page is going to be created and it won't show up on the list page.
+`featured` is used to feature a case study in the homepage
 `coming_soon` is used to show the "Case study coming soon" message on the list page.
 
 ### Main

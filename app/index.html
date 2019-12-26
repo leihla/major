@@ -48,67 +48,26 @@ body_class: body-homepage
 
 <section class="projects">
   <ul class="row">
+    {% assign case_studies = site.case_studies | where: 'featured', true | where: 'published', true | reverse %}
+    {% for cs in case_studies %}
     <li>
       <article>
-        <a href="#">
-          <div class="card-shot animatecontainer"><img src="/assets/graphics/content/w_ClimateScope_Design_Shot.jpg" alt="Climatescope 2018"></div>
+        <a href="{{ site.baseurl }}/{{ cs.permalink }}" title="View {{ cs.title }} page">
+          <div class="card-shot animatecontainer">
+            <img src="{{ cs.images.card }}" alt="{{ cs.title }}" />
+          </div>
           <div class="card-resume">
-            <span class="card-name container-invisible">Climatescope 2018</span>
-            <h2 class="card-title container-invisible">Evaluating Global Green Energy Investment.</h2>
-            <p class="description container-invisible">We've worked with Development Seed and Bloomberg New Energy Finance to make it easier to understand open data about green energy investment in 103 countries.</p>
-            <p class="small container-invisible"><small>UX Design / UI Design</small></p>
+            <span class="card-name container-invisible">{{ cs.client }}</span>
+            <h2 class="card-title container-invisible">{{ cs.title }}</h2>
+            <p class="description container-invisible">{{ cs.s_intro.description }}</p>
+            {% if cs.s_summary.scope %}
+            <p class="small container-invisible"><small>{{ cs.s_summary.scope | join: ' / '}}</small></p>
+            {% endif %}
           </div>
           </a>
       </article>
     </li>
-    <li>
-      <article>
-        <a href="#">
-          <div class="card-shot animatecontainer"><img src="/assets/graphics/content/w_Rise_Design_Shot.jpg" alt="Wodify Rise"></div>
-          <div class="card-resume">
-            <span class="card-name container-invisible">Wodify Rise</span>
-            <h2 class="card-title container-invisible">Lifestyle challenges, gone&nbsp;digital.</h2>
-            <p class="description container-invisible">We've helped Wodify create an app for running nutrition, exercise and wellness challenges while motivating people to power through it.</p>
-            <p class="small container-invisible"><small>Product Strategy / UX Design / UI Design</small></p>
-          </div>
-        </a>
-      </article>
-    </li>
-    <li>
-      <article>
-        <a href="#">
-          <div class="card-shot animatecontainer"><img src="/assets/graphics/content/w_Elsie_Design_Shot.jpg" alt="Elsie Website"></div>
-          <div class="card-resume">
-            <span class="card-name container-invisible">Elsie</span>
-            <h2 class="card-title container-invisible">Improving patient healthcare with genetics.</h2>
-            <p class="description container-invisible">Elsie helps physicians make more personalised diagnosis and prognoses adapted to each patient’s genetic makeup by streamlining the workflow of choosing, ordering and understanding tests results.</p>
-            <p class="small container-invisible"><small>Product Strategy / Research / UX Design / UI Design</small></p>
-          </div>
-        </a>
-      </article>
-    </li>
-    <!-- <li>
-      <article>
-          <div class="card-shot animatecontainer"><img src="/assets/graphics/content/w_Arena_Design_Shot.jpg" alt="Wodify Arena"></div>
-          <div class="card-resume">
-            <span class="card-name container-invisible">Wodify Arena</span>
-            <h2 class="card-title container-invisible">Crossfit competitions, made easy.</h2>
-            <p class="description container-invisible">We created a fast and easy way to manage all the moving pieces of a CrossFit competition, bringing competitors, spectators and judges together.</p>
-            <p class="small container-invisible"><small>Product Strategy / Research / UX Design / UI Design</small></p>
-          </div>
-      </article>
-    </li>
-    <li>
-      <article>
-          <div class="card-shot animatecontainer"><img src="/assets/graphics/content/w_AppCTT_Design_Shot.jpg" alt="App CTT"></div>
-          <div class="card-resume">
-            <span class="card-name container-invisible">App CTT</span>
-            <h2 class="card-title container-invisible">All CTT tools at your fingertips.</h2>
-            <p class="description container-invisible">We created an OutSystems-based tablet and mobile app that combines all CTT tools available in their website.</p>
-            <p class="small container-invisible"><small>Research / UX Design / UI Design</small></p>
-          </div>
-      </article>
-    </li> -->
+    {% endfor %}
   </ul>
   <div class="row allprojects">
       <a href="/work.html">See all projects</a>
