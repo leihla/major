@@ -309,19 +309,21 @@ s_content:
       - url:
         alt:
     class:
+    bgcolor:
 ```
 - `type` (string) type of the section as listed above
 - `images` (array[object]) list of images. Keep adding more items to the list if needed
 - `image[].url` (string) image url
 - `image[].alt` (string) image tag alt text
 - `class` (string) If needed, an additional css class can be added to this section
+- `bgcolor` (string) background color for the section block. *Important*: This value must be between quotes
 
 #### Escape hatch section
 There's a special section type `section-esc-hatch` that can be used as an escape hatch, to print whatever is found in the `content` variable without any wrappers.
 This shouldn't be used unless there's no other solution.
 ```
 s_content:
-  - type:
+  - type: section-esc-hatch
     content:
 ```
 - `type` (string) section-esc-hatch

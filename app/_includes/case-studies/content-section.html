@@ -46,11 +46,18 @@
 </article>
 
 {% elsif include.sec.type == 'section-img' or include.sec.type == 'section-img-full' %}
-{% if include.sec.type == 'section-img-full' %}
-<article class="sec-img sec-img-full-width {{ include.sec.class }}">
-{% else %}
-<article class="sec-img {{ include.sec.class }}">
+
+{% assign bgcolor = '' %}
+{% if include.sec.bgcolor %}
+  {% capture bgcolor %}background-color: {{ include.sec.bgcolor }};{% endcapture %}
 {% endif %}
+
+{% if include.sec.type == 'section-img-full' %}
+<article class="sec-img sec-img-full-width {{ include.sec.class }}" style="{{ bgcolor }}">
+{% else %}
+<article class="sec-img {{ include.sec.class }}" style="{{ bgcolor }}">
+{% endif %}
+
   <figure class="sec-img-images">
     {% for img in include.sec.images %}
     <img
@@ -62,6 +69,7 @@
     {% endfor %}
   </figure>
 </article>
+
 {% elsif include.sec.type == 'section-esc-hatch' %}
   {{ include.sec.content | liquify | markdownify }}
 {% endif %}
