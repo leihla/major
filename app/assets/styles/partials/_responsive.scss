@@ -221,13 +221,42 @@ header .row nav .menu-icon{
     padding: 6rem 8rem 6rem 3rem;
   }
 
-  .projects article{
 
+  .projects li:nth-child(even){
+    article a{
+      flex-direction: column;
+      .card-shot{
+        width: 90%;
+        margin: 0;
+      }
+      .card-resume{
+        margin: 0;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  .projects{
+
+    li{
+      margin-bottom: 4rem;
+    }
+    article a{
+    flex-direction: column;
     .card-shot{
-      width: 100%;
+      width: 90%;
+      margin: 0;
     }
     .card-resume{
       width: 90%;
+      max-width: unset;
+      margin: 0;
+      align-self: center;
+      padding-top: 2rem;
+      p{
+        margin-bottom: 0.5rem;
+      }
+    }
     }
   }
 
@@ -505,7 +534,7 @@ figure{
   	font-size: 2rem;
   	line-height: 2.5rem;
     padding-bottom: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   h3{
@@ -610,7 +639,7 @@ width: 90%;
 }
 
 .about-the-studio .row .about-text{
-      padding: 1rem 0rem 1rem 0;
+      padding: 3rem 0rem 1rem 0;
 }
 
 //Team section
@@ -683,6 +712,16 @@ dl{
     display: none;
 }
 
+
+//WORK page
+
+.work-list{
+  padding-bottom: 3rem;
+}
+
+.work-list ul li a .card-resume h2{
+  margin-bottom: 0.3rem;
+}
 
 //CASE STUDY ////////////////////
 
