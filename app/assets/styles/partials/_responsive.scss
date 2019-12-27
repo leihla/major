@@ -381,7 +381,7 @@ figure{
     align-items: initial;
     padding-top: 6rem;
     padding-bottom: 3rem;
-    max-height: 90vh;
+    max-height: unset;
     .row{
       padding-top: 4rem;
       flex-direction: column-reverse;
