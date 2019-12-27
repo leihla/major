@@ -1,4 +1,4 @@
----
+--- 
 layout: base
 body_class: body-work
 ---
@@ -11,92 +11,28 @@ body_class: body-work
   </div>
 </section>
 
+{% assign case_studies = site.case_studies | where: 'published', true | reverse %}
 <section class="work-list">
   <div class="row">
     <ul>
-      <li>
-        <a href="/case-studies/ipsum/" class="coming-soon animatecontainer" data-animate="img-animate">
-            <figure class="card-shot"><img src="/assets/graphics/content/case-studies/hot/hot-shot.png" alt="HOT"></figure>
-            <div class="card-resume">
-              <span class="card-name">HOT</span>
-              <h2 class="card-title">This is a title</h2>
-              <p class="small"><small>Research / UX Design / UI Design</small></p>
-            </div>
-        </a>
-      </li>
-      <li>
-        <a href="/case-studies/ipsum/" class="coming-soon animatecontainer" data-animate="img-animate">
-            <figure class="card-shot"><img src="/assets/graphics/content/case-studies/openaq/openaq-shot.png" alt="Open AQ"></figure>
-            <div class="card-resume">
-              <span class="card-name">OpenAQ</span>
-              <h2 class="card-title">This is a title</h2>
-              <p class="small"><small>UX Design / UI Design</small></p>
-            </div>
-        </a>
-      </li>
-      <li>
-        <a href="/case-studies/ipsum/" class="coming-soon animatecontainer" data-animate="img-animate">
-            <figure class="card-shot"><img src="/assets/graphics/content/case-studies/speak/speak-shot.png" alt="Speak"></figure>
-            <div class="card-resume">
-              <span class="card-name">Speak</span>
-              <h2 class="card-title">This is a title</h2>
-              <p class="small"><small>UX Design / UI Design</small></p>
-            </div>
-        </a>
-      </li>
-      <li>
-        <a href="/case-studies/ipsum/" class="animatecontainer" data-animate="img-animate">
-            <figure class="card-shot"><img src="/assets/graphics/content/w_ClimateScope_Design_Shot.jpg" alt="Climatescope 2018"></figure>
-            <div class="card-resume">
-              <span class="card-name">Climatescope 2018</span>
-              <h2 class="card-title">Evaluating Global Green Energy Investment.</h2>
-              <p class="small"><small>UX Design / UI Design</small></p>
-            </div>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="animatecontainer" data-animate="img-animate">
-            <div class="card-shot"><img src="/assets/graphics/content/w_Rise_Design_Shot.jpg" alt="Wodify Rise"></div>
-            <div class="card-resume">
-              <span class="card-name">Wodify Rise</span>
-              <h2 class="card-title">Lifestyle challenges, gone&nbsp;digital.</h2>
-              <p class="small"><small>Product Strategy / UX Design / UI Design</small></p>
-            </div>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="animatecontainer" data-animate="img-animate">
-            <div class="card-shot" data-animate="img-animate"><img src="/assets/graphics/content/w_Elsie_Design_Shot.jpg" alt="Elsie Website"></div>
-            <div class="card-resume">
-              <span class="card-name">Elsie</span>
-              <h2 class="card-title">Improving patient healthcare with genetics.</h2>
-              <p class="small"><small>Product Strategy / Research / UX Design / UI Design</small></p>
-            </div>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="animatecontainer" data-animate="img-animate">
-            <div class="card-shot animatecontainer" data-animate="img-animate"><img src="/assets/graphics/content/w_Arena_Design_Shot.jpg" alt="Wodify Arena"></div>
-            <div class="card-resume">
-              <span class="card-name">Wodify Arena</span>
-              <h2 class="card-title">Crossfit competitions, made easy.</h2>
-              <p class="small"><small>Product Strategy / Research / UX Design / UI Design</small></p>
-            </div>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="animatecontainer" data-animate="img-animate">
-            <div class="card-shot"><img src="/assets/graphics/content/w_AppCTT_Design_Shot.jpg" alt="App CTT"></div>
-            <div class="card-resume">
-              <span class="card-name">App CTT</span>
-              <h2 class="card-title">All CTT tools at your fingertips.</h2>
-              <p class="small"><small>Research / UX Design / UI Design</small></p>
-            </div>
-        </a>
-      </li>
-  </ul>
-
-
+      {% for cs in case_studies %}
+        {% assign coming_soon = '' %}
+        {% if cs.coming_soon %}
+          {% assign coming_soon = 'coming-soon' %}
+        {% endif %}
+        <li>
+          <a href="{{ site.baseurl }}/{{ cs.permalink }}" class="{{ coming_soon }} animatecontainer" data-animate="img-animate">
+              <figure class="card-shot"><img src="{{ cs.images.card }}" alt="{{ cs.title }}"></figure>
+              <div class="card-resume">
+                <span class="card-name">{{ cs.client }}</span>
+                <h2 class="card-title">{{ cs.title }}</h2>
+                {% if cs.s_summary.scope %}
+                <p class="small"><small>{{ cs.s_summary.scope | join: ' / '}}</small></p>
+                {% endif %}
+              </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
-
 </section>

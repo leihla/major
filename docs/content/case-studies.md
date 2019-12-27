@@ -11,6 +11,8 @@ This is the base structure:
 layout: case-study
 permalink: case-studies/<slug>/
 theme:
+coming_soon:
+published:
 
 # Main section
 title:
@@ -113,10 +115,16 @@ Failing to do this will result in the variable being interpreted as plain text.
 layout: case-study
 permalink: case-studies/<slug>/
 theme:
+published:
+featured:
+coming_soon:
 ```
 These variables are needed by jekyll.
 `layout` will always be `case-study` and the permalink should be unique (The trailing slash is important)
 The `theme` variable allows a class to be added to the `body` tag. Leave empty for no class.
+`published` controls whether a case study is published. If false, no page is going to be created and it won't show up on the list page.
+`featured` is used to feature a case study in the homepage
+`coming_soon` is used to show the "Case study coming soon" message on the list page.
 
 ### Main
 ![](sec-hero.jpg)
@@ -301,19 +309,21 @@ s_content:
       - url:
         alt:
     class:
+    bgcolor:
 ```
 - `type` (string) type of the section as listed above
 - `images` (array[object]) list of images. Keep adding more items to the list if needed
 - `image[].url` (string) image url
 - `image[].alt` (string) image tag alt text
 - `class` (string) If needed, an additional css class can be added to this section
+- `bgcolor` (string) background color for the section block. *Important*: This value must be between quotes
 
 #### Escape hatch section
 There's a special section type `section-esc-hatch` that can be used as an escape hatch, to print whatever is found in the `content` variable without any wrappers.
 This shouldn't be used unless there's no other solution.
 ```
 s_content:
-  - type:
+  - type: section-esc-hatch
     content:
 ```
 - `type` (string) section-esc-hatch
