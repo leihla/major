@@ -30,7 +30,7 @@
   <div class="row">
     <dl class="cs-section-text-content">
       <dt><h2 class="container-invisible" data-animate="yellow">{{ include.sec.title }}</h2></dt>
-      <dd class="container-invisible" data-animate="white">{{ include.sec.content | liquify | markdownify }}</dd>
+      <dd class="container-invisible" data-animate="getcolor">{{ include.sec.content | liquify | markdownify }}</dd>
     </dl>
     <figure class="sec-text-img-images ">
       {% for img in include.sec.images %}
