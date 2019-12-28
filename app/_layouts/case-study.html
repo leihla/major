@@ -150,9 +150,10 @@ body_class: body-casestudy
     {% comment %}
       With this loop we get the item before and after the current if they exist.
     {% endcomment %}
+    {% assign case_studies = site.case_studies | where: 'coming_soon', false | where: 'published', true %}
 
     {% assign found = false %}
-    {% for case_study in site.case_studies %}
+    {% for case_study in case_studies %}
       {% if case_study.url == page.url %}
         {% assign found = true %}
         {% continue %}
@@ -171,10 +172,10 @@ body_class: body-casestudy
       When we're dealing with the first and last entries in the array.
     {% endcomment %}
     {% unless next %}
-      {% assign next = site.case_studies | first %}
+      {% assign next = case_studies | first %}
     {% endunless %}
     {% unless previous %}
-      {% assign previous = site.case_studies | last %}
+      {% assign previous = case_studies | last %}
     {% endunless %}
 
     <a href="{{ site.baseurl }}{{ previous.url }}">
