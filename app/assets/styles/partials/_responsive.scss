@@ -740,6 +740,10 @@ dl{
   margin-bottom: 0;
 }
 
+.cs-resume{
+  padding: 20% 0;
+}
+
 .cs-intro{
   padding: 20% 0 10% 0;
 }
@@ -800,10 +804,12 @@ dl{
   margin-top: 0;
 }
 
+.sec-background-custom .cs-section-text-content{
+  margin-top: 15%;
+}
 
 .cs-content .sec-text-left .row .cs-section-text-content, .cs-content .sec-text-right .row .cs-section-text-content{
   padding-top: 0;
-  margin-top: 10%;
 }
 
 .cs-browse-more-projects .browse-more-projects-wrap dl dt, .cs-browse-more-projects .browse-more-projects-wrap dl dd h3{
@@ -811,7 +817,7 @@ font-size: 0.9rem;
 margin-bottom: 0;
 }
 
-.cs-browse-more-projects .browse-more-projects-wrap dl .next-project:before{
+.cs-browse-more-projects .browse-more-projects-wrap dl .previous-project:before{
   transform: scale(0.8);
 }
 
@@ -819,7 +825,9 @@ margin-bottom: 0;
   transform: scale(0.8);
 }
 
-
+.cs-browse-more-projects{
+  padding: 20% 0;
+}
 
 .work-list{
 
