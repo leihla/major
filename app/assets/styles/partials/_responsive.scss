@@ -647,6 +647,9 @@ width: 90%;
 
   ul li{
       flex: 0 1 100%;
+      .member-description{
+        line-height: 1.5rem;
+      }
   }
 }
 
@@ -659,7 +662,7 @@ width: 90%;
 
 dl{
   dt{
-    font-size: 1.3rem;
+    font-size: 1.125rem;
     line-height:1.5rem;
   }
 
