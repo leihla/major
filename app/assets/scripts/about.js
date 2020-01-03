@@ -59,32 +59,32 @@ $teamtitle.waypoint(
         $teamdescription.addClass('animacao_white');
         setTimeout(function () {
           $teammembdesc1.removeClass('container-invisible');
-          $teammembdesc1.addClass('animacao_grey');
+          $teammembdesc1.addClass('animacao');
           setTimeout(function () {
             $teammembfoto1.removeClass('animatecontainer');
             setTimeout(function () {
               $teammembdesc2.removeClass('container-invisible');
-              $teammembdesc2.addClass('animacao_grey');
+              $teammembdesc2.addClass('animacao');
               setTimeout(function () {
                 $teammembfoto2.removeClass('animatecontainer');
                 setTimeout(function () {
                   $teammembdesc3.removeClass('container-invisible');
-                  $teammembdesc3.addClass('animacao_grey');
+                  $teammembdesc3.addClass('animacao');
                   setTimeout(function () {
                     $teammembfoto3.removeClass('animatecontainer');
                     setTimeout(function () {
                       $teammembdesc4.removeClass('container-invisible');
-                      $teammembdesc4.addClass('animacao_grey');
+                      $teammembdesc4.addClass('animacao');
                       setTimeout(function () {
                         $teammembfoto4.removeClass('animatecontainer');
                         setTimeout(function () {
                           $teammembdesc5.removeClass('container-invisible');
-                          $teammembdesc5.addClass('animacao_grey');
+                          $teammembdesc5.addClass('animacao');
                           setTimeout(function () {
                             $teammembfoto5.removeClass('animatecontainer');
                             setTimeout(function () {
                               $teammembdesc6.removeClass('container-invisible');
-                              $teammembdesc6.addClass('animacao_grey');
+                              $teammembdesc6.addClass('animacao');
                               setTimeout(function () {
                                 $teammembfoto6.removeClass('animatecontainer');
                               }, 100);
