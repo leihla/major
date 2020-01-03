@@ -8,7 +8,7 @@ $(function() {
   }
 
 
-  
+
 
 
   const sect = $('[data-animate]');
@@ -42,22 +42,23 @@ if (direction === 'down') {
          //white
          if (sectioncolor==="rgb(255, 255, 255)"){
            wEl.removeClass('container-invisible');
-           wEl.addClass('animacao_white');
+           wEl.addClass('animacao');
          }
          //grey
          else if (sectioncolor==="rgb(250, 249, 248)"){
            wEl.removeClass('container-invisible');
-           wEl.addClass('animacao_grey');
+           wEl.addClass('animacao');
 
          }
          //red
          else if (sectioncolor==="rgb(248, 42, 84)"){
            wEl.removeClass('container-invisible');
-           wEl.addClass('animacao_red');
+           wEl.addClass('animacao');
          }
 
          else{
-           return;
+           wEl.removeClass('container-invisible');
+           wEl.addClass('animacao');
          }
        }
 

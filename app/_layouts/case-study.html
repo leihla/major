@@ -39,7 +39,7 @@ body_class: body-casestudy
       {% endfor %}
     </figure>
     <dl>
-      <dt class="container-invisible" data-animate="yellow">
+      <dt class="container-invisible" data-animate="getcolor">
         <h2 >{{ page.s_intro.title }}</h2>
       </dt>
       <dd class="container-invisible" data-animate="getcolor">
@@ -111,7 +111,7 @@ body_class: body-casestudy
     {% endif %}
       <dl>
         <dt><h2 class="container-invisible" data-animate="yellow">{{ page.s_feature_quote.quote }}</h2></dt>
-        <dd class="container-invisible" data-animate="yellow">— {{ page.s_feature_quote.source }}</dd>
+        <dd><p class="container-invisible" data-animate="getcolor">— {{ page.s_feature_quote.source }}</p></dd>
       </dl>
     </div>
   </article>
@@ -162,7 +162,7 @@ body_class: body-casestudy
       {% if found %}
         {% assign next = case_study %}
         {% break %}
-      {% else %} 
+      {% else %}
         {% assign previous = case_study %}
       {% endif %}
     {% endfor %}
