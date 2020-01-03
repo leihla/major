@@ -403,10 +403,10 @@ display: inline-block;
 
 @mixin textanimation{
 	position: relative;
-	-webkit-animation:animee 0.3s normal ease-in-out; /* Safari 4+ */
-	-moz-animation:    animee 0.3s normal ease-in-out; /* Fx 5+ */
-	-o-animation:      animee 0.3s normal ease-in-out; /* Opera 12+ */
-	animation:         animee 0.3s normal ease-in-out; /* IE 10+, Fx 29+ */
+	-webkit-animation: animee 0.3s normal ease-in-out; /* Safari 4+ */
+	-moz-animation: animee 0.3s normal ease-in-out; /* Fx 5+ */
+	-o-animation: animee 0.3s normal ease-in-out; /* Opera 12+ */
+	animation: animee 0.3s normal ease-in-out; /* IE 10+, Fx 29+ */
 	display: inline-block;
 
 	 &:after{
@@ -475,30 +475,30 @@ display: inline-block;
 
 @-webkit-keyframes animee{
   0%{transform: scaleX(0);
-  transform-origin: 0% 0% 0px;}
+  transform-origin: 0 0 0px;}
   100%{transform: scaleX(1);
-  transform-origin: 0% 0% 0px;}
+  transform-origin: 0 0 0px;}
 }
 
 @-moz-keyframes animee{
   0%{transform: scaleX(0);
-  transform-origin: 0% 0% 0px;}
+  transform-origin: 0 0 0px;}
   100%{transform: scaleX(1);
-  transform-origin: 0% 0% 0px;}
+  transform-origin: 0 0 0px;}
 }
 
 @-o-keyframes animee{
   0%{transform: scaleX(0);
-  transform-origin: 0% 0% 0px;}
+  transform-origin: 0 0 0px;}
   100%{transform: scaleX(1);
-  transform-origin: 0% 0% 0px;}
+  transform-origin: 0 0 0px;}
 }
 
 @keyframes animee{
   0%{transform: scaleX(0);
-  transform-origin: 0% 0% 0px;}
+  transform-origin: 0 0 0px;}
   100%{transform: scaleX(1);
-  transform-origin: 0% 0% 0px;}
+  transform-origin: 0 0 0px;}
 }
 
 
@@ -508,31 +508,31 @@ display: inline-block;
 // @keyframes NAME-YOUR-ANIMATION
 
 
-
-@-webkit-keyframes animee2{
-  0%{transform: scaleX(1);
-  transform-origin: 100% 0% 0px;}
-  100%{transform: scaleX(0);
-  transform-origin: 100% 0% 0px;}
-}
-
-@-moz-keyframes animee2{
-  0%{transform: scaleX(1);
-  transform-origin: 100% 0% 0px;}
-  100%{transform: scaleX(0);
-  transform-origin: 100% 0% 0px;}
-}
-@-o-keyframes animee2{
-  0%{transform: scaleX(1);
-  transform-origin: 100% 0% 0px;}
-  100%{transform: scaleX(0);
-  transform-origin: 100% 0% 0px;}
-}
+//
+// @-webkit-keyframes animee2{
+//   0%{transform: scaleX(1);
+//   transform-origin: 100% 0 0px;}
+//   100%{transform: scaleX(0);
+//   transform-origin: 100% 0 0px;}
+// }
+//
+// @-moz-keyframes animee2{
+//   0%{transform: scaleX(1);
+//   transform-origin: 100% 0 0px;}
+//   100%{transform: scaleX(0);
+//   transform-origin: 100% 0 0px;}
+// }
+// @-o-keyframes animee2{
+//   0%{transform: scaleX(1);
+//   transform-origin: 100% 0 0px;}
+//   100%{transform: scaleX(0);
+//   transform-origin: 100% 0 0px;}
+// }
 @keyframes animee2{
   0%{transform: scaleX(1);
-  transform-origin: 100% 0% 0px;}
+  transform-origin: 100% 0 0px;}
   100%{transform: scaleX(0);
-  transform-origin: 100% 0% 0px;}
+  transform-origin: 100% 0 0px;}
 }
 
 .page-transition-wrap{
