@@ -1,0 +1,126 @@
+
+
+.work-list{
+
+	padding-bottom: 6rem;
+	ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		li{
+			flex: 0 0 46%;
+			//margin-bottom: 2rem;
+
+			&:nth-child(even){
+				margin-top: 8rem;
+			}
+			&:nth-child(odd){
+				transform: translateY(-8rem);
+			}
+
+			a{
+				&:hover{
+					text-decoration: none;
+				}
+				.card-shot{
+					width: 100%;
+					margin: 0;
+					box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.08);
+					transition: box-shadow 0.3s ease-in-out;
+					overflow: hidden;
+					&:hover{
+						box-shadow: 10px 15px 50px 0 rgba(0,0,0,0.3);
+						transition: box-shadow 0.3s ease-in-out;
+
+						img{
+							transform: scale(1.03);
+							// -webkit-transition:transform 600ms ease-out, opacity 600ms ease-out;
+							// -moz-transition: transform 600ms ease-out, opacity 600ms ease-out;
+							// -o-transition: transform 600ms ease-out, opacity 600ms ease-out;
+							// transition:transform 200ms ease-out, opacity 200ms ease-out;
+
+						}
+					}
+					img{
+						width: 100%;
+						height: auto;
+						display: block;
+						-webkit-transition:transform 600ms ease-out, opacity 600ms ease-out;
+						-moz-transition: transform 600ms ease-out, opacity 600ms ease-out;
+						-o-transition: transform 600ms ease-out, opacity 600ms ease-out;
+						transition:transform 200ms ease-out, opacity 200ms ease-out;
+					}
+				}
+				.card-resume{
+					display: flex;
+					flex-direction: column;
+					padding: 1rem 0;
+
+					.card-name{
+							@include smalltitle;
+							font-size: 0.8rem;
+							margin:0.8rem 0 0.4rem;
+					}
+
+					h2{
+						font-family:$titles-type;
+						font-size: 1.6rem;
+						line-height: 1.9rem;
+						margin-bottom: 0rem;
+					}
+
+					small{
+						font-family: $titles-type-medium;
+						font-size: 0.9rem;
+						line-height: 1.2rem;
+						color: $lightgrey;
+					}
+
+				}
+			}
+
+			a.coming-soon{
+				figure{
+					position: relative;
+					display: flex;
+					&:hover{
+						img{
+							transform: none;
+						}
+					}
+					transition: none;
+					&:after{
+						content: "Case study coming soon";
+						background-color: rgba(1,1,1,0.6);
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						padding: 3rem;
+						color: white;
+						text-align: center;
+						display: flex;
+						align-items: center;
+						opacity: 0;
+						transition: opacity 200ms ease-out;
+					}
+
+
+				}
+
+				&:hover{
+					cursor: default;
+					figure:after{
+						opacity: 1;
+							transition: opacity 200ms ease-out;
+					}
+
+				}
+			}
+
+		}
+	}
+}

@@ -16,7 +16,12 @@
   {% assign bgklass='sec-background-white' %}
 {% endif %}
 
-<article class="sec-text-img {{ bgklass }} {{ klass }} {{ include.sec.class }}">
+{% assign articleStyle='' %}
+{% if include.sec.color %}
+  {% capture articleStyle %}color: {{ include.sec.color }};{% endcapture %}
+{% endif %}
+
+<article class="sec-text-img {{ bgklass }} {{ klass }} {{ include.sec.class }}" style="{{ articleStyle }}">
   {% if include.sec.bgcolor %}
     <span class="cs-article-background" style="background-color: {{ include.sec.bgcolor }}"></span>
   {% else %}
@@ -25,7 +30,7 @@
   <div class="row">
     <dl class="cs-section-text-content">
       <dt><h2 class="container-invisible" data-animate="yellow">{{ include.sec.title }}</h2></dt>
-      <dd class="container-invisible" data-animate="white">{{ include.sec.content | liquify | markdownify }}</dd>
+      <dd class="container-invisible" data-animate="getcolor">{{ include.sec.content | liquify | markdownify }}</dd>
     </dl>
     <figure class="sec-text-img-images ">
       {% for img in include.sec.images %}
@@ -41,11 +46,18 @@
 </article>
 
 {% elsif include.sec.type == 'section-img' or include.sec.type == 'section-img-full' %}
-{% if include.sec.type == 'section-img-full' %}
-<article class="sec-img sec-img-full-width {{ include.sec.class }}">
-{% else %}
-<article class="sec-img {{ include.sec.class }}">
+
+{% assign bgcolor = '' %}
+{% if include.sec.bgcolor %}
+  {% capture bgcolor %}background-color: {{ include.sec.bgcolor }};{% endcapture %}
 {% endif %}
+
+{% if include.sec.type == 'section-img-full' %}
+<article class="sec-img sec-img-full-width {{ include.sec.class }}" style="{{ bgcolor }}">
+{% else %}
+<article class="sec-img {{ include.sec.class }}" style="{{ bgcolor }}">
+{% endif %}
+
   <figure class="sec-img-images">
     {% for img in include.sec.images %}
     <img
@@ -57,6 +69,7 @@
     {% endfor %}
   </figure>
 </article>
+
 {% elsif include.sec.type == 'section-esc-hatch' %}
   {{ include.sec.content | liquify | markdownify }}
 {% endif %}

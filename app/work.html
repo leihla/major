@@ -1,0 +1,38 @@
+--- 
+layout: base
+body_class: body-work
+---
+
+
+<section class="landingpage work-landingpage">
+  <div class="row">
+    <h1 class="container-invisible" data-animate="yellow">Every project tells a story</h1>
+    <p class="container-invisible" data-animate="getcolor"></p>
+  </div>
+</section>
+
+{% assign case_studies = site.case_studies | where: 'published', true | reverse %}
+<section class="work-list">
+  <div class="row">
+    <ul>
+      {% for cs in case_studies %}
+        {% assign coming_soon = '' %}
+        {% if cs.coming_soon %}
+          {% assign coming_soon = 'coming-soon' %}
+        {% endif %}
+        <li>
+          <a href="{{ site.baseurl }}/{{ cs.permalink }}" class="{{ coming_soon }} animatecontainer" data-animate="img-animate">
+              <figure class="card-shot"><img src="{{ cs.images.card }}" alt="{{ cs.title }}"></figure>
+              <div class="card-resume">
+                <span class="card-name">{{ cs.client }}</span>
+                <h2 class="card-title">{{ cs.title }}</h2>
+                {% if cs.s_summary.scope %}
+                <p class="small"><small>{{ cs.s_summary.scope | join: ' / '}}</small></p>
+                {% endif %}
+              </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

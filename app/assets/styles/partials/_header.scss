@@ -35,7 +35,7 @@ header{
 			z-index: 9;
 			a{
 			display: inline-flex;
-			margin-left: -6px;
+		//	margin-left: -6px;
 			}
 		}
 		nav{
@@ -44,12 +44,14 @@ header{
 				position: fixed;
 				transform: translate(-100%, -100%);
 
+
 				z-index: 99;
 				rect {
-				  fill: black;
+				  fill: $darkblue;
 				  transform-origin: 21px 20px;
 				  transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out; // Safari
-				  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+				  transition: transform .2s ease-in-out, opacity .2s ease-in-out, fill .1s .8s;
+
 
 			  &:nth-child(1){
 			    transform: translate(12px, 3px);
@@ -93,14 +95,20 @@ header{
 		  rect {
 		    &:nth-child(1){
 		      transform: rotate(45deg) translate(20px, 8px);
+					fill:$darkblue;
+					transition: fill .1s;
 		    }
 
 		    &:nth-child(2){
 		      opacity: 0;
+					fill:$darkblue;
+					transition: fill .1s;
 		    }
 
 		    &:nth-child(3){
 		      transform: rotate(-45deg) translate(20px, 8px);
+					fill:$darkblue;
+					transition: fill .1s;
 		    }
 		  }
 		}
@@ -132,10 +140,10 @@ header{
 	svg{
 		transition: opacity 0.2s linear 0.8s;
 		height: 48px;
-		margin-left: -6px;
-		margin-top: 4px;
+		margin-left: 0;
+		margin-top: 14px;
 		path{
-			fill:$red;
+			fill:$darkblue;
 		}
 
 	}
@@ -169,7 +177,7 @@ header{
 		}
 
 		a{
-			font-size: 4.5rem;
+			font-size: 3.7rem;
 			font-weight: 300;
 			line-height: 4.5rem;
 

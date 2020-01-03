@@ -1,14 +1,17 @@
 
 
 
+@media (min-width: 1056px) {
+  // .cs-hero .cs-hero-background{
+  //   transform: translateY(-5%);
+  // }
+
+}
+
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1055px) {
 
 //ABOUT /////////////////////////////////////////////////////////////////
-.team ul{
-  width: 100%;
-  margin: unset;
-}
 
 .about-the-studio{
   .row{
@@ -38,6 +41,10 @@ figure{
 }
 
 //CASE STUDY ///////////////////////////////////////////////////////////////
+
+// .cs-hero .cs-hero-background{
+//   transform: translate(-15%,-20%);
+// }
 .cs-content .sec-background-custom .cs-article-background{
   height: 80%;
 }
@@ -61,9 +68,15 @@ figure{
 
 .mobile-break{
   display: block;
-
   }
 
+
+.browse-more-projects-wrap{
+  ul{
+    justify-content: flex-start;
+    padding: 0rem 4rem 4rem 5%;
+  }
+}
 
 
  }
@@ -156,8 +169,16 @@ figure{
 }
 //CASE STUDY ///////////////////////////////////////////////////////////////
 
-.cs-content .sec-users-saying ul{
-  padding: 0rem 4rem 4rem 5%;
+.cs-content .sec-users-saying{
+
+  .row{
+    text-align: left;
+  }
+
+  ul{
+    padding: 3rem 4rem 4rem 5%;
+  }
+
 }
 
 .cs-browse-more-projects ul li{
@@ -200,13 +221,42 @@ header .row nav .menu-icon{
     padding: 6rem 8rem 6rem 3rem;
   }
 
-  .projects article{
 
+  .projects li:nth-child(even){
+    article a{
+      flex-direction: column;
+      .card-shot{
+        width: 90%;
+        margin: 0;
+      }
+      .card-resume{
+        margin: 0;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  .projects{
+
+    li{
+      margin-bottom: 4rem;
+    }
+    article a{
+    flex-direction: column;
     .card-shot{
-      width: 100%;
+      width: 90%;
+      margin: 0;
     }
     .card-resume{
       width: 90%;
+      max-width: unset;
+      margin: 0;
+      align-self: center;
+      padding-top: 2rem;
+      p{
+        margin-bottom: 0.5rem;
+      }
+    }
     }
   }
 
@@ -240,94 +290,16 @@ figure{
     }
 }
 
-//reset styles
 
-.team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
-  width: 60%;
-}
-
-  .team ul li:nth-child(4n-1) .member-description dl, .team ul li:nth-child(4n-2) .member-description dl{
-    border:unset;
-  }
-
-
-  .team ul li:nth-child(4n) .member-description, .team ul li:nth-child(4n-1) .member-description{
-    right: auto;
-    left: unset;
-  }
-
-  .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img{
-    float: none;
-
-  }
-
-  .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
-    float: none;
-  }
-
-  .team ul li:nth-child(4n) figure .smiling, .team ul li:nth-child(4n-1) figure .smiling{
-    left: unset;
-  }
-//end reset Styles
-
-.team{
-  overflow-x: hidden;
-}
-
-.team .team-text{
-  width: inherit;
-  margin-bottom: 5rem;
-}
-
-.team .row{
-  width: 100%;
+//team
+.team {
   .team-text{
-    padding: 0 5% 0 5%;
+    width: 100%;
+  }
+  ul li{
+      flex: 0 1 48%;
   }
 }
-  .team ul li{
-    float: none;
-    width: 100%;
-
-    figure{
-      overflow: hidden;
-
-
-    }
-
-    &:nth-child(odd){
-      .member-description{
-        width: 60%;
-        right: 0;
-
-      }
-
-      figure{
-        text-align: right;
-
-        .smiling{
-          right: 0;
-        }
-      }
-    }
-
-    &:nth-child(even){
-
-      .member-description{
-        width: 60%;
-        left: 0;
-      }
-
-      figure{
-        text-align: left;
-
-        .smiling{
-          left: 0;
-        }
-      }
-    }
-
-  }
 
   .process{
     flex-direction: column-reverse;
@@ -405,6 +377,28 @@ figure{
 
   //CASE STUDY ///////////////////////////////////////////////////////////////
 
+  .cs-hero {
+    align-items: initial;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    max-height: unset;
+    .row{
+      padding-top: 4rem;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+
+      figure{
+        flex: 1 1 auto;
+        margin-top: 0;
+      }
+      dl{
+        flex: 1 1 auto;
+        padding-bottom: 2rem;
+      }
+
+    }
+  }
+
 
   .cs-intro{
     .row{
@@ -430,6 +424,9 @@ figure{
       &:nth-child(2){
         width: 100%;
       }
+      dl{
+        padding-right: 0;
+      }
 
     }
     }
@@ -442,6 +439,7 @@ figure{
     .cs-section-text-content{
       width: 100%;
       padding-bottom: 3rem;
+      padding-top: 0;
     }
 
     .sec-text-img-images{
@@ -480,6 +478,12 @@ figure{
 
 //CASE STUDY ///////////////////////////////////////////
 
+  .no-padding{
+    padding: 5% 0;
+  }
+
+
+
 .cs-resume{
   ul{
   li{
@@ -496,7 +500,13 @@ figure{
   }
   }
 }
+.neg-margin-top{
+  margin-top: -15px;
+}
 
+.large-neg-margin-top{
+  margin-top: 0px;
+}
 
 }
 
@@ -513,16 +523,18 @@ figure{
   }
 
   h1{
-    	font-size: 2.7rem;
+    	font-size: 2.52rem;
     	line-height: 3rem;
-      padding: 0rem 0 1rem 0;
+      padding-bottom: 0;
+      margin-bottom: 2rem;
 
     }
 
   h2{
-  	font-size: 2.2rem;
-  	line-height: 2.7rem;
-    padding-bottom: 2rem;
+  	font-size: 2rem;
+  	line-height: 2.5rem;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
   }
 
   h3{
@@ -576,7 +588,6 @@ figure{
 }
 
 .wecanhelp .row h2{
-  line-height: 3rem;
   width: 90%;
   padding-bottom: 0;
 }
@@ -628,53 +639,15 @@ width: 90%;
 }
 
 .about-the-studio .row .about-text{
-      padding: 1rem 0rem 1rem 0;
+      padding: 3rem 0rem 1rem 0;
 }
 
-.team .row .team-text{
-  margin-bottom: 2rem;
-}
+//Team section
+.team {
 
-.team ul li{
-  margin-bottom: 1rem;
-}
-
-
-  .team ul li:nth-child(4n-2) figure img, .team ul li:nth-child(4n-3) figure img, .team ul li:nth-child(4n) figure img, .team ul li:nth-child(4n-1) figure img{
-    width: 60%;
+  ul li{
+      flex: 0 1 100%;
   }
-
-  .team ul li:nth-child(odd), .team ul li:nth-child(even){
-    .member-description{
-      width: 60%;
-    }
-}
-
-.team ul li .member-description{
-  margin-top: 1.5rem;
-  padding-left: 1.5rem;
-
-dl{
-  dt{
-    font-size: 1.2rem;
-    margin-bottom: 0;
-  }
-
-  dd{
-    font-size: 0.8rem;
-    line-height: 1rem;
-
-
-  }
-  }
-
-}
-
-.team ul li .member-long-description{
-  padding: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.5rem;
-  margin-bottom: -2rem;
 }
 
 .services ul li{
@@ -740,7 +713,33 @@ dl{
 }
 
 
+//WORK page
+
+.work-list{
+  padding-bottom: 3rem;
+}
+
+.work-list ul li a .card-resume h2{
+  margin-bottom: 0.3rem;
+}
+
 //CASE STUDY ////////////////////
+
+.cs-hero {
+  // .cs-hero-background{
+  //     transform: translate(-45%,-15%);
+  // }
+
+  .row .cs-hero-title{
+    top:30%;
+    width: 100%;
+  }
+}
+
+.cs-intro figure img{
+  height: 24px;
+}
+
 .cs-content .sec-metrics ul {
 .metric-value{
   font-size: 3.5rem;
@@ -749,16 +748,41 @@ dl{
 
 }
 
-.cs-browse-more-projects{
-h2{
-  padding-bottom: 0;
+.cs-content .sec-text-left .row .cs-section-text-content, .cs-content .sec-text-right .row .cs-section-text-content{
+  padding-top: 0;
 }
-ul{
-  padding: 2rem 4rem 4rem 5%;
+
+.cs-browse-more-projects .browse-more-projects-wrap dl dt, .cs-browse-more-projects .browse-more-projects-wrap dl dd h3{
+font-size: 0.9rem;
+margin-bottom: 0;
+}
+
+.cs-browse-more-projects .browse-more-projects-wrap dl .next-project:before{
+  transform: scale(0.8);
+}
+
+.cs-browse-more-projects .browse-more-projects-wrap dl .next-project:after{
+  transform: scale(0.8);
 }
 
 
+
+.work-list{
+
+  ul{
+    li{
+      flex: 0 0 100%;
+      margin-bottom: 4rem;
+      &:nth-child(even){
+        margin-top: 0;
+      }
+      &:nth-child(odd){
+        transform: translateY(0);
+      }
+    }
+  }
 }
+
 
 }
 

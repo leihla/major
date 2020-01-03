@@ -32,9 +32,6 @@ a:active {
 }
 
 
-
-
-
 /* Button */
 button:active{
 	border: none;
@@ -59,14 +56,15 @@ svg {
   background-color: transparent; //Firefox
 }
 
-$titles-type: 'Oswald', sans-serif;
-$body-text-type:'IBM Plex Sans', sans-serif;
+$titles-type: 'objectivity-bold', sans-serif;
+$titles-type-medium: 'objectivity-medium', sans-serif;
+$body-text-type: 'Noto Serif SC', serif;
 $background-color: #FAF9F8;
-$red: #F82A54;
-$darkblue: #071D49;
-$lightgrey: #828DA3;
-$yellow:#FFCE38;
-$title-padding: 2.2rem;
+$red: #EF3341;
+$darkblue: #24023D;
+$lightgrey: #A6A2A9;
+$yellow:#FBCD07;
+$title-padding: 1rem;
 
 
 @mixin clearfix {
@@ -101,7 +99,8 @@ body {
 	font-weight: 400;
 	color: $darkblue;
 	font-size: 1rem;
-	line-height: 1.4rem;
+	line-height: 1.5rem;
+	-webkit-font-smoothing: antialiased;
 }
 
 .lock-scrol{
@@ -110,9 +109,9 @@ body {
 
 h1 {
 	font-family: $titles-type;
-	font-size: 4.5rem;
+	font-size: 3.7rem;
 	font-weight: 400;
-	line-height: 5.3rem;
+	line-height: 4.7rem;
 	margin: unset;
 	margin-bottom: $title-padding;
 	/*@include column(8/12);*/
@@ -122,10 +121,10 @@ h1 {
 
 h2{
 	font-family: $titles-type;
-	font-size: 3rem;
+	font-size: 2.8rem;
 	font-weight: 400;
-	line-height: 1.3;
-	margin-bottom: $title-padding;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
 	display: inline-block;
 }
 
@@ -134,29 +133,35 @@ h3{
 	font-family: $titles-type;
 	font-size: 1.5rem;
 	font-weight: 400;
-	line-height: 1.8rem;
+	line-height: 2rem;
+	margin-bottom: 1rem;
 	display: inline-block;
 }
 
 @mixin smalltitle{
-	font-family: $titles-type;
+	font-family: 'objectivity-medium', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.03rem;
 	display: inline-block;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	line-height: 1.1rem;
 	margin-bottom: 1rem;
 }
 
+@mixin paragraph{
+	font-family: $body-text-type;
+	font-size: 1.13rem;
+	line-height: 2rem;
+}
 
 p {
 	font-size: 1.13rem;
-	line-height: 1.6rem;
+	line-height: 2rem;
 	display: inline-block;
 }
 
 small{
-	font-size: 1rem;
+	font-size: 0.9rem;
 	line-height: 1.4rem;
 	font-weight: 300;
 	color: $lightgrey;
@@ -178,8 +183,8 @@ display: inline-block;
 }
 
 .lead {
-	font-size: 1.4rem;
-	line-height: 2rem;
+	font-size: 1.3rem;
+	line-height: 1.8rem;
 }
 
 .row {
@@ -268,8 +273,9 @@ display: inline-block;
 
 
 .section-title-underlay{
-	font-family: $titles-type;
-	font-size: 13rem;
+	font-family: $body-text-type;
+	font-size: 10rem;
+	font-weight: 700;
 	color: white;
 	line-height: 13rem;
 	position: fixed;
@@ -300,12 +306,12 @@ display: inline-block;
 	}
 
  .fadetext{
-	 // transition: opacity 0.5s ease-out;
-	 // opacity: 0.8;
--webkit-animation: fadetext 3s ease-in-out; /* Safari 4+ */
--moz-animation:    fadetext 3s ease-in-out; /* Fx 5+ */
--o-animation:      fadetext 3s ease-in-out; /* Opera 12+ */
-animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
+	 transition: opacity 0.5s ease-out;
+	 opacity: 0.8;
+// -webkit-animation: fadetext 3s ease-in-out; /* Safari 4+ */
+// -moz-animation:    fadetext 3s ease-in-out; /* Fx 5+ */
+// -o-animation:      fadetext 3s ease-in-out; /* Opera 12+ */
+// animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 
  }
 
@@ -376,7 +382,8 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 .process .process-text p,
 .clients .clients-text h1,
 .clients .clients-text p,
-.clients .clients-logos
+.clients .clients-logos,
+.work-list ul li a
 {
 
 	-webkit-transition:transform 600ms ease-out, opacity 600ms ease-out;
@@ -428,8 +435,8 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 .animacao_grey{
 	@include textanimation;
 	&:after{
-		background-color:$background-color;
-		-webkit-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Safari 4+ */
+	background-color:$background-color;
+	-webkit-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Safari 4+ */
  	-moz-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Fx 5+ */
  	-o-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Opera 12+ */
  	animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* IE 10+, Fx 29+ */
@@ -450,13 +457,15 @@ animation:         fadetext 3s ease-in-out; /* IE 10+, Fx 29+ */
 .animacao_white{
 	@include textanimation;
 	&:after{
-		background-color:white;
-		-webkit-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Safari 4+ */
+	background-color:white;
+	-webkit-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Safari 4+ */
  	-moz-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Fx 5+ */
  	-o-animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* Opera 12+ */
  	animation:animee2 0.5s normal 0.3s ease-in-out forwards; /* IE 10+, Fx 29+ */
 	}
 }
+
+
 
 .animacao2::after{
 	background-color:$red;

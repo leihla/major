@@ -2,7 +2,7 @@ $(function() {
   if(!$('body.body-about')) return;
 // About the major_studio
 const $abouttdescription = $('.about-the-studio .about-text p');
-const $abouttitle = $('.about-the-studio .about-text h1');
+const $abouttitle = $('.about-the-studio .about-text h2');
 const $studiofigure = $('.about-the-studio .row figure');
 $studiofigure.waypoint(
   function (direction) {
@@ -34,7 +34,7 @@ $studiolongdescription.waypoint(
 );
 
 // Team
-const $teamtitle = $('.team .team-text h1');
+const $teamtitle = $('.team .team-text h2');
 const $teamdescription = $('.team .team-text p');
 const $teammembdesc1 = $('.team li:nth-child(1) .member-description');
 const $teammembfoto1 = $('.team li:nth-child(1) figure');
@@ -44,6 +44,10 @@ const $teammembdesc3 = $('.team li:nth-child(3) .member-description');
 const $teammembfoto3 = $('.team li:nth-child(3) figure');
 const $teammembdesc4 = $('.team li:nth-child(4) .member-description');
 const $teammembfoto4 = $('.team li:nth-child(4) figure');
+const $teammembdesc5 = $('.team li:nth-child(5) .member-description');
+const $teammembfoto5 = $('.team li:nth-child(5) figure');
+const $teammembdesc6 = $('.team li:nth-child(6) .member-description');
+const $teammembfoto6 = $('.team li:nth-child(6) figure');
 
 $teamtitle.waypoint(
   function (direction) {
@@ -73,6 +77,20 @@ $teamtitle.waypoint(
                       $teammembdesc4.addClass('animacao_grey');
                       setTimeout(function () {
                         $teammembfoto4.removeClass('animatecontainer');
+                        setTimeout(function () {
+                          $teammembdesc5.removeClass('container-invisible');
+                          $teammembdesc5.addClass('animacao_grey');
+                          setTimeout(function () {
+                            $teammembfoto5.removeClass('animatecontainer');
+                            setTimeout(function () {
+                              $teammembdesc6.removeClass('container-invisible');
+                              $teammembdesc6.addClass('animacao_grey');
+                              setTimeout(function () {
+                                $teammembfoto6.removeClass('animatecontainer');
+                              }, 100);
+                            }, 200);
+                          }, 100);
+                        }, 200);
                       }, 100);
                     }, 200);
                   }, 200);
@@ -88,7 +106,7 @@ $teamtitle.waypoint(
 );
 
 // services
-const $servicestitle = $('.services h1');
+const $servicestitle = $('.services h2');
 const $servicesresearch = $('.services li:nth-child(1)');
 const $servicesux = $('.services li:nth-child(2)');
 const $servicesui = $('.services li:nth-child(3)');
@@ -116,7 +134,7 @@ $servicestitle.waypoint(
 );
 
 // process
-const $processtitle = $('.process h1');
+const $processtitle = $('.process h2');
 const $processdesc = $('.process p');
 const $processfigure = $('.process figure');
 $processtitle.waypoint(
@@ -137,7 +155,7 @@ $processtitle.waypoint(
 );
 
 // clients
-const $clientstitle = $('.clients h1');
+const $clientstitle = $('.clients h2');
 const clientsdesc = $('.clients p');
 const $clientslogos = $('.clients ul');
 $clientstitle.waypoint(

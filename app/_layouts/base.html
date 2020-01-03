@@ -14,11 +14,11 @@
 
   </head>
   {% if page.body_class %}
-  <body class="{{ page.body_class }}">
+  <body class="{{ page.body_class }} {{ page.theme }}">
   {% elsif layout.body_class %}
-  <body class="{{ layout.body_class }}">
+  <body class="{{ layout.body_class }} {{ page.theme }}">
   {% else %}
-  <body>
+  <body class="{{ page.theme }}">
   {% endif %}
     {% include header.html %}
     <main id="page-body" role="main">
