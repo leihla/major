@@ -234,7 +234,7 @@ function html () {
     jkConf = defaultsdeep({}, stageConf, jkConf);
   }
 
-  return gulp.src('_site/*.html')
+  return gulp.src('_site/**/*.html')
     .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
     .pipe(cacheUseref())
     // Do not compress comparisons, to avoid MapboxGLJS minification issue
