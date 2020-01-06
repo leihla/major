@@ -27,7 +27,7 @@ $homelandh1.waypoint(
 );
 
 // wecan help
-const $wecanhelph2 = $('.wecanhelptext h2');
+const $wecanhelph2 = $('.wecanhelptext h1');
 const $redblock = $('.wecanhelp .redblock');
 $redblock.waypoint(
   function (direction) {
@@ -179,11 +179,12 @@ window.scrollhomepage =  function (){
   // Homepage
   var landingpage = $('.landingpage').offset().top;
   var projects = $('.projects').offset().top - compensation * 1.5;
+  var clients = $('.clients').offset().top - compensation;
   var knowmore = $('.know-more-about').offset().top - compensation;
   var scrollPos = $(document).scrollTop();
 
   // Apply text changes
-  if (scrollPos >= projects && scrollPos < knowmore) {
+  if (scrollPos >= projects && scrollPos < clients) {
     $('.section-title-underlay span').addClass('fadetext');
   } else {
     $('.section-title-underlay span').removeClass('fadetext');

@@ -229,9 +229,9 @@
 				}
 				p{
 					@include paragraph;
-					margin-bottom: 1.5rem;
+					margin-bottom:2rem;
 					small{
-						font-family: $titles-type-medium;
+						font-family: $titles-type-regular;
 					}
 				}
 			}
@@ -278,13 +278,13 @@
 	}
 
 	.allprojects{
-		height: 8rem;
+		height: 12rem;
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		padding-right: 0.5rem;
 		a{
 			width: 100%;
-			font-size: 1rem;
+			font-size: 1.2rem;
 			text-align: right;
 			color: $red;
 			line-height: 0.9rem;
@@ -293,7 +293,6 @@
 			margin-left: 0.5rem;
 			g g{
 				fill: $red;
-
 			}
 
 		}
