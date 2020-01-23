@@ -268,7 +268,7 @@ $clientstitle.waypoint(
     var team = $('.team').offset().top - compensationabout;
     var services = $('.services').offset().top - compensationabout;
     var processs = $('.process').offset().top - compensationabout;
-    var clients = $('.clients').offset().top - compensationabout;
+    //var clients = $('.clients').offset().top - compensationabout;
     var scrollPos = $(document).scrollTop();
     var footer = $('#page-footer').offset().top - compensationabout;
 
@@ -293,22 +293,24 @@ $clientstitle.waypoint(
         'fadetext'
       );
       $('.section-title-underlay ul li:nth-child(3)').addClass('fadetext');
-    } else if (
-      scrollPos >= clients &&
-      scrollPos < footer - compensationtitle
+    }
+    //  else if (
+    //   scrollPos >= clients &&
+    //   scrollPos < footer - compensationtitle
+    // ) {
+    //   $('.section-title-underlay ul li:not(:nth-child(4))').removeClass(
+    //     'fadetext'
+    //   );
+    //   $('.section-title-underlay ul li:nth-child(4)').addClass('fadetext');
+    // }
+    else if (
+      scrollPos >= mission &&
+      scrollPos < team - compensationtitle
     ) {
       $('.section-title-underlay ul li:not(:nth-child(4))').removeClass(
         'fadetext'
       );
       $('.section-title-underlay ul li:nth-child(4)').addClass('fadetext');
-    } else if (
-      scrollPos >= mission &&
-      scrollPos < team - compensationtitle
-    ) {
-      $('.section-title-underlay ul li:not(:nth-child(5))').removeClass(
-        'fadetext'
-      );
-      $('.section-title-underlay ul li:nth-child(5)').addClass('fadetext');
     } else {
       $('.section-title-underlay ul li').removeClass('fadetext');
     }
