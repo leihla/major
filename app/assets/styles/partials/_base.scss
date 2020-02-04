@@ -144,7 +144,7 @@ h3{
 	text-transform: uppercase;
 	letter-spacing: 0.03rem;
 	display: inline-block;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	line-height: 1.1rem;
 	margin-bottom: 1rem;
 }
@@ -163,12 +163,13 @@ p {
 
 small{
 	font-size: 0.9rem;
-	line-height: 1.4rem;
+	line-height: 1.4;
 	font-weight: 300;
 	color: $lightgrey;
 	display: inline-block;
-
 }
+
+
 
 span{
 	display: inline-block;
