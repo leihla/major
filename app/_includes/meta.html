@@ -1,5 +1,5 @@
 {% if page.title %}
-  {% capture meta_title %}{{ page.title }} — Major{% endcapture %}
+  {% capture meta_title %}{{ page.client }} — {{ page.title }}{% endcapture %}
 {% else %}
   {% capture meta_title %}Major{% endcapture %}
 {% endif %}
@@ -7,13 +7,13 @@
 {% if page.introduction %}
   {% assign meta_introduction = page.introduction %}
 {% else %}
-  {% assign meta_introduction = "Major, a digital design studio." %}
+  {% assign meta_introduction = "Major, a collaborative design studio humanising digital solutions." %}
 {% endif %}
 
-{% if page.image %}
-  {% assign meta_image = page.image %}
+{% if page.images.card %}
+  {% assign meta_image = page.images.card %}
 {% else %}
-  {% assign meta_image = "/assets/graphics/meta/default-meta-image.png" %}
+  {% assign meta_image = "/assets/graphics/layout/majorOG.png" %}
 {% endif %}
 
 <meta charset="utf-8" />
@@ -25,19 +25,19 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="A collaborative design studio humanising digital solutions.">
+<meta name="twitter:site" content="@wegomajor" />
+<meta name="twitter:title" content="{{ meta_title }}">
 <meta name="twitter:description" content="{{ meta_introduction }}" />
-<meta name="twitter:image:src" content="/assets/graphics/layout/majorOG.png" />
+<meta name="twitter:image:src" content="{{ site.baseurl }}{{ meta_image }}" />
 <!--/ Twitter -->
 
 <!-- OG -->
 <meta property="og:site_name" content="Major" />
-<meta property="og:title" content="Major, a collaborative design studio humanising digital solutions." />
+<meta property="og:title" content="{{ meta_title }}" />
 <meta property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="{{ meta_introduction }}" />
-<meta property="og:image" content="/assets/graphics/layout/majorOG.png" />
+<meta property="og:image" content="{{ site.baseurl }}{{ meta_image }}" />
 <!--/ OG -->
 
 <link rel="shortcut icon" href="{{ site.baseurl }}/assets/graphics/meta/favicon.ico" type="image/x-icon" />
@@ -61,6 +61,11 @@
 @font-face {
     font-family: objectivity-medium;
     src:url("/assets/fonts/objectivity.medium.otf");
+}
+
+@font-face {
+    font-family: objectivity-regular;
+    src:url("/assets/fonts/objectivity.regular.otf");
 }
 </style>
 <!-- /Fonts -->

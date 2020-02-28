@@ -149,7 +149,7 @@ background-color: white;
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 800px;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     &:after{
       display: none!important;

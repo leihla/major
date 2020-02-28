@@ -58,11 +58,12 @@ svg {
 
 $titles-type: 'objectivity-bold', sans-serif;
 $titles-type-medium: 'objectivity-medium', sans-serif;
+$titles-type-regular: 'objectivity-regular', sans-serif;
 $body-text-type: 'Noto Serif SC', serif;
 $background-color: #FAF9F8;
 $red: #EF3341;
 $darkblue: #24023D;
-$lightgrey: #A6A2A9;
+$lightgrey: #868388;
 $yellow:#FBCD07;
 $title-padding: 1rem;
 
@@ -111,7 +112,7 @@ h1 {
 	font-family: $titles-type;
 	font-size: 3.7rem;
 	font-weight: 400;
-	line-height: 4.7rem;
+	line-height: 4.6rem;
 	margin: unset;
 	margin-bottom: $title-padding;
 	/*@include column(8/12);*/
@@ -124,7 +125,7 @@ h2{
 	font-size: 2.8rem;
 	font-weight: 400;
 	line-height: 1.2;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 	display: inline-block;
 }
 
@@ -143,31 +144,32 @@ h3{
 	text-transform: uppercase;
 	letter-spacing: 0.03rem;
 	display: inline-block;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	line-height: 1.1rem;
 	margin-bottom: 1rem;
 }
 
 @mixin paragraph{
 	font-family: $body-text-type;
-	font-size: 1.13rem;
+	font-size: 1.2rem;
 	line-height: 2rem;
 }
 
 p {
-	font-size: 1.13rem;
+	font-size: 1.2rem;
 	line-height: 2rem;
 	display: inline-block;
 }
 
 small{
 	font-size: 0.9rem;
-	line-height: 1.4rem;
+	line-height: 1.4;
 	font-weight: 300;
 	color: $lightgrey;
 	display: inline-block;
-
 }
+
+
 
 span{
 	display: inline-block;
@@ -183,7 +185,7 @@ display: inline-block;
 }
 
 .lead {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	line-height: 1.8rem;
 }
 
@@ -338,7 +340,6 @@ display: inline-block;
 		-o-transition: opacity 0.5s ease-out;
 		transition:opacity 0.5s ease-out;
 	}
-
 }
 
 	//Move containers on scrollPos
