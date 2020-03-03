@@ -27,8 +27,9 @@ s_intro:
 # Summary section
 s_summary:
   scope:
-    - UX/UI Design
-    - Information architecture
+    - UX Design
+    - UI Design
+    - Front-end development
   challenge:
     title: Crafting a unified experience
     description: Create an single app that combines all CTT services available in their website.
