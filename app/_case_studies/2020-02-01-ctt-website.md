@@ -2,16 +2,16 @@
 layout: case-study
 permalink: case-studies/appctt/
 theme: dark
-published: false
-featured: true
-coming_soon: false
+published: true
+featured: false
+coming_soon: true
 
-title: All CTT tools at your fingertips.
-client: app ctt
+title: Redesigning Portugal's postal service.
+client: CTT Website
 images:
-  full: /assets/graphics/content/case-studies/ctt/appctt-hero.png
+  full: /assets/graphics/content/case-studies/ctt/ctt-website-hero.png
   small:
-  card: /assets/graphics/content/case-studies/ctt/appctt-shot.jpg
+  card: /assets/graphics/content/case-studies/ctt/ctt-website-hero.png
 
 # Into section
 s_intro:
