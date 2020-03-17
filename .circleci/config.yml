@@ -103,7 +103,7 @@ jobs:
           name: Deploy to surge staging
           command: |
             cp /workspace/_site/index.html /workspace/_site/200.html
-            ./node_modules/surge/lib/cli.js --project ./_site --domain major.surge.sh
+            ./node_modules/surge/lib/cli.js --project /workspace/_site --domain major.surge.sh
 
 workflows:
   version: 2
