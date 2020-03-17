@@ -34,7 +34,6 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - .bundle
             - bundle
           key: v1-dependencies-{{ checksum "package.json" }}
   build:
@@ -46,6 +45,8 @@ jobs:
       - run: 
           name: Build app
           command: |
+            # Link all gems
+            bundle install --path bundle/cache
             yarn build
       - persist_to_workspace:
           root: ~/repo
@@ -83,6 +84,8 @@ jobs:
       - run:
           name: Build app
           command: |
+            # Link all gems
+            bundle install --path bundle/cache
             yarn build-stage
       - persist_to_workspace:
           root: ~/repo
