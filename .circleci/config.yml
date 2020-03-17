@@ -34,7 +34,8 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - bundle/cache
+            - .bundle
+            - bundle
           key: v1-dependencies-{{ checksum "package.json" }}
   build:
     <<: *base_def
