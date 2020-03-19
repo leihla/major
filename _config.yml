@@ -1,4 +1,5 @@
 source: app
+environment: production
 # To exclude inside app/
 baseurl: http://wegomajor.com
 kramdown:
