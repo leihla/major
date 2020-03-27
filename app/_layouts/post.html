@@ -1,0 +1,21 @@
+---
+layout: base
+body_class: body-blog-post
+---
+<section class="blog-post-hero">
+  <figure class="blog-post-image">
+    <img class="blog-hero-background" src="{{ page.images.hero }}" alt="Blog post hero image">
+  </figure>
+  <div class="row">
+    <div class="blog-post-title">
+      <span>{{ page.category }}</span>
+      <h2>{{ page.title }}</h2>
+      <p><small>{{ page.author }}</small></p>
+    </div>
+  </div>
+</section>
+<section class="blog-post-content">
+  <div class="row">
+    <div class="blog-post-content-wrap">{{ content }}</div>
+  </div>
+</section>
