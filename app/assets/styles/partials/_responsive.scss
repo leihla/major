@@ -392,11 +392,20 @@ figure{
 
   #page-footer {
 
-    .logo-footer{display: none;}
+    .major-footer{display: none;}
+
+    .row{
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: center;
+    }
 
     .p2020-footer{
-      left:0;
       height: 90px;
+      margin:2rem 0;
+      margin-right: 0;
+      justify-content: center;
+
       svg{
         max-width: 70%;
       }
@@ -404,14 +413,7 @@ figure{
     }
 
     .social{
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 144px;
-    justify-content: space-between;
 
-    left: 0;
     p {
       margin-top: 1rem;
       margin-bottom: 2rem;

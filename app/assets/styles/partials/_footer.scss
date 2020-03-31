@@ -1,7 +1,7 @@
 #page-footer {
-	background-color: $red;
-	color: #fff;
-	height: 100vh;
+	background-color: white;
+	color: $darkblue;
+	height: 100px;
 	position: relative;
 	z-index: 9;
 
@@ -11,57 +11,37 @@
 		display: flex;
 		align-items: center;
 		position: relative;
-
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
-
-	.say-hi-contact{
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 10%;
-
-
-	h2{
-		margin-bottom: 0.5rem;
-
+.major-footer{
+	height: 100px;
+	position: absolute;
+	left: 0;
+	display: flex;
+	align-items: center;
+	svg{
+		width: 48px;
 	}
-
-	a{
-font-family: $body-text-type;
-color: white;
-font-size: 1.3rem;
-font-weight: 400;
-
-	}
-	}
-
+}
 
 .p2020-footer{
-	position: absolute;
-	height: 80px;
-	bottom: 0;
-
+	//position: absolute;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	margin-right: 2rem;
+	svg{
+		 path{
+			fill:$lightgrey;
+		 }
+	}
 
 }
 
 
-	.logo-footer{
-		position: absolute;
-		height: 130px;
-		top: 0;
-		left: 0;
-		display: flex;
-		align-items: center;
-		svg{
-			width: 48px;
-			 path{
-			 	fill:white;
-			 }
-		}
-	}
 
 	.social{
-		position: absolute;
+		//position: absolute;
 		height: 100px;
 		bottom: 0;
 		right: 0;
@@ -73,17 +53,28 @@ font-weight: 400;
 		ul{
 			display: flex;
 			flex-direction: row;
-			img{
-				width: 20px;
-				margin-right:1.5rem;
+			li{
+				width: 40px;
+				margin:0 0.5rem;
+				&:first-child{
+					margin-left: 0;
+				}
+				svg{
+					width: 22px;
+					path{
+					 fill:$lightgrey;
+					}
+
+				}
 			}
+
 		}
 		p{
 			font-size: 0.75rem;
 			line-height: 0.87rem;
 			font-weight: 400;
 			margin-right: 2rem;
-
+			display: none;
 		}
 		a{
 			line-height: 0;
