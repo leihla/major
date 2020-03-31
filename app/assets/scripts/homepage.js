@@ -179,16 +179,16 @@ window.scrollhomepage =  function (){
   // Homepage
   var landingpage = $('.landingpage').offset().top;
   var projects = $('.projects').offset().top - compensation * 1.5;
-  var clients = $('.clients').offset().top - compensation;
+  //var clients = $('.clients').offset().top - compensation;
   var knowmore = $('.know-more-about').offset().top - compensation;
   var scrollPos = $(document).scrollTop();
 
   // Apply text changes
-  if (scrollPos >= projects && scrollPos < clients) {
-    $('.section-title-underlay span').addClass('fadetext');
-  } else {
-    $('.section-title-underlay span').removeClass('fadetext');
-  }
+  // if (scrollPos >= projects && scrollPos < clients) {
+  //   $('.section-title-underlay span').addClass('fadetext');
+  // } else {
+  //   $('.section-title-underlay span').removeClass('fadetext');
+  // }
 
   // Strokes animation - we know the internet
   if (scrollPos >= landingpage && scrollPos < projects + compensation) {

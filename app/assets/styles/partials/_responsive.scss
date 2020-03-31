@@ -1,10 +1,65 @@
 
 
 
-@media (min-width: 1056px) {
-  // .cs-hero .cs-hero-background{
-  //   transform: translateY(-5%);
-  // }
+@media (min-width: 801px) {
+body{
+  position: relative;
+}
+header{
+  button{
+    display: none;
+  }
+}
+.overlay-menu{
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  .row{
+    svg{
+      display: none;
+    }
+  }
+  .row.menu{
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      margin-bottom: 0;
+      margin-left: 3rem;
+      display: flex;
+      //align-items: flex-end;
+      &:first-child{
+        display: none;
+      }
+      a{
+        opacity: 1;
+        font-size: 1rem;
+        line-height: 1.1rem;
+        margin-top: 2rem;
+        //font-family: $titles-type-medium;
+        &:after{
+          content: "";
+          width: 100%;
+          height: 3px;
+          background-color: $darkblue;
+          display: block;
+          visibility: hidden;
+        }
+        &:hover{
+          text-decoration: none;
+          &:after{
+            visibility: visible;
+          }
+
+        }
+      }
+
+    }
+  }
+}
 
 }
 
