@@ -106,32 +106,32 @@ $teamtitle.waypoint(
 );
 
 // services
-const $servicestitle = $('.services h2');
-const $servicesresearch = $('.services li:nth-child(1)');
-const $servicesux = $('.services li:nth-child(2)');
-const $servicesui = $('.services li:nth-child(3)');
-const $servicesfe = $('.services li:nth-child(4)');
-$servicestitle.waypoint(
-  function (direction) {
-    if (direction === 'down') {
-      $servicestitle.removeClass('container-invisible');
-      $servicestitle.addClass('animacao');
-      setTimeout(function () {
-        $servicesresearch.removeClass('animatecontainer'); // $abouttdescription.addClass('animacao');
-        setTimeout(function () {
-          $servicesux.removeClass('animatecontainer'); // $studiophoto1.addClass('animacao');
-          setTimeout(function () {
-            $servicesui.removeClass('animatecontainer'); // $studiophoto2.addClass('animacao');
-            setTimeout(function () {
-              $servicesfe.removeClass('animatecontainer'); // $studiophoto2.addClass('animacao');
-            }, 200);
-          }, 200);
-        }, 200);
-      }, 200);
-    }
-  },
-  { offset: '60%' }
-);
+// const $servicestitle = $('.services h2');
+// const $servicesresearch = $('.services li:nth-child(1)');
+// const $servicesux = $('.services li:nth-child(2)');
+// const $servicesui = $('.services li:nth-child(3)');
+// const $servicesfe = $('.services li:nth-child(4)');
+// $servicestitle.waypoint(
+//   function (direction) {
+//     if (direction === 'down') {
+//       $servicestitle.removeClass('container-invisible');
+//       $servicestitle.addClass('animacao');
+//       setTimeout(function () {
+//         $servicesresearch.removeClass('animatecontainer'); // $abouttdescription.addClass('animacao');
+//         setTimeout(function () {
+//           $servicesux.removeClass('animatecontainer'); // $studiophoto1.addClass('animacao');
+//           setTimeout(function () {
+//             $servicesui.removeClass('animatecontainer'); // $studiophoto2.addClass('animacao');
+//             setTimeout(function () {
+//               $servicesfe.removeClass('animatecontainer'); // $studiophoto2.addClass('animacao');
+//             }, 200);
+//           }, 200);
+//         }, 200);
+//       }, 200);
+//     }
+//   },
+//   { offset: '60%' }
+// );
 
 // process
 const $processtitle = $('.process h2');
@@ -266,34 +266,34 @@ $clientstitle.waypoint(
     var compensationtitle = $('.section-title-underlay ul li').height() / 2;
     var mission = $('.studio-description').offset().top - compensationabout;
     var team = $('.team').offset().top - compensationabout;
-    var services = $('.services').offset().top - compensationabout;
-    var processs = $('.process').offset().top - compensationabout;
-    //var clients = $('.clients').offset().top - compensationabout;
+  //  var services = $('.services').offset().top - compensationabout;
+  //  var processs = $('.process').offset().top - compensationabout;
+    var clients = $('.clients').offset().top - compensationabout;
     var scrollPos = $(document).scrollTop();
     var footer = $('#page-footer').offset().top - compensationabout;
 
-    if (scrollPos >= team && scrollPos < services - compensationtitle) {
-      $('.section-title-underlay ul li:not(:nth-child(1))').removeClass(
-        'fadetext'
-      );
-      $('.section-title-underlay ul li:nth-child(1)').addClass('fadetext');
-    } else if (
-      scrollPos >= services &&
-      scrollPos < processs - compensationtitle
-    ) {
-      $('.section-title-underlay ul li:not(:nth-child(2))').removeClass(
-        'fadetext'
-      );
-      $('.section-title-underlay ul li:nth-child(2)').addClass('fadetext');
-    } else if (
-      scrollPos >= processs &&
-      scrollPos < clients - compensationtitle
-    ) {
-      $('.section-title-underlay ul li:not(:nth-child(3))').removeClass(
-        'fadetext'
-      );
-      $('.section-title-underlay ul li:nth-child(3)').addClass('fadetext');
-    }
+    // if (scrollPos >= team && scrollPos < services - compensationtitle) {
+    //   $('.section-title-underlay ul li:not(:nth-child(1))').removeClass(
+    //     'fadetext'
+    //   );
+    //   $('.section-title-underlay ul li:nth-child(1)').addClass('fadetext');
+    // } else if (
+    //   scrollPos >= services &&
+    //   scrollPos < processs - compensationtitle
+    // ) {
+    //   $('.section-title-underlay ul li:not(:nth-child(2))').removeClass(
+    //     'fadetext'
+    //   );
+    //   $('.section-title-underlay ul li:nth-child(2)').addClass('fadetext');
+    // } else if (
+    //   scrollPos >= processs &&
+    //   scrollPos < clients - compensationtitle
+    // ) {
+    //   $('.section-title-underlay ul li:not(:nth-child(3))').removeClass(
+    //     'fadetext'
+    //   );
+    //   $('.section-title-underlay ul li:nth-child(3)').addClass('fadetext');
+    // }
     //  else if (
     //   scrollPos >= clients &&
     //   scrollPos < footer - compensationtitle
@@ -303,17 +303,17 @@ $clientstitle.waypoint(
     //   );
     //   $('.section-title-underlay ul li:nth-child(4)').addClass('fadetext');
     // }
-    else if (
-      scrollPos >= mission &&
-      scrollPos < team - compensationtitle
-    ) {
-      $('.section-title-underlay ul li:not(:nth-child(4))').removeClass(
-        'fadetext'
-      );
-      $('.section-title-underlay ul li:nth-child(4)').addClass('fadetext');
-    } else {
-      $('.section-title-underlay ul li').removeClass('fadetext');
-    }
+    // else if (
+    //   scrollPos >= mission &&
+    //   scrollPos < team - compensationtitle
+    // ) {
+    //   $('.section-title-underlay ul li:not(:nth-child(4))').removeClass(
+    //     'fadetext'
+    //   );
+    //   $('.section-title-underlay ul li:nth-child(4)').addClass('fadetext');
+    // } else {
+    //   $('.section-title-underlay ul li').removeClass('fadetext');
+    // }
   };
 
   });

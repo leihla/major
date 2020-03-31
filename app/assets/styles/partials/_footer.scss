@@ -1,7 +1,7 @@
 #page-footer {
 	background-color: white;
 	color: $darkblue;
-	height: 100px;
+	height: 150px;
 	position: relative;
 	z-index: 9;
 
@@ -9,12 +9,12 @@
 	.row{
 		height: 100%;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		position: relative;
 		justify-content: flex-end;
 	}
 .major-footer{
-	height: 100px;
+
 	position: absolute;
 	left: 0;
 	display: flex;
@@ -26,10 +26,10 @@
 
 .p2020-footer{
 	//position: absolute;
-	height: 100px;
+
 	display: flex;
 	align-items: center;
-	margin-right: 2rem;
+	margin-right: 4rem;
 	svg{
 		 path{
 			fill:$lightgrey;
@@ -42,12 +42,12 @@
 
 	.social{
 		//position: absolute;
-		height: 100px;
+
 		bottom: 0;
 		right: 0;
 		display: flex;
 		align-items: center;
-		flex-direction: row-reverse;
+		flex-direction: column;
 
 
 		ul{
@@ -70,11 +70,12 @@
 
 		}
 		p{
-			font-size: 0.75rem;
+			font-size: 0.7rem;
 			line-height: 0.87rem;
 			font-weight: 400;
 			margin-right: 2rem;
-			display: none;
+			color: $lightgrey;
+		//	display: none;
 		}
 		a{
 			line-height: 0;

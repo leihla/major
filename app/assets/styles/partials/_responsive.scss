@@ -43,7 +43,7 @@ header{
         &:after{
           content: "";
           width: 100%;
-          height: 3px;
+          height: 2px;
           background-color: $darkblue;
           display: block;
           visibility: hidden;
@@ -60,7 +60,14 @@ header{
     }
   }
 }
-
+.body-about {
+  .overlay-menu .row.menu li a{
+    color: white;
+    &::after{
+      background-color: white;
+    }
+  }
+}
 }
 
 // Large devices (desktops, less than 1200px)
@@ -195,29 +202,15 @@ figure{
 
 .clients{
   .row{
-    flex-direction: column;
     .clients-text{
       width: 100%;
-      margin: 0;
+
       max-width: none;
       padding: 0;
     }
 
     .clients-logos{
-
-      li:nth-child(1), li:nth-child(2), li:nth-child(3){
-  margin:0 0 0 2rem;
-
-         }
-
-      li:last-child{
-        margin-left: 0;
-      }
-        width: 100%;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        padding-top: 4rem;
-
+           grid-template-columns: auto auto auto;
 
     }
   }
@@ -748,20 +741,27 @@ dl{
 
 
 .clients{
-  padding-bottom: 15%;
+margin-bottom: 3rem;
+
+.row{
+  .clients-text{
+    margin-bottom: 2rem;
+  }
+
+  .clients-logos{
+         grid-template-columns: auto auto;
+         grid-gap: 24px 24px;
+         li{
+           padding: 0.5rem 0;
+         }
+  }
 }
 
-  .clients .row .clients-logos li{
-        margin: 0 0 0 1rem;
-  }
+}
 
-  .clients .row .clients-logos li a{
-    margin-top: 1rem;
-  }
 
-  .clients .row .clients-logos li:last-child{
-    margin: 0;
-  }
+
+
 
   .process{
     padding-top: 10%;
