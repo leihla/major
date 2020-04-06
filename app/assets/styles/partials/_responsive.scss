@@ -480,9 +480,7 @@ figure{
 
 .blog-list{
   ul{
-    li{
-      flex: 0 0 49%
-    }
+		grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -891,11 +889,10 @@ margin-bottom: 0;
   }
 }
 
+
 .blog-list{
   ul{
-    li{
-      flex: 0 0 100%
-    }
+		grid-template-columns: repeat(1, 1fr);
   }
 }
 
