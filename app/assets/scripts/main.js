@@ -56,6 +56,13 @@ function onPageLoad () {
               );
               $('.overlay-menu li:nth-child(4) a').toggleClass('animacao');
               $('.overlay-menu li:nth-child(4) a').toggleClass('animacao2');
+              setTimeout(function () {
+                $('.overlay-menu li:nth-child(5) a').toggleClass(
+                  'container-invisible'
+                );
+                $('.overlay-menu li:nth-child(5) a').toggleClass('animacao');
+                $('.overlay-menu li:nth-child(5) a').toggleClass('animacao2');
+              }, 300);
             }, 300);
           }, 300);
         }, 300);
