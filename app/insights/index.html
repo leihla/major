@@ -1,0 +1,48 @@
+---
+layout: base
+body_class: body-blog
+---
+
+<section class="blog-hero">
+  {% assign featPost = site.posts | where: "featured", true | first %}
+  <div class="row">
+    <a href="{{ site.baseurl }}{{ featPost.url }}" class="blog-card blog-card-featured animatecontainer" data-animate="img-animate">
+      <figure class="card-shot">
+        <img src="{{ featPost.images.hero }}" alt="Blog post hero image"></figure>
+      <div class="card-resume">
+        <span class="card-name">{{ featPost.category }}</span>
+        <h2 class="card-title">{{ featPost.title }}</h2>
+        {% if featPost.summary %}
+        <p>{{ featPost.summary }}</p>
+        {% else %}
+        <p>{{ featPost.excerpt | strip_html | truncatewords: 40 }}</p>
+        {% endif %}
+<!--         <div class="link">
+          <p>Read now</p>
+        </div> -->
+
+        <!-- <p><small>This is the author</small></p> -->
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- <section class="blog-list">
+  <div class="row">
+    <ul>
+      {% for post in site.posts %}
+        {% unless post.url == featPost.url %}
+          <li>
+            <a href="{{ site.baseurl }}{{ post.url }}" class="blog-card" data-animate="">
+              <figure class="card-shot"><img src="{{ post.images.card }}" alt="Blog post card image"></figure>
+              <div class="card-resume">
+                <span class="card-name">{{ post.category }}</span>
+                <h2 class="card-title">{{ post.title }}</h2>
+            </div>
+            </a>
+          </li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+</section> -->
