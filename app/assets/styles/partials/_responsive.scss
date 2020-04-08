@@ -867,6 +867,17 @@ margin-bottom: 0;
   width: 100%;
 }
 
+.blog-post-hero{
+min-height: 200px;
+padding: 0;
+.blog-post-image{
+  height: 40vh;
+}
+.row{
+  width: 100%;
+
+}
+}
 
 .blog-post-hero .blog-post-title {
   width: 100%;
@@ -874,6 +885,15 @@ margin-bottom: 0;
 .blog-post-content .row .blog-post-content-wrap h2{
   font-size: 2rem;
   line-height: 2.5rem;
+}
+
+.blog-post-content .row .blog-post-content-wrap h3{
+  line-height: 2.5rem;
+}
+
+.blog-post-content .row .blog-post-content-wrap p{
+  font-size: 1.1rem;
+  line-height: 1.8rem;
 }
 
 .blog-post-content .row .blog-post-content-wrap .blog-quote{
