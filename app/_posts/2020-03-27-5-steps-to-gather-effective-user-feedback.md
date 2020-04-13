@@ -1,6 +1,6 @@
 ---
 layout: post
-featured: true
+featured: false
 
 title: 5 Steps to Gather Effective User Feedback
 summary: How to get actual insights from your research

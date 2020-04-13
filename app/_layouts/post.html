@@ -4,13 +4,17 @@ body_class: body-blog-post
 ---
 <section class="blog-post-hero">
   <figure class="blog-post-image">
-    <img class="blog-hero-background" src="{{ page.images.hero }}" alt="Blog post hero image">
+    <picture>
+      <source media="(min-width: 800px)" srcset="{{ page.images.hero }}">
+      <source media="(min-width: 200px)" srcset="{{ page.images.card }}">
+      <img src="{{ post.images.hero }}" alt="{{ post.title }}">
+    </picture>  
   </figure>
   <div class="row">
     <div class="blog-post-title">
       <span>{{ page.category }}</span>
       <h2>{{ page.title }}</h2>
-      <p><small>{{ page.author }}</small></p>
+      <p><small>By {{ page.author }}</small></p>
     </div>
   </div>
 </section>
