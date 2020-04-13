@@ -9,7 +9,7 @@ author: Leihla Pinho
 
 images:
   hero: /assets/graphics/content/blog/5-steps-to-gather-effective-feedback.png
-  card: /assets/graphics/content/blog/5-steps-to-gather-effective-feedback.png
+  card: /assets/graphics/content/blog/5-steps-to-gather-effective-feedback-square.png
 ---
 
 Imagine this: you are in charge of gathering user feedback on problems, pain points and potential ideas for enhancements of your product. You want to gather useful insights that you can take back to your manager and your team and that will lead the development of new features or improve existing ones.

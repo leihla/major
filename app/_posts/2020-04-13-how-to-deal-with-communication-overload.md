@@ -2,14 +2,14 @@
 layout: post
 featured: true
 
-title: How to deal with communication overload
+title: How To Deal With Communication Overload
 summary: A guide to navigate the growing stream of messages we receive everyday
 category: User Feedback
 author: Leihla Pinho
 
 images:
-  hero: /assets/graphics/content/blog/5-steps-to-gather-effective-feedback.png
-  card: /assets/graphics/content/blog/5-steps-to-gather-effective-feedback.png
+  hero: /assets/graphics/content/blog/how-to-deal-with-communication-overload.jpg
+  card: /assets/graphics/content/blog/how-to-deal-with-communication-overload-square.jpg
 ---
 
 If you find yourself navigating remote work for the first time you might already learned that social distancing doesn't translate to less communication, and as some of us can see, it can mean quite the opposite, a communication overload. Being unable to communicate face-to-face   intensifies some challenges that already existed in our communications and surfaces new challenges that we'll need to overcome in order to communicate more effectively.
