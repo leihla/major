@@ -4,7 +4,7 @@ featured: true
 
 title: How To Deal With Communication Overload
 summary: A guide to navigate the growing stream of messages we receive everyday
-category: User Feedback
+category: Remote Work
 author: Leihla Pinho
 
 images:
