@@ -1,6 +1,6 @@
 ---
 layout: post
-featured: true
+featured: false
 
 title: How To Deal With Communication Overload
 summary: A guide to navigate the growing stream of messages we receive everyday
