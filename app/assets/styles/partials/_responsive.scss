@@ -413,6 +413,7 @@ figure{
     }
   }
 
+
   .cs-resume{
     ul{
     flex-direction: column;
@@ -431,6 +432,8 @@ figure{
     }
     }
   }
+
+
 
   .cs-content {
     .sec-text-img .row{
@@ -451,6 +454,26 @@ figure{
 
     }
 
+      .sec-text-full {
+  .row{ 
+    .cs-section-text-content {
+      dt h2 {
+         @include column(12/12);
+         margin-bottom: 2.5rem;
+      }
+
+      dd {
+        @include column(12/12);
+        float: right;
+
+        p {
+          @include column(12/12);
+        }
+
+      }
+    }
+  }
+}
 
 
 
