@@ -1,9 +1,11 @@
-{% if include.sec.type == 'section-tl' or include.sec.type == 'section-tr' or include.sec.type == 'section-tl-small' or include.sec.type == 'section-tr-small' %}
+{% if include.sec.type == 'section-tl' or include.sec.type == 'section-tr' or include.sec.type == 'section-tf' or include.sec.type == 'section-tl-small' or include.sec.type == 'section-tr-small' %}
 
 {% if include.sec.type == 'section-tl' %}
   {% assign klass='sec-text-left' %}
 {% elsif include.sec.type == 'section-tr' %}
   {% assign klass='sec-text-right' %}
+{% elsif include.sec.type == 'section-tf' %}
+  {% assign klass='sec-text-full' %}
 {% elsif include.sec.type == 'section-tl-small' %}
   {% assign klass='sec-text-left sec-small-title' %}
 {% elsif include.sec.type == 'section-tr-small' %}
