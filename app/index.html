@@ -59,7 +59,6 @@ body_class: body-homepage
           <div class="card-resume">
             <span class="card-name container-invisible">{{ cs.client }}</span>
             <h2 class="card-title container-invisible">{{ cs.title }}</h2>
-            <p class="description container-invisible">{{ cs.s_intro.description }}</p>
             {% if cs.s_summary.scope %}
             <p class="small container-invisible"><small>{{ cs.s_summary.scope | join: ' / '}}</small></p>
             {% endif %}

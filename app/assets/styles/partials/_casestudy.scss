@@ -123,6 +123,9 @@ figure{
   dl{
     @include column(8/12);
   }
+  p {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .cs-resume{
@@ -191,7 +194,7 @@ article{
   }
   dd{
     p{
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     ul, ol{
       list-style-position: inside;
@@ -218,7 +221,7 @@ article{
   @include column(5/12);
   }
   .sec-text-img-images{
-    @include column(6/12);
+    @include column(6.5/12);
   }
 }
 }
@@ -232,10 +235,31 @@ article{
   @include column(5/12);
   }
   .sec-text-img-images{
-    @include column(6/12);
+    @include column(6.5/12);
   }
 }
 
+}
+
+.sec-text-full {
+  .row{ 
+    .cs-section-text-content {
+      dt h2 {
+         @include column(6/12);
+         margin-bottom: 2.5rem;
+      }
+
+      dd {
+        @include column(8/12);
+        float: right;
+
+        p {
+          @include column(6/12);
+        }
+
+      }
+    }
+  }
 }
 
 .sec-small-title{
