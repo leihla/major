@@ -9,7 +9,50 @@ kramdown:
 permalink: /insights/:title/
 
 # Collection definition
-
 collections:
   case_studies:
     output: true
+
+# ############## #
+#    CLIENTS
+clients:
+  -
+    name: Wodify
+    url: https://www.wodify.com/
+    image: /assets/graphics/content/wodify_logo.jpg
+    featured: true
+  -
+    name: Developmentseed
+    url: https://developmentseed.org//
+    image: /assets/graphics/content/devseed_logo.jpg
+    featured: true
+  -
+    name: CTT
+    url: http://www.ctt.pt/home/index.html
+    image: /assets/graphics/content/ctt_logo.jpg
+    featured: true
+  -
+    name: Elsie
+    url: https://elsie.pt/
+    image: /assets/graphics/content/elsie_logo.jpg
+    featured: true
+  -
+    name: Dott
+    url: https://www.dott.pt/
+    image: /assets/graphics/content/dott_logo.jpg
+    featured: true
+  -
+    name: Bright Pixel
+    url: https://brpx.com/
+    image: /assets/graphics/content/brpx_logo.jpg
+    featured: true
+  -
+    name: AMT
+    url: https://www.amt-autoridade.pt/
+    image: /assets/graphics/content/amt_logo.jpg
+    featured: true
+  -
+    name: BloombergNEF
+    url: https://about.bnef.com/
+    image: /assets/graphics/content/bloombergNEF_logo.jpg
+    featured: true
