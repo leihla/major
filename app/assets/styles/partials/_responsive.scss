@@ -589,6 +589,13 @@ figure{
 }
 
 
+.contact {
+  h1, h1 a{
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+}
+
 }
 
 // Extra small devices (portrait phones, less than 576px)
@@ -665,6 +672,8 @@ figure{
     font-size: 2.2rem;
     line-height: 2.4rem;
   }
+
+
 
   p{
     font-size: 1rem;
@@ -1041,6 +1050,25 @@ margin-bottom: 0;
   }
 }
 
+.contact{
+
+   h1 a{
+     font-size: 1.5rem;
+     line-height: 3rem;
+     padding-bottom: 0;
+     margin-bottom: 0rem;
+     display: block;
+   }
+   p{
+     margin: 1rem 0 1.5rem 0;
+   }
+
+}
+
+
+.contact .entry-text{
+  margin-bottom: 2rem;
+}
 
 }
 
