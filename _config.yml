@@ -16,15 +16,21 @@ collections:
 # ############## #
 #    CLIENTS
 clients:
-  -
-    name: Wodify
-    url: https://www.wodify.com/
-    image: /assets/graphics/content/wodify_logo.png
-    featured: true
+
   -
     name: Developmentseed
     url: https://developmentseed.org//
     image: /assets/graphics/content/devseed_logo.png
+    featured: true
+  -
+    name: BloombergNEF
+    url: https://about.bnef.com/
+    image: /assets/graphics/content/bloombergNEF_logo.png
+    featured: false
+  -
+    name: Nasa
+    url: https://www.nasa.gov/
+    image: /assets/graphics/content/nasa_logo.png
     featured: true
   -
     name: CTT
@@ -32,34 +38,24 @@ clients:
     image: /assets/graphics/content/ctt_logo.png
     featured: true
   -
-    name: Elsie
-    url: https://elsie.pt/
-    image: /assets/graphics/content/elsie_logo.png
-    featured: true
-  -
     name: Dott
     url: https://www.dott.pt/
     image: /assets/graphics/content/dott_logo.png
     featured: true
   -
+    name: Wodify
+    url: https://www.wodify.com/
+    image: /assets/graphics/content/wodify_logo.png
+    featured: true
+  -
+    name: Elsie
+    url: https://elsie.pt/
+    image: /assets/graphics/content/elsie_logo.png
+    featured: true
+  -
     name: Bright Pixel
     url: https://brpx.com/
     image: /assets/graphics/content/brpx_logo.png
-    featured: true
-  -
-    name: AMT
-    url: https://www.amt-autoridade.pt/
-    image: /assets/graphics/content/amt_logo.png
-    featured: true
-  -
-    name: BloombergNEF
-    url: https://about.bnef.com/
-    image: /assets/graphics/content/bloombergNEF_logo.png
-    featured: true
-  -
-    name: Nasa
-    url: https://www.nasa.gov/
-    image: /assets/graphics/content/nasa_logo.png
     featured: true
   -
     name: Faber
