@@ -9,7 +9,7 @@ header{
 }
 .overlay-menu{
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   left: 0;
   top: 0;
   height: 100px;
@@ -65,6 +65,27 @@ header{
     }
   }
 }
+
+.body-casestudy{
+
+  .overlay-menu a{
+  color: white;
+  }
+  .overlay-menu .row.menu li a:after{
+    background-color: white;
+  }
+}
+
+.body-casestudy.dark{
+  .overlay-menu a{
+  color: $darkblue;
+  }
+  .overlay-menu .row.menu li a:after{
+    background-color: $darkblue;
+  }
+}
+
+
 }
 
 
@@ -473,6 +494,9 @@ figure{
     figure{
       padding-bottom: 2rem;
       width: 25%;
+      img{
+        height: 40px;
+      }
     }
     dl{
       width: 100%;
@@ -866,10 +890,6 @@ padding-bottom: 20%;
 
 .cs-intro{
   padding: 20% 0 10% 0;
-}
-
-.cs-intro figure img{
-  height: 24px;
 }
 
 
