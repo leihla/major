@@ -87,23 +87,18 @@ body_class: body-homepage
       <p class="container-invisible">We feel inspired to work with organisations and entities that plow through daily challenges with the ultimate goal of shaping the world into a better place.</p>
     </div>
       <ul class="clients-logos animatecontainer">
-        <li>
-          <a target="_blank" href="https://www.wodify.com/"><img src="/assets/graphics/content/wodify_logo.jpg" alt="Wodify logotype"></a>
-          <a target="_blank" href="https://developmentseed.org//"><img src="/assets/graphics/content/devseed_logo.jpg" alt="Developmentseed logotype"></a>
-        </li>
-        <li>
-          <a target="_blank" href="http://www.ctt.pt/home/index.html"><img src="/assets/graphics/content/ctt_logo.jpg" alt="CTT logotype"></a>
-          <a target="_blank" href="https://elsie.pt/"><img src="/assets/graphics/content/elsie_logo.jpg" alt="Elsie logotype"></a>
-          <a target="_blank" href="https://www.dott.pt/"><img src="/assets/graphics/content/dott_logo.jpg" alt="Dott logotype"></a>
-        </li>
-        <li>
-          <a target="_blank" href="https://brpx.com/"><img src="/assets/graphics/content/brpx_logo.jpg" alt="Bright Pixel logotype"></a>
-          <a target="_blank" href="https://www.amt-autoridade.pt/"><img src="/assets/graphics/content/amt_logo.jpg" alt="AMT logotype"></a>
-          <a target="_blank" href="https://about.bnef.com/"><img src="/assets/graphics/content/bloombergNEF_logo.jpg" alt="BloombergNEF logotype"></a>
-        </li>
+        {% assign clients = site.clients | where: "featured", true %}
+        {% for client in clients %}
+          <li>
+            <a target="_blank" href="{{ client.url }}" rel="noopener noreferrer" title="Visit {{ client.name }} page">
+              <img src="{{ client.image }}" alt="{{ client.name }} logotype" />
+            </a>
+          </li>
+        {% endfor %}
       </ul>
   </div>
 </section>
+
 
 <section class="know-more-about row">
   <div class="logo-container">
