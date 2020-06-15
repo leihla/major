@@ -7,6 +7,7 @@ Source code for [Major](http://wegomajor.com/) website
 ## Content management
 
 - [Case studies documentation](docs/content/case-studies.md)
+- [Clients] clients are now defined in config.yml
 
 ## Development
 
