@@ -35,10 +35,10 @@ padding:10% 0;
       fill: $red;
     }
   }
-
   .cs-hero-title{
     color:$darkblue;
   }
+
 }
 
 .cs-hero{
@@ -116,7 +116,7 @@ figure{
   figure{
     	@include column(2/12);
       img{
-        height: 32px;
+        height: 56px;
         width: auto;
       }
   }
@@ -242,7 +242,7 @@ article{
 }
 
 .sec-text-full {
-  .row{ 
+  .row{
     .cs-section-text-content {
       dt h2 {
          @include column(6/12);

@@ -1,89 +1,83 @@
 #page-footer {
-	background-color: $red;
-	color: #fff;
-	height: 100vh;
+	background-color: white;
+	color: $darkblue;
+	min-height: 170px;
 	position: relative;
 	z-index: 9;
+	padding-top: 3rem;
 
 
 	.row{
 		height: 100%;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		position: relative;
-
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
+.major-footer{
 
-	.say-hi-contact{
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 10%;
-
-
-	h2{
-		margin-bottom: 0.5rem;
-
+	position: absolute;
+	left: 0;
+	display: flex;
+	align-items: center;
+	svg{
+		width: 48px;
 	}
-
-	a{
-font-family: $body-text-type;
-color: white;
-font-size: 1.3rem;
-font-weight: 400;
-
-	}
-	}
-
+}
 
 .p2020-footer{
-	position: absolute;
-	height: 80px;
-	bottom: 0;
-
+	//position: absolute;
+padding: 0.3rem 0;
+	display: flex;
+	align-items: center;
+	margin-right: 4rem;
+	svg{
+		 path{
+			fill:$lightgrey;
+		 }
+	}
 
 }
 
 
-	.logo-footer{
-		position: absolute;
-		height: 130px;
-		top: 0;
-		left: 0;
-		display: flex;
-		align-items: center;
-		svg{
-			width: 48px;
-			 path{
-			 	fill:white;
-			 }
-		}
-	}
 
 	.social{
-		position: absolute;
-		height: 100px;
+		//position: absolute;
+
 		bottom: 0;
 		right: 0;
 		display: flex;
-		align-items: center;
-		flex-direction: row-reverse;
+		align-items: flex-end;
+		flex-direction: column;
 
 
 		ul{
 			display: flex;
 			flex-direction: row;
-			img{
-				width: 20px;
-				margin-right:1.5rem;
+
+			li{
+				width: 40px;
+				margin:0 0 0.5rem 0.5rem;
+				display: flex;
+				justify-content: center;
+
+				svg{
+					width: 22px;
+					path{
+					 fill:$lightgrey;
+					}
+
+				}
 			}
+
 		}
 		p{
-			font-size: 0.75rem;
+			font-size: 0.7rem;
 			line-height: 0.87rem;
 			font-weight: 400;
-			margin-right: 2rem;
-
+			//margin-right: 2rem;
+			color: $lightgrey;
+		//	display: none;
 		}
 		a{
 			line-height: 0;
