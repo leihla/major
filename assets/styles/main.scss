@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+/* Libraries
+   ========================================================================== */
+
+/**
+ * Bourbon for extended SASS functionality:
+ * http://bourbon.io/
+ */
+
+@import "bourbon";
+
+/**
+ * Jeet, a grid system designed for humans:
+ * http://jeet.gs/
+ */
+
+@import "jeet";
+
+/**
+ * Normalize.css, a modern, HTML5-ready alternative to CSS resets:
+ * http://necolas.github.io/normalize.css/
+ */
+
+@import "vendor/normalize";
+
+/**
+ * Kenneth Ormandy's OpenType features—ligatures, kerning, and more—to Normalize.css:
+ * https://github.com/kennethormandy/normalize-opentype.css
+ */
+
+@import "vendor/normalize-opentype";
+
+/* Core
+   ========================================================================== */
+
+/*
+Base Styles - Type, Color, headings...
+*/
+@import "partials/base";
+
+/*
+Header Style
+*/
+@import "partials/header";
+
+/*
+Footer Style
+*/
+@import "partials/footer";
+
+/*
+Homepage content
+*/
+@import "partials/homepage";
+
+/*
+About content
+*/
+@import "partials/about";
+
+/*
+Case study content
+*/
+@import "partials/casestudy";
+
+/*
+Work content
+*/
+@import "partials/work";
+
+/*
+Blog content
+*/
+@import "partials/blog";
+
+/*
+404 content
+*/
+@import "partials/404";
+
+/*
+contact content
+*/
+@import "partials/contact";
+
+/*
+Media Queries
+*/
+@import "partials/responsive";
