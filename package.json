@@ -80,7 +80,7 @@
     "jeet": "7.2.0",
     "node-bourbon": "^4.2.8",
     "node-notifier": "^5.2.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.13.1",
     "require-globify": "^1.4.1",
     "surge": "^0.20.1",
     "through2": "^3.0.0",
