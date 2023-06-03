@@ -1,7 +1,7 @@
 source: app
 environment: production
 # To exclude inside app/
-baseurl: http://wegomajor.com
+baseurl: //wegomajor.com
 kramdown:
   input: GFM
   syntax_highlighter: rouge
